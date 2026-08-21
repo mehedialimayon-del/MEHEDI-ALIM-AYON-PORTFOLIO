@@ -5,57 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communicationist - Mehedi Alim Ayon</title>
     <style>
-        body { margin: 0; background: #080c14; font-family: 'Arial', sans-serif; color: #d1d5db; line-height: 1.8; font-size: 1.15rem; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
+        body { 
+            margin: 0; 
+            background: #080c14; 
+            font-family: 'Arial', sans-serif; 
+            color: #ffffff; 
+            line-height: 1.8; 
+            font-size: 1.15rem; /* বেস ফন্ট সাইজ বড় করা হলো */
+        }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
         
-        /* Single Logo Section */
-        .logo-container { text-align: center; margin-bottom: 30px; background: #1a202c; padding: 25px; border-radius: 12px; border: 1px solid #ff7414; }
-        .logo { width: 180px; height: 180px; object-fit: contain; background: white; padding: 10px; border-radius: 10px; }
+        /* লোগো সেকশন: লোগো অনেক বড় করে দেওয়া হয়েছে */
+        .logo-container { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            background: #ff7414; 
+            padding: 15px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(255,116,20,0.5); 
+        }
+        .logo { 
+            max-width: 450px; 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+        }
         
-        /* Designation Section */
-        .designation { text-align: center; color: #ff7414; font-weight: bold; font-size: 1.3rem; margin-bottom: 30px; letter-spacing: 0.5px; }
-        
-        h2 { color: #ff7414; border-left: 5px solid #ff7414; padding-left: 15px; margin-top: 30px; font-size: 1.6rem; }
-        .content-box { background: #1a202c; padding: 30px; border-radius: 10px; border: 1px solid #ff7414; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        
-        p, li { font-size: 1.18rem; margin-bottom: 15px; letter-spacing: 0.3px; }
-        
-        /* Back Button */
-        .btn-container { text-align: center; margin-top: 40px; }
-        .back-btn { display: inline-block; padding: 14px 35px; background: #1a202c; color: #ff7414; border: 2px solid #ff7414; border-radius: 10px; font-weight: bold; font-size: 17px; text-decoration: none; transition: 0.3s; }
-        .back-btn:hover { background: #252b3b; transform: scale(1.02); }
+        h1, h2 { color: #ff7414; text-align: center; }
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.6rem; margin-top: 0; }
 
-        ul { padding-left: 20px; }
+        .content-box { 
+            background: #1a202c; 
+            padding: 25px; 
+            border-radius: 10px; 
+            border: 1px solid #ff7414; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
+        }
+        
+        .back-btn { 
+            display: block; 
+            text-align: center; 
+            margin-top: 30px; 
+            color: #ff7414; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 18px; 
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        /* প্যারাগ্রাফ এবং লিস্টের টেক্সট বড় ও স্পষ্ট করা হলো */
+        p { 
+            color: #d1d5db; 
+            font-size: 1.18rem; 
+            margin-bottom: 15px;
+            letter-spacing: 0.3px;
+        }
+        ul { 
+            color: #d1d5db; 
+            padding-left: 20px; 
+        }
+        li { 
+            font-size: 1.15rem; 
+            margin-bottom: 10px; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Single Logo Section -->
+        
+        <!-- বড় লোগো সেকশন -->
         <div class="logo-container">
-            <img src="https://i.postimg.cc/vH2d6rV3/images-(2).png" alt="Communication Logo" class="logo">
+            <img src="https://i.postimg.cc/KY94HkkG/logo-klust.png" alt="KLUST Logo" class="logo">
         </div>
+        
+        <h1>Master of Communication</h1>
 
-        <div class="designation">
-            Mehedi Alim Ayon || Communicationist || Master's in Communication
-        </div>
-
-        <!-- Master's Degree & Academic Excellence -->
         <div class="content-box">
-            <h2>Master's in Communication - Academic Milestone & Excellence</h2>
-            <p><strong>Academic Achievement:</strong> I completed my Master's degree in Communication from Kuala Lumpur University of Science and Technology, achieving a prestigious department topper status with a <strong>4.0 CGPA</strong>.</p>
-            <p><strong>Professional Value:</strong> This advanced academic journey sharpened my core expertise in strategic corporate messaging, negotiation skills, media relations, and cross-cultural communication—vital assets that empower me to handle high-level stakeholder discussions, brand promotions, and multi-channel trade marketing with absolute precision.</p>
+            <h2>About KLUST</h2>
+            <p>Kuala Lumpur University of Science and Technology (KLUST) is a premier institution dedicated to academic excellence, innovative research, and holistic student development. Established to foster high-standard education, it provides an inspiring platform that bridges scientific knowledge, technical expertise, and modern humanistic practices. It stands out for its multicultural environment and comprehensive curriculum across diverse disciplines.</p>
         </div>
 
-        <!-- Strategic Impact in Corporate Leadership -->
         <div class="content-box">
-            <h2>The Role of Communication in Modern FMCG Sales</h2>
-            <p><strong>Bridging Strategy and Execution:</strong> In fast-moving consumer goods (FMCG) and modern trade management, clear and persuasive communication is the ultimate driver of success. Whether negotiating multi-outlet combo campaigns with hypermarket executives or aligning cross-functional sales teams, effective communication ensures seamless execution and brand dominance.</p>
+            <h2>Master of Communication: Core Insights & Future</h2>
+            <p>The Master of Communication program at KLUST is meticulously structured to navigate the complex dynamics of the modern digital, corporate, and global business environment. It dives deep into critical subjects such as organizational communication, strategic messaging, digital media impact, cross-cultural collaboration, and corporate social responsibility (CSR).</p>
+            <p><strong>What is taught:</strong> Students explore how effective communication drives organizational productivity, manages public trust, and aligns internal and external goals. The future for graduates in this field is remarkably promising, offering high-impact career pathways in corporate affairs, media management, multinational leadership, and strategic consultancy.</p>
         </div>
 
-        <!-- Back to Home Button -->
-        <div class="btn-container">
-            <a href="index.html" class="back-btn">← BACK TO HOME</a>
+        <div class="content-box">
+            <h2>My Journey to Malaysia & Academics</h2>
+            <p>Moving to Malaysia marked a transformative chapter in my professional and academic life. As a thriving multicultural economic hub in Southeast Asia, Malaysia offered an ideal ecosystem to explore how diverse communities and global multinational corporations interact and communicate. Pursuing my Master of Communication here allowed me to blend my foundational background with high-level corporate communication strategies, achieving top-tier academic recognition with a 4.0 CGPA.</p>
         </div>
+
+        <div class="content-box">
+            <h2>What I Have Learned & Acquired Skills</h2>
+            <p>Through rigorous coursework and practical research modules during my Master's program, I have mastered essential industry skills, including:</p>
+            <ul>
+                <li><strong>Cross-Cultural Communication:</strong> Designing culturally-adaptive messaging to foster harmony and engagement in diverse corporate environments.</li>
+                <li><strong>Digital Media Strategies:</strong> Analyzing how digital networks, social media, and online platforms influence consumer behavior and brand reputation.</li>
+                <li><strong>Organizational Dynamics:</strong> Implementing multi-channel feedback systems to optimize employee engagement and workplace productivity.</li>
+                <li><strong>Strategic Research:</strong> Conducting empirical studies on corporate communication frameworks, transparency, and trust-building.</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-btn">← BACK TO HOME</a>
     </div>
 </body>
 </html>
