@@ -8,28 +8,40 @@
         body { margin: 0; background: #080c14; font-family: 'Arial', sans-serif; color: #ffffff; line-height: 1.6; }
         .container { max-width: 800px; margin: auto; padding: 20px; }
         
-        /* হেডার: বামে লোগো, ডানে নাম */
-        .header-section { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: #1a202c; padding: 20px; border-radius: 10px; border: 1px solid #ff7414; }
-        .logo { width: 90px; height: 90px; object-fit: contain; flex-shrink: 0; }
-        .header-text { font-size: 22px; font-weight: 800; color: #ffffff; margin: 0; }
+        /* লোগো সেকশন: মাঝে বড় লোগো এবং কমলা ব্যাকগ্রাউন্ড যাতে লেখা স্পষ্ট দেখা যায় */
+        .logo-container { 
+            text-align: center; 
+            margin-bottom: 25px; 
+            background: #ff7414; 
+            padding: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(255,116,20,0.4); 
+        }
+        .logo { 
+            max-width: 280px; 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+        }
         
         h1, h2 { color: #ff7414; text-align: center; }
         .content-box { background: #1a202c; padding: 25px; border-radius: 10px; border: 1px solid #ff7414; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
         .back-btn { display: block; text-align: center; margin-top: 30px; color: #ff7414; text-decoration: none; font-weight: bold; font-size: 18px; }
         p { color: #d1d5db; }
         ul { color: #d1d5db; padding-left: 20px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <!-- লোগো এবং ইউনিভার্সিটির নাম -->
-        <div class="header-section">
+        <!-- মাঝখানে বড় লোগো এবং ব্যাকগ্রাউন্ড -->
+        <div class="logo-container">
             <img src="https://i.postimg.cc/KY94HkkG/logo-klust.png" alt="KLUST Logo" class="logo">
-            <h2 class="header-text">Kuala Lumpur University of Science and Technology</h2>
         </div>
         
-        <h1>Master in Communication</h1>
+        <h1>Master of Communication</h1>
 
         <div class="content-box">
             <h2>About KLUST</h2>
@@ -37,14 +49,14 @@
         </div>
 
         <div class="content-box">
-            <h2>Master in Communication: Core Insights & Future</h2>
-            <p>The Master in Communication program at KLUST is meticulously structured to navigate the complex dynamics of the modern digital, corporate, and global business environment. It dives deep into critical subjects such as organizational communication, strategic messaging, digital media impact, cross-cultural collaboration, and corporate social responsibility (CSR).</p>
+            <h2>Master of Communication: Core Insights & Future</h2>
+            <p>The Master of Communication program at KLUST is meticulously structured to navigate the complex dynamics of the modern digital, corporate, and global business environment. It dives deep into critical subjects such as organizational communication, strategic messaging, digital media impact, cross-cultural collaboration, and corporate social responsibility (CSR).</p>
             <p><strong>What is taught:</strong> Students explore how effective communication drives organizational productivity, manages public trust, and aligns internal and external goals. The future for graduates in this field is remarkably promising, offering high-impact career pathways in corporate affairs, media management, multinational leadership, and strategic consultancy.</p>
         </div>
 
         <div class="content-box">
             <h2>My Journey to Malaysia & Academics</h2>
-            <p>Moving to Malaysia marked a transformative chapter in my professional and academic life. As a thriving multicultural economic hub in Southeast Asia, Malaysia offered an ideal ecosystem to explore how diverse communities and global multinational corporations interact and communicate. Pursuing my Master in Communication here allowed me to blend my foundational background with high-level corporate communication strategies, achieving top-tier academic recognition with a 4.0 CGPA.</p>
+            <p>Moving to Malaysia marked a transformative chapter in my professional and academic life. As a thriving multicultural economic hub in Southeast Asia, Malaysia offered an ideal ecosystem to explore how diverse communities and global multinational corporations interact and communicate. Pursuing my Master of Communication here allowed me to blend my foundational background with high-level corporate communication strategies, achieving top-tier academic recognition with a 4.0 CGPA.</p>
         </div>
 
         <div class="content-box">
