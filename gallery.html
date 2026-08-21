@@ -6,8 +6,23 @@
     <title>Gallery - Mehedi Alim Ayon</title>
     <style>
         body { margin: 0; background: #080c14; font-family: sans-serif; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; max-width: 800px; margin: auto; }
-        .gallery-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #ff7414; }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px; 
+            padding: 15px; 
+            max-width: 800px; 
+            margin: auto; 
+        }
+        .gallery-img { 
+            width: 100%; 
+            height: auto; /* উচ্চতা অটো রাখা হয়েছে যাতে ছবি না কাটে */
+            min-height: 200px; /* একটি নির্দিষ্ট উচ্চতা বজায় রাখবে */
+            object-fit: contain; /* ছবি পুরোপুরি দেখানোর জন্য */
+            border-radius: 8px; 
+            border: 2px solid #ff7414; 
+            background: #000; /* খালি জায়গায় কালো ব্যাকগ্রাউন্ড */
+        }
         h2 { color: #ff7414; text-align: center; padding: 20px; }
     </style>
 </head>
