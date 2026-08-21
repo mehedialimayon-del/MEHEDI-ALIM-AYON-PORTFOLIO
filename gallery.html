@@ -6,46 +6,36 @@
     <title>Gallery - Mehedi Alim Ayon</title>
     <style>
         body { margin: 0; background: #080c14; font-family: sans-serif; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; max-width: 800px; margin: auto; }
-        .gallery-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer; border: 2px solid #ff7414; }
-        #modal { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; }
-        #modal img { max-width: 95vw; max-height: 90vh; object-fit: contain; border-radius: 5px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; max-width: 800px; margin: auto; }
+        .gallery-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 2px solid #ff7414; }
+        h2 { color: #ff7414; text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
-    <h2 style="color:#ff7414; text-align:center; padding:20px;">MY GALLERY</h2>
+    <h2>MY GALLERY</h2>
     <div class="gallery-grid">
-        <img class="gallery-img" src="https://i.postimg.cc/fVwfLnzB/Document-from-KAM-AYON-260812-092213-10.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzd/Document-from-KAM-AYON-260812-092213-11.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzx/Document-from-KAM-AYON-260812-092213-13.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/jDs450xg/Document-from-KAM-AYON-260812-092213-14.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/XrVkJSj1/Document-from-KAM-AYON-260812-092213-15.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/w10cRfMW/Document-from-KAM-AYON-260812-092213-16.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/VJYW6QfV/Document-from-KAM-AYON-260812-092213-17.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/HrB48ZnZ/Document-from-KAM-AYON-260812-092213-18.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/18JcVCXj/Document-from-KAM-AYON-260812-092213-19.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/sMw9G6xL/Document-from-KAM-AYON-260812-092213-20.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/bZ3HSCrK/Document-from-KAM-AYON-260812-092213-21.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/ts2tnSJ8/Document-from-KAM-AYON-260812-092213-22.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/jDZQngCT/Document-from-KAM-AYON-260812-092213-25.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/FYDgkW1h/Document-from-KAM-AYON-260812-092213-26.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/ykhTsYHR/Document-from-KAM-AYON-260812-092213-3.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/jDs450xw/Document-from-KAM-AYON-260812-092213-4.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/K1ZDzSGY/Document-from-KAM-AYON-260812-092213-5.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/QHgqhx31/Document-from-KAM-AYON-260812-092213-6.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/QFXJtG87/Document-from-KAM-AYON-260812-092213-7.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/CRFs1Thb/Document-from-KAM-AYON-260812-092213-8.jpg" onclick="openModal(this.src)">
-        <img class="gallery-img" src="https://i.postimg.cc/yDVyd41m/Document-from-KAM-AYON-260812-092213-9.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/fVwfLnzB/Document-from-KAM-AYON-260812-092213-10.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzd/Document-from-KAM-AYON-260812-092213-11.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzx/Document-from-KAM-AYON-260812-092213-13.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/jDs450xg/Document-from-KAM-AYON-260812-092213-14.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/XrVkJSj1/Document-from-KAM-AYON-260812-092213-15.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/w10cRfMW/Document-from-KAM-AYON-260812-092213-16.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/VJYW6QfV/Document-from-KAM-AYON-260812-092213-17.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/HrB48ZnZ/Document-from-KAM-AYON-260812-092213-18.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/18JcVCXj/Document-from-KAM-AYON-260812-092213-19.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/sMw9G6xL/Document-from-KAM-AYON-260812-092213-20.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/bZ3HSCrK/Document-from-KAM-AYON-260812-092213-21.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/ts2tnSJ8/Document-from-KAM-AYON-260812-092213-22.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/jDZQngCT/Document-from-KAM-AYON-260812-092213-25.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/FYDgkW1h/Document-from-KAM-AYON-260812-092213-26.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/ykhTsYHR/Document-from-KAM-AYON-260812-092213-3.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/jDs450xw/Document-from-KAM-AYON-260812-092213-4.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/K1ZDzSGY/Document-from-KAM-AYON-260812-092213-5.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/QHgqhx31/Document-from-KAM-AYON-260812-092213-6.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/QFXJtG87/Document-from-KAM-AYON-260812-092213-7.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/CRFs1Thb/Document-from-KAM-AYON-260812-092213-8.jpg">
+        <img class="gallery-img" src="https://i.postimg.cc/yDVyd41m/Document-from-KAM-AYON-260812-092213-9.jpg">
     </div>
-    <div id="modal" onclick="this.style.display='none'">
-        <img id="modal-img">
-    </div>
-    <script>
-        function openModal(src) {
-            document.getElementById('modal-img').src = src;
-            document.getElementById('modal').style.display = 'flex';
-        }
-    </script>
     <div style="text-align:center; padding:30px;">
         <a href="index.html" style="color:#ff7414; text-decoration:none; font-weight:bold; font-size:18px;">← BACK TO HOME</a>
     </div>
