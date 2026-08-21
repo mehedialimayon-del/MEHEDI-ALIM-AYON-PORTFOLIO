@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Mehedi Alim Ayon</title>
+    <style>
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: 0 auto; }
+        .gallery-img { width: 100%; border-radius: 12px; cursor: pointer; transition: 0.3s; border: 2px solid #ff7414; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .gallery-img:hover { transform: scale(1.03); filter: brightness(1.1); }
+        #modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; }
+        #modal img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 25px rgba(255,116,20,0.5); }
+    </style>
 </head>
-<body style="margin:0; padding:20px; background:#080c14; font-family:Arial, sans-serif; color:#ffffff;">
+<body style="margin:0; background:#080c14; font-family:Arial, sans-serif; color:#ffffff; text-align:center;">
 
-    <div style="max-width:900px; margin:0 auto; text-align:center;">
-        <h2 style="color:#ff7414; margin-bottom:30px; letter-spacing:2px;">MY GALLERY</h2>
-        
-        <!-- গ্যালারি গ্রিড -->
-        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:15px;">
-            
-            <!-- ছবিগুলোর তালিকা -->
-            <img src="https://i.postimg.cc/fVwfLnzB/Document-from-KAM-AYON-260812-092213-10.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/zyJFBZzd/Document-from-KAM-AYON-260812-092213-11.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/zyJFBZzx/Document-from-KAM-AYON-260812-092213-13.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/jDs450xg/Document-from-KAM-AYON-260812-092213-14.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/XrVkJSj1/Document-from-KAM-AYON-260812-092213-15.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/w10cRfMW/Document-from-KAM-AYON-260812-092213-16.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/VJYW6QfV/Document-from-KAM-AYON-260812-092213-17.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/HrB48ZnZ/Document-from-KAM-AYON-260812-092213-18.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/18JcVCXj/Document-from-KAM-AYON-260812-092213-19.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/sMw9G6xL/Document-from-KAM-AYON-260812-092213-20.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/bZ3HSCrK/Document-from-KAM-AYON-260812-092213-21.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/ts2tnSJ8/Document-from-KAM-AYON-260812-092213-22.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/jDZQngCT/Document-from-KAM-AYON-260812-092213-25.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/FYDgkW1h/Document-from-KAM-AYON-260812-092213-26.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/ykhTsYHR/Document-from-KAM-AYON-260812-092213-3.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/jDs450xw/Document-from-KAM-AYON-260812-092213-4.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/K1ZDzSGY/Document-from-KAM-AYON-260812-092213-5.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/QHgqhx31/Document-from-KAM-AYON-260812-092213-6.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/QFXJtG87/Document-from-KAM-AYON-260812-092213-7.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/CRFs1Thb/Document-from-KAM-AYON-260812-092213-8.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
-            <img src="https://i.postimg.cc/yDVyd41m/Document-from-KAM-AYON-260812-092213-9.jpg" style="width:100%; border-radius:10px; border:2px solid #252b3b;">
+    <h2 style="color:#ff7414; padding:30px 0; letter-spacing:2px; font-size:32px;">MY GALLERY</h2>
 
-        </div>
-
-        <br><br>
-        <a href="index.html" style="color:#ff7414; text-decoration:none; font-weight:bold;">← BACK TO HOME</a>
+    <div class="gallery-grid">
+        <img class="gallery-img" src="https://i.postimg.cc/fVwfLnzB/Document-from-KAM-AYON-260812-092213-10.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzd/Document-from-KAM-AYON-260812-092213-11.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzx/Document-from-KAM-AYON-260812-092213-13.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/jDs450xg/Document-from-KAM-AYON-260812-092213-14.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/XrVkJSj1/Document-from-KAM-AYON-260812-092213-15.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/w10cRfMW/Document-from-KAM-AYON-260812-092213-16.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/VJYW6QfV/Document-from-KAM-AYON-260812-092213-17.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/HrB48ZnZ/Document-from-KAM-AYON-260812-092213-18.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/18JcVCXj/Document-from-KAM-AYON-260812-092213-19.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/sMw9G6xL/Document-from-KAM-AYON-260812-092213-20.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/bZ3HSCrK/Document-from-KAM-AYON-260812-092213-21.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/ts2tnSJ8/Document-from-KAM-AYON-260812-092213-22.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/jDZQngCT/Document-from-KAM-AYON-260812-092213-25.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/FYDgkW1h/Document-from-KAM-AYON-260812-092213-26.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/ykhTsYHR/Document-from-KAM-AYON-260812-092213-3.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/jDs450xw/Document-from-KAM-AYON-260812-092213-4.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/K1ZDzSGY/Document-from-KAM-AYON-260812-092213-5.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/QHgqhx31/Document-from-KAM-AYON-260812-092213-6.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/QFXJtG87/Document-from-KAM-AYON-260812-092213-7.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/CRFs1Thb/Document-from-KAM-AYON-260812-092213-8.jpg" onclick="openModal(this.src)">
+        <img class="gallery-img" src="https://i.postimg.cc/yDVyd41m/Document-from-KAM-AYON-260812-092213-9.jpg" onclick="openModal(this.src)">
     </div>
+
+    <!-- Modal for full screen view -->
+    <div id="modal" onclick="this.style.display='none'">
+        <img id="modal-img">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+    </script>
+
+    <br><br>
+    <a href="index.html" style="color:#ff7414; text-decoration:none; font-weight:bold; font-size:16px;">← BACK TO HOME</a>
+    <br><br>
 </body>
 </html>
