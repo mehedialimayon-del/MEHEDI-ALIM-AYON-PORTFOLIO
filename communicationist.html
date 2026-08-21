@@ -7,7 +7,12 @@
     <style>
         body { margin: 0; background: #080c14; font-family: 'Arial', sans-serif; color: #ffffff; line-height: 1.6; }
         .container { max-width: 800px; margin: auto; padding: 20px; }
-        .logo { display: block; margin: 0 auto 20px; width: 180px; height: auto; filter: drop-shadow(0 4px 10px rgba(255,116,20,0.3)); }
+        
+        /* হেডার সেকশন: লোগো ও টেক্সট পাশাপাশি */
+        .header-section { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; background: #1a202c; padding: 15px; border-radius: 10px; border: 1px solid #ff7414; }
+        .logo { width: 80px; height: 80px; object-fit: contain; }
+        .header-title { font-size: 20px; font-weight: bold; color: #ff7414; margin: 0; }
+        
         h1, h2 { color: #ff7414; text-align: center; }
         .content-box { background: #1a202c; padding: 25px; border-radius: 10px; border: 1px solid #ff7414; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
         .back-btn { display: block; text-align: center; margin-top: 30px; color: #ff7414; text-decoration: none; font-weight: bold; font-size: 18px; }
@@ -18,8 +23,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- আপনার লোগো -->
-        <img src="https://i.postimg.cc/KY94HkkG/logo-klust.png" alt="KLUST Logo" class="logo">
+        
+        <!-- নতুন হেডার: বামে লোগো, ডানে ইউনিভার্সিটির নাম -->
+        <div class="header-section">
+            <img src="https://i.postimg.cc/KY94HkkG/logo-klust.png" alt="KLUST Logo" class="logo">
+            <h2 class="header-title">Kuala Lumpur University of Science and Technology</h2>
+        </div>
         
         <h1>Master in Communication</h1>
 
