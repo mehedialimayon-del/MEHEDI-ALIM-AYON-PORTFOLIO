@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Communicationist - Mehedi Alif Ayon</title>
+    <title>Communicationist - Mehedi Alim Ayon</title>
     <style>
         body { 
             margin: 0; 
@@ -17,7 +17,7 @@
         
         .logo-container { 
             text-align: center; 
-            margin-bottom: 30px; 
+            margin-bottom: 20px; 
             background: #ff7414; 
             padding: 20px; 
             border-radius: 12px; 
@@ -30,6 +30,16 @@
             display: block; 
             margin: 0 auto; 
             object-fit: contain;
+        }
+
+        /* Designation Header Style - Matching Agriculture Page */
+        .designation-header {
+            color: #ff7414;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
         }
         
         h1, h2 { color: #ff7414; text-align: center; }
@@ -79,63 +89,36 @@
             font-size: 2rem; 
             margin-bottom: 15px; 
         }
-        /* =========================================
-   COMMUNICATIONIST PAGE
-   SAME MOBILE FONT SIZE AS AGRICULTURIST
-   DESKTOP COMPLETELY UNCHANGED
-   ========================================= */
 
-@media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) {
+            .content-box p {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            .content-box h2 {
+                font-size: 1.10rem !important;
+                line-height: 1.3 !important;
+            }
+            .designation-header {
+                font-size: 0.85rem !important;
+            }
+            .back-btn {
+                font-size: 0.90rem !important;
+            }
+        }
 
-    .content-box p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-    }
-
-    .content-box h2 {
-        font-size: 1.10rem !important;
-        line-height: 1.3 !important;
-    }
-
-    .designation {
-        font-size: 0.90rem !important;
-        line-height: 1.4 !important;
-    }
-
-    .back-btn {
-        font-size: 0.90rem !important;
-    }
-}
-
-
-/* VERY SMALL PHONES */
-
-@media screen and (max-width: 380px) {
-
-    .content-box p {
-        font-size: 0.90rem !important;
-        line-height: 1.55 !important;
-    }
-
-    .content-box h2 {
-        font-size: 1.05rem !important;
-    }
-
-    .designation {
-        font-size: 0.85rem !important;
-    }
-
-    .back-btn {
-        font-size: 0.85rem !important;
-    }
-}
-        .content-box h2 {
-    font-size: 1.10rem !important;
-    line-height: 1.3 !important;
-}
-        .content-box h2 {
-    font-size: 1.05rem !important;
-}
+        @media screen and (max-width: 380px) {
+            .content-box p {
+                font-size: 0.90rem !important;
+                line-height: 1.55 !important;
+            }
+            .designation-header {
+                font-size: 0.75rem !important;
+            }
+            .back-btn {
+                font-size: 0.85rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -144,7 +127,9 @@
             <img src="https://i.postimg.cc/KY94HkkG/logo-klust.png" alt="KLUST Logo" class="logo">
         </div>
         
-        <h1>Master of Communication</h1>
+        <div class="designation-header">
+            Mehedi Alim Ayon || Communication || Master of Communication
+        </div>
 
         <div class="content-box">
             <h2>About KLUST</h2>
