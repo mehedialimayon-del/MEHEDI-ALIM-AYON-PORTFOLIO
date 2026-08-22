@@ -129,17 +129,39 @@
     }
 }
         /* =========================================
-   MOBILE LOGO — 5% SMALLER
+   MOBILE LOGO + BOX SMALLER
    DESKTOP COMPLETELY UNCHANGED
    ========================================= */
 
 @media screen and (max-width: 600px) {
 
+    .logo-container {
+        padding: 14px !important;
+        margin-bottom: 20px !important;
+        border-radius: 10px !important;
+    }
+
     .logo {
-        width: 95% !important;
-        max-width: 210px !important;
+        width: 88% !important;
+        max-width: 180px !important;
+        padding: 7px !important;
         margin: 0 auto !important;
-        padding: 9px !important;
+    }
+}
+
+
+/* VERY SMALL PHONES */
+
+@media screen and (max-width: 380px) {
+
+    .logo-container {
+        padding: 12px !important;
+    }
+
+    .logo {
+        width: 88% !important;
+        max-width: 165px !important;
+        padding: 6px !important;
     }
 }
     </style>
