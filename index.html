@@ -677,59 +677,76 @@
             }
         }
 /* =====================================================
-   FINAL MOBILE TYPOGRAPHY FIX
-   DESKTOP REMAINS 100% UNCHANGED
+   FINAL MOBILE FONT SIZE
+   DESKTOP COMPLETELY UNCHANGED
    ===================================================== */
 
 @media screen and (max-width: 600px) {
 
-    /* HOME PAGE NAME */
+    /* NAME */
     body > div > div:last-child h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.55rem !important;
         line-height: 1.15 !important;
-        letter-spacing: 0.5px !important;
+        letter-spacing: 0.3px !important;
     }
 
     /* PROFESSION */
     body > div > div:last-child p {
-        font-size: 0.75rem !important;
-        line-height: 1.35 !important;
-        letter-spacing: 0.25px !important;
+        font-size: 0.68rem !important;
+        line-height: 1.3 !important;
+        letter-spacing: 0.15px !important;
         white-space: normal !important;
     }
 
-    /* ALL HOME PAGE BUTTONS */
+    /* ALL BUTTONS */
     body > div > div:last-child a {
         box-sizing: border-box !important;
         min-width: 0 !important;
         max-width: 100% !important;
-        overflow: hidden !important;
 
         text-align: center !important;
         white-space: normal !important;
-        overflow-wrap: normal !important;
+
+        overflow: visible !important;
+        text-overflow: clip !important;
+
         word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 
-    /* TOP 3 BUTTONS */
+    /* =========================================
+       TOP 3 BUTTONS
+       ========================================= */
+
+    body > div > div:last-child > div:first-of-type {
+        gap: 7px !important;
+    }
+
     body > div > div:last-child > div:first-of-type a {
-        font-size: 0.85rem !important;
-        line-height: 1.15 !important;
+        font-size: 0.70rem !important;
+        line-height: 1.12 !important;
 
-        padding-left: 6px !important;
-        padding-right: 6px !important;
+        padding: 5px 3px !important;
+
+        min-height: 62px !important;
     }
 
-    /* ABOUT ME + GALLERY */
+    /* =========================================
+       ABOUT ME + GALLERY
+       ========================================= */
+
     body > div > div:last-child > div:nth-of-type(2) a {
-        font-size: 1rem !important;
-        line-height: 1.15 !important;
+        font-size: 0.90rem !important;
+        line-height: 1.12 !important;
     }
 
-    /* PROFILE / CV + CONTACT */
+    /* =========================================
+       PROFILE / CV + CONTACT
+       ========================================= */
+
     body > div > div:last-child > div:nth-of-type(3) a {
-        font-size: 1rem !important;
-        line-height: 1.15 !important;
+        font-size: 0.90rem !important;
+        line-height: 1.12 !important;
     }
 }
 
@@ -741,20 +758,21 @@
 @media screen and (max-width: 380px) {
 
     body > div > div:last-child h1 {
-        font-size: 1.6rem !important;
+        font-size: 1.40rem !important;
     }
 
     body > div > div:last-child p {
-        font-size: 0.68rem !important;
+        font-size: 0.62rem !important;
     }
 
     body > div > div:last-child > div:first-of-type a {
-        font-size: 0.78rem !important;
+        font-size: 0.65rem !important;
+        min-height: 58px !important;
     }
 
     body > div > div:last-child > div:nth-of-type(2) a,
     body > div > div:last-child > div:nth-of-type(3) a {
-        font-size: 0.9rem !important;
+        font-size: 0.82rem !important;
     }
 }
     </style>
