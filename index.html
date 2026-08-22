@@ -385,16 +385,12 @@
             ----------------------------------------------------- */
 
             .hero {
-                width: 100%;
-
-                height: 52vh;
-
-                min-height: 390px;
-                max-height: 520px;
-
-                overflow: hidden;
-            }
-
+    width: 100%;
+    height: 60vh;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+}
             .hero-image {
                 width: 100%;
                 height: 100%;
@@ -775,7 +771,38 @@
         font-size: 0.82rem !important;
     }
 }
-        
+ /* =========================================
+   MOBILE FONT SIZE
+   DESKTOP COMPLETELY UNCHANGED
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* NAME */
+    body > div > div:last-child h1 {
+        font-size: 1.55rem !important;
+    }
+
+    /* PROFESSION */
+    body > div > div:last-child p {
+        font-size: 0.68rem !important;
+    }
+
+    /* TOP 3 BUTTONS */
+    body > div > div:last-child > div:first-of-type a {
+        font-size: 0.70rem !important;
+    }
+
+    /* ABOUT ME + GALLERY */
+    body > div > div:last-child > div:nth-of-type(2) a {
+        font-size: 0.90rem !important;
+    }
+
+    /* PROFILE / CV + CONTACT */
+    body > div > div:last-child > div:nth-of-type(3) a {
+        font-size: 0.90rem !important;
+    }
+}       
     </style>
 </head>
 
