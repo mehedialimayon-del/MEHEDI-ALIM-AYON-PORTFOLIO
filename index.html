@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mehedi Alim Ayon - Professional Portfolio</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 
     <style>
 
-        /* =====================================================
+        /* =========================================================
            GLOBAL RESET
-        ===================================================== */
+        ========================================================= */
 
-        *,
-        *::before,
-        *::after {
+        * {
             box-sizing: border-box;
         }
 
-        html {
-            width: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-
-            overflow-x: hidden;
-
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-        }
-
+        html,
         body {
             width: 100%;
             max-width: 100%;
             margin: 0;
             padding: 0;
+            overflow-x: hidden !important;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
 
-            overflow-x: hidden;
-
+        body {
             background:
                 linear-gradient(
                     180deg,
@@ -51,9 +40,7 @@
                     #101622 55%,
                     #080c14 100%
                 );
-
-            font-family: Arial, Helvetica, sans-serif;
-
+            font-family: Arial, sans-serif;
             color: #ffffff;
         }
 
@@ -66,22 +53,21 @@
         }
 
 
-        /* =====================================================
+        /* =========================================================
            PAGE
-        ===================================================== */
+        ========================================================= */
 
         .page {
             width: 100%;
             max-width: 100%;
             min-height: 100vh;
-
             overflow-x: hidden;
         }
 
 
-        /* =====================================================
+        /* =========================================================
            HOVER
-        ===================================================== */
+        ========================================================= */
 
         .btn-hover {
             transition:
@@ -91,14 +77,14 @@
 
         .btn-hover:hover {
             transform: scale(1.02);
-            filter: brightness(1.2);
+            filter: brightness(1.15);
         }
 
 
-        /* =====================================================
-           HERO
-           DESKTOP ORIGINAL
-        ===================================================== */
+        /* =========================================================
+           HERO / HEADER IMAGE
+           DESKTOP — ORIGINAL LOOK
+        ========================================================= */
 
         .hero {
             width: 100%;
@@ -106,13 +92,12 @@
             min-height: 420px;
 
             position: relative;
-
             overflow: hidden;
 
             background: #111827;
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.6);
+                0 10px 30px rgba(0, 0, 0, 0.6);
         }
 
         .hero-image {
@@ -122,15 +107,13 @@
             display: block;
 
             object-fit: cover;
-
             object-position: center 5%;
         }
 
 
-        /* =====================================================
+        /* =========================================================
            SOCIAL ICONS
-           DESKTOP ORIGINAL
-        ===================================================== */
+        ========================================================= */
 
         .social-icons {
             position: absolute;
@@ -139,10 +122,9 @@
             right: 20px;
 
             display: flex;
-
             gap: 10px;
 
-            z-index: 10;
+            z-index: 20;
         }
 
         .social-icons a {
@@ -152,14 +134,12 @@
             flex: 0 0 45px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
             border-radius: 50%;
 
             color: #ffffff;
-
             text-decoration: none;
 
             font-size: 20px;
@@ -169,19 +149,256 @@
         }
 
         .linkedin {
-            background: rgba(255,116,20,0.20);
+            background: rgba(255, 116, 20, 0.20);
             border: 1px solid #ff7414;
         }
 
         .email {
-            background: rgba(255,116,20,0.20);
+            background: rgba(255, 116, 20, 0.20);
             border: 1px solid #ff7414;
         }
 
         .whatsapp {
-            background: rgba(37,211,102,0.20);
+            background: rgba(37, 211, 102, 0.20);
             border: 1px solid #25d366;
         }
 
 
-        /* =====================================================
+        /* =========================================================
+           HERO GRADIENT
+        ========================================================= */
+
+        .hero-gradient {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 50%;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(8, 12, 20, 0),
+                    rgba(8, 12, 20, 1)
+                );
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           MAIN CONTENT
+           DESKTOP — ORIGINAL FORMAT
+        ========================================================= */
+
+        .main-content {
+            width: 100%;
+            max-width: 850px;
+
+            margin: -50px auto 0;
+
+            padding: 20px 20px 40px;
+
+            text-align: center;
+
+            position: relative;
+            z-index: 10;
+        }
+
+
+        /* =========================================================
+           NAME
+        ========================================================= */
+
+        .name {
+            margin: 0 0 10px;
+
+            color: #ffffff;
+
+            font-size: 42px;
+            line-height: 1.15;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+
+            text-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* =========================================================
+           PROFESSION
+        ========================================================= */
+
+        .profession {
+            margin: 0 0 30px;
+
+            color: #ff7414;
+
+            font-size: 16px;
+            line-height: 1.35;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           BUTTON ROW
+        ========================================================= */
+
+        .button-row {
+            width: 100%;
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+        }
+
+
+        /* =========================================================
+           ALL MENU BUTTONS
+        ========================================================= */
+
+        .menu-button {
+            min-width: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 10px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            font-weight: 900;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #252b3b,
+                    #1a202c
+                );
+
+            border: 2px solid #ff7414;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            overflow-wrap: anywhere;
+
+            word-break: normal;
+
+            flex-shrink: 1;
+        }
+
+
+        /* =========================================================
+           TOP THREE BUTTONS
+        ========================================================= */
+
+        .top-button {
+            flex: 1 1 0;
+
+            min-height: 75px;
+
+            font-size: 16px;
+
+            line-height: 1.15;
+        }
+
+
+        /* =========================================================
+           MIDDLE TWO BUTTONS
+        ========================================================= */
+
+        .middle-button {
+            flex: 1 1 0;
+
+            height: 65px;
+
+            font-size: 18px;
+
+            line-height: 1.15;
+        }
+
+
+        /* =========================================================
+           BOTTOM TWO BUTTONS
+        ========================================================= */
+
+        .bottom-button {
+            flex: 1 1 0;
+
+            height: 65px;
+
+            font-size: 18px;
+
+            line-height: 1.15;
+
+            background: #ff7414;
+
+            border: 2px solid #ff7414;
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ONLY MOBILE CHANGES HERE
+           DESKTOP REMAINS UNCHANGED
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden !important;
+            }
+
+            .page {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden !important;
+            }
+
+
+            /* -----------------------------------------------------
+               HERO
+            ----------------------------------------------------- */
+
+            .hero {
+                width: 100%;
+
+                height: 52vh;
+
+                min-height: 390px;
+                max-height: 520px;
+
+                overflow: hidden;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+
+                object-position
