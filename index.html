@@ -1,248 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Mehedi Alim Ayon - Professional Portfolio</title>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-/* =========================================
-   FINAL MOBILE CONTENT VISIBILITY FIX
-   ========================================= */
 
-.hero {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-.hero-gradient {
-    pointer-events: none !important;
-    z-index: 2 !important;
-}
-
-.main-content {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    position: relative !important;
-    z-index: 20 !important;
-
-    width: 100% !important;
-    max-width: 850px !important;
-
-    margin: -35px auto 0 !important;
-
-    padding: 15px 12px 30px !important;
-
-    text-align: center !important;
-}
-
-/* Make sure all content is visible */
-.main-content h1,
-.main-content p,
-.main-content .button-row,
-.main-content a {
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-    .hero {
-        height: 52vh !important;
-        min-height: 420px !important;
-        max-height: 650px !important;
-    }
-
-    .main-content {
-        display: block !important;
-        position: relative !important;
-        z-index: 20 !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-top: -25px !important;
-
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        padding-bottom: 30px !important;
-    }
-
-    .name {
-        display: block !important;
-
-        font-size: 29px !important;
-        line-height: 1.15 !important;
-
-        margin: 0 0 8px !important;
-    }
-
-    .profession {
-        display: block !important;
-
-        font-size: 10.5px !important;
-        line-height: 1.35 !important;
-
-        margin: 0 0 20px !important;
-    }
-
-    .button-row {
-        display: flex !important;
-
-        width: 100% !important;
-
-        gap: 7px !important;
-
-        margin-bottom: 9px !important;
-    }
-
-    .menu-button {
-        display: flex !important;
-
-        visibility: visible !important;
-        opacity: 1 !important;
-
-        min-width: 0 !important;
-
-        overflow: hidden !important;
-    }
-
-    .top-button {
-        flex: 1 1 0 !important;
-
-        min-width: 0 !important;
-        min-height: 62px !important;
-
-        padding: 6px 3px !important;
-
-        font-size: 10px !important;
-        line-height: 1.12 !important;
-    }
-
-    .middle-button {
-        flex: 1 1 0 !important;
-
-        height: 56px !important;
-
-        font-size: 14px !important;
-    }
-
-    .bottom-button {
-        flex: 1 1 0 !important;
-
-        height: 56px !important;
-
-        font-size: 14px !important;
-    }
-}
-
-/* VERY SMALL MOBILE */
-@media (max-width: 380px) {
-
-    .hero {
-        height: 48vh !important;
-        min-height: 370px !important;
-    }
-
-    .main-content {
-        margin-top: -20px !important;
-        padding-left: 9px !important;
-        padding-right: 9px !important;
-    }
-
-    .name {
-        font-size: 25px !important;
-    }
-
-    .profession {
-        font-size: 9px !important;
-    }
-
-    .top-button {
-        min-height: 58px !important;
-        font-size: 9px !important;
-    }
-
-    .middle-button,
-    .bottom-button {
-        height: 52px !important;
-        font-size: 12.5px !important;
-    }
-}
     <style>
 
-        /* =========================
+        /* =====================================================
            GLOBAL RESET
-        ========================= */
+        ===================================================== */
 
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        html {
             width: 100%;
             max-width: 100%;
             margin: 0;
             padding: 0;
+
             overflow-x: hidden;
+
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
         }
 
         body {
-            background: linear-gradient(
-                180deg,
-                #111827 0%,
-                #101622 55%,
-                #080c14 100%
-            );
-            font-family: Arial, sans-serif;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+
+            overflow-x: hidden;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #111827 0%,
+                    #101622 55%,
+                    #080c14 100%
+                );
+
+            font-family: Arial, Helvetica, sans-serif;
+
             color: #ffffff;
+        }
+
+        img {
+            max-width: 100%;
         }
 
         a {
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* =========================
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        .page {
+            width: 100%;
+            max-width: 100%;
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
            HOVER
-        ========================= */
+        ===================================================== */
 
         .btn-hover {
-            transition: transform 0.25s ease,
-                        filter 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                filter 0.25s ease;
         }
 
         .btn-hover:hover {
             transform: scale(1.02);
-            filter: brightness(1.15);
+            filter: brightness(1.2);
         }
 
-        /* =========================
-           MAIN PAGE
-        ========================= */
 
-        .page {
-            width: 100%;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* =========================
-           HERO IMAGE
-        ========================= */
+        /* =====================================================
+           HERO
+           DESKTOP ORIGINAL
+        ===================================================== */
 
         .hero {
             width: 100%;
             height: 60vh;
             min-height: 420px;
+
             position: relative;
+
             overflow: hidden;
 
             background: #111827;
@@ -254,15 +118,19 @@
         .hero-image {
             width: 100%;
             height: 100%;
+
             display: block;
 
             object-fit: cover;
+
             object-position: center 5%;
         }
 
-        /* =========================
+
+        /* =====================================================
            SOCIAL ICONS
-        ========================= */
+           DESKTOP ORIGINAL
+        ===================================================== */
 
         .social-icons {
             position: absolute;
@@ -271,6 +139,7 @@
             right: 20px;
 
             display: flex;
+
             gap: 10px;
 
             z-index: 10;
@@ -283,17 +152,20 @@
             flex: 0 0 45px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             border-radius: 50%;
 
             color: #ffffff;
+
             text-decoration: none;
 
             font-size: 20px;
 
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         .linkedin {
@@ -311,390 +183,5 @@
             border: 1px solid #25d366;
         }
 
-        /* =========================
-           HERO DARK GRADIENT
-        ========================= */
 
-        .hero-gradient {
-            position: absolute;
-
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            width: 100%;
-            height: 50%;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(8,12,20,0),
-                    rgba(8,12,20,1)
-                );
-        }
-
-        /* =========================
-           MAIN CONTENT
-        ========================= */
-
-        .main-content {
-            width: 100%;
-            max-width: 850px;
-
-            margin: -50px auto 0;
-
-            padding: 20px 20px 40px;
-
-            text-align: center;
-
-            position: relative;
-            z-index: 5;
-        }
-
-        /* =========================
-           NAME
-        ========================= */
-
-        .name {
-            margin: 0 0 10px;
-
-            color: #ffffff;
-
-            font-size: 42px;
-            line-height: 1.15;
-
-            font-weight: 900;
-            letter-spacing: 1.5px;
-
-            text-shadow:
-                0 4px 15px rgba(0,0,0,0.8);
-        }
-
-        /* =========================
-           PROFESSION
-        ========================= */
-
-        .profession {
-            margin: 0 0 30px;
-
-            color: #ff7414;
-
-            font-size: 16px;
-            line-height: 1.35;
-
-            font-weight: 800;
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-        }
-
-        /* =========================
-           BUTTON ROWS
-        ========================= */
-
-        .button-row {
-            width: 100%;
-
-            display: flex;
-
-            gap: 12px;
-
-            margin-bottom: 14px;
-        }
-
-        /* =========================
-           ALL BUTTONS
-        ========================= */
-
-        .menu-button {
-            min-width: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 10px;
-
-            color: #ffffff;
-            text-decoration: none;
-
-            text-align: center;
-
-            font-weight: 900;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #252b3b,
-                    #1a202c
-                );
-
-            border: 2px solid #ff7414;
-
-            border-radius: 10px;
-
-            overflow-wrap: anywhere;
-            word-break: normal;
-        }
-
-        /* TOP THREE */
-
-        .top-button {
-            flex: 1 1 0;
-
-            min-height: 75px;
-
-            font-size: 16px;
-            line-height: 1.15;
-        }
-
-        /* SECOND ROW */
-
-        .middle-button {
-            flex: 1 1 0;
-
-            height: 65px;
-
-            font-size: 18px;
-            line-height: 1.15;
-        }
-
-        /* BOTTOM ROW */
-
-        .bottom-button {
-            flex: 1 1 0;
-
-            height: 65px;
-
-            font-size: 18px;
-            line-height: 1.15;
-
-            background: #ff7414;
-            border: 2px solid #ff7414;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            .hero {
-                height: 47vh;
-                min-height: 300px;
-                max-height: 430px;
-            }
-
-            .hero-image {
-                object-position: center 5%;
-            }
-
-            .social-icons {
-                top: 12px;
-                right: 12px;
-
-                gap: 7px;
-            }
-
-            .social-icons a {
-                width: 38px;
-                height: 38px;
-
-                flex-basis: 38px;
-
-                font-size: 17px;
-            }
-
-            .main-content {
-                width: 100%;
-                max-width: 100%;
-
-                margin: -35px auto 0;
-
-                padding:
-                    15px
-                    12px
-                    30px;
-            }
-
-            .name {
-                font-size: 29px;
-                line-height: 1.12;
-
-                letter-spacing: 0.8px;
-
-                margin-bottom: 8px;
-            }
-
-            .profession {
-                font-size: 11px;
-                line-height: 1.35;
-
-                letter-spacing: 0.45px;
-
-                margin-bottom: 20px;
-            }
-
-            /* TOP 3 BUTTONS */
-
-            .button-row {
-                width: 100%;
-
-                gap: 7px;
-
-                margin-bottom: 9px;
-            }
-
-            .top-button {
-                min-width: 0;
-                min-height: 62px;
-
-                padding: 7px 4px;
-
-                font-size: 10.5px;
-                line-height: 1.12;
-
-                border-width: 2px;
-                border-radius: 9px;
-            }
-
-            /* MIDDLE TWO */
-
-            .middle-button {
-                min-width: 0;
-                height: 56px;
-
-                padding: 6px;
-
-                font-size: 14px;
-                line-height: 1.1;
-
-                border-radius: 9px;
-            }
-
-            /* BOTTOM TWO */
-
-            .bottom-button {
-                min-width: 0;
-                height: 56px;
-
-                padding: 6px;
-
-                font-size: 14px;
-                line-height: 1.1;
-
-                border-radius: 9px;
-            }
-        }
-
-        /* =========================
-           VERY SMALL PHONES
-        ========================= */
-
-        @media (max-width: 380px) {
-
-            .hero {
-                height: 43vh;
-                min-height: 280px;
-            }
-
-            .main-content {
-                padding-left: 9px;
-                padding-right: 9px;
-            }
-
-            .name {
-                font-size: 25px;
-            }
-
-            .profession {
-                font-size: 9.5px;
-                letter-spacing: 0.3px;
-            }
-
-            .button-row {
-                gap: 5px;
-            }
-
-            .top-button {
-                min-height: 58px;
-
-                font-size: 9px;
-                padding: 5px 3px;
-            }
-
-            .middle-button,
-            .bottom-button {
-                height: 52px;
-
-                font-size: 12.5px;
-            }
-
-            .social-icons {
-                top: 9px;
-                right: 9px;
-            }
-
-            .social-icons a {
-                width: 34px;
-                height: 34px;
-                flex-basis: 34px;
-
-                font-size: 15px;
-            }
-        }
-
-    </style>
-</head>
-
-<body>
-
-<div class="page">
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <div class="hero">
-
-        <img
-            class="hero-image"
-            alt="Mehedi Alim Ayon"
-            src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
-        >
-
-        <!-- SOCIAL ICONS -->
-
-        <div class="social-icons">
-
-            <a
-                class="linkedin"
-                href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
-                target="_blank"
-                aria-label="LinkedIn"
-            >
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-
-            <a
-                class="email"
-                href="mailto:mehedialif1999@gmail.com"
-                aria-label="Email"
-            >
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-
-            <a
-                class="whatsapp"
-                href="https://wa.me/601172267068"
-                target="_blank"
-                aria-label="WhatsApp"
-            >
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-
-        </div>
-
-        <div class="hero-gradient"></div>
-
-    </div>
+        /* =====================================================
