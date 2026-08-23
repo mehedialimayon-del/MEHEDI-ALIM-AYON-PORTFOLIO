@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRAN Achievements Gallery</title>
+    <title>83</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* প্রটেকশন ও বেসিক সেটআপ */
         * { 
             box-sizing: border-box; 
             -webkit-user-select: none;
@@ -28,7 +27,7 @@
         .gallery-title {
             text-align: center;
             color: #ff7414;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 900;
             margin-bottom: 30px;
             text-transform: uppercase;
@@ -36,7 +35,6 @@
             text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
         }
 
-        /* অটোমেটিক রেসপনসিভ গ্রিড */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -46,7 +44,6 @@
             margin: 0 auto;
         }
 
-        /* গ্লাসমোরফিজম কার্ড */
         .photo-card {
             background: rgba(37, 43, 59, 0.55);
             border: 1.5px solid rgba(255, 116, 20, 0.4);
@@ -93,7 +90,6 @@
             border-top: 1px solid rgba(255, 116, 20, 0.2);
         }
 
-        /* স্ক্রিন জুড়ে ফুলভিউ (লাইটবক্স) */
         .lightbox {
             display: none;
             position: fixed;
@@ -137,13 +133,12 @@
 </head>
 <body oncontextmenu="return false;">
 
-    <h1 class="gallery-title">PRAN ACHIEVEMENTS</h1>
+    <h1 class="gallery-title">83</h1>
 
     <div class="gallery-grid" id="gallery-container">
         <p style="text-align:center; width:100%; color: #ff7414; grid-column: 1/-1;">Loading Gallery...</p>
     </div>
 
-    <!-- ফুলস্ক্রিন ওভারলে -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" class="lightbox-img" src="" alt="Full View">
@@ -151,11 +146,10 @@
     </div>
 
     <script>
-        // আপনার ড্রাইভার আইডি ও এপিআই কি ফিক্সড করা
+        // আপনার দেওয়া এপিআই কি এবং ফোল্ডার আইডি সেটিং
         const API_KEY = 'AIzaSyA_placeholder_your_key_here'; 
         const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
 
-        // শর্টকাট ব্লক (ডাউনলোড প্রটেকশন)
         document.addEventListener('keydown', function(e) {
             if (e.key === 'PrintScreen') navigator.clipboard.writeText('');
             if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
@@ -171,12 +165,10 @@
                 container.innerHTML = '';
 
                 if (data.files && data.files.length > 0) {
-                    // শুধু ইমেজ ফাইল ফিল্টার করা
                     const imageFiles = data.files.filter(f => f.mimeType && f.mimeType.startsWith('image/'));
 
                     if(imageFiles.length > 0) {
                         imageFiles.forEach(file => {
-                            // নতুন ডিরেক্ট গুগল ইমেজ লিংক ফরম্যাট (সব ব্রাউজারে কাজ করবে)
                             const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
                             const caption = file.description ? file.description : '';
 
@@ -190,14 +182,14 @@
                             container.appendChild(card);
                         });
                     } else {
-                        container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos inside the folder!</p>';
+                        container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found inside the folder!</p>';
                     }
                 } else {
                     container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No files found!</p>';
                 }
             } catch (err) {
                 console.error(err);
-                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444; grid-column: 1/-1;">Error loading photos.</p>';
+                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444; grid-column: 1/-1;">Error loading photos. Please check API Key/Permissions.</p>';
             }
         }
 
