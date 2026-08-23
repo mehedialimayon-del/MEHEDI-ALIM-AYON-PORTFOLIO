@@ -159,32 +159,28 @@
             if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
         });
 
-        // ফাইলের নাম থেকে ফরম্যাটিং করে ক্যাপশন বের করার ফাংশন
         function getCleanCaption(fileName) {
-            // ফাইলের এক্সটেনশন (.jpg, .png ইত্যাদি) সরিয়ে ফেলা
             let nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
-            
-            // শুরুর সিরিয়াল নম্বর (যেমন: 01, 02, 1, 2) এবং তার পরের স্পেস/ড্যাশ/আন্ডারস্কোর মুছে ফেলা
             let cleanText = nameWithoutExt.replace(/^[0-9]+[\s\-_.]*/, '').trim();
-
             return cleanText;
         }
 
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
             const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
-            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100`;
+            
+            // timestamp যোগ করা হয়েছে যাতে ব্রাউজার ক্যাশ না করে সবসময় লেটেস্ট ডেটা লোড করে
+            const timestamp = new Date().getTime();
+            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100&_=${timestamp}`;
 
             try {
-                const res = await fetch(url);
+                const res = await fetch(url, { cache: 'no-store' });
                 const data = await res.json();
                 container.innerHTML = '';
 
                 if (data.files && data.files.length > 0) {
                     data.files.forEach(file => {
                         const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
-                        
-                        // যদি ড্রাইভে ডেসক্রিপশন দেওয়া থাকে তবে সেটি নেবে, না থাকলে ফাইলের নাম থেকে অটো ক্যাপশন তৈরি করবে
                         const caption = file.description ? file.description : getCleanCaption(file.name);
 
                         const card = document.createElement('div');
