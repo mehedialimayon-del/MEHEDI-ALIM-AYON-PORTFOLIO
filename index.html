@@ -777,178 +777,46 @@
     /* NAME */
     body > div > div:last-child h1 {
         font-size: 1.55rem !important;
-    }
-
-    /* PROFESSION */
-    body > div > div:last-child p {
-        font-size: 0.68rem !important;
-    }
-
-    /* TOP 3 BUTTONS */
-    body > div > div:last-child > div:first-of-type a {
-        font-size: 0.70rem !important;
-    }
-
-    /* ABOUT ME + GALLERY */
-    body > div > div:last-child > div:nth-of-type(2) a {
-        font-size: 0.90rem !important;
-    }
-
-    /* PROFILE / CV + CONTACT */
-    body > div > div:last-child > div:nth-of-type(3) a {
-        font-size: 0.90rem !important;
-    }
-}    
-      /* =========================================================
-   FINAL MOBILE BUTTON ADJUSTMENT
-   DESKTOP COMPLETELY UNCHANGED
-   BUTTON STRUCTURE COMPLETELY UNCHANGED
-   ========================================================= */
-
-@media screen and (max-width: 600px) {
-
-    /* =========================================
-       KEEP ALL ROWS EXACTLY AS THEY ARE
-       ========================================= */
-
-    .button-row {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        gap: 7px !important;
-    }
-
-
-    /* =========================================
-       ALL BUTTONS
-       Keep same 3 / 2 / 2 structure
-       ========================================= */
-
-    .menu-button {
-        box-sizing: border-box !important;
-
-        flex-shrink: 1 !important;
-
-        min-width: 0 !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-
-        white-space: normal !important;
-
-        word-break: normal !important;
-        overflow-wrap: anywhere !important;
-
-        text-align: center !important;
-
-        padding-left: 4px !important;
-        padding-right: 4px !important;
-    }
-
-
-    /* =========================================
-       TOP ROW — 3 EQUAL BUTTONS
-       Previous: 12px
-       New: approximately 20% smaller
-       ========================================= */
-
-    .top-button {
-        flex: 1 1 0 !important;
-
-        min-height: 50px !important;
-
-        height: auto !important;
-
-        font-size: 9.6px !important;
-
-        line-height: 1.15 !important;
-
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-
-        border-radius: 9px !important;
-    }
-
-
-    /* =========================================
-       MIDDLE ROW — 2 EQUAL BUTTONS
-       Previous: 14px
-       New: approximately 20% smaller
-       ========================================= */
-
-    .middle-button {
-        flex: 1 1 0 !important;
-
-        height: 45px !important;
-
-        font-size: 11.2px !important;
-
-        line-height: 1.12 !important;
-
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-
-        border-radius: 9px !important;
-    }
-
-
-    /* =========================================
-       BOTTOM ROW — 2 EQUAL BUTTONS
-       Previous: 14px
-       New: approximately 20% smaller
-       ========================================= */
-
-    .bottom-button {
-        flex: 1 1 0 !important;
-
-        height: 45px !important;
-
-        font-size: 11.2px !important;
-
-        line-height: 1.12 !important;
-
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-
-        border-radius: 9px !important;
-    }
-}
-
 @media screen and (min-width: 1024px) {
 
+  /* 1. Fix Background Image Position */
   body, header, section {
-    background-size: 100% auto !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center 35% !important;
   }
 
-  div, nav, .container {
-    max-width: 1100px !important;
+  /* 2. Center Align Content Box */
+  div, nav, section, .container {
+    max-width: 850px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
+  /* 3. Text Padding Adjustment */
   h1 {
-    font-size: 26px !important;
-    margin-top: 120px !important;
+    margin-top: 150px !important;
+    font-size: 28px !important;
   }
 
-  h2, h3, p {
-    font-size: 14px !important;
+  /* 4. Align Buttons Perfectly in 2 Rows */
+  .button-container, nav, div:has(button), div:has(a) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
   }
 
   a, button, .btn {
-    width: 30% !important;
-    max-width: 250px !important;
-    min-width: 180px !important;
-    padding: 8px 10px !important;
-    font-size: 12px !important;
-    margin: 4px !important;
+    flex: 0 1 30% !important;
+    min-width: 220px !important;
+    max-width: 260px !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
   }
 }
+
 
     </style>
 </head>
