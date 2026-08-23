@@ -8,112 +8,76 @@
 
     <style>
 
-        /* =========================================================
-           DESKTOP — ORIGINAL DESIGN
-        ========================================================= */
-
-        body {
-            margin: 0;
-            background: #080c14;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            line-height: 1.8;
-            font-size: 2rem;
+        body { 
+            margin: 0; 
+            background: #080c14; 
+            font-family: Arial, sans-serif; 
+            color: #ffffff; 
+            line-height: 1.8; 
+            font-size: 2rem; 
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 20px; 
         }
 
-        .profile-header {
-            text-align: center;
-            margin-bottom: 30px;
-            background: #1a202c;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #ff7414;
+        .profile-header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            background: #1a202c; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid #ff7414; 
         }
 
-        .profile-title {
-            color: #ff7414;
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .profile-title { 
+            color: #ff7414; 
+            font-size: 2.8rem; 
+            margin-bottom: 10px; 
+            font-weight: bold; 
         }
 
-        .profile-subtitle {
-            color: #d1d5db;
-            font-size: 2rem;
+        .profile-subtitle { 
+            color: #d1d5db; 
+            font-size: 2rem; 
         }
 
-        h2 {
-            color: #ff7414;
-            border-left: 5px solid #ff7414;
-            padding-left: 15px;
-            margin-top: 30px;
-            font-size: 2.3rem;
+        h2 { 
+            color: #ff7414; 
+            border-left: 5px solid #ff7414; 
+            padding-left: 15px; 
+            margin-top: 30px; 
+            font-size: 2.3rem; 
         }
 
-        .content-box {
-            background: #1a202c;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #ff7414;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        .content-box { 
+            background: #1a202c; 
+            padding: 30px; 
+            border-radius: 10px; 
+            border: 1px solid #ff7414; 
+            margin-bottom: 25px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
         }
 
-        .highlight {
-            color: #ff7414;
-            font-weight: bold;
+        .highlight { 
+            color: #ff7414; 
+            font-weight: bold; 
         }
 
-        p {
-            color: #d1d5db;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            color: #d1d5db;
-            padding-left: 25px;
-        }
-
-        li {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .quote-box {
-            background: #1a202c;
-            border: 1px solid #ff7414;
-            border-left: 5px solid #ff7414;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .quote-box p {
-            color: #ffffff;
-            font-style: italic;
-            margin: 0;
-        }
-
-        .back-btn {
-            display: block;
-            text-align: center;
-            margin-top: 30px;
+        .back-btn { 
+            display: block; 
+            text-align: center; 
+            margin-top: 30px; 
             padding: 18px;
             background: #1a202c;
             border: 2px solid #ff7414;
             border-radius: 10px;
-            color: #ff7414;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.8rem;
+            color: #ff7414; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.8rem; 
             transition: 0.3s;
         }
 
@@ -123,98 +87,74 @@
             transform: scale(1.02);
         }
 
+        p { 
+            color: #d1d5db; 
+            font-size: 2rem; 
+            margin-bottom: 20px; 
+        }
 
-        /* =========================================================
-           MOBILE
-           KAM PAGE STYLE FONT SIZE
+        ul { 
+            color: #d1d5db; 
+            padding-left: 25px; 
+        }
+
+        li { 
+            font-size: 2rem; 
+            margin-bottom: 15px; 
+        }
+
+
+        /* =====================================================
+           MOBILE ONLY
+           KAM PAGE FONT SIZE
            DESKTOP COMPLETELY UNCHANGED
-        ========================================================= */
+        ===================================================== */
 
         @media screen and (max-width: 600px) {
 
-            .container {
-                max-width: 100%;
-                padding: 20px;
-            }
-
             .profile-header {
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 10px;
+                padding: 20px !important;
+                margin-bottom: 20px !important;
             }
 
             .profile-title {
                 font-size: 1.55rem !important;
                 line-height: 1.2 !important;
-                margin-bottom: 8px;
             }
 
             .profile-subtitle {
                 font-size: 0.95rem !important;
-                line-height: 1.5 !important;
+                line-height: 1.4 !important;
+            }
+
+            .content-box {
+                padding: 20px !important;
+                margin-bottom: 20px !important;
             }
 
             h2 {
                 font-size: 1.10rem !important;
                 line-height: 1.3 !important;
-                padding-left: 10px;
-                border-left-width: 4px;
-                margin-top: 20px;
-            }
-
-            .content-box {
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 9px;
+                padding-left: 10px !important;
             }
 
             p {
                 font-size: 0.95rem !important;
                 line-height: 1.6 !important;
-                margin-bottom: 16px;
-            }
-
-            ul {
-                padding-left: 20px;
             }
 
             li {
-                font-size: 0.95rem !important;
-                line-height: 1.6 !important;
-                margin-bottom: 10px;
-            }
-
-            .quote-box {
-                padding: 20px;
-                border-radius: 9px;
-            }
-
-            .quote-box p {
                 font-size: 0.95rem !important;
                 line-height: 1.6 !important;
             }
 
             .back-btn {
                 font-size: 0.90rem !important;
-                padding: 14px;
-                margin-top: 20px;
             }
         }
 
 
-        /* =========================================================
-           VERY SMALL PHONES
-        ========================================================= */
-
         @media screen and (max-width: 380px) {
-
-            .container {
-                padding: 15px;
-            }
-
-            .profile-header {
-                padding: 17px;
-            }
 
             .profile-title {
                 font-size: 1.45rem !important;
@@ -228,13 +168,8 @@
                 font-size: 1.05rem !important;
             }
 
-            .content-box {
-                padding: 17px;
-            }
-
             p,
-            li,
-            .quote-box p {
+            li {
                 font-size: 0.90rem !important;
                 line-height: 1.55 !important;
             }
@@ -247,15 +182,9 @@
     </style>
 </head>
 
-
 <body>
 
 <div class="container">
-
-
-    <!-- =========================================================
-         PROFILE HEADER
-    ========================================================== -->
 
     <div class="profile-header">
 
@@ -264,242 +193,207 @@
         </div>
 
         <div class="profile-subtitle">
-            About Me | Personal Journey | Family & Life
+            Professional Profile & Personal Journey
         </div>
 
     </div>
 
 
-    <!-- =========================================================
-         WHO I AM
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>Who I Am</h2>
+        <h2>Introduction & Early Life</h2>
 
         <p>
-            <span class="highlight">I am Mehedi Alim Ayon.</span>
-            I was born on 10 May 1999 in Rangpur, Bangladesh, to my beloved father
-            Abu Hena Mostofa and mother Anjuman Ara Begum. My father is a retired
-            Bangladesh Army officer, and growing up as the son of a military man
-            had a profound influence on my personality, discipline, courage and
-            sense of responsibility.
+            <span class="highlight">Who I Am:</span>
+            I am Mehedi Alim Ayon, born on 10 May 1999 in Rangpur, Bangladesh,
+            to my beloved father Abu Hena Mostofa and mother Anjuman Ara Begum.
+            My father is a retired Bangladesh Army officer, and growing up as
+            the son of a military man had a strong influence on my discipline,
+            courage, responsibility and personality.
         </p>
 
         <p>
-            From childhood, I was energetic, adventurous, determined and naturally
-            curious. I was never afraid of taking responsibility or standing in
-            front of people. My parents always encouraged me to learn, explore,
-            remain disciplined and become independent in life.
+            From childhood, I was energetic, adventurous, determined and
+            independent by nature. My parents always encouraged me to learn,
+            remain disciplined and develop myself through education and
+            experience.
         </p>
 
         <p>
-            One of the strongest principles I learned from my father was
-            <span class="highlight">self-dependence.</span>
-            He taught me through his own life that a person should first learn
-            to stand on his own feet, take responsibility for his decisions and
-            work hard before expecting anything from others.
+            One of the most important lessons I received from my father was the
+            value of <span class="highlight">self-dependence, discipline and responsibility.</span>
+            Those principles have remained an important part of my life.
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         CHILDHOOD & EDUCATION
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>Childhood, Education & Academic Journey</h2>
+        <h2>Education & Academic Journey</h2>
 
         <p>
-            Because of my father's military career, I spent different stages of
-            my educational life in different places. This gave me the opportunity
-            to experience different environments, cultures and communities from
-            an early age.
+            Because of my father's military career, I spent different stages
+            of my education in different places. This helped me develop the
+            ability to adapt quickly to new environments and people.
         </p>
 
         <ul>
 
             <li>
                 <span class="highlight">Primary Education:</span>
-                My early schooling took place in different locations, including
-                Balya and Cumilla, before continuing at Adamjee Cantonment School
-                & College.
+                I studied in different locations during my early schooling
+                before continuing at Adamjee School & College.
             </li>
 
             <li>
                 <span class="highlight">PSC:</span>
-                I achieved a Golden GPA 5 in my Primary School Certificate
-                examination.
+                I achieved Golden GPA 5 in my Primary School Certificate.
             </li>
 
             <li>
                 <span class="highlight">JSC:</span>
-                I completed my Junior School Certificate from Rangpur
-                Cantonment Public School & College with GPA 5.
+                I completed my JSC from Rangpur Cantonment Public School &
+                College with GPA 5.
             </li>
 
             <li>
                 <span class="highlight">SSC:</span>
-                I completed my Secondary School Certificate from Rangpur
-                Cantonment Public School & College with Golden GPA 5.
+                I completed my SSC from Rangpur Cantonment Public School &
+                College with Golden GPA 5.
             </li>
 
         </ul>
 
         <p>
-            Throughout my academic life, by the grace of Almighty Allah,
-            I remained consistent in my studies and always tried to achieve
-            the highest possible result.
+            By the grace of Almighty Allah, I remained consistent throughout
+            my academic life and always tried to achieve the highest possible
+            result.
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         BNCC JOURNEY
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>BNCC, Leadership & The Beginning of My Confidence</h2>
+        <h2>BNCC, Leadership & Confidence</h2>
 
         <p>
-            One of the most important chapters of my early life was my involvement
-            with the <span class="highlight">Bangladesh National Cadet Corps (BNCC)</span>.
-            I joined BNCC during my school years, and this experience transformed
-            many aspects of my personality.
+            One of the most influential chapters of my school life was my
+            involvement with the
+            <span class="highlight">Bangladesh National Cadet Corps (BNCC).</span>
         </p>
 
         <p>
-            BNCC taught me discipline, leadership, courage, public speaking,
-            teamwork, communication, management and the ability to make decisions
-            under pressure. It was one of the most important platforms that
-            helped me become confident in front of people.
+            I joined BNCC during my school years, and the experience changed
+            many aspects of my personality. It taught me discipline, leadership,
+            teamwork, public speaking, communication, confidence and decision
+            making.
         </p>
 
         <p>
-            I participated in numerous BNCC camps, quiz competitions, debates,
-            cultural programs, drills and other activities. Through dedication
-            and hard work, I received various awards, medals and recognitions.
+            I participated in various quiz competitions, cultural programs,
+            debates, BNCC camps, drills and other activities. Through my
+            dedication, I received several medals, awards and achievements.
         </p>
 
         <p>
-            At a remarkably young age, I was entrusted with leadership
-            responsibilities within my division. I also had the honour of
-            receiving recognition for my drill performance and leadership
-            abilities.
+            At a young age, I was given leadership responsibilities within
+            my division. I also received recognition for my drill performance
+            and leadership abilities.
         </p>
 
         <p>
-            One of the memorable achievements of my BNCC journey was being
-            selected as one of only a few cadets from Bangladesh for an
-            international cadet ambassador tour to Karnataka, India. The
-            experience broadened my understanding of leadership, teamwork,
-            culture and international exposure.
+            One of the most memorable achievements of my BNCC journey was being
+            selected as one of only a few cadets from Bangladesh for a cadet
+            ambassador tour to Karnataka, India.
         </p>
 
         <p>
-            I participated in multiple camps and frequently served in leadership
-            responsibilities. These experiences gave me a strong foundation in
+            These experiences became the foundation of my
             <span class="highlight">
-            leadership, communication, confidence, convincing ability and
-            people management.
+            communication skills, leadership ability, convincing power,
+            team management and confidence.
             </span>
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         PERSONALITY & INTERESTS
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>My Personality, Interests & Passions</h2>
+        <h2>My Personality & Interests</h2>
 
         <p>
-            I have always considered myself a person who enjoys learning,
-            exploring and taking responsibility. I naturally like challenges
-            and I enjoy situations where I have to think quickly and find
-            practical solutions.
+            I have always enjoyed taking responsibility, learning new things
+            and facing challenges. I naturally like situations where I need
+            to think quickly and find practical solutions.
         </p>
 
         <p>
             Personally, I love sports, especially
             <span class="highlight">football.</span>
-            I also have a strong passion for personal appearance, fashion and
-            dressing well. I enjoy collecting shoes, perfumes, shirts, T-shirts,
-            traditional Panjabi and other clothing items.
+            I also have a strong passion for dressing well and maintaining
+            a well-organized personal appearance.
         </p>
 
         <p>
-            Another major fascination of mine is
-            <span class="highlight">cars.</span>
-            I have always been interested in automobiles and I enjoy learning
-            about different types of vehicles.
+            I enjoy collecting shoes, perfumes, T-shirts, shirts, Panjabi and
+            different types of clothing. Another major fascination of mine is
+            <span class="highlight">cars and automobiles.</span>
         </p>
 
         <p>
-            For me, looking organized is not simply about appearance. It is
-            connected with discipline, confidence and self-respect.
+            For me, personal appearance represents confidence, discipline and
+            self-respect.
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         UNIVERSITY & FAMILY LIFE
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>University Life & The Beginning of My Family</h2>
+        <h2>University Life & Family</h2>
 
         <p>
-            After completing my school and college education, I joined
-            <span class="highlight">Bangladesh Agricultural University (BAU)</span>.
-            My university life became one of the most important chapters of
+            After completing my earlier education, I joined
+            <span class="highlight">Bangladesh Agricultural University.</span>
+            My university life became one of the most important periods of
             my personal and professional development.
         </p>
 
         <p>
-            It was also during my university life that an important chapter
-            of my personal life began. My wife,
-            <span class="highlight">Nusrat Nasrin,</span>
-            was my immediate junior at Bangladesh Agricultural University and
-            was associated with the Fisheries Faculty and Sultanah Ziahan Hall.
+            During my university life, I met my wife,
+            <span class="highlight">Nusrat Nasrin.</span>
+            She was my immediate junior at Bangladesh Agricultural University
+            and was associated with the Fisheries Faculty and Sultanah Ziahan Hall.
         </p>
 
         <p>
             Through university life, we came to know each other and eventually
-            became life partners. Today, we are together in Malaysia, continuing
-            our education, professional careers and family journey.
+            became life partners. Today, we are living together in Malaysia
+            and continuing our academic and professional journeys.
         </p>
 
     </div>
 
-
-    <!-- =========================================================
-         MY WIFE
-    ========================================================== -->
 
     <div class="content-box">
 
         <h2>My Wife & Her Journey</h2>
 
         <p>
-            My wife, <span class="highlight">Nusrat Nasrin,</span> is one of
-            the most important sources of support in my life.
+            My wife, <span class="highlight">Nusrat Nasrin</span>, is one of
+            the strongest sources of support in my life.
         </p>
 
         <p>
             She completed her education at Bangladesh Agricultural University
-            and later pursued an
+            and later completed an
             <span class="highlight">MBA in Kuala Lumpur, Malaysia.</span>
+        </p>
+
+        <p>
             She is currently enrolled in a research program in
             <span class="highlight">Aquaculture</span> at a university in
             Malaysia.
@@ -512,41 +406,33 @@
         </p>
 
         <p>
-            Her dedication to research, education and professional development
-            continues to inspire me, and we support each other in our individual
-            journeys.
+            Her dedication to education, research and professional development
+            continues to inspire me, and we support each other throughout
+            our journey.
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         MY BROTHER
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>My Family & My Younger Brother</h2>
+        <h2>My Younger Brother</h2>
 
         <p>
-            I come from a family where my parents have always been my strongest
-            source of support. My father and mother currently live in Bangladesh,
-            while my wife, my younger brother and I are currently based in
-            Malaysia.
+            I have one younger brother,
+            <span class="highlight">Wasif Ishaq Orpon.</span>
         </p>
 
         <p>
-            My younger brother,
-            <span class="highlight">Wasif Ishaq Orpon,</span>
-            is also currently in Malaysia. He is pursuing his studies at
-            <span class="highlight">Asia Metropolitan University</span>
-            while also working alongside his education.
+            He is currently living in Malaysia and studying at
+            <span class="highlight">Asia Metropolitan University.</span>
+            Alongside his studies, he is also working and gaining professional
+            experience.
         </p>
 
         <p>
-            We are two brothers, and although we are living away from our parents,
-            their love, guidance and blessings remain an essential part of our
-            lives.
+            My parents currently live in Bangladesh while my wife, my younger
+            brother and I are currently based in Malaysia.
         </p>
 
         <p>
@@ -557,25 +443,21 @@
     </div>
 
 
-    <!-- =========================================================
-         MY VALUES
-    ========================================================== -->
-
     <div class="content-box">
 
         <h2>My Values & Life Philosophy</h2>
 
         <p>
-            I believe that success is not simply about money, position or
-            recognition. For me, true success means becoming capable enough
+            I believe that success is not only about money, position or
+            recognition. For me, real success means becoming capable enough
             to take responsibility for myself and my family.
         </p>
 
         <p>
-            From childhood, I have wanted to become
+            Since childhood, I have always wanted to become
             <span class="highlight">self-dependent.</span>
-            My parents always had the ability to support me, but I personally
-            wanted to build my own path and learn how to stand on my own feet.
+            My parents have always supported me, but I personally wanted to
+            build my own path and learn how to stand on my own feet.
         </p>
 
         <p>
@@ -585,22 +467,17 @@
         </p>
 
         <p>
-            I also believe that every difficult situation teaches something.
-            The struggles, failures, uncertainty and challenges of life are not
-            necessarily obstacles; sometimes they are the training ground for
-            the person we are meant to become.
+            I also believe that difficult situations are often the greatest
+            teachers. Every struggle, challenge and uncertain period of life
+            teaches us something that success alone cannot teach.
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         FAMILY SUPPORT
-    ========================================================== -->
-
     <div class="content-box">
 
-        <h2>The People Behind My Journey</h2>
+        <h2>My Family — My Greatest Support</h2>
 
         <p>
             Whatever I have achieved so far, I never consider it a journey
@@ -609,12 +486,12 @@
 
         <p>
             My parents, my wife, my younger brother and my entire family have
-            always been my strongest support system. They have encouraged me,
-            trusted me and never stopped me from pursuing my dreams.
+            always been my strongest support system. They have trusted me,
+            encouraged me and supported me in every important decision of my life.
         </p>
 
         <p>
-            Their prayers, sacrifices and support give me the strength to keep
+            Their prayers, love and sacrifices give me the strength to continue
             moving forward even when the road becomes difficult.
         </p>
 
@@ -626,24 +503,20 @@
     </div>
 
 
-    <!-- =========================================================
-         PERSONAL QUOTE
-    ========================================================== -->
+    <div class="content-box">
 
-    <div class="quote-box">
+        <h2>My Personal Belief</h2>
 
         <p>
-            “The day I become capable of fulfilling my responsibilities toward
+            <span class="highlight">
+            "The day I become capable of fulfilling my responsibilities toward
             my parents, earning their respect and making my family proud —
-            that will be the day I will truly consider myself successful.”
+            that will be the day I will truly consider myself successful."
+            </span>
         </p>
 
     </div>
 
-
-    <!-- =========================================================
-         FINAL MESSAGE
-    ========================================================== -->
 
     <div class="content-box">
 
@@ -651,40 +524,39 @@
 
         <p>
             Today, I am living in Malaysia with my family and continuing my
-            professional and personal journey. I am grateful for every chapter
-            of my life — the easy moments, the difficult moments, the lessons,
-            the people I met and every opportunity Allah has given me.
+            personal, academic and professional journey.
         </p>
 
         <p>
-            I know that my journey is far from complete. There are still many
-            things I want to learn, many goals I want to achieve and many
+            I am grateful for every chapter of my life — the good moments,
+            difficult moments, achievements, struggles and every person who
+            has contributed something meaningful to my journey.
+        </p>
+
+        <p>
+            I know that my journey is not finished. There are still many goals
+            I want to achieve, many things I want to learn and many
             responsibilities I want to fulfil.
         </p>
 
         <p>
-            With the blessings of my parents, the support of my family, the
-            lessons of my past and the mercy of Almighty Allah, I will continue
-            moving forward with courage, humility and determination.
+            With the blessings of my parents, the support of my family and
+            the mercy of Almighty Allah, I will continue moving forward with
+            courage, humility and determination.
         </p>
 
         <p>
             <span class="highlight">
-                Please keep me and my family in your prayers.
+            Please keep me and my family in your prayers.
             </span>
         </p>
 
     </div>
 
 
-    <!-- =========================================================
-         BACK BUTTON
-    ========================================================== -->
-
     <a href="index.html" class="back-btn">
         ← BACK TO HOME
     </a>
-
 
 </div>
 
