@@ -87,7 +87,7 @@
 
         .photo-caption {
             padding: 12px;
-            font-size: 13px;
+            font-size: 14px;
             color: #f3f4f6;
             text-align: center;
             background: rgba(17, 24, 39, 0.9);
@@ -159,11 +159,20 @@
             if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
         });
 
+        // ফাইলের নাম থেকে ফরম্যাটিং করে ক্যাপশন বের করার ফাংশন
+        function getCleanCaption(fileName) {
+            // ফাইলের এক্সটেনশন (.jpg, .png ইত্যাদি) সরিয়ে ফেলা
+            let nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+            
+            // শুরুর সিরিয়াল নম্বর (যেমন: 01, 02, 1, 2) এবং তার পরের স্পেস/ড্যাশ/আন্ডারস্কোর মুছে ফেলা
+            let cleanText = nameWithoutExt.replace(/^[0-9]+[\s\-_.]*/, '').trim();
+
+            return cleanText;
+        }
+
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
             const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
-            
-            // orderBy=name যোগ করা হয়েছে যাতে গুগল ড্রাইভের ফাইলগুলো নামের ক্রমানুসারে (01, 02, 03) লোড হয়
             const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100`;
 
             try {
@@ -174,7 +183,9 @@
                 if (data.files && data.files.length > 0) {
                     data.files.forEach(file => {
                         const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
-                        const caption = file.description ? file.description : '';
+                        
+                        // যদি ড্রাইভে ডেসক্রিপশন দেওয়া থাকে তবে সেটি নেবে, না থাকলে ফাইলের নাম থেকে অটো ক্যাপশন তৈরি করবে
+                        const caption = file.description ? file.description : getCleanCaption(file.name);
 
                         const card = document.createElement('div');
                         card.className = 'photo-card';
