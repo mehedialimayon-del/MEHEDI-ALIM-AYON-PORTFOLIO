@@ -156,8 +156,8 @@
 
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
-            // ক্যুয়েরি সহজ করে দেওয়া হয়েছে যাতে ফোল্ডারের ভেতরের সব ফাইল সঠিকভাবে স্ক্যান হয়
-            const url = `https://www.googleapis.com/drive/v3/files?q='${TARGET_FOLDER_ID}'+in+parents&key=${API_KEY}&fields=files(id,name,description,mimeType)&pageSize=100`;
+            // ট্র্যাশ বাদে ছবি খোঁজার ইউনিভার্সাল ফিল্টার
+            const url = `https://www.googleapis.com/drive/v3/files?q=mimeType+contains+'image/'+and+trashed=false&key=${API_KEY}&fields=files(id,name,description,parents)&pageSize=100`;
 
             try {
                 const res = await fetch(url);
@@ -165,28 +165,25 @@
                 container.innerHTML = '';
 
                 if (data.files && data.files.length > 0) {
-                    // ফোল্ডার বাদ দিয়ে শুধু ফাইলগুলো ফিল্টার করা
-                    const validFiles = data.files.filter(f => f.mimeType !== 'application/vnd.google-apps.folder');
+                    // নির্দিষ্ট ফোল্ডার বা সাবফোল্ডারের ফাইল ফিল্টার করা
+                    const matchedFiles = data.files.filter(f => f.parents && f.parents.includes(TARGET_FOLDER_ID));
+                    const filesToRender = matchedFiles.length > 0 ? matchedFiles : data.files;
 
-                    if(validFiles.length > 0) {
-                        validFiles.forEach(file => {
-                            const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
-                            const caption = file.description ? file.description : '';
+                    filesToRender.forEach(file => {
+                        const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
+                        const caption = file.description ? file.description : '';
 
-                            const card = document.createElement('div');
-                            card.className = 'photo-card';
-                            card.onclick = () => openLightbox(imgUrl, caption);
-                            card.innerHTML = `
-                                <img src="${imgUrl}" alt="${file.name}" loading="lazy" ondragstart="return false;">
-                                ${caption ? `<div class="photo-caption">${caption}</div>` : ''}
-                            `;
-                            container.appendChild(card);
-                        });
-                    } else {
-                        container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found inside the folder!</p>';
-                    }
+                        const card = document.createElement('div');
+                        card.className = 'photo-card';
+                        card.onclick = () => openLightbox(imgUrl, caption);
+                        card.innerHTML = `
+                            <img src="${imgUrl}" alt="${file.name}" loading="lazy" ondragstart="return false;">
+                            ${caption ? `<div class="photo-caption">${caption}</div>` : ''}
+                        `;
+                        container.appendChild(card);
+                    });
                 } else {
-                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No files found!</p>';
+                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found!</p>';
                 }
             } catch (err) {
                 console.error(err);
