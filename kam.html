@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Account Manager - Mehedi Alim Ayon</title>
+    <title>Management & Campus - Mehedi Alim Ayon</title>
     <style>
         body { 
             margin: 0; 
@@ -15,103 +15,189 @@
         }
         .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        /* Large Logo Header Section */
-        .header-logo-container { 
+        /* Logo Container for 3 Logos in a Row */
+        .logo-container { 
             text-align: center; 
-            margin-bottom: 30px; 
+            margin-bottom: 20px; 
+            background: #ff7414; 
+            padding: 12px 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(255,116,20,0.5); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .logo { 
+            max-width: 100px; 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            object-fit: contain;
+        }
+
+        /* Designation Header Style */
+        .designation-header {
+            color: #ff7414;
+            font-size: 2.3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+        
+        h1, h2 { color: #ff7414; text-align: center; }
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.3rem; margin-top: 0; text-align: left; }
+
+        .content-box { 
             background: #1a202c; 
             padding: 30px; 
-            border-radius: 12px; 
+            border-radius: 10px; 
             border: 1px solid #ff7414; 
+            margin-bottom: 25px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
         }
-        .logo-row { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .logo { width: 200px; height: 200px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; }
         
-        /* Designation Section */
-        .designation { text-align: center; color: #ff7414; font-weight: bold; font-size: 2.2rem; margin-bottom: 30px; letter-spacing: 0.5px; }
-        
-        h2 { color: #ff7414; border-left: 5px solid #ff7414; padding-left: 15px; margin-top: 30px; font-size: 2.3rem; }
-        .content-box { background: #1a202c; padding: 30px; border-radius: 10px; border: 1px solid #ff7414; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        
-        /* হাইলাইট করা টেক্সটের স্টাইল */
-        .highlight { color: #ff7414; font-weight: bold; }
+        .back-btn { 
+            display: block; 
+            text-align: center; 
+            margin-top: 30px; 
+            padding: 18px;
+            background: #1a202c;
+            border: 2px solid #ff7414;
+            border-radius: 10px;
+            color: #ff7414; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.8rem; 
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #ff7414;
+            color: #ffffff;
+            transform: scale(1.02);
+        }
 
-        p { font-size: 2rem; line-height: 1.8; margin-bottom: 20px; color: #d1d5db; }
+        p { 
+            color: #d1d5db; 
+            font-size: 2rem; 
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+        ul { 
+            color: #d1d5db; 
+            padding-left: 25px; 
+        }
+        li { 
+            font-size: 2rem; 
+            margin-bottom: 15px; 
+        }
 
-        /* Buttons */
-        .btn-container { display: flex; gap: 15px; margin-top: 40px; }
-        .action-btn { flex: 1; padding: 18px; text-align: center; border-radius: 10px; font-weight: bold; font-size: 1.8rem; text-decoration: none; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .gallery-btn { background: #ff7414; color: #ffffff; border: 2px solid #ff7414; }
-        .gallery-btn:hover { background: #e0630f; transform: scale(1.02); }
-        .back-btn { background: #1a202c; color: #ff7414; border: 2px solid #ff7414; }
-        .back-btn:hover { background: #252b3b; transform: scale(1.02); }
+        ul li strong {
+            color: #ff7414;
+            font-size: 1.4rem;
+        }
 
-        ul { padding-left: 25px; color: #d1d5db; }
-        li { font-size: 2rem; margin-bottom: 15px; line-height: 1.7; }
+        @media screen and (max-width: 600px) {
+            .logo-container {
+                padding: 10px 15px !important;
+                margin-bottom: 20px !important;
+                border-radius: 9px !important;
+                max-width: 85% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                box-sizing: border-box !important;
+                gap: 10px !important;
+            }
+            .logo {
+                max-width: 55px !important;
+            }
+            .content-box p {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            .content-box h2 {
+                font-size: 1.10rem !important;
+                line-height: 1.3 !important;
+            }
+            .designation-header {
+                font-size: 1.10rem !important;
+                line-height: 1.3 !important;
+            }
+            ul li {
+                font-size: 0.95rem !important;
+            }
+            ul li strong {
+                font-size: 1.05rem !important;
+            }
+            .back-btn {
+                font-size: 0.90rem !important;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            .logo-container {
+                max-width: 80% !important;
+                padding: 8px 10px !important;
+                gap: 8px !important;
+            }
+            .logo {
+                max-width: 45px !important;
+            }
+            .content-box p {
+                font-size: 0.90rem !important;
+                line-height: 1.55 !important;
+            }
+            .content-box h2 {
+                font-size: 1.05rem !important;
+            }
+            .designation-header {
+                font-size: 1.05rem !important;
+            }
+            ul li {
+                font-size: 0.90rem !important;
+            }
+            ul li strong {
+                font-size: 1.0rem !important;
+            }
+            .back-btn {
+                font-size: 0.85rem !important;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo Header Section in order: PRAN, Eco Expo, Pinnacle Foods -->
-        <div class="header-logo-container">
-            <div class="logo-row">
-                <img src="https://i.postimg.cc/kRcXyXGQ/pran-logo-png-seeklogo-455206.png" alt="PRAN Logo" class="logo">
-                <img src="https://i.postimg.cc/q6LMGMq8/images.png" alt="Eco Expo Logo" class="logo">
-                <img src="https://i.postimg.cc/V0RLFLv9/images-(3).jpg" alt="Pinnacle Foods Logo" class="logo">
-            </div>
+        <!-- Three Logos in a Row (PRAN, Eco Expo, Pinnacle Foods) -->
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/pran-logo-placeholder.png" alt="PRAN Logo" class="logo">
+            <img src="https://i.postimg.cc/eco-expo-logo-placeholder.png" alt="Eco Expo Logo" class="logo">
+            <img src="https://i.postimg.cc/pinnacle-logo-placeholder.png" alt="Pinnacle Foods Logo" class="logo">
+        </div>
+        
+        <div class="designation-header">
+            Mehedi Alim Ayon || Key Account Manager & Regional Manager || Sales Management
         </div>
 
-        <div class="designation">
-            Mehedi Alim Ayon || Project Manager || Sales Representative || Regional Manager || Key Account Manager
-        </div>
-
-        <!-- Eco Expo Section -->
         <div class="content-box">
-            <h2>Eco Expo (Foundation & Execution)</h2>
-            <p><span class="highlight">Overview:</span> Eco Expo served as my primary learning ground where I worked as a Project Manager, handling large-scale international exhibitions and trade fairs, including prominent events like the China-Bangladesh Friendship Fair.</p>
-            <p><span class="highlight">Key Learnings & Skills Acquired:</span></p>
+            <h2>Sales Management & Key Account Operations</h2>
+            <p>With extensive experience in fast-moving consumer goods (FMCG) sales management, I specialize in key account operations, modern trade execution, and regional retail expansion. Leading strategic initiatives across prominent platforms like Pinnacle Foods Sdn Bhd (an affiliate of PRAN-RFL Group) and Eco Expo has allowed me to drive high-volume market penetration and robust commercial growth.</p>
+        </div>
+
+        <div class="content-box">
+            <h2>Core Competencies & Strategic Execution</h2>
+            <p>Through hands-on leadership in retail merchandising, promotional campaigns, and trade marketing, I have mastered essential industry capabilities:</p>
             <ul>
-                <li><span class="highlight">Event Management:</span> Gained deep expertise in executing complex international fairs and trade operations.</li>
-                <li><span class="highlight">Communication & Crisis Handling:</span> Mastered good communication skills and the ability to handle instant environment situations and crisis management under pressure.</li>
-                <li><span class="highlight">Instant Decision Making:</span> Developed sharp capabilities in taking immediate, practical decisions on the ground.</li>
-                <li><span class="highlight">Client & Team Management:</span> Enhanced professional buyer-client handling, customer relationship management, and leadership skills.</li>
+                <li><strong>Key Account Management:</strong> Building and sustaining strong commercial partnerships with major hypermarket chains and modern trade outlets.</li>
+                <li><strong>Trade Initiatives & Merchandising:</strong> Structuring innovative product combo promotions, high-impact planograms, and regional sales campaigns.</li>
+                <li><strong>Team Leadership & Coordination:</strong> Directing regional sales forces, streamlining operational workflows, and aligning team execution with corporate targets.</li>
+                <li><strong>Strategic Problem Solving:</strong> Delivering rapid, data-driven solutions to optimize supply chain flows and maximize shelf-space visibility.</li>
             </ul>
         </div>
 
-        <!-- Pinnacle Foods & PRAN Journey & Struggle -->
-        <div class="content-box">
-            <h2>Pinnacle Foods (PRAN-RFL Group) - Journey & Hard Work</h2>
-            <p><span class="highlight">Background & Joining Struggle:</span> Pinnacle Foods (M) Sdn Bhd is a key affiliate of the globally recognized PRAN-RFL Group (established in 1981). My breakthrough into this organization came when I met Mr. Parvez (Head of Sales, Modern Trade & Key Account Manager). Following a rigorous interview process and evaluating my potential, I successfully secured my position.</p>
-            <p><span class="highlight">Leadership Appreciation & Rapid Growth:</span> Despite being one of the youngest team members, I earned this major responsibility in a remarkably short span through my dedication. Our Managing Director, Mr. Mohammad Salim Bhuiyan, Group CEO Mr. Ahsan Khan Chowdhury, along with Mr. Parvez and other team members, have always shown immense appreciation for my sincerity and hard work.</p>
-            <p><span class="highlight">Effort & Future Commitment:</span> Currently, I am proudly serving in triple capacities as a Zone Representative, Regional Manager, and Key Account Manager. By the infinite grace of Almighty Allah, I pray to stay healthy and strong to continuously push forward. With my relentless hard work, good thinking capabilities, and execution skills, my personal goal is to drive Pinnacle Foods to become the undisputed Number 1 company in Malaysia.</p>
-        </div>
-
-        <!-- Career Achievements -->
-        <div class="content-box">
-            <h2>Career Achievements & Milestones</h2>
-            <ul>
-                <li><span class="highlight">Sales Representative:</span> Honored as the "Best Performer" in my first year for exceptional target achievement.</li>
-                <li><span class="highlight">Regional Manager:</span> Consistently awarded "Best Manager of the Year" alongside multiple "Best Dedication" awards for driving outstanding regional growth.</li>
-                <li><span class="highlight">Key Account Manager:</span> Successfully spearheaded the listing of 17 new market segments and secured high-value retail listings in hypermarket giants like Giant and NSK Hypermarket.</li>
-            </ul>
-        </div>
-
-        <!-- Future Vision -->
-        <div class="content-box">
-            <h2>The Future Vision of Key Account Management</h2>
-            <p><span class="highlight">Strategic Roadmap:</span> Moving forward, the role of a Key Account Manager focuses on evolving from traditional sales to becoming a strategic market driver. My future roadmap includes:</p>
-            <ul>
-                <li><span class="highlight">Strategic Partnerships:</span> Deepening long-term relationships with major retail chains and hypermarkets.</li>
-                <li><span class="highlight">Data-Driven & AI Integration:</span> Utilizing advanced market analytics and digital tracking frameworks to optimize supply chain efficiency and product visibility.</li>
-                <li><span class="highlight">Expansion & Leadership:</span> Scaling multi-unit listings and spearheading wider regional market penetration.</li>
-            </ul>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="btn-container">
-            <a href="gallery.html" class="action-btn gallery-btn">VIEW SUCCESS STORIES IN GALLERY →</a>
-            <a href="index.html" class="action-btn back-btn">← BACK TO HOME</a>
-        </div>
+        <a href="index.html" class="back-btn">← BACK TO HOME</a>
     </div>
 </body>
 </html>
