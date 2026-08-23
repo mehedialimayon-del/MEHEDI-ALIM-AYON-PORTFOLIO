@@ -596,24 +596,23 @@
         updateCounter();
     });
 
-    // 3. VISITED BUTTON TRACKING
+        // 3. REFRESH-SAFE BUTTON CLICK EFFECT (NO PERSISTENT ORANGE)
     document.addEventListener("DOMContentLoaded", function () {
         if(textArray.length) setTimeout(type, 1000);
 
+        // CLEAR ANY OLD SESSION DATA ON RELOAD
+        sessionStorage.clear();
+
         const buttons = document.querySelectorAll(".menu-button");
         buttons.forEach(button => {
-            const href = button.getAttribute("href");
-
-            if (sessionStorage.getItem("visited_" + href)) {
-                button.classList.add("visited-btn");
-            }
-
+            // TOUCH / CLICK RESPONSE
             button.addEventListener("click", function () {
-                sessionStorage.setItem("visited_" + href, "true");
+                buttons.forEach(b => b.classList.remove("visited-btn"));
                 this.classList.add("visited-btn");
             });
         });
     });
+
 </script>
 
 </body>
