@@ -60,10 +60,31 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
         }
         
+        .gallery-btn { 
+            display: block; 
+            text-align: center; 
+            margin-top: 25px; 
+            margin-bottom: 15px; 
+            padding: 18px;
+            background: #ff7414;
+            border: 2px solid #ff7414;
+            border-radius: 10px;
+            color: #ffffff; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.8rem; 
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255,116,20,0.4);
+        }
+        .gallery-btn:hover {
+            background: #e0630e;
+            transform: scale(1.02);
+        }
+
         .back-btn { 
             display: block; 
             text-align: center; 
-            margin-top: 30px; 
+            margin-top: 20px; 
             padding: 18px;
             background: #1a202c;
             border: 2px solid #ff7414;
@@ -132,7 +153,7 @@
             ul li strong {
                 font-size: 1.05rem !important;
             }
-            .back-btn {
+            .gallery-btn, .back-btn {
                 font-size: 0.90rem !important;
             }
         }
@@ -162,7 +183,7 @@
             ul li strong {
                 font-size: 1.0rem !important;
             }
-            .back-btn {
+            .gallery-btn, .back-btn {
                 font-size: 0.85rem !important;
             }
         }
@@ -206,6 +227,9 @@
                 <li><strong>Dynamic Team Leadership:</strong> Guiding sales teams with sharp decision-making and fostering collaborative synergy to surpass organizational targets.</li>
             </ul>
         </div>
+
+        <!-- Gallery Navigation Button -->
+        <a href="gallery.html" class="gallery-btn">🖼️ VIEW CAMPAIGN & RETAIL GALLERY</a>
 
         <a href="index.html" class="back-btn">← BACK TO HOME</a>
     </div>
