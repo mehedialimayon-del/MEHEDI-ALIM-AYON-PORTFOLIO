@@ -10,38 +10,53 @@
       color: #ffffff;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 15px;
     }
 
     h1 {
       text-align: center;
       color: #ff6600;
-      margin-top: 10px;
-      margin-bottom: 25px;
+      margin-top: 5px;
+      margin-bottom: 20px;
       letter-spacing: 2px;
       text-transform: uppercase;
+      font-size: 24px;
     }
 
-    /* ফিল্টার বাটন সমূহের কন্টেইনার */
+    /* ফিল্টার বাটনগুলোর কন্টেইনার: ফোনের স্ক্রিনে পাশাপাশি যেন অনেকগুলো বাটন ধরে */
     .filter-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 30px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 8px;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: #ff6600 #1c2541;
+    }
+
+    /* ক্রোম বা ব্রাউজারের জন্য স্ক্রলবার স্টাইল */
+    .filter-container::-webkit-scrollbar {
+      height: 4px;
+    }
+    .filter-container::-webkit-scrollbar-thumb {
+      background: #ff6600;
+      border-radius: 4px;
     }
 
     .filter-btn {
       background-color: #1c2541;
       border: 2px solid #ff6600;
       color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 25px;
+      padding: 8px 14px;
+      border-radius: 20px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 13px;
+      white-space: nowrap;
       transition: all 0.3s ease;
       outline: none;
+      flex-shrink: 0;
     }
 
     .filter-btn:hover, .filter-btn.active {
@@ -50,12 +65,12 @@
       box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
     }
 
-    /* গ্যালারি গ্রিড লেআউট */
+    /* গ্যালারি গ্রিড লেআউট: ছবিগুলো বড় ও আকর্ষণীয় দেখানোর জন্য */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 10px;
+      gap: 15px;
+      padding: 5px;
     }
 
     .gallery-card {
@@ -72,7 +87,7 @@
 
     .gallery-card img {
       width: 100%;
-      height: 260px;
+      height: 280px;
       object-fit: cover;
       display: block;
     }
@@ -91,12 +106,12 @@
 
   <h1>PORTFOLIO GALLERY</h1>
 
-  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ -->
+  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ (ফোনে পাশাপাশি স্ক্রল বা শো করার জন্য অপ্টিমাইজড) -->
   <div class="filter-container">
-    <button class="filter-btn active" onclick="loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3', this)">PRAN GROUP MALAYSIA</button>
+    <button class="filter-btn active" onclick="loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3', this)">PRAN GROUP</button>
     <button class="filter-btn" onclick="loadDrivePhotos('1_b4DW79bCQwzTlDoDiPsfTquRyc0ZfI7', this)">ECO EXPO</button>
     <button class="filter-btn" onclick="loadDrivePhotos('1fWtIlzVzsFLduSDAqIYVunQJkk7JmJ27', this)">ACADEMIC</button>
-    <button class="filter-btn" onclick="loadDrivePhotos('1l6U7PdXmhRQYIa03nMlMWU86HewGkaDv', this)">FAMILY</button>
+    <button class="filter-btn" onclick="loadDrivePhotos('1l6U7PdXmhRQYIa03nMlMWU86HewGkaDv', thisENAME', this)">FAMILY</button>
     <button class="filter-btn" onclick="loadDrivePhotos('1SfoC1ZilQlpFbdKrpYQhSu3_lyngpqqf', this)">MYSELF</button>
   </div>
 
@@ -110,7 +125,6 @@
     const API_KEY = 'YOUR_GOOGLE_DRIVE_API_KEY'; 
 
     async function loadDrivePhotos(folderId, btnElement) {
-      // অ্যাক্টিভ বাটনের স্টাইল চেঞ্জ করা
       if (btnElement) {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         btnElement.classList.add('active');
@@ -119,17 +133,15 @@
       const gallery = document.getElementById('gallery');
       gallery.innerHTML = '<div class="status-msg">ছবি লোড হচ্ছে...</div>';
 
-      // গুগল ড্রাইভ থেকে নির্দিষ্ট ফোল্ডারের ফাইল আনার URL
       const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents+and+trashed=false&fields=files(id,name,mimeType)&key=${API_KEY}`;
 
       try {
         const response = await fetch(url);
         const data = await response.json();
 
-        gallery.innerHTML = ''; // আগের ছবি ক্লিয়ার করা
+        gallery.innerHTML = '';
 
         if (data.files && data.files.length > 0) {
-          // শুধু ইমেজ ফাইলগুলো ফিল্টার করা
           const imageFiles = data.files.filter(file => file.mimeType.startsWith('image/'));
 
           if (imageFiles.length > 0) {
@@ -143,7 +155,7 @@
               img.loading = 'lazy';
 
               card.appendChild(img);
-              gallery.appendChild(card);
+            gallery.appendChild(card);
             });
           } else {
             gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
@@ -152,12 +164,11 @@
           gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
         }
       } catch (error) {
-        gallery.innerHTML = '<div class="status-msg">ছবি লোড করতে সমস্যা হয়েছে। অনুগ্রহ করে এপিআই কি (API Key) চেক করুন।</div>';
+        gallery.innerHTML = '<div class="status-msg">ছবি লোড করতে সমস্যা হয়েছে। এপিআই কি (API Key) চেক করুন।</div>';
         console.error("Error fetching images:", error);
       }
     }
 
-    // পেজ লোড হওয়ার পর ডিফল্টভাবে PRAN GROUP MALAYSIA ফোল্ডারের ছবি দেখাবে
     window.onload = () => {
       loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3');
     };
