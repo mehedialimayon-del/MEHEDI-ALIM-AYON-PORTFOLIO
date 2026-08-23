@@ -12,7 +12,6 @@
     >
 
     <style>
-
         /* =========================================================
            GLOBAL RESET
         ========================================================= */
@@ -52,7 +51,6 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-
         /* =========================================================
            PAGE
         ========================================================= */
@@ -64,52 +62,44 @@
             overflow-x: hidden;
         }
 
-
         /* =========================================================
-           HOVER
+           HOVER & GLASS EFFECTS
         ========================================================= */
 
         .btn-hover {
-            transition:
-                transform 0.25s ease,
-                filter 0.25s ease;
+            transition: all 0.3s ease-in-out !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         .btn-hover:hover {
-            transform: scale(1.02);
+            transform: translateY(-3px) scale(1.02) !important;
+            border-color: #ff7414 !important;
+            box-shadow: 0 8px 20px rgba(255, 116, 20, 0.25);
             filter: brightness(1.15);
         }
 
-
         /* =========================================================
            HERO / HEADER IMAGE
-           DESKTOP — ORIGINAL LOOK
         ========================================================= */
 
         .hero {
             width: 100%;
             height: 60vh;
             min-height: 420px;
-
             position: relative;
             overflow: hidden;
-
             background: #111827;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
         }
 
         .hero-image {
             width: 100%;
             height: 100%;
-
             display: block;
-
             object-fit: cover;
             object-position: center 5%;
         }
-
 
         /* =========================================================
            SOCIAL ICONS
@@ -117,33 +107,24 @@
 
         .social-icons {
             position: absolute;
-
             top: 20px;
             right: 20px;
-
             display: flex;
             gap: 10px;
-
             z-index: 20;
         }
 
         .social-icons a {
             width: 45px;
             height: 45px;
-
             flex: 0 0 45px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border-radius: 50%;
-
             color: #ffffff;
             text-decoration: none;
-
             font-size: 20px;
-
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
@@ -163,838 +144,380 @@
             border: 1px solid #25d366;
         }
 
-
         /* =========================================================
            HERO GRADIENT
         ========================================================= */
 
         .hero-gradient {
             position: absolute;
-
             left: 0;
             right: 0;
             bottom: 0;
-
             width: 100%;
             height: 50%;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(8, 12, 20, 0),
-                    rgba(8, 12, 20, 1)
-                );
-
+            background: linear-gradient(to bottom, rgba(8, 12, 20, 0), rgba(8, 12, 20, 1));
             pointer-events: none;
-
             z-index: 2;
         }
 
-
         /* =========================================================
            MAIN CONTENT
-           DESKTOP — ORIGINAL FORMAT
         ========================================================= */
 
         .main-content {
             width: 100%;
             max-width: 850px;
-
             margin: -50px auto 0;
-
             padding: 20px 20px 40px;
-
             text-align: center;
-
             position: relative;
             z-index: 10;
         }
 
-
         /* =========================================================
-           NAME
+           NAME & TYPEWRITER PROFESSION
         ========================================================= */
 
         .name {
             margin: 0 0 10px;
-
             color: #ffffff;
-
             font-size: 42px;
             line-height: 1.15;
-
             font-weight: 900;
-
             letter-spacing: 1.5px;
-
-            text-shadow:
-                0 4px 15px rgba(0, 0, 0, 0.8);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
         }
-
-
-        /* =========================================================
-           PROFESSION
-        ========================================================= */
 
         .profession {
             margin: 0 0 30px;
-
             color: #ff7414;
-
             font-size: 16px;
             line-height: 1.35;
-
             font-weight: 800;
-
             letter-spacing: 1px;
-
             text-transform: uppercase;
+            min-height: 24px;
         }
 
+        .typed-text {
+            color: #ff7414;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #ff7414;
+            margin-left: 2px;
+            width: 3px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
 
         /* =========================================================
-           BUTTON ROW
+           BUTTON ROW & MENU BUTTONS
         ========================================================= */
 
         .button-row {
             width: 100%;
-
             display: flex;
-
             gap: 12px;
-
             margin-bottom: 14px;
         }
 
-
-        /* =========================================================
-           ALL MENU BUTTONS
-        ========================================================= */
-
         .menu-button {
             min-width: 0;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             padding: 10px;
-
             color: #ffffff;
-
             text-decoration: none;
-
             text-align: center;
-
             font-weight: 900;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #252b3b,
-                    #1a202c
-                );
-
+            background: linear-gradient(145deg, rgba(37, 43, 59, 0.8), rgba(26, 32, 44, 0.8));
             border: 2px solid #ff7414;
-
             border-radius: 10px;
-
             overflow: hidden;
-
             overflow-wrap: anywhere;
-
             word-break: normal;
-
             flex-shrink: 1;
         }
 
-
-        /* =========================================================
-           TOP THREE BUTTONS
-        ========================================================= */
-
         .top-button {
             flex: 1 1 0;
-
             min-height: 75px;
-
             font-size: 16px;
-
             line-height: 1.15;
         }
-
-
-        /* =========================================================
-           MIDDLE TWO BUTTONS
-        ========================================================= */
 
         .middle-button {
             flex: 1 1 0;
-
             height: 65px;
-
             font-size: 18px;
-
             line-height: 1.15;
         }
-
-
-        /* =========================================================
-           BOTTOM TWO BUTTONS
-        ========================================================= */
 
         .bottom-button {
             flex: 1 1 0;
-
             height: 65px;
-
             font-size: 18px;
-
             line-height: 1.15;
-
             background: #ff7414;
-
             border: 2px solid #ff7414;
         }
 
+        /* =========================================================
+           LIVE STATS / COUNTER SECTION
+        ========================================================= */
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0 10px;
+            gap: 12px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 15px 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 116, 20, 0.3);
+            text-align: center;
+            flex: 1;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-card h2 {
+            color: #ff7414;
+            font-size: 1.8rem;
+            margin: 0 0 4px 0;
+            font-weight: 900;
+        }
+
+        .stat-card p {
+            margin: 0;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #d1d5db;
+        }
 
         /* =========================================================
-           MOBILE
-           ONLY MOBILE CHANGES HERE
-           DESKTOP REMAINS UNCHANGED
+           MOBILE RESPONSIVE
         ========================================================= */
 
         @media (max-width: 600px) {
-
-            html,
-            body {
-                width: 100%;
-                max-width: 100%;
-                overflow-x: hidden !important;
-            }
-
-            .page {
-                width: 100%;
-                max-width: 100%;
-                overflow-x: hidden !important;
-            }
-
-
-            /* -----------------------------------------------------
-               HERO
-            ----------------------------------------------------- */
-
             .hero {
-    width: 100%;
-    height: 60vh;
-    min-height: 0;
-    max-height: none;
-    overflow: hidden;
-}
-            .hero-image {
-                width: 100%;
-                height: 100%;
-
-                object-fit: cover;
-
-                object-position: center 5%;
+                height: 60vh;
+                min-height: 0;
             }
-
-
-            /* -----------------------------------------------------
-               SOCIAL ICONS
-            ----------------------------------------------------- */
 
             .social-icons {
-    top: 10px;
-    right: 10px;
-    gap: 5px;
-}
+                top: 10px;
+                right: 10px;
+                gap: 5px;
+            }
 
-.social-icons a {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
-    font-size: 14px;
-}
-
-            /* -----------------------------------------------------
-               MAIN CONTENT
-            ----------------------------------------------------- */
+            .social-icons a {
+                width: 32px;
+                height: 32px;
+                flex: 0 0 32px;
+                font-size: 14px;
+            }
 
             .main-content {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-
-                width: 100% !important;
-                max-width: 100% !important;
-
                 margin: -28px auto 0 !important;
-
-                padding:
-                    14px
-                    12px
-                    35px !important;
-
-                position: relative;
-
-                z-index: 20 !important;
-
-                text-align: center;
+                padding: 14px 12px 35px !important;
             }
-
-
-            /* -----------------------------------------------------
-               NAME
-               Normal professional mobile size
-            ----------------------------------------------------- */
 
             .name {
-                display: block !important;
-
-                margin: 0 0 8px !important;
-
-                font-size: 28px !important;
-
-                line-height: 1.15 !important;
-
-                letter-spacing: 0.6px !important;
+                font-size: 26px !important;
             }
-
-
-            /* -----------------------------------------------------
-               PROFESSION
-            ----------------------------------------------------- */
 
             .profession {
-                display: block !important;
-
-                margin: 0 0 20px !important;
-
-                font-size: 11px !important;
-
-                line-height: 1.4 !important;
-
-                letter-spacing: 0.35px !important;
+                font-size: 12px !important;
+                margin-bottom: 20px !important;
             }
-
-
-            /* -----------------------------------------------------
-               ALL ROWS
-            ----------------------------------------------------- */
 
             .button-row {
-                display: flex !important;
-
-                width: 100% !important;
-
-                max-width: 100% !important;
-
                 gap: 7px !important;
-
                 margin-bottom: 9px !important;
-
-                overflow: visible !important;
             }
-
-
-            /* -----------------------------------------------------
-               ALL BUTTONS
-            ----------------------------------------------------- */
-
-            .menu-button {
-                min-width: 0 !important;
-
-                max-width: 100% !important;
-
-                flex-shrink: 1 !important;
-
-                overflow: hidden !important;
-
-                padding: 6px 4px !important;
-
-                white-space: normal !important;
-
-                word-break: normal !important;
-
-                overflow-wrap: anywhere !important;
-
-                text-overflow: clip !important;
-            }
-
-
-            /* -----------------------------------------------------
-               TOP THREE
-            ----------------------------------------------------- */
 
             .top-button {
-                flex: 1 1 0 !important;
-
-                min-width: 0 !important;
-
                 min-height: 62px !important;
-
-                height: auto !important;
-
-                padding:
-                    6px
-                    3px !important;
-
-                font-size: 12px !important;
-
-                line-height: 1.18 !important;
-
-                border-radius: 9px !important;
+                font-size: 11px !important;
+                padding: 6px 3px !important;
             }
 
-
-            /* -----------------------------------------------------
-               MIDDLE TWO
-            ----------------------------------------------------- */
-
-            .middle-button {
-                flex: 1 1 0 !important;
-
-                min-width: 0 !important;
-
+            .middle-button, .bottom-button {
                 height: 56px !important;
-
-                padding: 6px !important;
-
                 font-size: 14px !important;
-
-                line-height: 1.12 !important;
-
-                border-radius: 9px !important;
             }
 
+            .stats-container {
+                gap: 6px;
+            }
 
-            /* -----------------------------------------------------
-               BOTTOM TWO
-            ----------------------------------------------------- */
+            .stat-card h2 {
+                font-size: 1.3rem;
+            }
 
-            .bottom-button {
-                flex: 1 1 0 !important;
-
-                min-width: 0 !important;
-
-                height: 56px !important;
-
-                padding: 6px !important;
-
-                font-size: 14px !important;
-
-                line-height: 1.12 !important;
-
-                border-radius: 9px !important;
+            .stat-card p {
+                font-size: 0.6rem;
             }
         }
 
-
-        /* =========================================================
-           VERY SMALL PHONES
-        ========================================================= */
-
         @media (max-width: 380px) {
-
-            .hero {
-                height: 50vh;
-
-                min-height: 360px;
-
-                max-height: 450px;
-            }
-
-            .main-content {
-                margin-top: -24px !important;
-
-                padding-left: 9px !important;
-                padding-right: 9px !important;
-            }
-
             .name {
-                font-size: 25px !important;
-
-                letter-spacing: 0.4px !important;
-            }
-
-            .profession {
-                font-size: 9.5px !important;
-
-                letter-spacing: 0.25px !important;
-
-                margin-bottom: 18px !important;
-            }
-
-            .button-row {
-                gap: 5px !important;
-
-                margin-bottom: 7px !important;
+                font-size: 22px !important;
             }
 
             .top-button {
                 min-height: 58px !important;
-
                 font-size: 10px !important;
-
-                padding:
-                    5px
-                    2px !important;
             }
 
-            .middle-button,
-            .bottom-button {
+            .middle-button, .bottom-button {
                 height: 52px !important;
-
-                font-size: 13px !important;
-            }
-
-            .social-icons {
-                top: 9px;
-
-                right: 9px;
-
-                gap: 6px;
-            }
-
-            .social-icons a {
-                width: 36px;
-
-                height: 36px;
-
-                flex-basis: 36px;
-
-                font-size: 15px;
+                font-size: 12px !important;
             }
         }
-/* =====================================================
-   FINAL MOBILE FONT SIZE
-   DESKTOP COMPLETELY UNCHANGED
-   ===================================================== */
-
-@media screen and (max-width: 600px) {
-
-    /* NAME */
-    body > div > div:last-child h1 {
-        font-size: 1.55rem !important;
-        line-height: 1.15 !important;
-        letter-spacing: 0.3px !important;
-    }
-
-    /* PROFESSION */
-    body > div > div:last-child p {
-        font-size: 0.68rem !important;
-        line-height: 1.3 !important;
-        letter-spacing: 0.15px !important;
-        white-space: normal !important;
-    }
-
-    /* ALL BUTTONS */
-    body > div > div:last-child a {
-        box-sizing: border-box !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-
-        text-align: center !important;
-        white-space: normal !important;
-
-        overflow: visible !important;
-        text-overflow: clip !important;
-
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-    }
-
-    /* =========================================
-       TOP 3 BUTTONS
-       ========================================= */
-
-    body > div > div:last-child > div:first-of-type {
-        gap: 7px !important;
-    }
-
-    body > div > div:last-child > div:first-of-type a {
-        font-size: 0.70rem !important;
-        line-height: 1.12 !important;
-
-        padding: 5px 3px !important;
-
-        min-height: 62px !important;
-    }
-
-    /* =========================================
-       ABOUT ME + GALLERY
-       ========================================= */
-
-    body > div > div:last-child > div:nth-of-type(2) a {
-        font-size: 0.90rem !important;
-        line-height: 1.12 !important;
-    }
-
-    /* =========================================
-       PROFILE / CV + CONTACT
-       ========================================= */
-
-    body > div > div:last-child > div:nth-of-type(3) a {
-        font-size: 0.90rem !important;
-        line-height: 1.12 !important;
-    }
-}
-
-
-/* =====================================================
-   VERY SMALL PHONES
-   ===================================================== */
-
-@media screen and (max-width: 380px) {
-
-    body > div > div:last-child h1 {
-        font-size: 1.40rem !important;
-    }
-
-    body > div > div:last-child p {
-        font-size: 0.62rem !important;
-    }
-
-    body > div > div:last-child > div:first-of-type a {
-        font-size: 0.65rem !important;
-        min-height: 58px !important;
-    }
-
-    body > div > div:last-child > div:nth-of-type(2) a,
-    body > div > div:last-child > div:nth-of-type(3) a {
-        font-size: 0.82rem !important;
-    }
-}
- /* =========================================
-   MOBILE FONT SIZE
-   DESKTOP COMPLETELY UNCHANGED
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    /* NAME */
-    body > div > div:last-child h1 {
-        font-size: 1.55rem !important;
-@media screen and (min-width: 1024px) {
-
-  /* 1. Fix Background Image Position */
-  body, header, section {
-    background-size: cover !important;
-    background-position: center 35% !important;
-  }
-
-  /* 2. Center Align Content Box */
-  div, nav, section, .container {
-    max-width: 850px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* 3. Text Padding Adjustment */
-  h1 {
-    margin-top: 150px !important;
-    font-size: 28px !important;
-  }
-
-  /* 4. Align Buttons Perfectly in 2 Rows */
-  .button-container, nav, div:has(button), div:has(a) {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 12px !important;
-  }
-
-  a, button, .btn {
-    flex: 0 1 30% !important;
-    min-width: 220px !important;
-    max-width: 260px !important;
-    padding: 10px 12px !important;
-    font-size: 13px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-}
-
-
     </style>
 </head>
-
 
 <body>
 
 <div class="page">
 
-
-    <!-- =========================================================
-         HERO IMAGE
-    ========================================================== -->
-
+    <!-- HERO IMAGE -->
     <div class="hero">
-
         <img
             class="hero-image"
             alt="Mehedi Alim Ayon"
             src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
         >
 
-
-        <!-- =====================================================
-             SOCIAL ICONS
-        ====================================================== -->
-
+        <!-- SOCIAL ICONS -->
         <div class="social-icons">
-
-            <a
-                class="linkedin"
-                href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-            >
+            <a class="linkedin" href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-
-
-            <a
-                class="email"
-                href="mailto:mehedialif1999@gmail.com"
-                aria-label="Email"
-            >
+            <a class="email" href="mailto:mehedialif1999@gmail.com" aria-label="Email">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-
-
-            <a
-                class="whatsapp"
-                href="https://wa.me/601172267068"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-            >
+            <a class="whatsapp" href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
-
         </div>
-
-
-        <!-- HERO GRADIENT -->
 
         <div class="hero-gradient"></div>
-
     </div>
 
-
-
-    <!-- =========================================================
-         MAIN CONTENT
-    ========================================================== -->
-
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-
         <!-- NAME -->
+        <h1 class="name">MEHEDI ALIM AYON</h1>
 
-        <h1 class="name">
-            MEHEDI ALIM AYON
-        </h1>
-
-
-        <!-- PROFESSION -->
-
+        <!-- PROFESSION WITH TYPEWRITER EFFECT -->
         <p class="profession">
-            AGRICULTURIST | COMMUNICATIONIST | KEY ACCOUNT MANAGER
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
         </p>
 
-
-
-        <!-- =====================================================
-             ROW 1 — THREE PROFESSIONAL AREAS
-        ====================================================== -->
-
+        <!-- ROW 1 — THREE PROFESSIONAL AREAS -->
         <div class="button-row">
-
-            <a
-                href="agriculturist.html"
-                class="menu-button top-button btn-hover"
-            >
-                AGRICULTURIST
-            </a>
-
-
-            <a
-                href="communicationist.html"
-                class="menu-button top-button btn-hover"
-            >
-                COMMUNICATIONIST
-            </a>
-
-
-            <a
-                href="kam.html"
-                class="menu-button top-button btn-hover"
-            >
-                KEY ACCOUNT<br>
-                MANAGER
-            </a>
-
+            <a href="agriculturist.html" class="menu-button top-button btn-hover">AGRICULTURIST</a>
+            <a href="communicationist.html" class="menu-button top-button btn-hover">COMMUNICATIONIST</a>
+            <a href="kam.html" class="menu-button top-button btn-hover">KEY ACCOUNT<br>MANAGER</a>
         </div>
 
-
-
-        <!-- =====================================================
-             ROW 2 — ABOUT / GALLERY
-        ====================================================== -->
-
+        <!-- ROW 2 — ABOUT / GALLERY -->
         <div class="button-row">
-
-            <a
-                href="about.html"
-                class="menu-button middle-button btn-hover"
-            >
-                ABOUT ME
-            </a>
-
-
-            <a
-                href="gallery.html"
-                class="menu-button middle-button btn-hover"
-            >
-                GALLERY
-            </a>
-
+            <a href="about.html" class="menu-button middle-button btn-hover">ABOUT ME</a>
+            <a href="gallery.html" class="menu-button middle-button btn-hover">GALLERY</a>
         </div>
 
-
-
-        <!-- =====================================================
-             ROW 3 — CV / CONTACT
-        ====================================================== -->
-
+        <!-- ROW 3 — CV / CONTACT -->
         <div class="button-row">
-
-            <a
-                href="resume.html"
-                class="menu-button bottom-button btn-hover"
-            >
-                PROFILE / CV
-            </a>
-
-
-            <a
-                href="contact.html"
-                class="menu-button bottom-button btn-hover"
-            >
-                CONTACT
-            </a>
-
+            <a href="resume.html" class="menu-button bottom-button btn-hover">PROFILE / CV</a>
+            <a href="contact.html" class="menu-button bottom-button btn-hover">CONTACT</a>
         </div>
 
+        <!-- LIVE STATS COUNTER SECTION -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2 class="counter" data-target="11">0</h2>
+                <p>Countries Sourced</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="900">0</h2>
+                <p>Products Managed</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="100">0</h2>
+                <p>% Client Focus</p>
+            </div>
+        </div>
 
     </div>
 
 </div>
+
+<!-- JAVASCRIPT FOR DYNAMIC EFFECTS -->
+<script>
+    // 1. TYPEWRITER EFFECT
+    const typedTextSpan = document.querySelector(".typed-text");
+    const textArray = ["AGRICULTURIST", "COMMUNICATIONIST", "KEY ACCOUNT MANAGER"];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textIndex].length) {
+            typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            textIndex = (textIndex + 1) % textArray.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    // 2. COUNTER ANIMATION
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const c = +counter.innerText;
+            const increment = target / 50;
+            if (c < target) {
+                counter.innerText = `${Math.ceil(c + increment)}`;
+                setTimeout(updateCounter, 30);
+            } else {
+                counter.innerText = target + "+";
+            }
+        };
+        updateCounter();
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        if(textArray.length) setTimeout(type, 1000);
+    });
+</script>
 
 </body>
 </html>
