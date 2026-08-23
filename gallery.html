@@ -1,217 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Gallery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Gallery</title>
+  <style>
+    body {
+      background-color: #0b132b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
 
-    <style>
-        * { 
-            box-sizing: border-box; 
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+    h1 {
+      text-align: center;
+      color: #ff6600;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-        body {
-            background: linear-gradient(180deg, #111827 0%, #101622 55%, #080c14 100%);
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 25px 15px;
-            min-height: 100vh;
-        }
+    /* ফিল্টার বাটন সমূহের কন্টেইনার */
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
 
-        .gallery-title {
-            text-align: center;
-            color: #ff7414;
-            font-size: 30px;
-            font-weight: 900;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
-        }
+    .filter-btn {
+      background-color: #1c2541;
+      border: 2px solid #ff6600;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      outline: none;
+    }
 
-        .gallery-grid {
-            column-count: 1;
-            column-gap: 18px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #ff6600;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    }
 
-        @media (min-width: 600px) {
-            .gallery-grid {
-                column-count: 2;
-            }
-        }
+    /* গ্যালারি গ্রিড লেআউট */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
 
-        @media (min-width: 1024px) {
-            .gallery-grid {
-                column-count: 3;
-            }
-        }
+    .gallery-card {
+      background-color: #1c2541;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
 
-        .photo-card {
-            background: rgba(37, 43, 59, 0.55);
-            border: 1.5px solid rgba(255, 116, 20, 0.4);
-            border-radius: 12px;
-            overflow: hidden;
-            display: inline-block;
-            width: 100%;
-            margin-bottom: 18px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            position: relative;
-            break-inside: avoid;
-        }
+    .gallery-card:hover {
+      transform: translateY(-5px);
+    }
 
-        .photo-card:hover {
-            transform: translateY(-5px);
-            border-color: #ff7414;
-            box-shadow: 0 10px 30px rgba(255, 116, 20, 0.3);
-        }
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
 
-        .photo-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            pointer-events: none;
-        }
-
-        .photo-caption {
-            padding: 12px;
-            font-size: 14px;
-            color: #f3f4f6;
-            text-align: center;
-            background: rgba(17, 24, 39, 0.9);
-            font-weight: 700;
-            border-top: 1px solid rgba(255, 116, 20, 0.2);
-        }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(8, 12, 20, 0.95);
-            backdrop-filter: blur(15px);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 15px;
-        }
-
-        .lightbox-img {
-            max-width: 90%;
-            max-height: 80vh;
-            border-radius: 10px;
-            border: 2px solid #ff7414;
-            box-shadow: 0 0 30px rgba(255, 116, 20, 0.4);
-            object-fit: contain;
-            pointer-events: none;
-        }
-
-        .lightbox-caption {
-            margin-top: 15px;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px; right: 25px;
-            color: #ff7414;
-            font-size: 35px;
-            cursor: pointer;
-        }
-    </style>
+    .status-msg {
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      color: #a0aec0;
+      grid-column: 1 / -1;
+      padding: 40px 0;
+    }
+  </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
-    <h1 class="gallery-title">Portfolio Gallery</h1>
+  <h1>PORTFOLIO GALLERY</h1>
 
-    <div class="gallery-grid" id="gallery-container">
-        <p style="text-align:center; width:100%; color: #ff7414;">Loading Gallery...</p>
-    </div>
+  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ -->
+  <div class="filter-container">
+    <button class="filter-btn active" onclick="loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3', this)">PRAN GROUP MALAYSIA</button>
+    <button class="filter-btn" onclick="loadDrivePhotos('1_b4DW79bCQwzTlDoDiPsfTquRyc0ZfI7', this)">ECO EXPO</button>
+    <button class="filter-btn" onclick="loadDrivePhotos('1fWtIlzVzsFLduSDAqIYVunQJkk7JmJ27', this)">ACADEMIC</button>
+    <button class="filter-btn" onclick="loadDrivePhotos('1l6U7PdXmhRQYIa03nMlMWU86HewGkaDv', this)">FAMILY</button>
+    <button class="filter-btn" onclick="loadDrivePhotos('1SfoC1ZilQlpFbdKrpYQhSu3_lyngpqqf', this)">MYSELF</button>
+  </div>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Full View">
-        <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
+  <!-- ছবি দেখানোর কন্টেইনার -->
+  <div id="gallery" class="gallery-grid">
+    <div class="status-msg">ছবি লোড হচ্ছে...</div>
+  </div>
 
-    <script>
-        const API_KEY = 'AIzaSyCbmu7zMzWO4CYID7oetFmdrXuVA4PbUHM'; 
-        const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
+  <script>
+    // আপনার গুগল ড্রাইভ এপিআই কি (API Key) এখানে বসান
+    const API_KEY = 'YOUR_GOOGLE_DRIVE_API_KEY'; 
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'PrintScreen') navigator.clipboard.writeText('');
-            if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
-        });
+    async function loadDrivePhotos(folderId, btnElement) {
+      // অ্যাক্টিভ বাটনের স্টাইল চেঞ্জ করা
+      if (btnElement) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        btnElement.classList.add('active');
+      }
 
-        function getCleanCaption(fileName) {
-            let nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
-            let cleanText = nameWithoutExt.replace(/^[0-9]+[\s\-_.]*/, '').trim();
-            return cleanText;
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '<div class="status-msg">ছবি লোড হচ্ছে...</div>';
+
+      // গুগল ড্রাইভ থেকে নির্দিষ্ট ফোল্ডারের ফাইল আনার URL
+      const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents+and+trashed=false&fields=files(id,name,mimeType)&key=${API_KEY}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        gallery.innerHTML = ''; // আগের ছবি ক্লিয়ার করা
+
+        if (data.files && data.files.length > 0) {
+          // শুধু ইমেজ ফাইলগুলো ফিল্টার করা
+          const imageFiles = data.files.filter(file => file.mimeType.startsWith('image/'));
+
+          if (imageFiles.length > 0) {
+            imageFiles.forEach(file => {
+              const card = document.createElement('div');
+              card.className = 'gallery-card';
+
+              const img = document.createElement('img');
+              img.src = `https://lh3.googleusercontent.com/d/${file.id}`;
+              img.alt = file.name;
+              img.loading = 'lazy';
+
+              card.appendChild(img);
+              gallery.appendChild(card);
+            });
+          } else {
+            gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
+          }
+        } else {
+          gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
         }
+      } catch (error) {
+        gallery.innerHTML = '<div class="status-msg">ছবি লোড করতে সমস্যা হয়েছে। অনুগ্রহ করে এপিআই কি (API Key) চেক করুন।</div>';
+        console.error("Error fetching images:", error);
+      }
+    }
 
-        async function loadDrivePhotos() {
-            const container = document.getElementById('gallery-container');
-            const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
-            
-            // timestamp যোগ করা হয়েছে যাতে ব্রাউজার ক্যাশ না করে সবসময় লেটেস্ট ডেটা লোড করে
-            const timestamp = new Date().getTime();
-            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100&_=${timestamp}`;
+    // পেজ লোড হওয়ার পর ডিফল্টভাবে PRAN GROUP MALAYSIA ফোল্ডারের ছবি দেখাবে
+    window.onload = () => {
+      loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3');
+    };
+  </script>
 
-            try {
-                const res = await fetch(url, { cache: 'no-store' });
-                const data = await res.json();
-                container.innerHTML = '';
-
-                if (data.files && data.files.length > 0) {
-                    data.files.forEach(file => {
-                        const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
-                        const caption = file.description ? file.description : getCleanCaption(file.name);
-
-                        const card = document.createElement('div');
-                        card.className = 'photo-card';
-                        card.onclick = () => openLightbox(imgUrl, caption);
-                        card.innerHTML = `
-                            <img src="${imgUrl}" alt="${file.name}" loading="lazy" ondragstart="return false;">
-                            ${caption ? `<div class="photo-caption">${caption}</div>` : ''}
-                        `;
-                        container.appendChild(card);
-                    });
-                } else {
-                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af;">No photos found!</p>';
-                }
-            } catch (err) {
-                console.error(err);
-                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444;">Error loading photos.</p>';
-            }
-        }
-
-        function openLightbox(src, caption) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-caption').innerText = caption;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-
-        loadDrivePhotos();
-    </script>
 </body>
 </html>
