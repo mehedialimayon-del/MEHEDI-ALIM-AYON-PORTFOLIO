@@ -9,7 +9,7 @@
     <style>
 
         /* =========================================================
-           DESKTOP DESIGN — ORIGINAL FORMAT
+           DESKTOP — ORIGINAL DESIGN
         ========================================================= */
 
         body {
@@ -27,10 +27,6 @@
             padding: 20px;
         }
 
-        /* =========================================================
-           PROFILE HEADER
-        ========================================================= */
-
         .profile-header {
             text-align: center;
             margin-bottom: 30px;
@@ -38,7 +34,6 @@
             padding: 30px;
             border-radius: 12px;
             border: 1px solid #ff7414;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
         .profile-title {
@@ -53,10 +48,6 @@
             font-size: 2rem;
         }
 
-        /* =========================================================
-           HEADINGS
-        ========================================================= */
-
         h2 {
             color: #ff7414;
             border-left: 5px solid #ff7414;
@@ -64,10 +55,6 @@
             margin-top: 30px;
             font-size: 2.3rem;
         }
-
-        /* =========================================================
-           CONTENT BOX
-        ========================================================= */
 
         .content-box {
             background: #1a202c;
@@ -78,18 +65,42 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* =========================================================
-           HIGHLIGHT
-        ========================================================= */
-
         .highlight {
             color: #ff7414;
             font-weight: bold;
         }
 
-        /* =========================================================
-           BACK BUTTON
-        ========================================================= */
+        p {
+            color: #d1d5db;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            color: #d1d5db;
+            padding-left: 25px;
+        }
+
+        li {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .quote-box {
+            background: #1a202c;
+            border: 1px solid #ff7414;
+            border-left: 5px solid #ff7414;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quote-box p {
+            color: #ffffff;
+            font-style: italic;
+            margin: 0;
+        }
 
         .back-btn {
             display: block;
@@ -112,77 +123,55 @@
             transform: scale(1.02);
         }
 
-        /* =========================================================
-           TEXT
-        ========================================================= */
-
-        p {
-            color: #d1d5db;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            color: #d1d5db;
-            padding-left: 25px;
-        }
-
-        li {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
 
         /* =========================================================
-           MOBILE VIEW
+           MOBILE
+           KAM PAGE STYLE FONT SIZE
            DESKTOP COMPLETELY UNCHANGED
-           SAME STANDARD AS KAM PAGE
         ========================================================= */
 
         @media screen and (max-width: 600px) {
 
             .container {
-                width: 100%;
                 max-width: 100%;
-                padding: 12px;
-                box-sizing: border-box;
+                padding: 20px;
             }
 
             .profile-header {
-                padding: 18px;
+                padding: 20px;
                 margin-bottom: 20px;
                 border-radius: 10px;
             }
 
             .profile-title {
-                font-size: 1.55rem;
-                line-height: 1.15;
-                margin-bottom: 7px;
+                font-size: 1.55rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 8px;
             }
 
             .profile-subtitle {
-                font-size: 0.95rem;
-                line-height: 1.4;
-            }
-
-            .content-box {
-                padding: 18px;
-                border-radius: 9px;
-                margin-bottom: 18px;
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
             }
 
             h2 {
-                font-size: 1.10rem;
-                line-height: 1.3;
-                margin-top: 20px;
+                font-size: 1.10rem !important;
+                line-height: 1.3 !important;
                 padding-left: 10px;
                 border-left-width: 4px;
+                margin-top: 20px;
+            }
+
+            .content-box {
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 9px;
             }
 
             p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-                margin-bottom: 15px;
-                letter-spacing: 0.1px;
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 16px;
             }
 
             ul {
@@ -190,14 +179,60 @@
             }
 
             li {
-                font-size: 0.95rem;
-                line-height: 1.6;
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
                 margin-bottom: 10px;
             }
 
-            .highlight {
-                font-size: 0.95rem;
+            .quote-box {
+                padding: 20px;
+                border-radius: 9px;
+            }
+
+            .quote-box p {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
             }
 
             .back-btn {
-                font-size: 0.90
+                font-size: 0.90rem !important;
+                padding: 14px;
+                margin-top: 20px;
+            }
+        }
+
+
+        /* =========================================================
+           VERY SMALL PHONES
+        ========================================================= */
+
+        @media screen and (max-width: 380px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .profile-header {
+                padding: 17px;
+            }
+
+            .profile-title {
+                font-size: 1.45rem !important;
+            }
+
+            .profile-subtitle {
+                font-size: 0.90rem !important;
+            }
+
+            h2 {
+                font-size: 1.05rem !important;
+            }
+
+            .content-box {
+                padding: 17px;
+            }
+
+            p,
+            li,
+            .quote-box p {
+                font-size:
