@@ -103,7 +103,7 @@
 
   <h1>PORTFOLIO GALLERY</h1>
 
-  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ -->
+  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ (সঠিক ফোল্ডার আইডি সহ) -->
   <div class="filter-container">
     <button class="filter-btn active" onclick="loadPhotos('pran', this)">PRAN GROUP</button>
     <button class="filter-btn" onclick="loadPhotos('eco', this)">ECO EXPO</button>
@@ -118,23 +118,22 @@
   </div>
 
   <script>
-    // বিভিন্ন ফোল্ডারের ছবির ফাইল আইডিগুলো এখানে বসাবেন
+    // আপনার ফোল্ডারগুলোর সঠিক আইডি এখানে সেট করা আছে
     const galleryData = {
       pran: [
-        "এখানে_প্রাণের_ছবির_ফাইল_আইডি_দিন",
-        "আরেকটি_ছবির_আইডি"
+        "1luVo0biysCP81PwVgPj1HMSanEWJjKF3" // এটি PRAN ফোল্ডারের আইডি
       ],
       eco: [
-        "এখানে_ইকো_এক্সপোর_ছবির_আইডি_দিন"
+        "1_b4DW79bCQwzTlDoDiPsfTquRyc0ZfI7" // এটি ECO EXPO ফোল্ডারের আইডি
       ],
       academic: [
-        "এখানে_একাডেমিকের_ছবির_আইডি_দিন"
+        "1fWtIlzVzsFLduSDAqIYVunQJkk7JmJ27" // এটি ACADEMIC ফোল্ডারের আইডি
       ],
       family: [
-        "এখানে_ফ্যামিলির_ছবির_আইডি_দিন"
+        "1l6U7PdXmhRQYIa03nMlMWU86HewGkaDv" // এটি FAMILY ফোল্ডারের আইডি
       ],
       myself: [
-        "এখানে_নিজের_ছবির_আইডি_দিন"
+        "1SfoC1ZilQlpFbdKrpYQhSu3_lyngpqqf" // এটি MYSELF ফোল্ডারের আইডি
       ]
     };
 
@@ -149,25 +148,30 @@
 
       const photoIds = galleryData[category] || [];
 
-      if (photoIds.length > 0 && photoIds[0] !== "এখানে_প্রাণের_ছবির_ফাইল_আইডি_দিন") {
+      if (photoIds.length > 0) {
         photoIds.forEach(id => {
           const card = document.createElement('div');
           card.className = 'gallery-card';
 
           const img = document.createElement('img');
-          // গুগল ড্রাইভের ডিরেক্ট ইমেজ লিংক ফরম্যাট
+          // ড্রাইভের ফোল্ডার আইডি থেকে সরাসরি ছবি দেখানোর জন্য
           img.src = `https://lh3.googleusercontent.com/d/${id}`;
           img.loading = 'lazy';
+
+          // যদি ফোল্ডারের আইডি দেওয়া হয় কিন্তু ভেতরে ছবি না থাকে বা লোড না হয়
+          img.onerror = function() {
+            card.innerHTML = '<div style="padding:20px; text-align:center; color:#ff9999;">ছবি পাওয়া যায়নি বা ফোল্ডার খালি!</div>';
+          };
 
           card.appendChild(img);
           gallery.appendChild(card);
         });
       } else {
-        gallery.innerHTML = '<div class="status-msg">এই ক্যাটাগরিতে এখনো কোনো ছবি যোগ করা হয়নি।</div>';
+        gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি নেই।</div>';
       }
     }
 
-    // প্রথমে PRAN GROUP এর ছবি দেখাবে
+    // প্রথমে PRAN GROUP এর ফোল্ডার দেখাবে
     window.onload = () => {
       loadPhotos('pran');
     };
