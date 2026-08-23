@@ -23,7 +23,6 @@
       font-size: 24px;
     }
 
-    /* ফিল্টার বাটনগুলোর কন্টেইনার: ফোনের স্ক্রিনে পাশাপাশি যেন অনেকগুলো বাটন ধরে */
     .filter-container {
       display: flex;
       flex-wrap: nowrap;
@@ -35,7 +34,6 @@
       scrollbar-color: #ff6600 #1c2541;
     }
 
-    /* ক্রোম বা ব্রাউজারের জন্য স্ক্রলবার স্টাইল */
     .filter-container::-webkit-scrollbar {
       height: 4px;
     }
@@ -65,7 +63,6 @@
       box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
     }
 
-    /* গ্যালারি গ্রিড লেআউট: ছবিগুলো বড় ও আকর্ষণীয় দেখানোর জন্য */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -106,13 +103,13 @@
 
   <h1>PORTFOLIO GALLERY</h1>
 
-  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ (ফোনে পাশাপাশি স্ক্রল বা শো করার জন্য অপ্টিমাইজড) -->
+  <!-- ক্যাটাগরি ফিল্টার বাটন সমূহ -->
   <div class="filter-container">
-    <button class="filter-btn active" onclick="loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3', this)">PRAN GROUP</button>
-    <button class="filter-btn" onclick="loadDrivePhotos('1_b4DW79bCQwzTlDoDiPsfTquRyc0ZfI7', this)">ECO EXPO</button>
-    <button class="filter-btn" onclick="loadDrivePhotos('1fWtIlzVzsFLduSDAqIYVunQJkk7JmJ27', this)">ACADEMIC</button>
-    <button class="filter-btn" onclick="loadDrivePhotos('1l6U7PdXmhRQYIa03nMlMWU86HewGkaDv', thisENAME', this)">FAMILY</button>
-    <button class="filter-btn" onclick="loadDrivePhotos('1SfoC1ZilQlpFbdKrpYQhSu3_lyngpqqf', this)">MYSELF</button>
+    <button class="filter-btn active" onclick="loadPhotos('pran', this)">PRAN GROUP</button>
+    <button class="filter-btn" onclick="loadPhotos('eco', this)">ECO EXPO</button>
+    <button class="filter-btn" onclick="loadPhotos('academic', this)">ACADEMIC</button>
+    <button class="filter-btn" onclick="loadPhotos('family', this)">FAMILY</button>
+    <button class="filter-btn" onclick="loadPhotos('myself', this)">MYSELF</button>
   </div>
 
   <!-- ছবি দেখানোর কন্টেইনার -->
@@ -121,56 +118,58 @@
   </div>
 
   <script>
-    // আপনার গুগল ড্রাইভ এপিআই কি (API Key) এখানে বসান
-    const API_KEY = 'YOUR_GOOGLE_DRIVE_API_KEY'; 
+    // বিভিন্ন ফোল্ডারের ছবির ফাইল আইডিগুলো এখানে বসাবেন
+    const galleryData = {
+      pran: [
+        "এখানে_প্রাণের_ছবির_ফাইল_আইডি_দিন",
+        "আরেকটি_ছবির_আইডি"
+      ],
+      eco: [
+        "এখানে_ইকো_এক্সপোর_ছবির_আইডি_দিন"
+      ],
+      academic: [
+        "এখানে_একাডেমিকের_ছবির_আইডি_দিন"
+      ],
+      family: [
+        "এখানে_ফ্যামিলির_ছবির_আইডি_দিন"
+      ],
+      myself: [
+        "এখানে_নিজের_ছবির_আইডি_দিন"
+      ]
+    };
 
-    async function loadDrivePhotos(folderId, btnElement) {
+    function loadPhotos(category, btnElement) {
       if (btnElement) {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         btnElement.classList.add('active');
       }
 
       const gallery = document.getElementById('gallery');
-      gallery.innerHTML = '<div class="status-msg">ছবি লোড হচ্ছে...</div>';
+      gallery.innerHTML = '';
 
-      const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents+and+trashed=false&fields=files(id,name,mimeType)&key=${API_KEY}`;
+      const photoIds = galleryData[category] || [];
 
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
+      if (photoIds.length > 0 && photoIds[0] !== "এখানে_প্রাণের_ছবির_ফাইল_আইডি_দিন") {
+        photoIds.forEach(id => {
+          const card = document.createElement('div');
+          card.className = 'gallery-card';
 
-        gallery.innerHTML = '';
+          const img = document.createElement('img');
+          // গুগল ড্রাইভের ডিরেক্ট ইমেজ লিংক ফরম্যাট
+          img.src = `https://lh3.googleusercontent.com/d/${id}`;
+          img.loading = 'lazy';
 
-        if (data.files && data.files.length > 0) {
-          const imageFiles = data.files.filter(file => file.mimeType.startsWith('image/'));
-
-          if (imageFiles.length > 0) {
-            imageFiles.forEach(file => {
-              const card = document.createElement('div');
-              card.className = 'gallery-card';
-
-              const img = document.createElement('img');
-              img.src = `https://lh3.googleusercontent.com/d/${file.id}`;
-              img.alt = file.name;
-              img.loading = 'lazy';
-
-              card.appendChild(img);
-            gallery.appendChild(card);
-            });
-          } else {
-            gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
-          }
-        } else {
-          gallery.innerHTML = '<div class="status-msg">এই ফোল্ডারে কোনো ছবি পাওয়া যায়নি।</div>';
-        }
-      } catch (error) {
-        gallery.innerHTML = '<div class="status-msg">ছবি লোড করতে সমস্যা হয়েছে। এপিআই কি (API Key) চেক করুন।</div>';
-        console.error("Error fetching images:", error);
+          card.appendChild(img);
+          gallery.appendChild(card);
+        });
+      } else {
+        gallery.innerHTML = '<div class="status-msg">এই ক্যাটাগরিতে এখনো কোনো ছবি যোগ করা হয়নি।</div>';
       }
     }
 
+    // প্রথমে PRAN GROUP এর ছবি দেখাবে
     window.onload = () => {
-      loadDrivePhotos('1luVo0biysCP81PwVgPj1HMSanEWJjKF3');
+      loadPhotos('pran');
     };
   </script>
 
