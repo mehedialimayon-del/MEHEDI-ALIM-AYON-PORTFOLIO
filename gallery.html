@@ -3,56 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Mehedi Alim Ayon</title>
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body { margin: 0; background: #080c14; font-family: sans-serif; }
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 15px; 
-            padding: 15px; 
-            max-width: 800px; 
-            margin: auto; 
+        * { 
+            box-sizing: border-box; 
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-        .gallery-img { 
-            width: 100%; 
-            height: auto; /* উচ্চতা অটো রাখা হয়েছে যাতে ছবি না কাটে */
-            min-height: 200px; /* একটি নির্দিষ্ট উচ্চতা বজায় রাখবে */
-            object-fit: contain; /* ছবি পুরোপুরি দেখানোর জন্য */
-            border-radius: 8px; 
-            border: 2px solid #ff7414; 
-            background: #000; /* খালি জায়গায় কালো ব্যাকগ্রাউন্ড */
+
+        body {
+            background: linear-gradient(180deg, #111827 0%, #101622 55%, #080c14 100%);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px 15px;
+            min-height: 100vh;
         }
-        h2 { color: #ff7414; text-align: center; padding: 20px; }
+
+        .gallery-title {
+            text-align: center;
+            color: #ff7414;
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
+        }
+
+        .gallery-grid {
+            column-count: 1;
+            column-gap: 18px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                column-count: 3;
+            }
+        }
+
+        .photo-card {
+            background: rgba(37, 43, 59, 0.55);
+            border: 1.5px solid rgba(255, 116, 20, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            break-inside: avoid;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff7414;
+            box-shadow: 0 10px 30px rgba(255, 116, 20, 0.3);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none;
+        }
+
+        .photo-caption {
+            padding: 12px;
+            font-size: 14px;
+            color: #f3f4f6;
+            text-align: center;
+            background: rgba(17, 24, 39, 0.9);
+            font-weight: 700;
+            border-top: 1px solid rgba(255, 116, 20, 0.2);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(8, 12, 20, 0.95);
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+            border: 2px solid #ff7414;
+            box-shadow: 0 0 30px rgba(255, 116, 20, 0.4);
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        .lightbox-caption {
+            margin-top: 15px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 25px;
+            color: #ff7414;
+            font-size: 35px;
+            cursor: pointer;
+        }
     </style>
 </head>
-<body>
-    <h2>MY GALLERY</h2>
-    <div class="gallery-grid">
-        <img class="gallery-img" src="https://i.postimg.cc/fVwfLnzB/Document-from-KAM-AYON-260812-092213-10.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzd/Document-from-KAM-AYON-260812-092213-11.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/zyJFBZzx/Document-from-KAM-AYON-260812-092213-13.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/jDs450xg/Document-from-KAM-AYON-260812-092213-14.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/XrVkJSj1/Document-from-KAM-AYON-260812-092213-15.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/w10cRfMW/Document-from-KAM-AYON-260812-092213-16.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/VJYW6QfV/Document-from-KAM-AYON-260812-092213-17.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/HrB48ZnZ/Document-from-KAM-AYON-260812-092213-18.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/18JcVCXj/Document-from-KAM-AYON-260812-092213-19.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/sMw9G6xL/Document-from-KAM-AYON-260812-092213-20.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/bZ3HSCrK/Document-from-KAM-AYON-260812-092213-21.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/ts2tnSJ8/Document-from-KAM-AYON-260812-092213-22.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/jDZQngCT/Document-from-KAM-AYON-260812-092213-25.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/FYDgkW1h/Document-from-KAM-AYON-260812-092213-26.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/ykhTsYHR/Document-from-KAM-AYON-260812-092213-3.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/jDs450xw/Document-from-KAM-AYON-260812-092213-4.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/K1ZDzSGY/Document-from-KAM-AYON-260812-092213-5.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/QHgqhx31/Document-from-KAM-AYON-260812-092213-6.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/QFXJtG87/Document-from-KAM-AYON-260812-092213-7.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/CRFs1Thb/Document-from-KAM-AYON-260812-092213-8.jpg">
-        <img class="gallery-img" src="https://i.postimg.cc/yDVyd41m/Document-from-KAM-AYON-260812-092213-9.jpg">
+<body oncontextmenu="return false;">
+
+    <h1 class="gallery-title">Portfolio Gallery</h1>
+
+    <div class="gallery-grid" id="gallery-container">
+        <p style="text-align:center; width:100%; color: #ff7414;">Loading Gallery...</p>
     </div>
-    <div style="text-align:center; padding:30px;">
-        <a href="index.html" style="color:#ff7414; text-decoration:none; font-weight:bold; font-size:18px;">← BACK TO HOME</a>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Full View">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
+
+    <script>
+        const API_KEY = 'AIzaSyCbmu7zMzWO4CYID7oetFmdrXuVA4PbUHM'; 
+        const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'PrintScreen') navigator.clipboard.writeText('');
+            if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
+        });
+
+        function getCleanCaption(fileName) {
+            let nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+            let cleanText = nameWithoutExt.replace(/^[0-9]+[\s\-_.]*/, '').trim();
+            return cleanText;
+        }
+
+        async function loadDrivePhotos() {
+            const container = document.getElementById('gallery-container');
+            const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
+            
+            // timestamp যোগ করা হয়েছে যাতে ব্রাউজার ক্যাশ না করে সবসময় লেটেস্ট ডেটা লোড করে
+            const timestamp = new Date().getTime();
+            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100&_=${timestamp}`;
+
+            try {
+                const res = await fetch(url, { cache: 'no-store' });
+                const data = await res.json();
+                container.innerHTML = '';
+
+                if (data.files && data.files.length > 0) {
+                    data.files.forEach(file => {
+                        const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
+                        const caption = file.description ? file.description : getCleanCaption(file.name);
+
+                        const card = document.createElement('div');
+                        card.className = 'photo-card';
+                        card.onclick = () => openLightbox(imgUrl, caption);
+                        card.innerHTML = `
+                            <img src="${imgUrl}" alt="${file.name}" loading="lazy" ondragstart="return false;">
+                            ${caption ? `<div class="photo-caption">${caption}</div>` : ''}
+                        `;
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af;">No photos found!</p>';
+                }
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444;">Error loading photos.</p>';
+            }
+        }
+
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        loadDrivePhotos();
+    </script>
 </body>
 </html>
