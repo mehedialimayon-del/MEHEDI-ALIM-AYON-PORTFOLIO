@@ -17,28 +17,35 @@
         
         .logo-container { 
             text-align: center; 
-            margin-bottom: 30px; 
-            background: #1a202c; 
-            padding: 25px; 
+            margin-bottom: 20px; 
+            background: #ff7414; 
+            padding: 20px; 
             border-radius: 12px; 
-            border: 1px solid #ff7414; 
+            box-shadow: 0 4px 20px rgba(255,116,20,0.5); 
         }
         .logo { 
-            max-width: 250px; 
+            max-width: 450px; 
             width: 100%; 
             height: auto; 
             display: block; 
             margin: 0 auto; 
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
             object-fit: contain;
         }
+
+        /* Designation Header Style */
+        .designation-header {
+            color: #ff7414;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
         
-        .designation { text-align: center; color: #ff7414; font-weight: bold; font-size: 2.2rem; margin-bottom: 30px; letter-spacing: 0.5px; }
-        
-        h2 { color: #ff7414; border-left: 5px solid #ff7414; padding-left: 15px; margin-top: 30px; font-size: 2.3rem; }
-        
+        h1, h2 { color: #ff7414; text-align: center; }
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.3rem; margin-top: 0; text-align: left; }
+
         .content-box { 
             background: #1a202c; 
             padding: 30px; 
@@ -48,9 +55,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
         }
         
-        /* হাইলাইট করা টেক্সটের স্টাইল */
-        .highlight { color: #ff7414; font-weight: bold; }
-
         .back-btn { 
             display: block; 
             text-align: center; 
@@ -71,97 +75,76 @@
             transform: scale(1.02);
         }
 
-        p { color: #d1d5db; font-size: 2rem; margin-bottom: 20px; }
-   /* =========================================
-   AGRICULTURIST PAGE
-   FINAL MOBILE FONT SIZE
-   DESKTOP COMPLETELY UNCHANGED
-   ========================================= */
+        p { 
+            color: #d1d5db; 
+            font-size: 2rem; 
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+        ul { 
+            color: #d1d5db; 
+            padding-left: 25px; 
+        }
+        li { 
+            font-size: 2rem; 
+            margin-bottom: 15px; 
+        }
 
-@media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) {
+            .logo-container {
+                padding: 10px !important;
+                margin-bottom: 20px !important;
+                border-radius: 8px !important;
+                max-width: 50% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                box-sizing: border-box !important;
+            }
+            .logo {
+                width: 100% !important;
+                max-width: 90px !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+            .content-box p {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            .content-box h2 {
+                font-size: 1.10rem !important;
+                line-height: 1.3 !important;
+            }
+            .designation-header {
+                font-size: 0.85rem !important;
+            }
+            .back-btn {
+                font-size: 0.90rem !important;
+            }
+        }
 
-    /* Main content paragraphs */
-    .content-box p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-    }
-
-    /* Section headings */
-    .content-box h2 {
-        font-size: 1.10rem !important;
-        line-height: 1.3 !important;
-    }
-
-    /* Top designation */
-    .designation {
-        font-size: 0.90rem !important;
-        line-height: 1.4 !important;
-    }
-
-    /* Back button */
-    .back-btn {
-        font-size: 0.90rem !important;
-    }
-}
-
-
-/* =========================================
-   VERY SMALL PHONES — 380px OR LESS
-   ========================================= */
-
-@media screen and (max-width: 380px) {
-
-    .content-box p {
-        font-size: 0.90rem !important;
-        line-height: 1.55 !important;
-    }
-
-    .content-box h2 {
-        font-size: 1.05rem !important;
-    }
-
-    .designation {
-        font-size: 0.85rem !important;
-    }
-
-    .back-btn {
-        font-size: 0.85rem !important;
-    }
-}
-        /* =========================================
-   MOBILE LOGO 75%
-   DESKTOP COMPLETELY UNCHANGED
-   ========================================= */
-
-@media screen and (max-width: 600px) {
-    .logo-container {
-        padding: 10px !important;
-        margin-bottom: 20px !important;
-        border-radius: 8px !important;
-        max-width: 50% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        box-sizing: border-box !important;
-    }
-    .logo {
-        width: 100% !important;
-        max-width: 90px !important;
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .logo-container {
-        max-width: 45% !important;
-        padding: 8px !important;
-    }
-    .logo {
-        max-width: 75px !important;
-    }
-}
-
+        @media screen and (max-width: 380px) {
+            .logo-container {
+                max-width: 45% !important;
+                padding: 8px !important;
+            }
+            .logo {
+                max-width: 75px !important;
+            }
+            .content-box p {
+                font-size: 0.90rem !important;
+                line-height: 1.55 !important;
+            }
+            .content-box h2 {
+                font-size: 1.05rem !important;
+            }
+            .designation-header {
+                font-size: 0.75rem !important;
+            }
+            .back-btn {
+                font-size: 0.85rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -169,26 +152,19 @@
         <div class="logo-container">
             <img src="https://i.postimg.cc/vH2d6rV3/images-(2).png" alt="BAU Logo" class="logo">
         </div>
-
-        <div class="designation">
+        
+        <div class="designation-header">
             Mehedi Alim Ayon || Agriculturist || Agricultural Economics & Rural Sociology
         </div>
 
         <div class="content-box">
             <h2>Bangladesh Agricultural University (BAU) - Overview & Legacy</h2>
-            <p><span class="highlight">About BAU:</span> Bangladesh Agricultural University (BAU) stands as the premier and top-tier higher education institution for agricultural sciences in the country. Established to drive agricultural revolution, food security, and rural development, BAU has consistently served as a powerhouse of academic excellence, cutting-edge research, and innovation.</p>
+            <p><strong>About BAU:</strong> Bangladesh Agricultural University (BAU) stands as the premier and top-tier higher education institution for agricultural sciences in the country. Established to drive agricultural revolution, food security, and rural development, BAU has consistently served as a powerhouse of academic excellence, cutting-edge research, and innovation.</p>
         </div>
 
         <div class="content-box">
-            <h2>Curriculum, Future Prospects & Global Valuation</h2>
-            <p><span class="highlight">What is Taught & Future Scope:</span> Enrolling in the Department of Agricultural Economics and Rural Sociology in 2017 allowed me to delve deep into macroeconomic principles, farm management, market dynamics, rural development, and supply-chain mechanisms.</p>
-            <p><span class="highlight">Global Recognition & Standards:</span> Across the international arena, graduates from agricultural disciplines—especially from premier institutions like BAU—are highly valued and respected. The rigorous academic framework equips students with exceptional analytical depth.</p>
-        </div>
-
-        <div class="content-box">
-            <h2>Shahid Nazmul Ahsan Hall & Leadership Journey</h2>
-            <p><span class="highlight">Hall Life & Brotherhood:</span> My campus life was profoundly shaped by living in Shahid Nazmul Ahsan Hall. The hall community taught me true discipline, resilience, collective harmony, and the strength of brotherhood.</p>
-            <p><span class="highlight">Extracurricular Excellence & Confidence:</span> Beyond academics, I was actively engaged in multiple educational, social, and cultural organizations. These co-curricular platforms built my leadership capabilities, public speaking mastery, and interpersonal communication skills.</p>
+            <h2>Faculty of Agricultural Economics & Rural Sociology</h2>
+            <p>The Faculty of Agricultural Economics and Rural Sociology at BAU focuses on shaping future leaders equipped with economic insight, policy-making acumen, and rural development strategies. It bridges the gap between agricultural production and market dynamics, ensuring sustainable growth.</p>
         </div>
 
         <a href="index.html" class="back-btn">← BACK TO HOME</a>
