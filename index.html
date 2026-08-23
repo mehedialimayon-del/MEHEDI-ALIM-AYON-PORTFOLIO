@@ -954,56 +954,41 @@
         padding: 4px 4px !important;
     }
 }
-        /* ==========================================
-   LAPTOP FULL PAGE & IMAGE FIX
-   ========================================== */
+        @media screen and (min-width: 1024px) {
 
-@media screen and (min-width: 1024px) {
-
-  /* Fix background profile image to show full face */
-  body, header, .hero-section {
-    background-size: contain !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-    min-height: 100vh !important;
+  body {
+    background-size: cover !important;
+    background-position: center 20% !important;
   }
 
-  /* Make header content fit properly in middle */
-  .container, .hero-content {
-    max-width: 1000px !important;
-    margin: 0 auto !important;
-    padding-top: 180px !important;
+  img {
+    max-height: 400px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
   }
 
-  /* Adjust typography */
-  h1 {
-    font-size: 28px !important;
-    letter-spacing: 1px !important;
-  }
-
-  h3, p {
-    font-size: 14px !important;
-  }
-
-  /* Align all buttons nicely in centered rows */
-  .button-container, .btn-group, nav {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-    max-width: 800px !important;
-    margin: 25px auto 0 auto !important;
-  }
-
-  /* Standard button width so they don't stretch */
-  button, .btn, a {
-    width: 220px !important;
-    padding: 10px 15px !important;
-    font-size: 13px !important;
+  h1, h2, h3 {
     text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  div, nav, section {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  a, button {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 180px !important;
+    max-width: 220px !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    margin: 5px !important;
   }
 }
-
 
     </style>
 </head>
