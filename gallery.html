@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>83</title>
+    <title>Portfolio Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -27,7 +27,7 @@
         .gallery-title {
             text-align: center;
             color: #ff7414;
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 900;
             margin-bottom: 30px;
             text-transform: uppercase;
@@ -35,13 +35,25 @@
             text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
         }
 
+        /* মেসনারি বা পিন্টারেস্ট স্টাইল লেআউট, যা লম্বা ও চ্যাপ্টা ছবি নিজে থেকেই অ্যাডজাস্ট করবে */
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 18px;
+            column-count: 1;
+            column-gap: 18px;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                column-count: 3;
+            }
         }
 
         .photo-card {
@@ -49,21 +61,16 @@
             border: 1.5px solid rgba(255, 116, 20, 0.4);
             border-radius: 12px;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
             position: relative;
-        }
-
-        .photo-card::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 2;
+            break-inside: avoid;
         }
 
         .photo-card:hover {
@@ -72,10 +79,10 @@
             box-shadow: 0 10px 30px rgba(255, 116, 20, 0.3);
         }
 
+        /* ছবি তার নিজস্ব সাইজ ও অনুপাত (Aspect Ratio) বজায় রাখবে */
         .photo-card img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
+            height: auto;
             display: block;
             pointer-events: none;
         }
@@ -133,10 +140,10 @@
 </head>
 <body oncontextmenu="return false;">
 
-    <h1 class="gallery-title">83</h1>
+    <h1 class="gallery-title">Portfolio Gallery</h1>
 
     <div class="gallery-grid" id="gallery-container">
-        <p style="text-align:center; width:100%; color: #ff7414; grid-column: 1/-1;">Loading Gallery...</p>
+        <p style="text-align:center; width:100%; color: #ff7414;">Loading Gallery...</p>
     </div>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -179,11 +186,11 @@
                         container.appendChild(card);
                     });
                 } else {
-                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found! Please check if the folder is public.</p>';
+                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af;">No photos found!</p>';
                 }
             } catch (err) {
                 console.error(err);
-                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444; grid-column: 1/-1;">Error loading photos.</p>';
+                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444;">Error loading photos.</p>';
             }
         }
 
