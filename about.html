@@ -3,301 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Me - Mehedi Alim Ayon</title>
+
     <style>
-        body { 
-            margin: 0; 
-            background: #080c14; 
-            font-family: 'Arial', sans-serif; 
-            color: #ffffff; 
-            line-height: 1.8; 
-            font-size: 2rem; 
-        }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        
-        .profile-header { 
-            text-align: center; 
-            margin-bottom: 30px; 
-            background: #1a202c; 
-            padding: 30px; 
-            border-radius: 12px; 
-            border: 1px solid #ff7414; 
-        }
-        .profile-title { color: #ff7414; font-size: 2.8rem; margin-bottom: 10px; font-weight: bold; }
-        .profile-subtitle { color: #d1d5db; font-size: 2rem; }
 
-        h2 { color: #ff7414; border-left: 5px solid #ff7414; padding-left: 15px; margin-top: 30px; font-size: 2.3rem; }
-        
-        .content-box { 
-            background: #1a202c; 
-            padding: 30px; 
-            border-radius: 10px; 
-            border: 1px solid #ff7414; 
-            margin-bottom: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
-        }
-        
-        /* হাইলাইট করা টেক্সটের স্টাইল */
-        .highlight { color: #ff7414; font-weight: bold; }
+        /* =========================================================
+           DESKTOP DESIGN — ORIGINAL FORMAT
+        ========================================================= */
 
-        .back-btn { 
-            display: block; 
-            text-align: center; 
-            margin-top: 30px; 
+        body {
+            margin: 0;
+            background: #080c14;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            line-height: 1.8;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* =========================================================
+           PROFILE HEADER
+        ========================================================= */
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #1a202c;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #ff7414;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .profile-title {
+            color: #ff7414;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .profile-subtitle {
+            color: #d1d5db;
+            font-size: 2rem;
+        }
+
+        /* =========================================================
+           HEADINGS
+        ========================================================= */
+
+        h2 {
+            color: #ff7414;
+            border-left: 5px solid #ff7414;
+            padding-left: 15px;
+            margin-top: 30px;
+            font-size: 2.3rem;
+        }
+
+        /* =========================================================
+           CONTENT BOX
+        ========================================================= */
+
+        .content-box {
+            background: #1a202c;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #ff7414;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        /* =========================================================
+           HIGHLIGHT
+        ========================================================= */
+
+        .highlight {
+            color: #ff7414;
+            font-weight: bold;
+        }
+
+        /* =========================================================
+           BACK BUTTON
+        ========================================================= */
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
             padding: 18px;
             background: #1a202c;
             border: 2px solid #ff7414;
             border-radius: 10px;
-            color: #ff7414; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.8rem; 
+            color: #ff7414;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.8rem;
             transition: 0.3s;
         }
+
         .back-btn:hover {
             background: #ff7414;
             color: #ffffff;
             transform: scale(1.02);
         }
 
-        p { color: #d1d5db; font-size: 2rem; margin-bottom: 20px; }
-        ul { color: #d1d5db; padding-left: 25px; }
-        li { font-size: 2rem; margin-bottom: 15px; }
         /* =========================================================
-   MOBILE VIEW — MATCH ACCOUNT MANAGER PAGE
-   DESKTOP COMPLETELY UNCHANGED
-   ========================================================= */
-
-@media screen and (max-width: 600px) {
-
-    /* =========================================
-       MAIN CONTAINER
-       ========================================= */
-
-    .container {
-        padding: 20px !important;
-    }
-
-
-    /* =========================================
-       PROFILE HEADER
-       Same mobile proportion as KAM page
-       ========================================= */
-
-    .profile-header {
-        padding: 20px !important;
-        margin-bottom: 20px !important;
-
-        border-radius: 9px !important;
-
-        background: #1a202c !important;
-        border: 1px solid #ff7414 !important;
-    }
-
-
-    /* =========================================
-       YOUR NAME
-       KAM designation-header equivalent
-       ========================================= */
-
-    .profile-title {
-        font-size: 1.10rem !important;
-        line-height: 1.3 !important;
-
-        margin-bottom: 8px !important;
-
-        color: #ff7414 !important;
-    }
-
-
-    /* =========================================
-       PROFILE SUBTITLE
-       ========================================= */
-
-    .profile-subtitle {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-
-        color: #d1d5db !important;
-    }
-
-
-    /* =========================================
-       CONTENT BOX
-       ========================================= */
-
-    .content-box {
-        padding: 20px !important;
-        border-radius: 9px !important;
-
-        margin-bottom: 20px !important;
-    }
-
-
-    /* =========================================
-       ALL HEADINGS
-       Same as KAM page
-       ========================================= */
-
-    .content-box h2 {
-        font-size: 1.10rem !important;
-        line-height: 1.3 !important;
-
-        margin-top: 0 !important;
-
-        padding-left: 10px !important;
-
-        border-left-width: 4px !important;
-    }
-
-
-    /* =========================================
-       ALL PARAGRAPHS
-       Same as KAM page
-       ========================================= */
-
-    .content-box p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-
-        margin-bottom: 20px !important;
-
-        letter-spacing: 0.3px !important;
-    }
-
-
-    /* =========================================
-       LIST
-       ========================================= */
-
-    .content-box li {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-
-        margin-bottom: 15px !important;
-    }
-
-
-    /* =========================================
-       HIGHLIGHT TEXT
-       ========================================= */
-
-    .highlight {
-        font-size: 1.05rem !important;
-    }
-
-
-    /* =========================================
-       BACK BUTTON
-       Same mobile proportion
-       ========================================= */
-
-    .back-btn {
-        font-size: 0.90rem !important;
-
-        padding: 14px !important;
-
-        border-radius: 9px !important;
-
-        margin-top: 20px !important;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   MATCH KAM PAGE <= 380px
-   ========================================================= */
-
-@media screen and (max-width: 380px) {
-
-    .container {
-        padding: 16px !important;
-    }
-
-
-    .profile-header {
-        padding: 16px !important;
-    }
-
-
-    .profile-title {
-        font-size: 1.05rem !important;
-        line-height: 1.3 !important;
-    }
-
-
-    .profile-subtitle {
-        font-size: 0.90rem !important;
-        line-height: 1.55 !important;
-    }
-
-
-    .content-box {
-        padding: 16px !important;
-    }
-
-
-    .content-box h2 {
-        font-size: 1.05rem !important;
-        line-height: 1.3 !important;
-    }
-
-
-    .content-box p {
-        font-size: 0.90rem !important;
-        line-height: 1.55 !important;
-    }
-
-
-    .content-box li {
-        font-size: 0.90rem !important;
-        line-height: 1.55 !important;
-    }
-
-
-    .highlight {
-        font-size: 1.0rem !important;
-    }
-
-
-    .back-btn {
-        font-size: 0.85rem !important;
-    }
-}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="profile-header">
-            <div class="profile-title">Mehedi Alim Ayon</div>
-            <div class="profile-subtitle">Professional Profile & Personal Journey</div>
-        </div>
-
-        <div class="content-box">
-            <h2>Introduction & Background</h2>
-            <p><span class="highlight">Who I Am:</span> I am Mehedi Alim Ayon, a dedicated corporate professional, sales management specialist, and strategic thinker currently based in Malaysia. My journey bridges rigorous analytical education with high-impact corporate leadership in the Fast-Moving Consumer Goods (FMCG) and modern trade sectors.</p>
-            <p><span class="highlight">Core Philosophy:</span> I strongly believe in continuous learning, relentless hard work, integrity, and proactive problem-solving. Whether managing complex international trade exhibitions or driving multimillion-dollar retail growth, my focus remains firmly on excellence and value creation.</p>
-        </div>
-
-        <div class="content-box">
-            <h2>Academic Excellence</h2>
-            <p><span class="highlight">Higher Education:</span> I completed my Bachelor's degree in Agricultural Economics and Rural Sociology from Bangladesh Agricultural University (BAU), which laid a strong foundation in economic principles, market behavior, and strategic planning.</p>
-            <p><span class="highlight">Master's Milestone:</span> Further expanding my expertise, I pursued and successfully completed my Master's degree in Communication at Kuala Lumpur University of Science and Technology (KLUST), graduating as a department topper with a prestigious 4.0 CGPA.</p>
-        </div>
-
-        <div class="content-box">
-            <h2>Professional Expertise & Leadership</h2>
-            <p><span class="highlight">Sales Management:</span> With extensive experience spanning project management at Eco Expo and leadership roles as a Key Account Manager and Regional Manager at Pinnacle Foods Sdn Bhd (PRAN-RFL Group), I specialize in modern trade execution, distribution scaling, and market expansion.</p>
-            <p><span class="highlight">Key Competencies:</span></p>
-            <ul>
-                <li><span class="highlight">Strategic Planning:</span> Developing robust sales pipelines and retail merchandising strategies.</li>
-                <li><span class="highlight">Cross-Cultural Leadership:</span> Directing diverse teams and building long-term client relationships.</li>
-                <li><span class="highlight">Crisis Management:</span> Maintaining composure and executing instant, practical solutions under high-pressure corporate environments.</li>
-            </ul>
-        </div>
-
-        <a href="index.html" class="back-btn">← BACK TO HOME</a>
-    </div>
-</body>
-</html>
+           TEXT
+        ========================================================= */
+
+        p {
+            color: #d1d5db;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            color: #d1d5db;
+            padding-left: 25px;
+        }
+
+        li {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================================
+           MOBILE VIEW
+           DESKTOP COMPLETELY UNCHANGED
+           SAME STANDARD AS KAM PAGE
+        ========================================================= */
+
+        @media screen and (max-width: 600px) {
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 12px;
+                box-sizing: border-box;
+            }
+
+            .profile-header {
+                padding: 18px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+
+            .profile-title {
+                font-size: 1.55rem;
+                line-height: 1.15;
+                margin-bottom: 7px;
+            }
+
+            .profile-subtitle {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+
+            .content-box {
+                padding: 18px;
+                border-radius: 9px;
+                margin-bottom: 18px;
+            }
+
+            h2 {
+                font-size: 1.10rem;
+                line-height: 1.3;
+                margin-top: 20px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                letter-spacing: 0.1px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+
+            .highlight {
+                font-size: 0.95rem;
+            }
+
+            .back-btn {
+                font-size: 0.90
