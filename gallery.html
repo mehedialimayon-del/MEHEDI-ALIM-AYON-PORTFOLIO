@@ -146,7 +146,7 @@
     </div>
 
     <script>
-        const API_KEY = 'AIzaSyA_placeholder_your_key_here'; 
+        const API_KEY = 'AIzaSyCbmu7zMzWO4CYID7oetFmdrXuVA4PbUHM'; 
         const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
 
         document.addEventListener('keydown', function(e) {
@@ -156,8 +156,8 @@
 
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
-            // ট্র্যাশ বাদে ছবি খোঁজার ইউনিভার্সাল ফিল্টার
-            const url = `https://www.googleapis.com/drive/v3/files?q=mimeType+contains+'image/'+and+trashed=false&key=${API_KEY}&fields=files(id,name,description,parents)&pageSize=100`;
+            const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
+            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&key=${API_KEY}&fields=files(id,name,description)&pageSize=100`;
 
             try {
                 const res = await fetch(url);
@@ -165,11 +165,7 @@
                 container.innerHTML = '';
 
                 if (data.files && data.files.length > 0) {
-                    // নির্দিষ্ট ফোল্ডার বা সাবফোল্ডারের ফাইল ফিল্টার করা
-                    const matchedFiles = data.files.filter(f => f.parents && f.parents.includes(TARGET_FOLDER_ID));
-                    const filesToRender = matchedFiles.length > 0 ? matchedFiles : data.files;
-
-                    filesToRender.forEach(file => {
+                    data.files.forEach(file => {
                         const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
                         const caption = file.description ? file.description : '';
 
@@ -183,7 +179,7 @@
                         container.appendChild(card);
                     });
                 } else {
-                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found!</p>';
+                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af; grid-column: 1/-1;">No photos found! Please check if the folder is public.</p>';
                 }
             } catch (err) {
                 console.error(err);
