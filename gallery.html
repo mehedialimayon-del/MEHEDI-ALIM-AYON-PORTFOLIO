@@ -35,7 +35,6 @@
             text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
         }
 
-        /* মেসনারি বা পিন্টারেস্ট স্টাইল লেআউট, যা লম্বা ও চ্যাপ্টা ছবি নিজে থেকেই অ্যাডজাস্ট করবে */
         .gallery-grid {
             column-count: 1;
             column-gap: 18px;
@@ -79,7 +78,6 @@
             box-shadow: 0 10px 30px rgba(255, 116, 20, 0.3);
         }
 
-        /* ছবি তার নিজস্ব সাইজ ও অনুপাত (Aspect Ratio) বজায় রাখবে */
         .photo-card img {
             width: 100%;
             height: auto;
@@ -164,7 +162,9 @@
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
             const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
-            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&key=${API_KEY}&fields=files(id,name,description)&pageSize=100`;
+            
+            // orderBy=name যোগ করা হয়েছে যাতে গুগল ড্রাইভের ফাইলগুলো নামের ক্রমানুসারে (01, 02, 03) লোড হয়
+            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100`;
 
             try {
                 const res = await fetch(url);
