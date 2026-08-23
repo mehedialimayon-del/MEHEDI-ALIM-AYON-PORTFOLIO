@@ -196,6 +196,18 @@
             letter-spacing: 1.5px;
             text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
         }
+        .refresh-name {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .refresh-name:active {
+            transform: scale(0.97);
+            opacity: 0.8;
+        }
 
         .profession {
             margin: 0 0 30px;
@@ -503,7 +515,11 @@
     <div class="main-content">
 
         <!-- NAME -->
-        <h1 class="name">MEHEDI ALIM AYON</h1>
+                <!-- NAME (CLICK TO REFRESH) -->
+        <h1 class="name">
+            <a href="javascript:void(0);" onclick="location.reload();" class="refresh-name">MEHEDI ALIM AYON</a>
+        </h1>
+
 
         <!-- PROFESSION WITH TYPEWRITER EFFECT -->
         <p class="profession">
