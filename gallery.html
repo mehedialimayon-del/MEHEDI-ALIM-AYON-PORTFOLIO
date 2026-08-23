@@ -146,7 +146,6 @@
     </div>
 
     <script>
-        // আপনার দেওয়া এপিআই কি এবং ফোল্ডার আইডি সেটিং
         const API_KEY = 'AIzaSyA_placeholder_your_key_here'; 
         const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
 
@@ -157,7 +156,8 @@
 
         async function loadDrivePhotos() {
             const container = document.getElementById('gallery-container');
-            const url = `https://www.googleapis.com/drive/v3/files?q='${TARGET_FOLDER_ID}'+in+parents+and+trashed=false&key=${API_KEY}&fields=files(id,name,description,mimeType)&pageSize=100`;
+            // ক্যুয়েরি সহজ করে দেওয়া হয়েছে যাতে ফোল্ডারের ভেতরের সব ফাইল সঠিকভাবে স্ক্যান হয়
+            const url = `https://www.googleapis.com/drive/v3/files?q='${TARGET_FOLDER_ID}'+in+parents&key=${API_KEY}&fields=files(id,name,description,mimeType)&pageSize=100`;
 
             try {
                 const res = await fetch(url);
@@ -165,10 +165,11 @@
                 container.innerHTML = '';
 
                 if (data.files && data.files.length > 0) {
-                    const imageFiles = data.files.filter(f => f.mimeType && f.mimeType.startsWith('image/'));
+                    // ফোল্ডার বাদ দিয়ে শুধু ফাইলগুলো ফিল্টার করা
+                    const validFiles = data.files.filter(f => f.mimeType !== 'application/vnd.google-apps.folder');
 
-                    if(imageFiles.length > 0) {
-                        imageFiles.forEach(file => {
+                    if(validFiles.length > 0) {
+                        validFiles.forEach(file => {
                             const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
                             const caption = file.description ? file.description : '';
 
@@ -189,7 +190,7 @@
                 }
             } catch (err) {
                 console.error(err);
-                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444; grid-column: 1/-1;">Error loading photos. Please check API Key/Permissions.</p>';
+                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444; grid-column: 1/-1;">Error loading photos.</p>';
             }
         }
 
