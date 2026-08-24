@@ -386,3 +386,76 @@ a {
     line-height: 1.15;
 
     background: #ff7414;
+
+    border: 2px solid #ff7414;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-container {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin: 25px 0 10px;
+
+    gap: 12px;
+}
+
+.stat-card {
+    background:
+        rgba(255,255,255,0.04);
+
+    padding: 15px 10px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(255,116,20,0.3);
+
+    text-align: center;
+
+    flex: 1;
+
+    backdrop-filter: blur(5px);
+}
+
+.stat-card h2 {
+    color: #ff7414;
+
+    font-size: 1.8rem;
+
+    margin: 0 0 4px;
+
+    font-weight: 900;
+}
+
+.stat-card p {
+    margin: 0;
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    color: #d1d5db;
+}
+
+
+/* =========================================================
+   MOBILE VERSION
+   600PX AND BELOW
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 58vh !important;
+        min-height: 350px !important;
+    }
+
+    .social-icons {
+        top: 8px !important;
