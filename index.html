@@ -1,621 +1,217 @@
- <!DOCTYPE html>  <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Mehedi Alim Ayon - Professional Portfolio</title>  
-
-<link  
-    rel="stylesheet"  
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  
->  
-
-<style>  
-    /* =========================================================  
-       GLOBAL RESET  
-    ========================================================= */  
-
-    * {  
-        box-sizing: border-box;  
-    }  
-
-    html,  
-    body {  
-        width: 100%;  
-        max-width: 100%;  
-        margin: 0;  
-        padding: 0;  
-        overflow-x: hidden !important;  
-        -webkit-text-size-adjust: 100%;  
-        text-size-adjust: 100%;  
-    }  
-
-    body {  
-        background:  
-            linear-gradient(  
-                180deg,  
-                #111827 0%,  
-                #101622 55%,  
-                #080c14 100%  
-            );  
-        font-family: Arial, sans-serif;  
-        color: #ffffff;  
-    }  
-
-    img {  
-        max-width: 100%;  
-    }  
-
-    a {  
-        -webkit-tap-highlight-color: transparent;  
-    }  
-
-    /* =========================================================  
-       PAGE  
-    ========================================================= */  
-
-    .page {  
-        width: 100%;  
-        max-width: 100%;  
-        min-height: 100vh;  
-        overflow-x: hidden;  
-    }  
-
-    /* =========================================================  
-       HOVER, GLASS & VISITED EFFECTS  
-    ========================================================= */  
-
-    .btn-hover {  
-        transition: all 0.3s ease-in-out !important;  
-        backdrop-filter: blur(8px);  
-        -webkit-backdrop-filter: blur(8px);  
-    }  
-
-    .btn-hover:hover {  
-        transform: translateY(-3px) scale(1.02) !important;  
-        border-color: #ff7414 !important;  
-        box-shadow: 0 8px 20px rgba(255, 116, 20, 0.25);  
-        filter: brightness(1.15);  
-    }  
-
-    /* CLICKED / VISITED BUTTON STATE */  
-    .menu-button:active,  
-    .menu-button.visited-btn {  
-        background: #ff7414 !important;  
-        color: #ffffff !important;  
-        border-color: #ff7414 !important;  
-        box-shadow: 0 0 15px rgba(255, 116, 20, 0.6) !important;  
-    }  
-
-    /* =========================================================  
-       HERO / HEADER IMAGE  
-    ========================================================= */  
-
-    .hero {  
-        width: 100%;  
-        height: 60vh;  
-        min-height: 420px;  
-        position: relative;  
-        overflow: hidden;  
-        background: #111827;  
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);  
-    }  
-
-    .hero-image {  
-        width: 100%;  
-        height: 100%;  
-        display: block;  
-        object-fit: cover;  
-        object-position: center 5%;  
-    }  
-
-    /* =========================================================  
-       SOCIAL ICONS  
-    ========================================================= */  
-
-    .social-icons {  
-        position: absolute;  
-        top: 20px;  
-        right: 20px;  
-        display: flex;  
-        gap: 10px;  
-        z-index: 20;  
-    }  
-
-    .social-icons a {  
-        width: 45px;  
-        height: 45px;  
-        flex: 0 0 45px;  
-        display: flex;  
-        align-items: center;  
-        justify-content: center;  
-        border-radius: 50%;  
-        color: #ffffff;  
-        text-decoration: none;  
-        font-size: 20px;  
-        backdrop-filter: blur(8px);  
-        -webkit-backdrop-filter: blur(8px);  
-    }  
-
-    .linkedin {  
-        background: rgba(255, 116, 20, 0.20);  
-        border: 1px solid #ff7414;  
-    }  
-
-    .email {  
-        background: rgba(255, 116, 20, 0.20);  
-        border: 1px solid #ff7414;  
-    }  
-
-    .whatsapp {  
-        background: rgba(37, 211, 102, 0.20);  
-        border: 1px solid #25d366;  
-    }  
-
-    /* =========================================================  
-       HERO GRADIENT  
-    ========================================================= */  
-
-    .hero-gradient {  
-        position: absolute;  
-        left: 0;  
-        right: 0;  
-        bottom: 0;  
-        width: 100%;  
-        height: 50%;  
-        background: linear-gradient(to bottom, rgba(8, 12, 20, 0), rgba(8, 12, 20, 1));  
-        pointer-events: none;  
-        z-index: 2;  
-    }  
-
-    /* =========================================================  
-       MAIN CONTENT  
-    ========================================================= */  
-
-    .main-content {  
-        width: 100%;  
-        max-width: 850px;  
-        margin: -50px auto 0;  
-        padding: 20px 20px 40px;  
-        text-align: center;  
-        position: relative;  
-        z-index: 10;  
-    }  
-
-    /* =========================================================  
-       NAME & TYPEWRITER PROFESSION  
-    ========================================================= */  
-
-    .name {  
-        margin: 0 0 10px;  
-        color: #ffffff;  
-        font-size: 42px;  
-        line-height: 1.15;  
-        font-weight: 900;  
-        letter-spacing: 1.5px;  
-        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);  
-    }  
-    .refresh-name {  
-        color: inherit;  
-        text-decoration: none;  
-        cursor: pointer;  
-        display: inline-block;  
-        transition: transform 0.2s ease, opacity 0.2s ease;  
-    }  
-
-    .refresh-name:active {  
-        transform: scale(0.97);  
-        opacity: 0.8;  
-    }  
-
-    .profession {  
-        margin: 0 0 30px;  
-        color: #ff7414;  
-        font-size: 16px;  
-        line-height: 1.35;  
-        font-weight: 800;  
-        letter-spacing: 1px;  
-        text-transform: uppercase;  
-        min-height: 24px;  
-    }  
-
-    .typed-text {  
-        color: #ff7414;  
-    }  
-
-    .cursor {  
-        display: inline-block;  
-        background-color: #ff7414;  
-        margin-left: 2px;  
-        width: 3px;  
-        animation: blink 1s infinite;  
-    }  
-
-    @keyframes blink {  
-        0%, 100% { opacity: 1; }  
-        50% { opacity: 0; }  
-    }  
-
-    /* =========================================================  
-       BUTTON ROW & MENU BUTTONS  
-    ========================================================= */  
-
-    .button-row {  
-        width: 100%;  
-        display: flex;  
-        gap: 12px;  
-        margin-bottom: 14px;  
-    }  
-
-    .menu-button {  
-        min-width: 0;  
-        display: flex;  
-        align-items: center;  
-        justify-content: center;  
-        padding: 10px;  
-        color: #ffffff;  
-        text-decoration: none;  
-        text-align: center;  
-        font-weight: 900;  
-        background: linear-gradient(145deg, rgba(37, 43, 59, 0.8), rgba(26, 32, 44, 0.8));  
-        border: 2px solid #ff7414;  
-        border-radius: 10px;  
-        overflow: hidden;  
-        overflow-wrap: anywhere;  
-        word-break: normal;  
-        flex-shrink: 1;  
-    }  
-
-    .top-button {  
-        flex: 1 1 0;  
-        min-height: 75px;  
-        font-size: 16px;  
-        line-height: 1.15;  
-    }  
-
-    .middle-button {  
-        flex: 1 1 0;  
-        height: 65px;  
-        font-size: 18px;  
-        line-height: 1.15;  
-    }  
-
-    .bottom-button {  
-        flex: 1 1 0;  
-        height: 65px;  
-        font-size: 18px;  
-        line-height: 1.15;  
-        background: #ff7414;  
-        border: 2px solid #ff7414;  
-    }  
-
-    /* =========================================================  
-       LIVE STATS / COUNTER SECTION  
-    ========================================================= */  
-
-    .stats-container {  
-        display: flex;  
-        justify-content: space-around;  
-        margin: 25px 0 10px;  
-        gap: 12px;  
-    }  
-
-    .stat-card {  
-        background: rgba(255, 255, 255, 0.04);  
-        padding: 15px 10px;  
-        border-radius: 10px;  
-        border: 1px solid rgba(255, 116, 20, 0.3);  
-        text-align: center;  
-        flex: 1;  
-        backdrop-filter: blur(5px);  
-    }  
-
-    .stat-card h2 {  
-        color: #ff7414;  
-        font-size: 1.8rem;  
-        margin: 0 0 4px 0;  
-        font-weight: 900;  
-    }  
-
-    .stat-card p {  
-        margin: 0;  
-        font-size: 0.75rem;  
-        text-transform: uppercase;  
-        letter-spacing: 0.5px;  
-        color: #d1d5db;  
-    }  
-
-    /* =========================================================  
-       PERFECT MOBILE POSITIONING & ICON FIX (MAX-WIDTH: 600PX)  
-    ========================================================= */  
-
-    @media (max-width: 600px) {  
-
-        /* HERO IMAGE AREA - FULL FACE VISIBILITY */  
-        .hero {  
-            height: 58vh !important;  
-            min-height: 350px !important;  
-        }  
-
-        /* TOP RIGHT SMALL SOCIAL ICONS */  
-        .social-icons {  
-            top: 8px !important;  
-            right: 8px !important;  
-            gap: 6px !important;  
-        }  
-
-        .social-icons a {  
-            width: 28px !important;  
-            height: 28px !important;  
-            flex: 0 0 28px !important;  
-            font-size: 12px !important;  
-        }  
-
-        /* MAIN CONTENT SHIFTED DOWNWARDS */  
-        .main-content {  
-            width: 100% !important;  
-            max-width: 100% !important;  
-            margin: -30px auto 0 !important;  
-            padding: 5px 10px 15px !important;  
-            text-align: center !important;  
-        }  
-
-        /* NAME - SINGLE LINE FIT */  
-        .name {  
-            font-size: 22px !important;  
-            line-height: 1.1 !important;  
-            letter-spacing: 0.5px !important;  
-            white-space: nowrap !important;  
-            margin: 0 0 4px !important;  
-        }  
-
-        /* PROFESSION / TYPEWRITER */  
-        .profession {  
-            font-size: 11px !important;  
-            margin: 0 0 12px !important;  
-            min-height: 18px !important;  
-        }  
-
-        /* BUTTON ROWS ALIGNMENT */  
-        .button-row {  
-            display: flex !important;  
-            justify-content: center !important;  
-            align-items: center !important;  
-            width: 100% !important;  
-            gap: 5px !important;  
-            margin-bottom: 7px !important;  
-        }  
-
-        /* MENU BUTTON BASE STYLE */  
-        .menu-button {  
-            display: flex !important;  
-            align-items: center !important;  
-            justify-content: center !important;  
-            text-align: center !important;  
-            box-sizing: border-box !important;  
-            border-radius: 7px !important;  
-            font-weight: 800 !important;  
-            white-space: normal !important;  
-            word-break: keep-all !important;  
-            overflow-wrap: normal !important;  
-        }  
-
-        /* TOP 3 HIGH-LIGHTED BUTTONS */  
-        .top-button {  
-            flex: 1 1 0 !important;  
-            min-width: 0 !important;  
-            min-height: 52px !important;  
-            height: auto !important;  
-            font-size: 8.8px !important;  
-            font-weight: 900 !important;  
-            letter-spacing: 0.3px !important;  
-            line-height: 1.15 !important;  
-            padding: 4px 1px !important;  
-            color: #ffffff !important;  
-            border: 1.5px solid rgba(255, 116, 20, 0.8) !important;  
-            text-shadow: 0 0 4px rgba(255, 116, 20, 0.6) !important;  
-            box-shadow: inset 0 0 8px rgba(255, 116, 20, 0.15) !important;  
-        }  
-
-        /* MIDDLE & BOTTOM BUTTONS */  
-        .middle-button,   
-        .bottom-button {  
-            flex: 1 1 0 !important;  
-            min-width: 0 !important;  
-            height: 45px !important;  
-            font-size: 11.5px !important;  
-            line-height: 1.12 !important;  
-            padding: 4px !important;  
-        }  
-
-        /* STATS / COUNTER FIT AT VERY BOTTOM */  
-        .stats-container {  
-            margin: 10px 0 0 !important;  
-            gap: 5px !important;  
-        }  
-
-        .stat-card {  
-            padding: 8px 3px !important;  
-        }  
-
-        .stat-card h2 {  
-            font-size: 1.1rem !important;  
-            margin-bottom: 2px !important;  
-        }  
-
-        .stat-card p {  
-            font-size: 0.55rem !important;  
-        }  
-    }  
-
-    /* =========================================================  
-       EXTRA SMALL MOBILE FIX (MAX-WIDTH: 380PX)  
-    ========================================================= */  
-
-    @media (max-width: 380px) {  
-
-        .hero {  
-            height: 52vh !important;  
-        }  
-
-        .main-content {  
-            margin-top: -25px !important;  
-        }  
-
-        .name {  
-            font-size: 19px !important;  
-        }  
-
-        .top-button {  
-            min-height: 48px !important;  
-            font-size: 7.8px !important;  
-            font-weight: 900 !important;  
-            padding: 3px 1px !important;  
-        }  
-
-        .middle-button,   
-        .bottom-button {  
-            height: 40px !important;  
-            font-size: 10.5px !important;  
-        }  
-    }  
-</style>
-
-</head>  <body>  <div class="page">  <!-- HERO IMAGE -->  
-<div class="hero">  
-    <img  
-        class="hero-image"  
-        alt="Mehedi Alim Ayon"  
-        src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"  
-    >  
-
-    <!-- SOCIAL ICONS -->  
-    <div class="social-icons">  
-        <a class="linkedin" href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">  
-            <i class="fa-brands fa-linkedin-in"></i>  
-        </a>  
-        <a class="email" href="mailto:mehedialif1999@gmail.com" aria-label="Email">  
-            <i class="fa-solid fa-envelope"></i>  
-        </a>  
-        <a class="whatsapp" href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">  
-            <i class="fa-brands fa-whatsapp"></i>  
-        </a>  
-    </div>  
-
-    <div class="hero-gradient"></div>  
-</div>  
-
-<!-- MAIN CONTENT -->  
-<div class="main-content">  
-
-    <!-- NAME -->  
-            <!-- NAME (CLICK TO REFRESH) -->  
-    <h1 class="name">  
-        <a href="javascript:void(0);" onclick="location.reload();" class="refresh-name">MEHEDI ALIM AYON</a>  
-    </h1>  
-
-
-    <!-- PROFESSION WITH TYPEWRITER EFFECT -->  
-    <p class="profession">  
-        <span class="typed-text"></span><span class="cursor">&nbsp;</span>  
-    </p>  
-
-    <!-- ROW 1 — THREE PROFESSIONAL AREAS -->  
-    <div class="button-row">  
-        <a href="agriculturist.html" class="menu-button top-button btn-hover">AGRICULTURIST</a>  
-        <a href="communicationist.html" class="menu-button top-button btn-hover">COMMUNICATIONIST</a>  
-        <a href="kam.html" class="menu-button top-button btn-hover">KEY ACCOUNT<br>MANAGER</a>  
-    </div>  
-
-    <!-- ROW 2 — ABOUT / GALLERY -->  
-    <div class="button-row">  
-        <a href="about.html" class="menu-button middle-button btn-hover">ABOUT ME</a>  
-        <a href="gallery.html" class="menu-button middle-button btn-hover">GALLERY</a>  
-    </div>  
-
-    <!-- ROW 3 — CV / CONTACT -->  
-    <div class="button-row">  
-        <a href="resume.html" class="menu-button bottom-button btn-hover">PROFILE / CV</a>  
-        <a href="contact.html" class="menu-button bottom-button btn-hover">CONTACT</a>  
-    </div>  
-
-    <!-- LIVE STATS COUNTER SECTION -->  
-    <div class="stats-container">  
-        <div class="stat-card">  
-            <h2 class="counter" data-target="11">0</h2>  
-            <p>Countries Sourced</p>  
-        </div>
-<h2 class="counter" data-target="900">0</h2>
-<p>Products Managed</p>
-</div>
-<div class="stat-card">
-<h2 class="counter" data-target="100">0</h2>
-<p>% Client Focus</p>
-</div>
-</div>
-
-</div>
-
-</div>  <!-- JAVASCRIPT FOR DYNAMIC EFFECTS -->  <script>  
-    // 1. TYPEWRITER EFFECT  
-    const typedTextSpan = document.querySelector(".typed-text");  
-    const textArray = ["AGRICULTURIST", "COMMUNICATIONIST", "KEY ACCOUNT MANAGER"];  
-    let textIndex = 0;  
-    let charIndex = 0;  
-  
-    function type() {  
-        if (charIndex < textArray[textIndex].length) {  
-            typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);  
-            charIndex++;  
-            setTimeout(type, 100);  
-        } else {  
-            setTimeout(erase, 2000);  
-        }  
-    }  
-  
-    function erase() {  
-        if (charIndex > 0) {  
-            typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);  
-            charIndex--;  
-            setTimeout(erase, 50);  
-        } else {  
-            textIndex = (textIndex + 1) % textArray.length;  
-            setTimeout(type, 500);  
-        }  
-    }  
-  
-    // 2. COUNTER ANIMATION  
-    const counters = document.querySelectorAll('.counter');  
-    counters.forEach(counter => {  
-        counter.innerText = '0';  
-        const updateCounter = () => {  
-            const target = +counter.getAttribute('data-target');  
-            const c = +counter.innerText;  
-            const increment = target / 50;  
-            if (c < target) {  
-                counter.innerText = `${Math.ceil(c + increment)}`;  
-                setTimeout(updateCounter, 30);  
-            } else {  
-                counter.innerText = target + "+";  
-            }  
-        };  
-        updateCounter();  
-    });  
-  
-        // 3. REFRESH-SAFE BUTTON CLICK EFFECT (NO PERSISTENT ORANGE)  
-    document.addEventListener("DOMContentLoaded", function () {  
-        if(textArray.length) setTimeout(type, 1000);  
-  
-        // CLEAR ANY OLD SESSION DATA ON RELOAD  
-        sessionStorage.clear();  
-  
-        const buttons = document.querySelectorAll(".menu-button");  
-        buttons.forEach(button => {  
-            // TOUCH / CLICK RESPONSE  
-            button.addEventListener("click", function () {  
-                buttons.forEach(b => b.classList.remove("visited-btn"));  
-                this.classList.add("visited-btn");  
-            });  
-        });  
-    });  
-  
-</script>  </body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { 
+            box-sizing: border-box; 
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            background: linear-gradient(180deg, #111827 0%, #101622 55%, #080c14 100%);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px 15px;
+            min-height: 100vh;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #ff7414;
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(255, 116, 20, 0.4);
+        }
+
+        .gallery-grid {
+            column-count: 1;
+            column-gap: 18px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                column-count: 3;
+            }
+        }
+
+        .photo-card {
+            background: rgba(37, 43, 59, 0.55);
+            border: 1.5px solid rgba(255, 116, 20, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            break-inside: avoid;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff7414;
+            box-shadow: 0 10px 30px rgba(255, 116, 20, 0.3);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none;
+        }
+
+        .photo-caption {
+            padding: 12px;
+            font-size: 14px;
+            color: #f3f4f6;
+            text-align: center;
+            background: rgba(17, 24, 39, 0.9);
+            font-weight: 700;
+            border-top: 1px solid rgba(255, 116, 20, 0.2);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(8, 12, 20, 0.95);
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+            border: 2px solid #ff7414;
+            box-shadow: 0 0 30px rgba(255, 116, 20, 0.4);
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        .lightbox-caption {
+            margin-top: 15px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 25px;
+            color: #ff7414;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <h1 class="gallery-title">Portfolio Gallery</h1>
+
+    <div class="gallery-grid" id="gallery-container">
+        <p style="text-align:center; width:100%; color: #ff7414;">Loading Gallery...</p>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Full View">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <script>
+        const API_KEY = 'AIzaSyCbmu7zMzWO4CYID7oetFmdrXuVA4PbUHM'; 
+        const TARGET_FOLDER_ID = '1jfLl4PG4xT1jIv25fMvWY3HH32PYNudr'; 
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'PrintScreen') navigator.clipboard.writeText('');
+            if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u' || e.key === 'i')) e.preventDefault();
+        });
+
+        function getCleanCaption(fileName) {
+            let nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+            let cleanText = nameWithoutExt.replace(/^[0-9]+[\s\-_.]*/, '').trim();
+            return cleanText;
+        }
+
+        async function loadDrivePhotos() {
+            const container = document.getElementById('gallery-container');
+            const query = `'${TARGET_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`;
+            
+            // timestamp যোগ করা হয়েছে যাতে ব্রাউজার ক্যাশ না করে সবসময় লেটেস্ট ডেটা লোড করে
+            const timestamp = new Date().getTime();
+            const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&orderBy=name&key=${API_KEY}&fields=files(id,name,description)&pageSize=100&_=${timestamp}`;
+
+            try {
+                const res = await fetch(url, { cache: 'no-store' });
+                const data = await res.json();
+                container.innerHTML = '';
+
+                if (data.files && data.files.length > 0) {
+                    data.files.forEach(file => {
+                        const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
+                        const caption = file.description ? file.description : getCleanCaption(file.name);
+
+                        const card = document.createElement('div');
+                        card.className = 'photo-card';
+                        card.onclick = () => openLightbox(imgUrl, caption);
+                        card.innerHTML = `
+                            <img src="${imgUrl}" alt="${file.name}" loading="lazy" ondragstart="return false;">
+                            ${caption ? `<div class="photo-caption">${caption}</div>` : ''}
+                        `;
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = '<p style="text-align:center; width:100%; color: #9ca3af;">No photos found!</p>';
+                }
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = '<p style="text-align:center; width:100%; color: #ef4444;">Error loading photos.</p>';
+            }
+        }
+
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        loadDrivePhotos();
+    </script>
+</body>
+</html>
