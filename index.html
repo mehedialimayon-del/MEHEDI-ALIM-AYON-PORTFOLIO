@@ -7,8 +7,8 @@
 <title>Mehedi Alim Ayon - Professional Portfolio</title>
 
 <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 >
 
 <style>
@@ -33,6 +33,9 @@ body {
 }
 
 body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+
     background:
         linear-gradient(
             180deg,
@@ -40,8 +43,6 @@ body {
             #101622 55%,
             #080c14 100%
         );
-    font-family: Arial, sans-serif;
-    color: #ffffff;
 }
 
 img {
@@ -51,6 +52,7 @@ img {
 a {
     -webkit-tap-highlight-color: transparent;
 }
+
 
 /* =========================================================
    PAGE
@@ -63,35 +65,35 @@ a {
     overflow-x: hidden;
 }
 
+
 /* =========================================================
-   HOVER EFFECT
+   BUTTON EFFECT
 ========================================================= */
 
 .btn-hover {
-    transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-hover:hover {
-    transform: translateY(-3px) scale(1.02) !important;
+    transform: translateY(-3px) scale(1.02);
     border-color: #ff7414 !important;
-    box-shadow: 0 8px 20px rgba(255,116,20,0.25);
+    box-shadow:
+        0 8px 20px rgba(255,116,20,0.25);
     filter: brightness(1.15);
 }
-
-/* =========================================================
-   BUTTON CLICK STATE
-========================================================= */
 
 .menu-button:active,
 .menu-button.visited-btn {
     background: #ff7414 !important;
     color: #ffffff !important;
     border-color: #ff7414 !important;
+
     box-shadow:
         0 0 15px rgba(255,116,20,0.6) !important;
 }
+
 
 /* =========================================================
    HERO
@@ -101,9 +103,12 @@ a {
     width: 100%;
     height: 60vh;
     min-height: 420px;
+
     position: relative;
     overflow: hidden;
+
     background: #111827;
+
     box-shadow:
         0 10px 30px rgba(0,0,0,0.6);
 }
@@ -111,10 +116,13 @@ a {
 .hero-image {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
     object-position: center 5%;
 }
+
 
 /* =========================================================
    SOCIAL ICONS
@@ -122,16 +130,20 @@ a {
 
 .social-icons {
     position: absolute;
+
     top: 20px;
     right: 20px;
+
     display: flex;
     gap: 10px;
+
     z-index: 20;
 }
 
 .social-icons a {
     width: 45px;
     height: 45px;
+
     flex: 0 0 45px;
 
     display: flex;
@@ -142,6 +154,7 @@ a {
 
     color: #ffffff;
     text-decoration: none;
+
     font-size: 20px;
 
     backdrop-filter: blur(8px);
@@ -159,12 +172,14 @@ a {
     border: 1px solid #25d366;
 }
 
+
 /* =========================================================
    HERO GRADIENT
 ========================================================= */
 
 .hero-gradient {
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
@@ -180,8 +195,10 @@ a {
         );
 
     pointer-events: none;
+
     z-index: 2;
 }
+
 
 /* =========================================================
    MAIN CONTENT
@@ -192,6 +209,7 @@ a {
     max-width: 850px;
 
     margin: -50px auto 0;
+
     padding: 20px 20px 40px;
 
     text-align: center;
@@ -199,6 +217,7 @@ a {
     position: relative;
     z-index: 10;
 }
+
 
 /* =========================================================
    NAME
@@ -210,6 +229,7 @@ a {
     color: #ffffff;
 
     font-size: 42px;
+
     line-height: 1.15;
 
     font-weight: 900;
@@ -222,7 +242,9 @@ a {
 
 .refresh-name {
     color: inherit;
+
     text-decoration: none;
+
     cursor: pointer;
 
     display: inline-block;
@@ -237,8 +259,9 @@ a {
     opacity: 0.8;
 }
 
+
 /* =========================================================
-   PROFESSION / TYPEWRITER
+   TYPEWRITER
 ========================================================= */
 
 .profession {
@@ -247,6 +270,7 @@ a {
     color: #ff7414;
 
     font-size: 16px;
+
     line-height: 1.35;
 
     font-weight: 800;
@@ -275,17 +299,15 @@ a {
 }
 
 @keyframes blink {
-
-    0%,
-    100% {
+    0%,100% {
         opacity: 1;
     }
 
     50% {
         opacity: 0;
     }
-
 }
+
 
 /* =========================================================
    BUTTON ROW
@@ -300,10 +322,6 @@ a {
 
     margin-bottom: 14px;
 }
-
-/* =========================================================
-   MENU BUTTON
-========================================================= */
 
 .menu-button {
     min-width: 0;
@@ -344,10 +362,6 @@ a {
     flex-shrink: 1;
 }
 
-/* =========================================================
-   TOP BUTTONS
-========================================================= */
-
 .top-button {
     flex: 1 1 0;
 
@@ -358,10 +372,6 @@ a {
     line-height: 1.15;
 }
 
-/* =========================================================
-   MIDDLE BUTTONS
-========================================================= */
-
 .middle-button {
     flex: 1 1 0;
 
@@ -371,10 +381,6 @@ a {
 
     line-height: 1.15;
 }
-
-/* =========================================================
-   BOTTOM BUTTONS
-========================================================= */
 
 .bottom-button {
     flex: 1 1 0;
@@ -389,6 +395,7 @@ a {
 
     border: 2px solid #ff7414;
 }
+
 
 /* =========================================================
    STATS
@@ -446,11 +453,11 @@ a {
 
 
 /* =========================================================
-   MOBILE VERSION
-   600PX AND BELOW
+   MOBILE
+   600px AND BELOW
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
     .hero {
         height: 58vh !important;
@@ -459,3 +466,1412 @@ a {
 
     .social-icons {
         top: 8px !important;
+        right: 8px !important;
+        gap: 6px !important;
+    }
+
+    .social-icons a {
+        width: 28px !important;
+        height: 28px !important;
+
+        flex: 0 0 28px !important;
+
+        font-size: 12px !important;
+    }
+
+    .main-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: -30px auto 0 !important;
+
+        padding: 5px 10px 15px !important;
+
+        text-align: center !important;
+    }
+
+    .name {
+        font-size: 22px !important;
+
+        line-height: 1.1 !important;
+
+        letter-spacing: 0.5px !important;
+
+        white-space: nowrap !important;
+
+        margin: 0 0 4px !important;
+    }
+
+    .profession {
+        font-size: 11px !important;
+
+        margin: 0 0 12px !important;
+
+        min-height: 18px !important;
+    }
+
+    .button-row {
+        display: flex !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+        gap: 5px !important;
+
+        margin-bottom: 7px !important;
+    }
+
+    .menu-button {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 7px !important;
+
+        font-weight: 800 !important;
+
+        white-space: normal !important;
+
+        word-break: keep-all !important;
+
+        overflow-wrap: normal !important;
+    }
+
+    .top-button {
+        flex: 1 1 0 !important;
+
+        min-width: 0 !important;
+
+        min-height: 52px !important;
+
+        height: auto !important;
+
+        font-size: 8.8px !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 0.3px !important;
+
+        line-height: 1.15 !important;
+
+        padding: 4px 1px !important;
+
+        color: #ffffff !important;
+
+        border:
+            1.5px solid rgba(255,116,20,0.8) !important;
+
+        text-shadow:
+            0 0 4px rgba(255,116,20,0.6) !important;
+
+        box-shadow:
+            inset 0 0 8px rgba(255,116,20,0.15) !important;
+    }
+
+    .middle-button,
+    .bottom-button {
+        flex: 1 1 0 !important;
+
+        min-width: 0 !important;
+
+        height: 45px !important;
+
+        font-size: 11.5px !important;
+
+        line-height: 1.12 !important;
+
+        padding: 4px !important;
+    }
+
+    .stats-container {
+        margin: 10px 0 0 !important;
+
+        gap: 5px !important;
+    }
+
+    .stat-card {
+        padding: 8px 3px !important;
+    }
+
+    .stat-card h2 {
+        font-size: 1.1rem !important;
+
+        margin-bottom: 2px !important;
+    }
+
+    .stat-card p {
+        font-size: 0.55rem !important;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width:380px) {
+
+    .hero {
+        height: 52vh !important;
+    }
+
+    .main-content {
+        margin-top: -25px !important;
+    }
+
+    .name {
+        font-size: 19px !important;
+    }
+
+    .top-button {
+        min-height: 48px !important;
+
+        font-size: 7.8px !important;
+
+        font-weight: 900 !important;
+
+        padding: 3px 1px !important;
+    }
+
+    .middle-button,
+    .bottom-button {
+        height: 40px !important;
+
+        font-size: 10.5px !important;
+    }
+}
+
+
+/* =========================================================
+   PREMIUM LAPTOP / DESKTOP
+   MOBILE DOES NOT COME HERE
+========================================================= */
+
+@media (min-width:601px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+
+        min-height: 100vh;
+
+        overflow: hidden !important;
+
+        background:
+            radial-gradient(
+                circle at 78% 48%,
+                rgba(255,116,20,0.13),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 92% 85%,
+                rgba(255,116,20,0.06),
+                transparent 25%
+            ),
+            linear-gradient(
+                135deg,
+                #020711 0%,
+                #07111f 48%,
+                #02060d 100%
+            ) !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        width: 100%;
+        height: 100vh;
+
+        min-height: 100vh;
+
+        position: relative;
+
+        overflow: hidden;
+
+        background:
+            radial-gradient(
+                circle at 78% 48%,
+                rgba(255,116,20,0.10),
+                transparent 28%
+            ),
+            linear-gradient(
+                135deg,
+                #020711 0%,
+                #07111f 48%,
+                #02060d 100%
+            );
+
+        border: 1px solid rgba(255,255,255,0.12);
+
+        border-radius: 20px;
+
+        box-shadow:
+            inset 0 0 100px rgba(0,0,0,0.55),
+            0 20px 60px rgba(0,0,0,0.45);
+    }
+
+
+    /* =====================================================
+       DECORATIVE BACKGROUND
+    ===================================================== */
+
+    .page::before {
+        content: "";
+
+        position: absolute;
+
+        right: -10%;
+        top: -35%;
+
+        width: 65%;
+        height: 150%;
+
+        border:
+            1px solid rgba(255,116,20,0.10);
+
+        border-radius: 50%;
+
+        transform: rotate(-12deg);
+
+        pointer-events: none;
+    }
+
+    .page::after {
+        content: "";
+
+        position: absolute;
+
+        right: 3%;
+        bottom: 5%;
+
+        width: 28%;
+        height: 28%;
+
+        background:
+            radial-gradient(
+                circle,
+                rgba(255,116,20,0.15) 1px,
+                transparent 1.5px
+            );
+
+        background-size: 14px 14px;
+
+        opacity: 0.35;
+
+        pointer-events: none;
+    }
+
+
+    /* =====================================================
+       HERO FULL SCREEN
+    ===================================================== */
+
+    .hero {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100vh !important;
+
+        min-height: 100vh !important;
+
+        overflow: hidden !important;
+
+        background: transparent !important;
+
+        box-shadow: none !important;
+
+        z-index: 1;
+    }
+
+
+    /* =====================================================
+       PROFILE PHOTO
+    ===================================================== */
+
+    .hero-image {
+        position: absolute !important;
+
+        width: min(40vw,620px) !important;
+
+        height: min(40vw,620px) !important;
+
+        max-width: none !important;
+
+        right: 7vw !important;
+
+        top: 50% !important;
+
+        transform:
+            translateY(-50%) !important;
+
+        object-fit: cover !important;
+
+        object-position: center 25% !important;
+
+        border-radius: 50% !important;
+
+        border:
+            7px solid rgba(255,255,255,0.92) !important;
+
+        outline:
+            3px solid #ff7414 !important;
+
+        outline-offset: 7px;
+
+        box-shadow:
+            0 0 0 15px rgba(255,116,20,0.08),
+            0 0 0 30px rgba(255,116,20,0.035),
+            0 0 45px rgba(255,116,20,0.45),
+            0 25px 70px rgba(0,0,0,0.75);
+
+        z-index: 4 !important;
+    }
+
+
+    /* =====================================================
+       PHOTO RINGS
+    ===================================================== */
+
+    .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: min(43vw,670px);
+
+        height: min(43vw,670px);
+
+        right: calc(7vw - 25px);
+
+        top: 50%;
+
+        transform:
+            translateY(-50%);
+
+        border:
+            2px solid rgba(255,116,20,0.55);
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 0 30px rgba(255,116,20,0.12),
+            inset 0 0 30px rgba(255,116,20,0.05);
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+    .hero::after {
+        content: "";
+
+        position: absolute;
+
+        width: min(47vw,730px);
+
+        height: min(47vw,730px);
+
+        right: calc(7vw - 55px);
+
+        top: 50%;
+
+        transform:
+            translateY(-50%);
+
+        border:
+            1px solid rgba(255,116,20,0.18);
+
+        border-radius: 50%;
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+
+    /* =====================================================
+       REMOVE OLD GRADIENT
+    ===================================================== */
+
+    .hero-gradient {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL ICONS
+    ===================================================== */
+
+    .social-icons {
+        position: absolute !important;
+
+        top: 28px !important;
+
+        right: 32px !important;
+
+        display: flex !important;
+
+        gap: 12px !important;
+
+        z-index: 30 !important;
+    }
+
+    .social-icons a {
+        width: 48px !important;
+
+        height: 48px !important;
+
+        flex: 0 0 48px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        color: #ffffff !important;
+
+        background:
+            rgba(4,12,22,0.72) !important;
+
+        backdrop-filter: blur(12px);
+
+        -webkit-backdrop-filter: blur(12px);
+
+        font-size: 19px !important;
+
+        transition: 0.3s ease;
+    }
+
+    .linkedin,
+    .email {
+        border:
+            1px solid rgba(255,116,20,0.8) !important;
+
+        color: #ff8a1f !important;
+    }
+
+    .whatsapp {
+        border:
+            1px solid #25d366 !important;
+
+        color: #25d366 !important;
+    }
+
+    .social-icons a:hover {
+        transform:
+            translateY(-4px)
+            scale(1.08);
+
+        box-shadow:
+            0 0 20px rgba(255,116,20,0.35);
+    }
+
+
+    /* =====================================================
+       LEFT CONTENT
+    ===================================================== */
+
+    .main-content {
+        position: absolute !important;
+
+        left: 0 !important;
+
+        top: 0 !important;
+
+        width: 52% !important;
+
+        max-width: none !important;
+
+        height: 100vh !important;
+
+        margin: 0 !important;
+
+        padding:
+            7vh
+            2vw
+            5vh
+            4.5vw !important;
+
+        z-index: 20 !important;
+
+        text-align: left !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        justify-content: center !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       WELCOME
+    ===================================================== */
+
+    .main-content::before {
+        content:
+            "WELCOME TO MY PORTFOLIO";
+
+        display: block;
+
+        color: #e5e7eb;
+
+        font-size:
+            clamp(10px,0.8vw,14px);
+
+        font-weight: 700;
+
+        letter-spacing: 4px;
+
+        margin:
+            0 0 24px 55px;
+
+        opacity: 0.9;
+    }
+
+    .main-content::after {
+        content: "";
+
+        position: absolute;
+
+        left: 4.5vw;
+
+        top: calc(50% - 35vh);
+
+        width: 42px;
+
+        height: 3px;
+
+        background: #ff7414;
+
+        box-shadow:
+            0 0 15px rgba(255,116,20,0.8);
+    }
+
+
+    /* =====================================================
+       NAME
+    ===================================================== */
+
+    .name {
+        margin:
+            0 0 14px !important;
+
+        font-size:
+            clamp(42px,4.4vw,76px) !important;
+
+        line-height: 0.95 !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 1px !important;
+
+        text-align: left !important;
+
+        color: #ffffff !important;
+
+        text-shadow:
+            0 5px 25px rgba(0,0,0,0.75);
+
+        max-width: 650px;
+    }
+
+    .refresh-name {
+        color: #ffffff !important;
+    }
+
+
+    /* =====================================================
+       PROFESSION
+    ===================================================== */
+
+    .profession {
+        margin:
+            0 0 25px !important;
+
+        min-height: 25px !important;
+
+        color: #ff7414 !important;
+
+        font-size:
+            clamp(12px,1vw,17px) !important;
+
+        font-weight: 800 !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 1px !important;
+
+        text-align: left !important;
+
+        text-transform: uppercase !important;
+    }
+
+    .typed-text {
+        color: #ff7414 !important;
+    }
+
+    .cursor {
+        background-color: #ff7414 !important;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+    ===================================================== */
+
+    .profession::after {
+        content:
+            "Dedicated professional with a strong background in agriculture, effective communication, and key account management. Committed to delivering innovative solutions and building lasting relationships.";
+
+        display: block;
+
+        max-width: 570px;
+
+        margin-top: 25px;
+
+        color: #d1d5db;
+
+        font-size:
+            clamp(12px,0.9vw,16px);
+
+        font-weight: 400;
+
+        line-height: 1.8;
+
+        letter-spacing: 0.2px;
+
+        text-transform: none;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .button-row {
+        width: 100%;
+
+        display: flex;
+
+        gap: 10px;
+
+        margin-bottom: 10px;
+    }
+
+    .button-row:first-of-type {
+        margin-top: 65px;
+    }
+
+    .menu-button {
+        border:
+            1px solid rgba(255,116,20,0.65) !important;
+
+        border-radius: 10px !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(30,39,56,0.92),
+                rgba(10,16,28,0.96)
+            ) !important;
+
+        backdrop-filter: blur(12px);
+
+        -webkit-backdrop-filter: blur(12px);
+
+        box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.035),
+            inset 0 0 20px rgba(255,116,20,0.025),
+            0 7px 20px rgba(0,0,0,0.28);
+
+        transition:
+            transform .3s ease,
+            box-shadow .3s ease,
+            border-color .3s ease,
+            background .3s ease;
+    }
+
+    .menu-button:hover {
+        transform:
+            translateY(-3px)
+            scale(1.015);
+
+        border-color:
+            #ff7414 !important;
+
+        box-shadow:
+            0 10px 28px rgba(255,116,20,0.18),
+            inset 0 0 18px rgba(255,116,20,0.05);
+    }
+
+
+    /* =====================================================
+       TOP BUTTONS
+    ===================================================== */
+
+    .top-button {
+        flex: 1 1 0 !important;
+
+        min-height: 58px !important;
+
+        height: 58px !important;
+
+        padding: 7px !important;
+
+        font-size:
+            clamp(10px,0.9vw,13px) !important;
+
+        line-height: 1.15 !important;
+
+        letter-spacing: 0.3px !important;
+    }
+
+
+    /* =====================================================
+       MIDDLE BUTTONS
+    ===================================================== */
+
+    .middle-button {
+        flex: 1 1 0 !important;
+
+        height: 52px !important;
+
+        font-size:
+            clamp(11px,1vw,14px) !important;
+    }
+
+
+    /* =====================================================
+       ORANGE BUTTONS
+    ===================================================== */
+
+    .bottom-button {
+        flex: 1 1 0 !important;
+
+        height: 52px !important;
+
+        font-size:
+            clamp(11px,1vw,14px) !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff7414 0%,
+                #ff8a32 48%,
+                #ff7414 100%
+            ) !important;
+
+        border:
+            1px solid #ff8a32 !important;
+
+        box-shadow:
+            0 8px 24px rgba(255,116,20,0.20),
+            inset 0 1px 0 rgba(255,255,255,0.20) !important;
+    }
+
+    .bottom-button:hover {
+        filter: brightness(1.08);
+
+        box-shadow:
+            0 12px 30px rgba(255,116,20,0.30),
+            inset 0 1px 0 rgba(255,255,255,0.25) !important;
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .stats-container {
+        width: 100% !important;
+
+        display: flex !important;
+
+        gap: 10px !important;
+
+        margin:
+            15px 0 0 !important;
+
+        justify-content:
+            space-between !important;
+    }
+
+    .stat-card {
+        flex: 1 1 0 !important;
+
+        min-width: 0 !important;
+
+        min-height: 68px !important;
+
+        padding:
+            9px 5px !important;
+
+        border-radius: 9px !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,0.045),
+                rgba(255,255,255,0.012)
+            ) !important;
+
+        border:
+            1px solid rgba(255,116,20,0.25) !important;
+
+        box-shadow:
+            inset 0 0 15px rgba(255,116,20,0.015),
+            0 5px 18px rgba(0,0,0,0.20);
+    }
+
+    .stat-card h2 {
+        color: #ff7414 !important;
+
+        font-size:
+            clamp(19px,1.8vw,27px) !important;
+
+        margin:
+            0 0 3px !important;
+
+        text-shadow:
+            0 0 12px rgba(255,116,20,0.22);
+    }
+
+    .stat-card p {
+        font-size:
+            clamp(7px,0.6vw,9px) !important;
+
+        letter-spacing: 0.6px !important;
+
+        white-space: nowrap !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP
+========================================================= */
+
+@media (min-width:601px) and (max-width:1000px) {
+
+    .main-content {
+        width: 55% !important;
+
+        padding-left: 4vw !important;
+    }
+
+    .name {
+        font-size: 38px !important;
+    }
+
+    .profession {
+        font-size: 14px !important;
+    }
+
+    .profession::after {
+        font-size: 12px;
+        max-width: 430px;
+    }
+
+    .hero-image {
+        width: 330px !important;
+        height: 330px !important;
+
+        right: 6vw !important;
+    }
+
+    .hero::before {
+        width: 370px;
+        height: 370px;
+
+        right: calc(6vw - 20px);
+    }
+
+    .hero::after {
+        width: 420px;
+        height: 420px;
+
+        right: calc(6vw - 45px);
+    }
+
+    .top-button {
+        font-size: 10px !important;
+    }
+
+    .middle-button,
+    .bottom-button {
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width:1200px) {
+
+    .hero-image {
+        width: min(40vw,620px) !important;
+        height: min(40vw,620px) !important;
+    }
+
+    .main-content {
+        padding-left: 5vw !important;
+    }
+}
+
+
+/* =========================================================
+   VERY LARGE DESKTOP
+========================================================= */
+
+@media (min-width:1600px) {
+
+    .hero-image {
+        width: 570px !important;
+        height: 570px !important;
+    }
+
+    .main-content {
+        padding-left: 6vw !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+<!-- =====================================================
+     HERO / PHOTO
+===================================================== -->
+
+<div class="hero">
+
+    <img
+        class="hero-image"
+        alt="Mehedi Alim Ayon"
+        src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
+    >
+
+
+    <!-- SOCIAL ICONS -->
+
+    <div class="social-icons">
+
+        <a
+            class="linkedin"
+            href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+
+        <a
+            class="email"
+            href="mailto:mehedialif1999@gmail.com"
+            aria-label="Email"
+        >
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+
+        <a
+            class="whatsapp"
+            href="https://wa.me/601172267068"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+    <div class="hero-gradient"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<div class="main-content">
+
+
+    <!-- NAME -->
+
+    <h1 class="name">
+
+        <a
+            href="javascript:void(0);"
+            onclick="location.reload();"
+            class="refresh-name"
+        >
+            MEHEDI ALIM AYON
+        </a>
+
+    </h1>
+
+
+
+    <!-- TYPEWRITER -->
+
+    <p class="profession">
+
+        <span class="typed-text"></span>
+
+        <span class="cursor">&nbsp;</span>
+
+    </p>
+
+
+
+    <!-- =================================================
+         ROW 1
+    ================================================== -->
+
+    <div class="button-row">
+
+        <a
+            href="agriculturist.html"
+            class="menu-button top-button btn-hover"
+        >
+            AGRICULTURIST
+        </a>
+
+
+        <a
+            href="communicationist.html"
+            class="menu-button top-button btn-hover"
+        >
+            COMMUNICATIONIST
+        </a>
+
+
+        <a
+            href="kam.html"
+            class="menu-button top-button btn-hover"
+        >
+            KEY ACCOUNT<br>
+            MANAGER
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ROW 2
+    ================================================== -->
+
+    <div class="button-row">
+
+        <a
+            href="about.html"
+            class="menu-button middle-button btn-hover"
+        >
+            ABOUT ME
+        </a>
+
+
+        <a
+            href="gallery.html"
+            class="menu-button middle-button btn-hover"
+        >
+            GALLERY
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ROW 3
+    ================================================== -->
+
+    <div class="button-row">
+
+        <a
+            href="resume.html"
+            class="menu-button bottom-button btn-hover"
+        >
+            PROFILE / CV
+        </a>
+
+
+        <a
+            href="contact.html"
+            class="menu-button bottom-button btn-hover"
+        >
+            CONTACT
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         STATS
+    ================================================== -->
+
+    <div class="stats-container">
+
+
+        <div class="stat-card">
+
+            <h2
+                class="counter"
+                data-target="11"
+            >
+                0
+            </h2>
+
+            <p>
+                Countries Sourced
+            </p>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <h2
+                class="counter"
+                data-target="900"
+            >
+                0
+            </h2>
+
+            <p>
+                Products Managed
+            </p>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <h2
+                class="counter"
+                data-target="100"
+            >
+                0
+            </h2>
+
+            <p>
+                % Client Focus
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =========================================================
+   TYPEWRITER EFFECT
+========================================================= */
+
+const typedTextSpan =
+    document.querySelector(".typed-text");
+
+const textArray = [
+    "AGRICULTURIST",
+    "COMMUNICATIONIST",
+    "KEY ACCOUNT MANAGER"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+
+
+function type() {
+
+    if (
+        charIndex <
+        textArray[textIndex].length
+    ) {
+
+        typedTextSpan.textContent +=
+            textArray[textIndex].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(type, 100);
+
+    } else {
+
+        setTimeout(erase, 2000);
+
+    }
+}
+
+
+function erase() {
+
+    if (charIndex > 0) {
+
+        typedTextSpan.textContent =
+            textArray[textIndex].substring(
+                0,
+                charIndex - 1
+            );
+
+        charIndex--;
+
+        setTimeout(erase, 50);
+
+    } else {
+
+        textIndex =
+            (textIndex + 1) %
+            textArray.length;
+
+        setTimeout(type, 500);
+    }
+}
+
+
+
+/* =========================================================
+   COUNTER ANIMATION
+========================================================= */
+
+const counters =
+    document.querySelectorAll(".counter");
+
+
+counters.forEach(counter => {
+
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+
+        const target =
+            +counter.getAttribute("data-target");
+
+        const current =
+            +counter.innerText;
+
+        const increment =
+            target / 50;
+
+
+        if (current < target) {
+
+            counter.innerText =
+                Math.ceil(
+                    current + increment
+                );
+
+            setTimeout(
+                updateCounter,
+                30
+            );
+
+        } else {
+
+            counter.innerText =
+                target + "+";
+        }
+    };
+
+
+    updateCounter();
+
+});
+
+
+
+/* =========================================================
+   BUTTON CLICK EFFECT
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        setTimeout(type, 1000);
+
+
+        const buttons =
+            document.querySelectorAll(
+                ".menu-button"
+            );
+
+
+        buttons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    buttons.forEach(
+                        b =>
+                        b.classList.remove(
+                            "visited-btn"
+                        )
+                    );
+
+                    this.classList.add(
+                        "visited-btn"
+                    );
+
+                }
+            );
+
+        });
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
