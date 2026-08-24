@@ -1890,108 +1890,415 @@
     .button-row {
         width: 100%;
 
-        display: flex;
+/* =========================================================
+   FINAL PREMIUM LAPTOP / DESKTOP DESIGN
+   MOBILE DESIGN COMPLETELY PROTECTED
+   ========================================================= */
 
-        gap: 12px;
+@media (min-width: 601px) and (hover: hover) and (pointer: fine) {
 
-        margin-bottom: 12px !important;
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        overflow: hidden !important;
+        background: #030914 !important;
     }
 
-    .menu-button {
-        min-width: 0;
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
-        min-height: 62px;
-
-        padding: 12px 15px !important;
-
-        border-radius: 9px;
-
-        border: 1.5px solid rgba(255, 116, 20, 0.75);
-
+    .page {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
         background:
-            linear-gradient(
-                145deg,
-                rgba(15, 28, 45, 0.96),
-                rgba(5, 14, 25, 0.96)
-            ) !important;
-
-        color: #ffffff;
-
-        font-size: clamp(12px, 0.9vw, 16px) !important;
-
-        font-weight: 800;
-
-        letter-spacing: 0.3px;
-
-        box-shadow:
-            inset 0 0 20px rgba(255, 116, 20, 0.025),
-            0 5px 15px rgba(0, 0, 0, 0.2);
-
-        transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease,
-            background 0.3s ease;
-    }
-
-    .menu-button:hover {
-        transform: translateY(-4px) !important;
-
-        border-color: #ff7414 !important;
-
-        box-shadow:
-            0 10px 28px rgba(255, 116, 20, 0.18),
-            inset 0 0 20px rgba(255, 116, 20, 0.08);
-    }
-
-    .top-button {
-        flex: 1;
-
-        height: 70px;
-
-        min-height: 70px;
-    }
-
-    .middle-button {
-        flex: 1;
-
-        height: 66px;
-
-        min-height: 66px;
-    }
-
-    .bottom-button {
-        flex: 1;
-
-        height: 66px;
-
-        min-height: 66px;
-
-        background:
+            radial-gradient(
+                circle at 78% 48%,
+                rgba(255,116,20,0.13),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 92% 85%,
+                rgba(255,116,20,0.06),
+                transparent 25%
+            ),
             linear-gradient(
                 135deg,
-                #ff8a1f,
-                #ff6410
-            ) !important;
-
-        border-color: #ff7414 !important;
-
+                #020711 0%,
+                #07111f 48%,
+                #02060d 100%
+            );
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 20px;
         box-shadow:
-            0 8px 25px rgba(255, 116, 20, 0.22);
+            inset 0 0 100px rgba(0,0,0,0.55),
+            0 20px 60px rgba(0,0,0,0.45);
     }
 
 
     /* =====================================================
-       STATS
+       DECORATIVE RIGHT SIDE
        ===================================================== */
 
-    .stats-container {
-        width: 100%;
+    .page::before {
+        content: "";
+        position: absolute;
+        right: -10%;
+        top: -35%;
+        width: 65%;
+        height: 150%;
+        border: 1px solid rgba(255,116,20,0.10);
+        border-radius: 50%;
+        transform: rotate(-12deg);
+        pointer-events: none;
+    }
 
-        display: flex;
+    .page::after {
+        content: "";
+        position: absolute;
+        right: 3%;
+        bottom: 5%;
+        width: 28%;
+        height: 28%;
+        background:
+            radial-gradient(
+                circle,
+                rgba(255,116,20,0.15) 1px,
+                transparent 1.5px
+            );
+        background-size: 14px 14px;
+        opacity: 0.35;
+        pointer-events: none;
+    }
 
-        gap: 12px;
 
-        margin: 16px 0 0 !important;
+    /* =====================================================
+       HERO AREA
+       ===================================================== */
+
+    .hero {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        overflow: hidden !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        z-index: 1;
+    }
+
+
+    /* =====================================================
+       PROFILE IMAGE
+       BIG + FULL HEAD + CIRCULAR
+       ===================================================== */
+
+    .hero-image {
+        position: absolute !important;
+
+        width: min(40vw, 620px) !important;
+        height: min(40vw, 620px) !important;
+
+        max-width: none !important;
+
+        right: 7vw !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        object-fit: cover !important;
+        object-position: center 25% !important;
+
+        border-radius: 50% !important;
+
+        border: 7px solid rgba(255,255,255,0.92) !important;
+
+        outline: 3px solid #ff7414 !important;
+        outline-offset: 7px;
+
+        box-shadow:
+            0 0 0 15px rgba(255,116,20,0.08),
+            0 0 0 30px rgba(255,116,20,0.035),
+            0 0 45px rgba(255,116,20,0.45),
+            0 25px 70px rgba(0,0,0,0.75);
+
+        z-index: 4 !important;
+    }
+
+
+    /* =====================================================
+       ORANGE RINGS AROUND PHOTO
+       ===================================================== */
+
+    .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: min(43vw, 670px);
+        height: min(43vw, 670px);
+
+        right: calc(7vw - 25px);
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        border: 2px solid rgba(255,116,20,0.55);
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 0 30px rgba(255,116,20,0.12),
+            inset 0 0 30px rgba(255,116,20,0.05);
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+    .hero::after {
+        content: "";
+
+        position: absolute;
+
+        width: min(47vw, 730px);
+        height: min(47vw, 730px);
+
+        right: calc(7vw - 55px);
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        border: 1px solid rgba(255,116,20,0.18);
+
+        border-radius: 50%;
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+
+    /* =====================================================
+       REMOVE OLD HERO GRADIENT
+       ===================================================== */
+
+    .hero-gradient {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL ICONS
+       ===================================================== */
+
+    .social-icons {
+        position: absolute !important;
+
+        top: 28px !important;
+        right: 32px !important;
+
+        display: flex !important;
+        gap: 12px !important;
+
+        z-index: 30 !important;
+    }
+
+    .social-icons a {
+        width: 48px !important;
+        height: 48px !important;
+
+        flex: 0 0 48px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        color: #ffffff !important;
+
+        background: rgba(4,12,22,0.72) !important;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        font-size: 19px !important;
+
+        transition: 0.3s ease;
+    }
+
+    .linkedin,
+    .email {
+        border: 1px solid rgba(255,116,20,0.8) !important;
+        color: #ff8a1f !important;
+    }
+
+    .whatsapp {
+        border: 1px solid #25d366 !important;
+        color: #25d366 !important;
+    }
+
+    .social-icons a:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 0 20px rgba(255,116,20,0.35);
+    }
+
+
+    /* =====================================================
+       LEFT CONTENT
+       ===================================================== */
+
+    .main-content {
+        position: absolute !important;
+
+        left: 0 !important;
+        top: 0 !important;
+
+        width: 52% !important;
+        max-width: none !important;
+
+        height: 100vh !important;
+
+        margin: 0 !important;
+
+        padding:
+            7vh
+            2vw
+            5vh
+            4.5vw !important;
+
+        z-index: 20 !important;
+
+        text-align: left !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       WELCOME
+       ===================================================== */
+
+    .main-content::before {
+        content: "WELCOME TO MY PORTFOLIO";
+
+        display: block;
+
+        color: #e5e7eb;
+
+        font-size: clamp(10px,0.8vw,14px);
+
+        font-weight: 700;
+
+        letter-spacing: 4px;
+
+        margin: 0 0 24px 55px;
+
+        opacity: 0.9;
+    }
+
+    .main-content::after {
+        content: "";
+
+        position: absolute;
+
+        left: 4.5vw;
+        top: calc(50% - 35vh);
+
+        width: 42px;
+        height: 3px;
+
+        background: #ff7414;
+
+        box-shadow:
+            0 0 15px rgba(255,116,20,0.8);
+    }
+
+
+    /* =====================================================
+       NAME
+       ===================================================== */
+
+    .name {
+        margin: 0 0 14px !important;
+
+        font-size:
+            clamp(42px,4.4vw,76px) !important;
+
+        line-height: 0.95 !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 1px !important;
+
+        text-align: left !important;
+
+        color: #ffffff !important;
+
+        text-shadow:
+            0 5px 25px rgba(0,0,0,0.75);
+
+        max-width: 650px;
+    }
+
+    .refresh-name {
+        color: #ffffff !important;
+    }
+
+
+    /* =====================================================
+       PROFESSION
+       ===================================================== */
+
+    .profession {
+        margin: 0 0 0 !important;
+
+        min-height: 25px !important;
+
+        color: #ff7414 !important;
+
+        font-size:
+            clamp(12px,1vw,17px) !important;
+
+        font-weight: 800 !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 1px !important;
+
+        text-align: left !important;
+
+        text-transform: uppercase !important;
+    }
+
+    .typed-text {
+        color: #ff7414 !important;
+    }
+
+    .cursor {
+        background-color: #ff7414 !important;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+       ===================================================== */
+
+    .profession::after {
+        content:
+        "
 </style>
 
 </head>    <body>    <div class="page">    <!-- HERO IMAGE -->    
