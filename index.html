@@ -1,4 +1,4 @@
-।<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,14 +7,14 @@
 <title>Mehedi Alim Ayon - Professional Portfolio</title>
 
 <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 >
 
 <style>
 
 /* =========================================================
-   GLOBAL
+   GLOBAL RESET
 ========================================================= */
 
 * {
@@ -24,25 +24,33 @@
 html,
 body {
     width: 100%;
-    min-height: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    background: #050a12;
-}
+    background:
+        linear-gradient(
+            180deg,
+            #111827 0%,
+            #101622 55%,
+            #080c14 100%
+        );
 
-a {
-    -webkit-tap-highlight-color: transparent;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
 img {
     max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -52,466 +60,39 @@ img {
 
 .page {
     width: 100%;
+    max-width: 100%;
     min-height: 100vh;
-    position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
 /* =========================================================
-   HERO
+   BUTTON HOVER
 ========================================================= */
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 58vh;
-    min-height: 350px;
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            #111827 0%,
-            #080d17 100%
-        );
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.55);
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center 8%;
-}
-
-.hero-gradient {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 55%;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(5,10,18,0),
-            rgba(5,10,18,1)
-        );
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   SOCIAL ICONS
-========================================================= */
-
-.social-icons {
-    position: absolute;
-
-    top: 10px;
-    right: 10px;
-
-    display: flex;
-    gap: 6px;
-
-    z-index: 20;
-}
-
-.social-icons a {
-    width: 30px;
-    height: 30px;
-
-    flex: 0 0 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 12px;
-
-    background: rgba(5,10,18,.70);
+.btn-hover {
+    transition: all 0.3s ease-in-out !important;
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-
-    transition: .3s ease;
 }
 
-.linkedin,
-.email {
-    border: 1px solid #ff7414;
-}
-
-.linkedin:hover,
-.email:hover {
-    background: #ff7414;
-}
-
-.whatsapp {
-    border: 1px solid #25d366;
-    color: #25d366;
-}
-
-.whatsapp:hover {
-    background: #25d366;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   MAIN CONTENT
-========================================================= */
-
-.main-content {
-    width: 100%;
-    max-width: 850px;
-
-    margin: -35px auto 0;
-
-    padding: 10px 12px 25px;
-
-    position: relative;
-    z-index: 10;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   NAME
-========================================================= */
-
-.name {
-    margin: 0 0 5px;
-
-    color: #ffffff;
-
-    font-size: 25px;
-    line-height: 1.1;
-
-    font-weight: 900;
-
-    letter-spacing: .5px;
-
-    white-space: nowrap;
-
-    text-shadow:
-        0 4px 15px rgba(0,0,0,.85);
-}
-
-.refresh-name {
-    color: #ffffff;
-    text-decoration: none;
-
-    display: inline-block;
-
-    cursor: pointer;
-
-    transition: .2s ease;
-}
-
-.refresh-name:active {
-    transform: scale(.97);
-}
-
-
-/* =========================================================
-   TYPEWRITER
-========================================================= */
-
-.profession {
-    margin: 0 0 15px;
-
-    min-height: 18px;
-
-    color: #ff7414;
-
-    font-size: 12px;
-
-    line-height: 1.3;
-
-    font-weight: 800;
-
-    letter-spacing: .8px;
-
-    text-transform: uppercase;
-}
-
-.typed-text {
-    color: #ff7414;
-}
-
-.cursor {
-    display: inline-block;
-
-    width: 2px;
-
-    background: #ff7414;
-
-    margin-left: 2px;
-
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-
-/* =========================================================
-   BUTTON ROW
-========================================================= */
-
-.button-row {
-    width: 100%;
-
-    display: flex;
-
-    gap: 6px;
-
-    margin-bottom: 7px;
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.menu-button {
-    min-width: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 5px;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    text-align: center;
-
-    font-weight: 800;
-
-    line-height: 1.15;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(37,43,59,.88),
-            rgba(15,21,32,.95)
-        );
-
-    border: 1.5px solid rgba(255,116,20,.75);
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        box-shadow .25s ease;
-}
-
-.menu-button:active {
-    transform: scale(.97);
-}
-
-
-/* =========================================================
-   TOP BUTTONS
-========================================================= */
-
-.top-button {
-    flex: 1 1 0;
-
-    min-height: 54px;
-
-    font-size: 9px;
-
-    letter-spacing: .2px;
-}
-
-
-/* =========================================================
-   MIDDLE BUTTONS
-========================================================= */
-
-.middle-button {
-    flex: 1 1 0;
-
-    height: 45px;
-
-    font-size: 11.5px;
-}
-
-
-/* =========================================================
-   BOTTOM BUTTONS
-========================================================= */
-
-.bottom-button {
-    flex: 1 1 0;
-
-    height: 45px;
-
-    font-size: 11.5px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff7414,
-            #e85f08
-        );
-
-    border-color: #ff7414;
-}
-
-
-/* =========================================================
-   CLICKED BUTTON
-========================================================= */
-
-.menu-button.visited-btn {
-    background: #ff7414 !important;
+.btn-hover:hover {
+    transform: translateY(-3px) scale(1.02) !important;
 
     border-color: #ff7414 !important;
 
-    color: #ffffff !important;
-
     box-shadow:
-        0 0 15px rgba(255,116,20,.45);
+        0 8px 20px rgba(255,116,20,0.25);
+
+    filter: brightness(1.15);
 }
 
 
 /* =========================================================
-   STATS
+   CLICK EFFECT
 ========================================================= */
 
-.stats-container {
-    width: 100%;
-
-    display: flex;
-
-    gap: 6px;
-
-    margin: 12px 0 0;
-}
-
-.stat-card {
-    flex: 1 1 0;
-
-    min-width: 0;
-
-    padding: 8px 3px;
-
-    text-align: center;
-
-    border-radius: 8px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.045),
-            rgba(255,255,255,.012)
-        );
-
-    border: 1px solid rgba(255,116,20,.25);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-}
-
-.stat-card h2 {
-    margin: 0 0 2px;
-
-    color: #ff7414;
-
-    font-size: 1.15rem;
-
-    line-height: 1;
-
-    font-weight: 900;
-}
-
-.stat-card p {
-    margin: 0;
-
-    color: #d1d5db;
-
-    font-size: .55rem;
-
-    line-height: 1.1;
-
-    letter-spacing: .4px;
-
-    text-transform: uppercase;
-
-    white-space: nowrap;
-}
-
-
-/* =========================================================
-   MOBILE 600PX AND BELOW
-========================================================= */
-
-@media (max-width: 600px) {
-
-    html,
-    body {
-        width: 100%;
-        min-height: 100%;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-
-        background: #050a12 !important;
-    }
-
-    .page {
-        width: 100%;
-        min-height: 100vh;
-
-        overflow-x: hidden;
-        overflow-y: visible;
-
-        background:
-            linear-gradient(
-                180deg,
-                #111827 0%,
-                #0b111c 35%,
-                #050a12 100%
-            );
-    }
-
-    /* -----------------------------------------------------
-       HERO MOBILE
-    ----------------------------------------------------- */
-
-    .hero {
-        width: 100%;
-
-        height:
+.menu-button:active,
+.menu-button.visited-btn {
+    background: #ff7414 !important;
