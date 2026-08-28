@@ -6,6 +6,9 @@
 
 <title>Agriculturist - Mehedi Alim Ayon</title>
 
+<!-- FontAwesome Icons for Hamburger & Close Buttons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
 
 /* =========================================================
@@ -41,6 +44,139 @@ body {
 
 
 /* =========================================================
+   PREMIUM CENTERED TOP NAVBAR WITH HAMBURGER MENU
+========================================================= */
+
+.site-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: rgba(18, 18, 18, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 116, 20, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.nav-placeholder {
+    width: 40px; /* Left spacing balance */
+}
+
+/* Centered Name styling */
+.nav-brand-centered {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(255, 116, 20, 0.5);
+    transition: all 0.3s ease;
+}
+
+.nav-brand-centered span {
+    color: #ff7414;
+}
+
+.nav-brand-centered:hover {
+    text-shadow: 0 0 20px rgba(255, 116, 20, 0.9);
+}
+
+/* Toggle Menu Button (Right Side Icon) */
+.menu-toggle-btn {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 116, 20, 0.12);
+    border: 1.5px solid rgba(255, 116, 20, 0.6);
+    border-radius: 12px;
+    color: #ff7414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 116, 20, 0.2);
+}
+
+.menu-toggle-btn:hover {
+    background: #ff7414;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(255, 116, 20, 0.6);
+}
+
+/* Overlay Menu Drawer */
+.nav-drawer {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 2px solid #ff7414;
+    padding: 20px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 9998;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    animation: fadeInDown 0.3s ease-in-out forwards;
+}
+
+.nav-drawer.active {
+    display: flex;
+}
+
+.drawer-link {
+    width: 85%;
+    max-width: 380px;
+    text-align: center;
+    padding: 12px 18px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 116, 20, 0.2);
+    transition: all 0.25s ease;
+}
+
+.drawer-link:hover,
+.drawer-link.active-link {
+    background: linear-gradient(135deg, #ff7414, #e85f00);
+    color: #ffffff;
+    border-color: #ff7414;
+    box-shadow: 0 6px 20px rgba(255, 116, 20, 0.4);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
    MAIN CONTAINER
 ========================================================= */
 
@@ -48,7 +184,7 @@ body {
     width: 100%;
     max-width: 1050px;
     margin: 0 auto;
-    padding: 28px 22px 60px;
+    padding: 95px 22px 60px; /* Top padding for Navbar */
 }
 
 
@@ -521,6 +657,37 @@ li::before {
 
 @media screen and (max-width: 600px) {
 
+    .site-navbar {
+        padding: 0 15px;
+        height: 55px;
+    }
+
+    .nav-placeholder {
+        width: 36px;
+    }
+
+    .nav-brand-centered {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .menu-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        border-radius: 9px;
+    }
+
+    .nav-drawer {
+        top: 55px;
+        padding: 15px 0;
+    }
+
+    .drawer-link {
+        font-size: 0.8rem;
+        padding: 10px 14px;
+    }
+
     body {
 
         background:
@@ -541,7 +708,7 @@ li::before {
 
     .container {
 
-        padding: 15px 12px 40px;
+        padding: 75px 12px 40px;
     }
 
 
@@ -674,6 +841,10 @@ li::before {
 
 @media screen and (max-width: 380px) {
 
+    .nav-brand-centered {
+        font-size: 0.75rem;
+    }
+
     .profile-title {
 
         font-size: 1.8rem;
@@ -715,6 +886,31 @@ li::before {
 
 
 <body>
+
+<!-- TOP CENTERED NAVBAR -->
+<nav class="site-navbar">
+    <div class="nav-placeholder"></div>
+    
+    <a href="index.html" class="nav-brand-centered">
+        MEHEDI <span>ALIM AYON</span>
+    </a>
+
+    <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+    </button>
+</nav>
+
+<!-- DROPDOWN DRAWER MENU -->
+<div class="nav-drawer" id="navDrawer">
+    <a href="index.html" class="drawer-link">Home</a>
+    <a href="about.html" class="drawer-link">About Me</a>
+    <a href="agriculturist.html" class="drawer-link active-link">Agriculturist</a>
+    <a href="communicationist.html" class="drawer-link">Communicationist</a>
+    <a href="kam.html" class="drawer-link">Key Account Manager</a>
+    <a href="gallery.html" class="drawer-link">Gallery</a>
+    <a href="resume.html" class="drawer-link">Profile / CV</a>
+    <a href="contact.html" class="drawer-link">Contact</a>
+</div>
 
 <div class="container">
 
@@ -1226,6 +1422,38 @@ li::before {
 
 
 </div>
+
+<!-- MENU TOGGLE SCRIPT -->
+<script>
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const navDrawer = document.getElementById('navDrawer');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggleBtn.addEventListener('click', () => {
+        navDrawer.classList.toggle('active');
+        
+        if (navDrawer.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+        } else {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!siteNavbarContains(e.target)) {
+            navDrawer.classList.remove('active');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    function siteNavbarContains(target) {
+        return menuToggleBtn.contains(target) || navDrawer.contains(target);
+    }
+</script>
 
 </body>
 </html>
