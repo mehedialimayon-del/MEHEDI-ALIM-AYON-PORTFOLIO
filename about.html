@@ -11,22 +11,8 @@
 /* =========================================================
    MEHEDI ALIM AYON — ABOUT ME
    PREMIUM BLACK + ORANGE THEME
-   ========================================================= */
-
-:root{
-    --bg:#171411;
-    --bg-soft:#211b17;
-    --card:#fff4e7;
-    --card-soft:#f8eadb;
-    --orange:#ff7414;
-    --orange-dark:#d95d08;
-    --orange-light:#ff9a4a;
-    --text:#f5e9dc;
-    --dark-text:#29221d;
-    --muted:#746a62;
-    --border:rgba(255,116,20,.28);
-    --shadow:0 15px 40px rgba(0,0,0,.22);
-}
+   NO PURE BLACK / NO PURE WHITE
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -38,155 +24,202 @@ html{
 
 body{
     margin:0;
-    padding:0;
     background:
-        radial-gradient(circle at 15% 5%, rgba(255,116,20,.10), transparent 30%),
-        radial-gradient(circle at 85% 35%, rgba(255,154,74,.07), transparent 28%),
-        var(--bg);
-    color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.7;
+        radial-gradient(circle at top left,#6b3518 0%,#32180e 42%,#21100a 100%);
+    font-family:Arial,Helvetica,sans-serif;
+    color:#ffe9d8;
+    line-height:1.75;
+    font-size:16px;
 }
 
-/* =========================================================
-   MAIN CONTAINER
-   ========================================================= */
+/* Main container */
 
 .container{
-    width:min(1120px, 94%);
-    margin:0 auto;
-    padding:45px 0 70px;
+    max-width:1050px;
+    margin:auto;
+    padding:35px 22px 60px;
 }
 
 /* =========================================================
-   HERO
-   ========================================================= */
+   HEADER
+========================================================= */
 
-.hero{
+.profile-header{
     position:relative;
     overflow:hidden;
+    text-align:left;
+    margin-bottom:38px;
+    padding:55px 48px;
+    border-radius:0 0 38px 38px;
+
     background:
-        linear-gradient(135deg,#261d17,#342118);
-    border:1px solid var(--border);
-    border-radius:28px;
-    padding:65px 55px;
-    margin-bottom:45px;
-    box-shadow:var(--shadow);
+        linear-gradient(135deg,#ffe0c2 0%,#ffc184 48%,#ff9a3d 100%);
+
+    border-bottom:5px solid #ff7414;
+    box-shadow:0 15px 40px rgba(20,8,3,.35);
 }
 
-.hero::before{
+.profile-header::after{
     content:"";
     position:absolute;
-    width:260px;
-    height:260px;
+    width:230px;
+    height:230px;
     border-radius:50%;
-    background:rgba(255,116,20,.10);
-    right:-90px;
+    right:-70px;
     top:-100px;
+    background:rgba(255,116,20,.18);
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    background:rgba(255,154,74,.07);
-    left:-80px;
-    bottom:-80px;
-}
-
-.eyebrow{
+.profile-title{
     position:relative;
     z-index:2;
-    color:var(--orange-light);
-    font-size:.78rem;
-    font-weight:800;
-    letter-spacing:4px;
+    color:#35170b;
+    font-size:3.5rem;
+    line-height:1.05;
+    margin-bottom:16px;
+    font-weight:900;
     text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.hero h1{
-    position:relative;
-    z-index:2;
-    margin:0;
-    color:#f9e9da;
-    font-size:clamp(2.6rem,7vw,5.5rem);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.hero h1 span{
-    color:var(--orange);
-}
-
-.hero-line{
-    width:70px;
-    height:4px;
-    background:var(--orange);
-    border-radius:10px;
-    margin:25px 0;
-}
-
-.hero p{
-    position:relative;
-    z-index:2;
-    max-width:850px;
-    color:#d8c9bb;
-    font-size:1.05rem;
-    margin:0;
-}
-
-/* =========================================================
-   SECTION
-   ========================================================= */
-
-.section{
-    margin-bottom:55px;
-}
-
-.section-label{
-    color:var(--orange-light);
-    font-size:.72rem;
-    font-weight:800;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.section-title{
-    margin:0 0 18px;
-    color:#f5e6d8;
-    font-size:clamp(2rem,4vw,3.2rem);
-    line-height:1.15;
     letter-spacing:-1px;
 }
 
-.section-title span{
-    color:var(--orange);
+.profile-title span{
+    color:#c84d00;
 }
 
-.section-intro{
-    color:#cbbeb2;
-    font-size:1rem;
-    max-width:980px;
-    margin-bottom:28px;
+.profile-subtitle{
+    position:relative;
+    z-index:2;
+    color:#633017;
+    font-size:1.15rem;
+    font-weight:500;
+    max-width:720px;
 }
 
 /* =========================================================
-   CARDS
-   ========================================================= */
+   SECTION LABEL
+========================================================= */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
+.section-label{
+    color:#ff9a4a;
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:5px;
 }
 
-.card{
-    background:linear-gradient(145deg,var(--card),var(--card-soft));
-    border:1px solid rgba(255,116,20,.15);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:var(--shadow);
+/* =========================================================
+   CONTENT BOX
+========================================================= */
+
+.content-box{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(145deg,#5b2b14 0%,#44200f 55%,#35170c 100%);
+
+    padding:35px 38px;
+    border-radius:24px;
+
+    border:1px solid rgba(255,116,20,.38);
+
+    margin-bottom:24px;
+
+    box-shadow:
+        0 12px 30px rgba(15,6,2,.30),
+        inset 0 1px 0 rgba(255,190,130,.08);
+}
+
+.content-box::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    right:-65px;
+    top:-65px;
+    background:rgba(255,116,20,.08);
+}
+
+.content-box h2{
+    position:relative;
+    z-index:2;
+
+    color:#ff9a4a;
+    font-size:1.65rem;
+    line-height:1.25;
+
+    margin:0 0 22px;
+
+    border-left:5px solid #ff7414;
+    padding-left:15px;
+}
+
+.content-box p{
+    position:relative;
+    z-index:2;
+
+    color:#f2d8c4;
+    font-size:1rem;
+    line-height:1.85;
+    margin:0 0 18px;
+}
+
+.content-box p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.highlight{
+    color:#ff9a4a;
+    font-weight:800;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.content-box ul{
+    position:relative;
+    z-index:2;
+
+    margin:0 0 18px;
+    padding-left:22px;
+}
+
+.content-box li{
+    color:#f2d8c4;
+    font-size:1rem;
+    line-height:1.8;
+    margin-bottom:12px;
+    padding-left:5px;
+}
+
+.content-box li::marker{
+    color:#ff7414;
+}
+
+/* =========================================================
+   NUSRAT LINK
+========================================================= */
+
+.nusrat-link{
+    display:inline-block;
+
+    color:#ff9a4a;
+    font-weight:800;
+    text-decoration:none;
+
+    border:1.5px solid #ff7414;
+    border-radius:9px;
+
+    padding:3px 10px;
+    margin:0 3px;
+
+    background:rgba(255,116,20,.08);
+
+    transition:.3
