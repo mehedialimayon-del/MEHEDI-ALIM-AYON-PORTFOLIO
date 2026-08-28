@@ -9,13 +9,27 @@
 <style>
 
 /* =========================================================
-   GLOBAL
-========================================================= */
+   MEHEDI ALIM AYON — ABOUT ME
+   PREMIUM BLACK + ORANGE THEME
+   ========================================================= */
+
+:root{
+    --bg:#171411;
+    --bg-soft:#211b17;
+    --card:#fff4e7;
+    --card-soft:#f8eadb;
+    --orange:#ff7414;
+    --orange-dark:#d95d08;
+    --orange-light:#ff9a4a;
+    --text:#f5e9dc;
+    --dark-text:#29221d;
+    --muted:#746a62;
+    --border:rgba(255,116,20,.28);
+    --shadow:0 15px 40px rgba(0,0,0,.22);
+}
 
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 html{
@@ -23,400 +37,118 @@ html{
 }
 
 body{
-    background:#07090d;
-    color:#ffffff;
+    margin:0;
+    padding:0;
+    background:
+        radial-gradient(circle at 15% 5%, rgba(255,116,20,.10), transparent 30%),
+        radial-gradient(circle at 85% 35%, rgba(255,154,74,.07), transparent 28%),
+        var(--bg);
+    color:var(--text);
     font-family:Arial, Helvetica, sans-serif;
     line-height:1.7;
-    overflow-x:hidden;
 }
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
 
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:35px 25px 60px;
+    width:min(1120px, 94%);
+    margin:0 auto;
+    padding:45px 0 70px;
 }
-
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
-.profile-header{
+.hero{
     position:relative;
-    background:linear-gradient(135deg,#ffffff 0%,#f7f7f7 100%);
-    color:#111111;
-    padding:65px 55px;
-    border-radius:0 0 45px 45px;
-    margin-bottom:55px;
     overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.45);
+    background:
+        linear-gradient(135deg,#261d17,#342118);
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:65px 55px;
+    margin-bottom:45px;
+    box-shadow:var(--shadow);
 }
 
-.profile-header::before{
+.hero::before{
     content:"";
     position:absolute;
     width:260px;
     height:260px;
-    right:-100px;
-    top:-120px;
-    background:rgba(255,116,20,0.12);
     border-radius:50%;
+    background:rgba(255,116,20,.10);
+    right:-90px;
+    top:-100px;
 }
 
-.profile-header::after{
+.hero::after{
     content:"";
     position:absolute;
-    width:160px;
-    height:160px;
-    left:-70px;
-    bottom:-80px;
-    background:rgba(255,116,20,0.08);
+    width:170px;
+    height:170px;
     border-radius:50%;
+    background:rgba(255,154,74,.07);
+    left:-80px;
+    bottom:-80px;
 }
 
-.profile-tag{
-    color:#ff7414;
-    font-size:0.75rem;
-    font-weight:bold;
+.eyebrow{
+    position:relative;
+    z-index:2;
+    color:var(--orange-light);
+    font-size:.78rem;
+    font-weight:800;
     letter-spacing:4px;
     text-transform:uppercase;
-    margin-bottom:15px;
+    margin-bottom:18px;
+}
+
+.hero h1{
     position:relative;
     z-index:2;
+    margin:0;
+    color:#f9e9da;
+    font-size:clamp(2.6rem,7vw,5.5rem);
+    line-height:1;
+    letter-spacing:-3px;
 }
 
-.profile-title{
-    font-size:4rem;
-    line-height:1.05;
-    font-weight:900;
-    color:#111827;
-    position:relative;
-    z-index:2;
+.hero h1 span{
+    color:var(--orange);
 }
 
-.profile-title span{
-    color:#ff7414;
-}
-
-.profile-subtitle{
-    margin-top:22px;
-    color:#626872;
-    font-size:1.05rem;
-    max-width:850px;
-    position:relative;
-    z-index:2;
-}
-
-.orange-line{
-    width:55px;
+.hero-line{
+    width:70px;
     height:4px;
-    background:#ff7414;
-    margin-top:25px;
+    background:var(--orange);
     border-radius:10px;
+    margin:25px 0;
 }
 
+.hero p{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    color:#d8c9bb;
+    font-size:1.05rem;
+    margin:0;
+}
 
 /* =========================================================
    SECTION
-========================================================= */
+   ========================================================= */
 
 .section{
-    margin-bottom:65px;
+    margin-bottom:55px;
 }
 
 .section-label{
-    color:#ff7414;
-    font-size:0.72rem;
-    font-weight:bold;
+    color:var(--orange-light);
+    font-size:.72rem;
+    font-weight:800;
     letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.section-title{
-    font-size:2.7rem;
-    line-height:1.15;
-    font-weight:900;
-    margin-bottom:20px;
-}
-
-.section-title span{
-    color:#ff7414;
-}
-
-.section-intro{
-    color:#c5c8ce;
-    font-size:1rem;
-    margin-bottom:28px;
-    max-width:1000px;
-}
-
-
-/* =========================================================
-   CARD GRID
-========================================================= */
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
-}
-
-.content-box{
-    background:#15191f;
-    border:1px solid rgba(255,116,20,0.22);
-    border-radius:20px;
-    padding:32px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.28);
-    transition:0.3s ease;
-}
-
-.content-box:hover{
-    transform:translateY(-4px);
-    border-color:rgba(255,116,20,0.65);
-    box-shadow:0 18px 38px rgba(0,0,0,0.38);
-}
-
-.content-box.full{
-    grid-column:1 / -1;
-}
-
-.card-icon{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:#ff7414;
-    color:#ffffff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.25rem;
-    font-weight:bold;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(255,116,20,0.25);
-}
-
-.card-title{
-    color:#ffffff;
-    font-size:1.35rem;
-    font-weight:800;
-    margin-bottom:15px;
-}
-
-.content-box p{
-    color:#c7cbd1;
-    font-size:0.98rem;
-    margin-bottom:17px;
-}
-
-.content-box p:last-child{
-    margin-bottom:0;
-}
-
-.highlight{
-    color:#ff7414;
-    font-weight:800;
-}
-
-
-/* =========================================================
-   EDUCATION / TIMELINE
-========================================================= */
-
-.timeline{
-    position:relative;
-    margin-top:30px;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:100px;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:rgba(255,116,20,0.25);
-}
-
-.timeline-item{
-    position:relative;
-    display:grid;
-    grid-template-columns:150px 1fr;
-    gap:25px;
-    margin-bottom:24px;
-}
-
-.timeline-year{
-    background:#1b2027;
-    border:1px solid rgba(255,116,20,0.35);
-    border-radius:12px;
-    padding:13px 10px;
-    height:max-content;
-    text-align:center;
-    color:#ff7414;
-    font-weight:900;
-    font-size:0.85rem;
-    position:relative;
-    z-index:2;
-}
-
-.timeline-card{
-    background:#15191f;
-    border:1px solid rgba(255,116,20,0.18);
-    border-radius:18px;
-    padding:25px 28px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-}
-
-.timeline-card h3{
-    color:#ffffff;
-    font-size:1.1rem;
-    margin-bottom:9px;
-}
-
-.timeline-card p{
-    margin:0;
-    font-size:0.92rem;
-}
-
-
-/* =========================================================
-   LIST
-========================================================= */
-
-.custom-list{
-    list-style:none;
-    margin-top:15px;
-}
-
-.custom-list li{
-    color:#c7cbd1;
-    font-size:0.98rem;
-    margin-bottom:15px;
-    padding-left:25px;
-    position:relative;
-}
-
-.custom-list li::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:10px;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#ff7414;
-}
-
-
-/* =========================================================
-   QUOTE
-========================================================= */
-
-.quote-box{
-    background:linear-gradient(135deg,#15191f,#101318);
-    border:1px solid rgba(255,116,20,0.45);
-    border-left:5px solid #ff7414;
-    border-radius:18px;
-    padding:35px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.35);
-}
-
-.quote-box p{
-    color:#ffffff;
-    font-size:1.15rem;
-    font-weight:700;
-    font-style:italic;
-    margin:0;
-}
-
-
-/* =========================================================
-   WIFE / CONNECTION CARD
-========================================================= */
-
-.connection-card{
-    background:#ffffff;
-    color:#111827;
-    border-radius:24px;
-    padding:40px;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.35);
-}
-
-.connection-card::after{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    right:-100px;
-    top:-100px;
-    border-radius:50%;
-    background:rgba(255,116,20,0.10);
-}
-
-.connection-label{
-    display:inline-block;
-    background:#fff0e6;
-    color:#ff7414;
-    padding:6px 14px;
-    border-radius:30px;
-    font-size:0.7rem;
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
-
-.connection-title{
-    font-size:2rem;
-    line-height:1.2;
-    font-weight:900;
-    margin-bottom:18px;
-    position:relative;
-    z-index:2;
-}
-
-.connection-title span{
-    color:#ff7414;
-}
-
-.connection-card p{
-    color:#60656d;
-    font-size:0.96rem;
-    margin-bottom:18px;
-    position:relative;
-    z-index:2;
-}
-
-.profile-link{
-    display:inline-block;
-    margin-top:5px;
-    padding:13px 22px;
-    background:#ff7414;
-    color:#ffffff;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:0.85rem;
-    transition:0.3s ease;
-    position:relative;
-    z-index:3;
-}
-
-.profile-link:hover{
-    background:#e85f00;
-    transform:translateY(-2px);
-}
-
-
-/* =========================================================
-   BACK BUTTON
-========================================================= */
-
-.back-btn{
-    display:block;
-    text-align:center;
-    margin-top:40px;
-    padding
+    text
