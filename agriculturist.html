@@ -79,6 +79,11 @@ body {
     box-shadow:
         0 20px 50px rgba(0,0,0,0.45),
         inset 0 1px 0 rgba(255,255,255,0.04);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 
@@ -119,6 +124,31 @@ body {
 }
 
 
+.profile-content-left {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+
+.profile-logo-right {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+
+.profile-logo-right img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255,116,20,0.6);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    background: #111;
+    display: block;
+}
+
+
 .profile-label {
     position: relative;
     z-index: 2;
@@ -143,7 +173,7 @@ body {
 
     color: #ffffff;
 
-    font-size: clamp(2.3rem, 6vw, 4.8rem);
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
 
     line-height: 1.05;
 
@@ -516,12 +546,17 @@ li::before {
 
 
     .profile-header {
-
         padding: 34px 24px;
-
         margin-bottom: 25px;
-
         border-radius: 22px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+
+    .profile-logo-right img {
+        width: 120px;
+        margin: 0 auto;
     }
 
 
@@ -684,35 +719,33 @@ li::before {
 <div class="container">
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="profile-header">
 
-    <div class="profile-label">
-        AGRICULTURIST
+    <div class="profile-content-left">
+        <div class="profile-label">
+            AGRICULTURIST
+        </div>
+
+        <div class="profile-title">
+            My Journey as an
+            <span>AGRICULTURIST</span>
+        </div>
+
+        <div class="profile-subtitle">
+            Agricultural Economics & Rural Sociology professional with a strong
+            academic foundation, practical understanding of agriculture,
+            communication, leadership, rural development and a passion for
+            creating meaningful impact in the agricultural sector.
+        </div>
     </div>
 
-    <div class="profile-title">
-        My Journey as an
-        <span>AGRICULTURIST</span>
-    </div>
-
-    <div class="profile-subtitle">
-        Agricultural Economics & Rural Sociology professional with a strong
-        academic foundation, practical understanding of agriculture,
-        communication, leadership, rural development and a passion for
-        creating meaningful impact in the agricultural sector.
+    <div class="profile-logo-right">
+        <img src="https://i.postimg.cc/vH2d6rV3/images-(2).png" alt="University Logo">
     </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     BAU OVERVIEW
-===================================================== -->
 
 <section class="content-box">
 
@@ -746,10 +779,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     MY JOURNEY
-===================================================== -->
 
 <section class="content-box">
 
@@ -795,10 +824,6 @@ li::before {
 
 
 
-<!-- =====================================================
-     CAMPUS LIFE
-===================================================== -->
-
 <section class="content-box">
 
     <h2>Campus Life, Leadership & Co-Curricular Activities</h2>
@@ -842,10 +867,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     AGRICULTURAL ECONOMICS
-===================================================== -->
 
 <section class="content-box">
 
@@ -913,10 +934,6 @@ li::before {
 
 
 
-<!-- =====================================================
-     SKILLS
-===================================================== -->
-
 <section class="content-box">
 
     <h2>Skills Developed Through Agricultural Education</h2>
@@ -973,10 +990,6 @@ li::before {
 
 
 
-<!-- =====================================================
-     SEVEN YEARS
-===================================================== -->
-
 <section class="content-box">
 
     <h2>Seven Years of Memories & Growth</h2>
@@ -1010,10 +1023,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     AGRICULTURE & CAREER
-===================================================== -->
 
 <section class="content-box">
 
@@ -1058,10 +1067,6 @@ li::before {
 
 
 
-<!-- =====================================================
-     MALAYSIA
-===================================================== -->
-
 <section class="content-box">
 
     <h2>From Bangladesh to Malaysia — A New Chapter</h2>
@@ -1100,10 +1105,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     PERSONAL CONNECTION
-===================================================== -->
 
 <section class="content-box">
 
@@ -1150,10 +1151,6 @@ li::before {
 
 
 
-<!-- =====================================================
-     BELIEF
-===================================================== -->
-
 <section class="content-box">
 
     <h2>My Belief as an Agriculturist</h2>
@@ -1173,10 +1170,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     JOURNEY CONTINUES
-===================================================== -->
 
 <section class="content-box">
 
@@ -1226,10 +1219,6 @@ li::before {
 </section>
 
 
-
-<!-- =====================================================
-     BACK HOME
-===================================================== -->
 
 <a href="index.html" class="back-btn">
     ← BACK TO HOME
