@@ -9,90 +9,116 @@
 <style>
 
 /* =========================================================
-   MEHEDI ALIM AYON — ABOUT ME
-   PREMIUM BLACK + ORANGE THEME
-   NO PURE BLACK / NO PURE WHITE
+   RESET
 ========================================================= */
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+    background:#160b06 !important;
+    min-height:100%;
 }
 
 body{
-    margin:0;
-    background:
-        radial-gradient(circle at top left,#6b3518 0%,#32180e 42%,#21100a 100%);
-    font-family:Arial,Helvetica,sans-serif;
-    color:#ffe9d8;
-    line-height:1.75;
-    font-size:16px;
-}
-
-/* Main container */
-
-.container{
-    max-width:1050px;
-    margin:auto;
-    padding:35px 22px 60px;
+    background:#160b06 !important;
+    background-color:#160b06 !important;
+    color:#f7e8dc !important;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
 /* =========================================================
-   HEADER
+   MAIN PAGE
+========================================================= */
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 22px 60px;
+}
+
+/* =========================================================
+   TOP HEADER
 ========================================================= */
 
 .profile-header{
     position:relative;
     overflow:hidden;
-    text-align:left;
-    margin-bottom:38px;
-    padding:55px 48px;
-    border-radius:0 0 38px 38px;
+
+    margin:0 -22px 45px;
+
+    padding:55px 45px 50px;
 
     background:
-        linear-gradient(135deg,#ffe0c2 0%,#ffc184 48%,#ff9a3d 100%);
+        linear-gradient(
+            135deg,
+            #ffe0c2 0%,
+            #ffbd7b 48%,
+            #ff8a28 100%
+        ) !important;
+
+    border-radius:0 0 42px 42px;
 
     border-bottom:5px solid #ff7414;
-    box-shadow:0 15px 40px rgba(20,8,3,.35);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.45);
 }
 
 .profile-header::after{
     content:"";
     position:absolute;
-    width:230px;
-    height:230px;
+
+    width:300px;
+    height:300px;
+
+    right:-120px;
+    top:-150px;
+
     border-radius:50%;
-    right:-70px;
-    top:-100px;
+
     background:rgba(255,116,20,.18);
 }
 
 .profile-title{
     position:relative;
     z-index:2;
-    color:#35170b;
-    font-size:3.5rem;
+
+    color:#261108 !important;
+
+    font-size:3.4rem;
     line-height:1.05;
-    margin-bottom:16px;
+
     font-weight:900;
+
     text-transform:uppercase;
+
     letter-spacing:-1px;
+
+    margin-bottom:15px;
 }
 
 .profile-title span{
-    color:#c84d00;
+    color:#d84e00 !important;
 }
 
 .profile-subtitle{
     position:relative;
     z-index:2;
-    color:#633017;
-    font-size:1.15rem;
-    font-weight:500;
-    max-width:720px;
+
+    max-width:800px;
+
+    color:#5a2b16 !important;
+
+    font-size:1.05rem;
+
+    line-height:1.6;
 }
 
 /* =========================================================
@@ -100,16 +126,21 @@ body{
 ========================================================= */
 
 .section-label{
-    color:#ff9a4a;
-    font-size:.75rem;
+    color:#ff9848 !important;
+
+    font-size:.72rem;
+
     font-weight:800;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
-    margin-bottom:5px;
+
+    margin-bottom:8px;
 }
 
 /* =========================================================
-   CONTENT BOX
+   CONTENT CARDS
 ========================================================= */
 
 .content-box{
@@ -117,53 +148,70 @@ body{
     overflow:hidden;
 
     background:
-        linear-gradient(145deg,#5b2b14 0%,#44200f 55%,#35170c 100%);
+        linear-gradient(
+            145deg,
+            #42200f 0%,
+            #32170b 55%,
+            #291208 100%
+        ) !important;
+
+    border:1px solid rgba(255,116,20,.35);
+
+    border-radius:22px;
 
     padding:35px 38px;
-    border-radius:24px;
-
-    border:1px solid rgba(255,116,20,.38);
 
     margin-bottom:24px;
 
     box-shadow:
-        0 12px 30px rgba(15,6,2,.30),
-        inset 0 1px 0 rgba(255,190,130,.08);
+        0 10px 30px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,180,120,.06);
 }
 
-.content-box::before{
+.content-box::after{
     content:"";
+
     position:absolute;
-    width:150px;
-    height:150px;
+
+    width:180px;
+    height:180px;
+
+    right:-80px;
+    top:-90px;
+
     border-radius:50%;
-    right:-65px;
-    top:-65px;
-    background:rgba(255,116,20,.08);
+
+    background:rgba(255,116,20,.07);
 }
 
 .content-box h2{
     position:relative;
     z-index:2;
 
-    color:#ff9a4a;
-    font-size:1.65rem;
-    line-height:1.25;
+    color:#ff9140 !important;
 
-    margin:0 0 22px;
+    font-size:1.55rem;
+
+    line-height:1.3;
 
     border-left:5px solid #ff7414;
-    padding-left:15px;
+
+    padding-left:14px;
+
+    margin-bottom:20px;
 }
 
 .content-box p{
     position:relative;
     z-index:2;
 
-    color:#f2d8c4;
+    color:#ead6c7 !important;
+
     font-size:1rem;
+
     line-height:1.85;
-    margin:0 0 18px;
+
+    margin-bottom:18px;
 }
 
 .content-box p:last-child{
@@ -175,7 +223,8 @@ body{
 ========================================================= */
 
 .highlight{
-    color:#ff9a4a;
+    color:#ff9848 !important;
+
     font-weight:800;
 }
 
@@ -187,16 +236,19 @@ body{
     position:relative;
     z-index:2;
 
-    margin:0 0 18px;
-    padding-left:22px;
+    padding-left:25px;
+
+    margin-bottom:20px;
 }
 
 .content-box li{
-    color:#f2d8c4;
+    color:#ead6c7 !important;
+
     font-size:1rem;
+
     line-height:1.8;
+
     margin-bottom:12px;
-    padding-left:5px;
 }
 
 .content-box li::marker{
@@ -210,16 +262,8 @@ body{
 .nusrat-link{
     display:inline-block;
 
-    color:#ff9a4a;
+    color:#ff9848 !important;
+
     font-weight:800;
-    text-decoration:none;
 
-    border:1.5px solid #ff7414;
-    border-radius:9px;
-
-    padding:3px 10px;
-    margin:0 3px;
-
-    background:rgba(255,116,20,.08);
-
-    transition:.3
+    text-decoration
