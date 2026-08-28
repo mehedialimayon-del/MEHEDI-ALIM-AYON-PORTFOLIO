@@ -1,121 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agriculturist - Mehedi Alim Ayon</title>
+    <title>Agriculturist - Mehedi Alim Ayon</title>
 
-<style>
+    <style>
 
-/* ================================
-   MAIN PAGE
-================================ */
+        /* =====================================================
+           RESET
+        ===================================================== */
 
-* {
-    box-sizing: border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-html {
-    background: #17120f;
-}
+        html {
+            background: #0b0b0b;
+        }
 
-body {
-    margin: 0;
-    padding: 0;
-    background:
-        radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 30%),
-        #17120f;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    line-height: 1.7;
-    min-height: 100vh;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
+                radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
+                #0d0d0d;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-/* ================================
-   CONTAINER
-================================ */
 
-.container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 35px 25px 50px;
-}
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
 
-/* ================================
-   TOP HEADER
-================================ */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 22px 60px;
+        }
 
-.profile-header {
-    background: linear-gradient(
-        135deg,
-        #211710,
-        #2a1a10
-    );
 
-    border: 1px solid rgba(255,116,20,0.55);
-    border-radius: 22px;
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-    padding: 38px 30px;
-    margin-bottom: 30px;
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #191919 0%,
+                    #21140d 50%,
+                    #151515 100%
+                );
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.35),
-        0 0 30px rgba(255,116,20,0.08);
+            border: 1px solid rgba(255,116,20,0.75);
+            border-radius: 24px;
+            padding: 42px 30px;
+            text-align: center;
 
-    text-align: center;
-}
+            box-shadow:
+                0 15px 45px rgba(0,0,0,0.55),
+                0 0 35px rgba(255,116,20,0.08);
 
-.profile-label {
-    color: #ff7414;
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
+            margin-bottom: 38px;
+        }
 
-.profile-title {
-    color: #ffffff;
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.15;
-    margin: 0;
-}
 
-.profile-title span {
-    color: #ff7414;
-}
+        /* =====================================================
+           BAU BADGE
+        ===================================================== */
 
-.profile-subtitle {
-    color: #d8d0ca;
-    font-size: 1.15rem;
-    margin-top: 15px;
-}
+        .bau-badge {
+            width: 100px;
+            height: 100px;
 
-/* ================================
-   SECTION BOX
-================================ */
+            margin: 0 auto 20px;
 
-.content-box {
-    background: #241b17;
+            border-radius: 50%;
 
-    border: 1px solid rgba(255,116,20,0.35);
-    border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    padding: 35px;
+            background: #ff7414;
 
-    margin-bottom: 28px;
+            color: #111111;
 
-    box-shadow:
-        0 12px 30px rgba(0,0,0,0.30);
-}
+            font-size: 26px;
+            font-weight: 900;
 
-/* ================================
-   HEADINGS
-================================ */
+            border: 5px solid #ffffff;
 
-h2 {
-    margin:
+            box-shadow:
+                0 0 0 7px rgba(255,116,20,0.15),
+                0 10px 30px rgba(0,0,0,0.45);
+        }
+
+
+        .hero-label {
+            color: #ff7414;
+
+            font-size: 0.78rem;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .hero h1 {
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: clamp(2.2rem, 5vw, 4rem);
+
+            line-height: 1.15;
+
+            font-weight: 900;
+        }
+
+
+        .hero h1 span {
+            color: #ff7414;
+        }
+
+
+        .hero-subtitle {
+            margin: 15px auto 0;
+
+            max-width: 820px;
+
+            color: #d2d2d
