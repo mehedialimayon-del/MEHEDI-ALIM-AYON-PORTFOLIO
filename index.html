@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +56,86 @@ a {
 
 
 /* =========================================================
+   TOP NAVIGATION BAR (NEW ADDED)
+========================================================= */
+
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 116, 20, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.nav-brand {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-brand span {
+    color: #ff7414;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-menu li a:hover {
+    color: #ffffff;
+    background: rgba(255, 116, 20, 0.2);
+    border: 1px solid rgba(255, 116, 20, 0.6);
+}
+
+@media (max-width: 600px) {
+    .top-navbar {
+        padding: 0 10px;
+        height: 48px;
+    }
+    .nav-brand {
+        font-size: 12px;
+    }
+    .nav-menu {
+        gap: 4px;
+    }
+    .nav-menu li a {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+}
+
+
+/* =========================================================
    PAGE
 ========================================================= */
 
@@ -63,6 +144,7 @@ a {
     max-width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    padding-top: 55px; /* Navbar height adjustment */
 }
 
 
@@ -919,7 +1001,7 @@ a {
     .social-icons {
         position: absolute !important;
 
-        top: 28px !important;
+        top: 75px !important; /* Adjusted for Top Navbar */
 
         right: 32px !important;
 
@@ -1004,7 +1086,7 @@ a {
         margin: 0 !important;
 
         padding:
-            7vh
+            10vh
             2vw
             5vh
             4.5vw !important;
@@ -1462,6 +1544,18 @@ a {
 
 
 <body>
+
+<!-- TOP NAVIGATION BAR (NEW ADDED) -->
+<nav class="top-navbar">
+    <a href="index.html" class="nav-brand">Mehedi <span>Ayon</span></a>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="resume.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
 <div class="page">
 
