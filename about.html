@@ -12,258 +12,1259 @@
    RESET
 ========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-    background:#160b06 !important;
-    min-height:100%;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#160b06 !important;
-    background-color:#160b06 !important;
-    color:#f7e8dc !important;
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.7;
-    min-height:100vh;
-    overflow-x:hidden;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #f5f5f5;
+
+    background:
+        radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
+        linear-gradient(135deg, #171717 0%, #101010 50%, #181818 100%);
+
+    line-height: 1.7;
 }
+
 
 /* =========================================================
-   MAIN PAGE
+   MAIN CONTAINER
 ========================================================= */
 
-.container{
-    width:100%;
-    max-width:1100px;
-    margin:0 auto;
-    padding:0 22px 60px;
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 28px 22px 60px;
 }
 
+
 /* =========================================================
-   TOP HEADER
+   HERO / PROFILE HEADER
 ========================================================= */
 
-.profile-header{
-    position:relative;
-    overflow:hidden;
-
-    margin:0 -22px 45px;
-
-    padding:55px 45px 50px;
+.profile-header {
+    position: relative;
+    overflow: hidden;
 
     background:
         linear-gradient(
             135deg,
-            #ffe0c2 0%,
-            #ffbd7b 48%,
-            #ff8a28 100%
-        ) !important;
+            #252525 0%,
+            #171717 60%,
+            #20160f 100%
+        );
 
-    border-radius:0 0 42px 42px;
+    border: 1px solid rgba(255,116,20,0.55);
 
-    border-bottom:5px solid #ff7414;
+    border-radius: 28px;
 
-    box-shadow:0 12px 35px rgba(0,0,0,.45);
+    padding: 55px 45px;
+
+    margin-bottom: 45px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
-.profile-header::after{
-    content:"";
-    position:absolute;
 
-    width:300px;
-    height:300px;
+/* Orange decorative circle */
 
-    right:-120px;
-    top:-150px;
+.profile-header::after {
+    content: "";
+    position: absolute;
 
-    border-radius:50%;
+    width: 230px;
+    height: 230px;
 
-    background:rgba(255,116,20,.18);
+    right: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255,116,20,0.12);
+
+    pointer-events: none;
 }
 
-.profile-title{
-    position:relative;
-    z-index:2;
 
-    color:#261108 !important;
+.profile-header::before {
+    content: "";
 
-    font-size:3.4rem;
-    line-height:1.05;
+    position: absolute;
 
-    font-weight:900;
+    width: 130px;
+    height: 130px;
 
-    text-transform:uppercase;
+    right: 70px;
+    bottom: -80px;
 
-    letter-spacing:-1px;
+    border-radius: 50%;
 
-    margin-bottom:15px;
+    background: rgba(255,116,20,0.08);
+
+    pointer-events: none;
 }
 
-.profile-title span{
-    color:#d84e00 !important;
+
+.profile-label {
+    position: relative;
+    z-index: 2;
+
+    color: #ff7414;
+
+    font-size: 0.78rem;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
 }
 
-.profile-subtitle{
-    position:relative;
-    z-index:2;
 
-    max-width:800px;
+.profile-title {
+    position: relative;
+    z-index: 2;
 
-    color:#5a2b16 !important;
+    color: #ffffff;
 
-    font-size:1.05rem;
+    font-size: clamp(2.3rem, 6vw, 4.8rem);
 
-    line-height:1.6;
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
 }
+
+
+.profile-title span {
+    color: #ff7414;
+}
+
+
+.profile-subtitle {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    color: #cfcfcf;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
 
 /* =========================================================
-   SECTION LABEL
+   CONTENT BOX
 ========================================================= */
 
-.section-label{
-    color:#ff9848 !important;
-
-    font-size:.72rem;
-
-    font-weight:800;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:8px;
-}
-
-/* =========================================================
-   CONTENT CARDS
-========================================================= */
-
-.content-box{
-    position:relative;
-    overflow:hidden;
+.content-box {
 
     background:
         linear-gradient(
             145deg,
-            #42200f 0%,
-            #32170b 55%,
-            #291208 100%
-        ) !important;
+            #242424 0%,
+            #191919 100%
+        );
 
-    border:1px solid rgba(255,116,20,.35);
+    border: 1px solid rgba(255,255,255,0.08);
 
-    border-radius:22px;
+    border-left: 4px solid #ff7414;
 
-    padding:35px 38px;
+    border-radius: 20px;
 
-    margin-bottom:24px;
+    padding: 35px 38px;
+
+    margin-bottom: 28px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.35),
-        inset 0 1px 0 rgba(255,180,120,.06);
+        0 15px 35px rgba(0,0,0,0.32);
+
+    transition: 0.3s ease;
 }
 
-.content-box::after{
-    content:"";
 
-    position:absolute;
+.content-box:hover {
 
-    width:180px;
-    height:180px;
+    transform: translateY(-3px);
 
-    right:-80px;
-    top:-90px;
+    border-color: rgba(255,116,20,0.45);
 
-    border-radius:50%;
-
-    background:rgba(255,116,20,.07);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.42);
 }
 
-.content-box h2{
-    position:relative;
-    z-index:2;
 
-    color:#ff9140 !important;
+/* =========================================================
+   SECTION HEADING
+========================================================= */
 
-    font-size:1.55rem;
+h2 {
 
-    line-height:1.3;
+    color: #ffffff;
 
-    border-left:5px solid #ff7414;
+    font-size: 1.8rem;
 
-    padding-left:14px;
+    line-height: 1.25;
 
-    margin-bottom:20px;
+    margin-bottom: 25px;
+
+    padding-left: 16px;
+
+    border-left: 4px solid #ff7414;
 }
 
-.content-box p{
-    position:relative;
-    z-index:2;
 
-    color:#ead6c7 !important;
-
-    font-size:1rem;
-
-    line-height:1.85;
-
-    margin-bottom:18px;
+h2::first-letter {
+    color: #ff7414;
 }
 
-.content-box p:last-child{
-    margin-bottom:0;
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+p {
+
+    color: #cfcfcf;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
 }
+
+
+p:last-child {
+    margin-bottom: 0;
+}
+
 
 /* =========================================================
    HIGHLIGHT
 ========================================================= */
 
-.highlight{
-    color:#ff9848 !important;
+.highlight {
 
-    font-weight:800;
+    color: #ff7414;
+
+    font-weight: 700;
 }
+
 
 /* =========================================================
    LIST
 ========================================================= */
 
-.content-box ul{
-    position:relative;
-    z-index:2;
+ul {
 
-    padding-left:25px;
+    list-style: none;
 
-    margin-bottom:20px;
+    margin: 10px 0 25px;
+
+    padding: 0;
 }
 
-.content-box li{
-    color:#ead6c7 !important;
 
-    font-size:1rem;
+li {
 
-    line-height:1.8;
+    position: relative;
 
-    margin-bottom:12px;
+    color: #d2d2d2;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    padding: 17px 20px 17px 48px;
+
+    margin-bottom: 12px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 12px;
 }
 
-.content-box li::marker{
-    color:#ff7414;
+
+li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 18px;
+    top: 15px;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff7414;
+
+    color: #111;
+
+    font-size: 0.75rem;
+
+    font-weight: 900;
 }
+
 
 /* =========================================================
-   NUSRAT LINK
+   NUSRAT PROFILE LINK
 ========================================================= */
 
-.nusrat-link{
-    display:inline-block;
+.partner-link {
 
-    color:#ff9848 !important;
+    display: inline-block;
 
-    font-weight:800;
+    color: #ff7414;
 
-    text-decoration
+    text-decoration: none;
+
+    font-weight: 800;
+
+    border: 1px solid #ff7414;
+
+    border-radius: 8px;
+
+    padding: 3px 10px;
+
+    margin: 0 3px;
+
+    transition: 0.3s ease;
+}
+
+
+.partner-link:hover {
+
+    background: #ff7414;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   QUOTE / BELIEF
+========================================================= */
+
+.quote-box {
+
+    position: relative;
+
+    padding: 30px 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,116,20,0.12),
+            rgba(255,116,20,0.035)
+        );
+
+    border: 1px solid rgba(255,116,20,0.35);
+
+    border-radius: 18px;
+
+    margin-top: 10px;
+}
+
+
+.quote-box::before {
+
+    content: "“";
+
+    position: absolute;
+
+    left: 18px;
+    top: -12px;
+
+    color: #ff7414;
+
+    font-size: 5rem;
+
+    line-height: 1;
+
+    opacity: 0.35;
+}
+
+
+.quote-box p {
+
+    color: #ffffff;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+    margin: 0;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding: 17px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7414,
+            #e85f00
+        );
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 10px 25px rgba(255,116,20,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.back-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(255,116,20,0.35);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+
+        background:
+            radial-gradient(
+                circle at top right,
+                rgba(255,116,20,0.13),
+                transparent 40%
+            ),
+            linear-gradient(
+                145deg,
+                #181818 0%,
+                #111111 100%
+            );
+
+        font-size: 16px;
+    }
+
+
+    .container {
+
+        padding: 15px 12px 40px;
+    }
+
+
+    .profile-header {
+
+        padding: 34px 24px;
+
+        margin-bottom: 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .profile-label {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .profile-title {
+
+        font-size: 2.05rem;
+
+        line-height: 1.08;
+
+        margin-bottom: 15px;
+    }
+
+
+    .profile-subtitle {
+
+        font-size: 0.88rem;
+
+        line-height: 1.65;
+    }
+
+
+    .content-box {
+
+        padding: 24px 20px;
+
+        border-radius: 17px;
+
+        margin-bottom: 20px;
+
+        border-left-width: 3px;
+    }
+
+
+    h2 {
+
+        font-size: 1.25rem;
+
+        line-height: 1.35;
+
+        padding-left: 11px;
+
+        margin-bottom: 19px;
+    }
+
+
+    p {
+
+        font-size: 0.88rem;
+
+        line-height: 1.75;
+
+        margin-bottom: 17px;
+    }
+
+
+    li {
+
+        font-size: 0.86rem;
+
+        line-height: 1.7;
+
+        padding: 14px 15px 14px 42px;
+    }
+
+
+    li::before {
+
+        left: 14px;
+
+        top: 14px;
+
+        width: 21px;
+
+        height: 21px;
+    }
+
+
+    .quote-box {
+
+        padding: 25px 20px;
+    }
+
+
+    .quote-box p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .back-btn {
+
+        font-size: 0.85rem;
+
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .profile-title {
+
+        font-size: 1.8rem;
+    }
+
+
+    .profile-subtitle {
+
+        font-size: 0.82rem;
+    }
+
+
+    .content-box {
+
+        padding: 21px 17px;
+    }
+
+
+    h2 {
+
+        font-size: 1.12rem;
+    }
+
+
+    p {
+
+        font-size: 0.84rem;
+    }
+
+
+    li {
+
+        font-size: 0.82rem;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="profile-header">
+
+    <div class="profile-label">
+        ABOUT ME
+    </div>
+
+    <div class="profile-title">
+        The Journey of
+        <span>MEHEDI ALIM AYON</span>
+    </div>
+
+    <div class="profile-subtitle">
+        Agriculturist, Communicationist and Account Management Professional
+        whose journey has been shaped by discipline, leadership, continuous
+        learning, family responsibility and a strong ambition to create
+        meaningful professional impact.
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EARLY LIFE
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>Introduction & Early Life</h2>
+
+    <p>
+        <span class="highlight">Who I Am:</span>
+        I am <span class="highlight">Mehedi Alim Ayon</span>,
+        born on <span class="highlight">10 May 1999 in Rangpur, Bangladesh</span>,
+        to my beloved father
+        <span class="highlight">Abu Hena Mostofa</span>
+        and mother
+        <span class="highlight">Anjuman Ara Begum.</span>
+    </p>
+
+    <p>
+        My father is a retired Bangladesh Army officer, and growing up as
+        the son of a military man had a strong influence on my discipline,
+        courage, responsibility and personality.
+    </p>
+
+    <p>
+        From childhood, I was energetic, adventurous, determined and
+        independent by nature. My parents always encouraged me to learn,
+        remain disciplined and develop myself through education and
+        experience.
+    </p>
+
+    <p>
+        One of the most important lessons I received from my father was the
+        value of
+        <span class="highlight">
+        self-dependence, discipline and responsibility.
+        </span>
+        Those principles have remained an important part of my life.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>Education & Academic Journey</h2>
+
+    <p>
+        Because of my father's military career, I experienced different
+        environments during my early education. This helped me develop the
+        ability to adapt quickly to new places, people and situations.
+    </p>
+
+    <ul>
+
+        <li>
+            <span class="highlight">Primary Education:</span>
+            I completed my early schooling in Bangladesh and developed a
+            strong foundation in academic learning and discipline.
+        </li>
+
+        <li>
+            <span class="highlight">PSC:</span>
+            I achieved Golden GPA 5 in my Primary School Certificate.
+        </li>
+
+        <li>
+            <span class="highlight">JSC:</span>
+            I completed my JSC from Rangpur Cantonment Public School &
+            College with GPA 5.
+        </li>
+
+        <li>
+            <span class="highlight">SSC:</span>
+            I completed my SSC from Rangpur Cantonment Public School &
+            College with Golden GPA 5.
+        </li>
+
+        <li>
+            <span class="highlight">HSC:</span>
+            I completed my Higher Secondary education with a strong
+            academic foundation and continued my journey toward
+            agricultural science.
+        </li>
+
+        <li>
+            <span class="highlight">BSc:</span>
+            I completed my Bachelor of Science from
+            <span class="highlight">
+            Bangladesh Agricultural University.
+            </span>
+        </li>
+
+        <li>
+            <span class="highlight">Master's Degree:</span>
+            I completed my Master's degree from
+            <span class="highlight">
+            Kuala Lumpur University of Science & Technology.
+            </span>
+        </li>
+
+    </ul>
+
+    <p>
+        By the grace of Almighty Allah, I remained consistent throughout
+        my academic life and always tried to achieve the highest possible
+        result while developing myself beyond the classroom.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     BNCC
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>BNCC, Leadership & Confidence</h2>
+
+    <p>
+        One of the most influential chapters of my school life was my
+        involvement with the
+        <span class="highlight">
+        Bangladesh National Cadet Corps (BNCC).
+        </span>
+    </p>
+
+    <p>
+        I joined BNCC during my school years, and the experience changed
+        many aspects of my personality. It taught me discipline, leadership,
+        teamwork, public speaking, communication, confidence and
+        decision-making.
+    </p>
+
+    <p>
+        I participated in various quiz competitions, cultural programs,
+        debates, BNCC camps, drills and other activities. Through my
+        dedication and participation, I received several medals, awards
+        and recognitions.
+    </p>
+
+    <p>
+        At a young age, I was given leadership responsibilities within
+        my division. I also received recognition for my drill performance
+        and leadership abilities.
+    </p>
+
+    <p>
+        One of the most memorable achievements of my BNCC journey was being
+        selected as one of only a few cadets from Bangladesh for a
+        <span class="highlight">
+        Cadet Ambassador Tour to Karnataka, India.
+        </span>
+    </p>
+
+    <p>
+        These experiences became the foundation of my
+        <span class="highlight">
+        communication skills, leadership ability, convincing power,
+        team management and professional confidence.
+        </span>
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSONALITY
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Personality & Interests</h2>
+
+    <p>
+        I have always enjoyed taking responsibility, learning new things
+        and facing challenges. I naturally like situations where I need
+        to think quickly, communicate effectively and find practical
+        solutions.
+    </p>
+
+    <p>
+        Personally, I love sports, especially
+        <span class="highlight">football.</span>
+        I also have a strong passion for dressing well and maintaining
+        a well-organized personal appearance.
+    </p>
+
+    <p>
+        I enjoy collecting shoes, perfumes, T-shirts, shirts, Panjabi
+        and different types of clothing. Another major fascination of
+        mine is
+        <span class="highlight">cars and automobiles.</span>
+    </p>
+
+    <p>
+        For me, personal appearance represents confidence, discipline
+        and self-respect.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     UNIVERSITY & FAMILY
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>University Life & Family</h2>
+
+    <p>
+        After completing my earlier education, I joined
+        <span class="highlight">
+        Bangladesh Agricultural University.
+        </span>
+        My university life became one of the most important periods of
+        my personal and professional development.
+    </p>
+
+    <p>
+        During my university life, I met my wife,
+        <span class="highlight">Nusrat Nasrin.</span>
+        She was my immediate junior at Bangladesh Agricultural University
+        and was associated with the Fisheries Faculty and Sultanah Razia Hall.
+    </p>
+
+    <p>
+        Through university life, we came to know each other and eventually
+        became life partners. Today, we are living together in Malaysia
+        and continuing our academic and professional journeys.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     NUSRAT
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Wife & Her Journey</h2>
+
+    <p>
+
+        My wife,
+
+        <a
+            href="https://mehedialimayon-del.github.io/Nusrat-Nasrin/#home"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner-link"
+        >
+            Nusrat Nasrin ↗
+        </a>
+
+        is one of the strongest sources of support in my life.
+
+    </p>
+
+
+    <p>
+
+        She completed her Bachelor degree in Fisheries at
+        <span class="highlight">
+        Bangladesh Agricultural University
+        </span>
+
+        and later completed an
+        <span class="highlight">
+        MBA at Kuala Lumpur University of Science & Technology.
+        </span>
+
+    </p>
+
+
+    <p>
+
+        She is currently enrolled in a research program in
+        <span class="highlight">
+        Aquaculture at Universiti Putra Malaysia (UPM).
+        </span>
+
+    </p>
+
+
+    <p>
+
+        Alongside her academic journey, she is also professionally active
+        and has developed herself through communication, leadership,
+        marketing and professional responsibilities.
+
+    </p>
+
+
+    <p>
+
+        Her dedication to education, research and professional development
+        continues to inspire me, and we support each other throughout
+        our journey.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     YOUNGER BROTHER
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Younger Brother</h2>
+
+    <p>
+
+        I have one younger brother,
+        <span class="highlight">
+        Wasi Israk Arpon.
+        </span>
+
+    </p>
+
+
+    <p>
+
+        He is currently living in Malaysia and studying at
+        <span class="highlight">
+        Asia Metropolitan University.
+        </span>
+
+        Alongside his studies, he is also working and gaining
+        professional experience.
+
+    </p>
+
+
+    <p>
+
+        My parents currently live in Bangladesh while my wife,
+        my younger brother and I continue our respective journeys
+        in Malaysia.
+
+    </p>
+
+
+    <p>
+
+        We are also fortunate to have our cousins around us in Malaysia,
+        which gives us a strong family environment while living abroad.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     VALUES
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Values & Life Philosophy</h2>
+
+    <p>
+
+        I believe that success is not only about money, position or
+        recognition. For me, real success means becoming capable enough
+        to take responsibility for myself and my family.
+
+    </p>
+
+
+    <p>
+
+        Since childhood, I have always wanted to become
+        <span class="highlight">
+        self-dependent.
+        </span>
+
+        My parents have always supported me, but I personally wanted
+        to build my own path and learn how to stand on my own feet.
+
+    </p>
+
+
+    <p>
+
+        I believe in hard work, discipline, honesty, continuous learning,
+        respect for people and taking responsibility for every opportunity
+        Allah gives me.
+
+    </p>
+
+
+    <p>
+
+        I also believe that difficult situations are often the greatest
+        teachers. Every struggle, challenge and uncertain period of life
+        teaches us something that success alone cannot teach.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAMILY
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Family — My Greatest Support</h2>
+
+    <p>
+
+        Whatever I have achieved so far, I never consider it a journey
+        that I completed alone.
+
+    </p>
+
+
+    <p>
+
+        My parents, my wife, my younger brother and my entire family have
+        always been my strongest support system. They have trusted me,
+        encouraged me and supported me in every important decision of my life.
+
+    </p>
+
+
+    <p>
+
+        Their prayers, love and sacrifices give me the strength to continue
+        moving forward even when the road becomes difficult.
+
+    </p>
+
+
+    <p>
+
+        I pray that Almighty Allah grants my parents, my wife, my brother
+        and every member of my family a long, healthy and blessed life.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSONAL BELIEF
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Personal Belief</h2>
+
+    <div class="quote-box">
+
+        <p>
+
+            "The day I become capable of fulfilling my responsibilities
+            toward my parents, earning their respect and making my family
+            proud — that will be the day I will truly consider myself successful."
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JOURNEY CONTINUES
+===================================================== -->
+
+<section class="content-box">
+
+    <h2>My Journey Continues</h2>
+
+    <p>
+
+        Today, I am living in Malaysia with my family and continuing my
+        personal, academic and professional journey.
+
+    </p>
+
+
+    <p>
+
+        I am grateful for every chapter of my life — the good moments,
+        difficult moments, achievements, struggles and every person who
+        has contributed something meaningful to my journey.
+
+    </p>
+
+
+    <p>
+
+        I know that my journey is not finished. There are still many goals
+        I want to achieve, many things I want to learn and many
+        responsibilities I want to fulfil.
+
+    </p>
+
+
+    <p>
+
+        With the blessings of my parents, the support of my family and
+        the mercy of Almighty Allah, I will continue moving forward with
+        courage, humility and determination.
+
+    </p>
+
+
+    <p>
+
+        <span class="highlight">
+        Please keep me and my family in your prayers.
+        </span>
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK HOME
+===================================================== -->
+
+<a href="index.html" class="back-btn">
+    ← BACK TO HOME
+</a>
+
+
+</div>
+
+</body>
+</html>
