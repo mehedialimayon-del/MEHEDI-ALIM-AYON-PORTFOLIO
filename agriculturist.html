@@ -1,144 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Agriculturist - Mehedi Alim Ayon</title>
+<title>Agriculturist - Mehedi Alim Ayon</title>
 
-    <style>
+<style>
 
-        /* =====================================================
-           RESET
-        ===================================================== */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-        * {
-            box-sizing: border-box;
-        }
+*{
+    box-sizing:border-box;
+}
 
-        html {
-            background: #0b0b0b;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background:
-                radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
-                radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
-                #0d0d0d;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
 
+    /* IMPORTANT:
+       NO PURE BLACK / NO PURE WHITE */
+    background:
+        radial-gradient(circle at top right, #9a481b 0%, transparent 32%),
+        radial-gradient(circle at bottom left, #713416 0%, transparent 30%),
+        linear-gradient(135deg,#321b12,#522713,#3b2116);
 
-        /* =====================================================
-           MAIN CONTAINER
-        ===================================================== */
+    color:#f8eee6;
+    line-height:1.7;
+    min-height:100vh;
+}
 
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 22px 60px;
-        }
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:28px 22px 50px;
+}
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+/* =========================================================
+   TOP HEADER
+========================================================= */
 
-        .hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    #191919 0%,
-                    #21140d 50%,
-                    #151515 100%
-                );
+.hero{
+    background:
+        linear-gradient(135deg,
+        rgba(255,255,255,0.97),
+        rgba(255,244,232,0.96));
 
-            border: 1px solid rgba(255,116,20,0.75);
-            border-radius: 24px;
-            padding: 42px 30px;
-            text-align: center;
+    color:#2b1a12;
 
-            box-shadow:
-                0 15px 45px rgba(0,0,0,0.55),
-                0 0 35px rgba(255,116,20,0.08);
+    padding:38px 35px;
+    border-radius:0 0 35px 35px;
 
-            margin-bottom: 38px;
-        }
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
 
+    margin-bottom:40px;
 
-        /* =====================================================
-           BAU BADGE
-        ===================================================== */
+    position:relative;
+    overflow:hidden;
+}
 
-        .bau-badge {
-            width: 100px;
-            height: 100px;
+.hero::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    right:-80px;
+    top:-80px;
 
-            margin: 0 auto 20px;
+    background:#ff7414;
+    opacity:.12;
 
-            border-radius: 50%;
+    border-radius:50%;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.hero-label{
+    color:#d95d0b;
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:4px;
+    text-transform:uppercase;
 
-            background: #ff7414;
+    margin-bottom:10px;
+}
 
-            color: #111111;
+.hero-title{
+    font-size:clamp(2.2rem,6vw,4rem);
+    line-height:1.05;
+    font-weight:900;
 
-            font-size: 26px;
-            font-weight: 900;
+    margin:0;
+}
 
-            border: 5px solid #ffffff;
+.hero-title span{
+    color:#e7650d;
+}
 
-            box-shadow:
-                0 0 0 7px rgba(255,116,20,0.15),
-                0 10px 30px rgba(0,0,0,0.45);
-        }
+.hero-line{
+    width:60px;
+    height:4px;
+    background:#ff7414;
+    border-radius:10px;
+    margin:22px 0;
+}
 
+.hero-description{
+    color:#6b625d;
+    font-size:1rem;
+    max-width:850px;
+    margin:0;
+}
 
-        .hero-label {
-            color: #ff7414;
+/* =========================================================
+   LOGO
+========================================================= */
 
-            font-size: 0.78rem;
+.logo-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
 
-            font-weight: bold;
+.logo-container{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-            letter-spacing: 3px;
+    background:
+        linear-gradient(135deg,#f47a1b,#c94d08);
 
-            text-transform: uppercase;
+    padding:13px 28px;
 
-            margin-bottom: 8px;
-        }
+    border-radius:16px;
 
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.28),
+        0 0 25px rgba(255,116,20,.18);
+}
 
-        .hero h1 {
-            margin: 0;
+.logo{
+    width:240px;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
 
-            color: #ffffff;
+/* =========================================================
+   DESIGNATION
+========================================================= */
 
-            font-size: clamp(2.2rem, 5vw, 4rem);
+.designation{
+    text-align:center;
+    color:#ffd8bd;
 
-            line-height: 1.15;
+    font-size:1.05rem;
+    font-weight:700;
 
-            font-weight: 900;
-        }
+    margin:0 auto 35px;
 
+    letter-spacing:.5px;
+}
 
-        .hero h1 span {
-            color: #ff7414;
-        }
+.designation span{
+    color:#ff8a3d;
+}
 
+/* =========================================================
+   SECTION
+========================================================= */
 
-        .hero-subtitle {
-            margin: 15px auto 0;
+.section{
+    margin-bottom:38px;
+}
 
-            max-width: 820px;
+.section-label{
+    color:#ff9a58;
 
-            color: #d2d2d
+    font-size:.72rem;
+    font-weight:800;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.section-title{
+    color:#fff2e8;
+
+    font-size:clamp(1.8rem,4vw,2.7rem);
+
+    line-height:1.15;
+
+    margin:0 0 22px;
+
+    font-weight:900;
+}
+
+.section-title span{
+    color:#ff7b25;
+}
+
+/* =========================================================
+   CONTENT CARDS
+========================================================= */
+
+.content-box{
+    position:relative;
+
+    background:
+        linear-gradient(145deg,
+        rgba(91,45,24,.98),
+        rgba(57,29,17,.98));
+
+    border:1px solid rgba(255,116,20,.45);
+
+    border-radius:22px;
+
+    padding:30px 32px;
+
+    margin-bottom:22px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.20);
+
+    overflow:hidden;
+}
+
+.content-box::after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-65px;
+    top:-65px;
+
+    border-radius:50%;
+
+    background:#ff7414;
+
+    opacity:.08;
+}
+
+.content-box
