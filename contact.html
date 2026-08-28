@@ -1,151 +1,287 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mehedi Alim Ayon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Mehedi Alim Ayon</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #f5f5f5;
+
+    background:
+        radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
+        linear-gradient(135deg, #171717 0%, #101010 50%, #181818 100%);
+
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 40px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #242424 0%,
+            #191919 100%
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 4px solid #ff7414;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.container:hover {
+    border-color: rgba(255,116,20,0.45);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+h1 {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+h1 span {
+    color: #ff7414;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 18px 20px;
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25d366, #1da851);
+    box-shadow: 0 10px 25px rgba(37,211,102,0.25);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(37,211,102,0.35);
+}
+
+.email-btn {
+    background: linear-gradient(135deg, #ff7414, #e85f00);
+    box-shadow: 0 10px 25px rgba(255,116,20,0.25);
+}
+
+.email-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(255,116,20,0.35);
+}
+
+.linkedin-btn {
+    background: linear-gradient(135deg, #0a66c2, #004182);
+    box-shadow: 0 10px 25px rgba(10,102,194,0.25);
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(10,102,194,0.35);
+}
+
+
+/* =========================================================
+   LOCATION AREA
+========================================================= */
+
+.location-box {
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 25px;
+    padding-top: 22px;
+}
+
+.location-box p {
+    font-size: 0.95rem;
+    color: #cfcfcf;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.location-box strong {
+    color: #ff7414;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    padding: 17px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #242424 0%,
+            #191919 100%
+        );
+
+    border: 1px solid rgba(255,116,20,0.55);
+    border-radius: 12px;
+
+    color: #ff7414;
+    text-decoration: none;
+
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.32);
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    background: #ff7414;
+    color: #ffffff;
+    box-shadow: 0 15px 30px rgba(255,116,20,0.35);
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 25px 20px;
+        border-radius: 17px;
+        border-left-width: 3px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-btn {
+        padding: 15px;
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    .location-box p {
+        font-size: 0.88rem;
+    }
+
+    .back-btn {
+        font-size: 0.85rem;
+        padding: 15px;
+        margin-top: 25px;
+    }
+}
+
+</style>
 </head>
 
-<body style="
-    margin:0;
-    padding:0;
-    background:linear-gradient(180deg, #111827 0%, #101622 55%, #080c14 100%);
-    color:#ffffff;
-    font-family:Arial, sans-serif;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-">
+<body>
 
-    <div style="
-        width:90%;
-        max-width:600px;
-        padding:40px;
-        background:#161e2e;
-        border-radius:20px;
-        border:1px solid #2d3748;
-        box-shadow:0 15px 40px rgba(0,0,0,0.5);
-        text-align:center;
-    ">
+    <div class="container">
 
-        <h1 style="
-            color:#ff7414;
-            font-size:36px;
-            font-weight:800;
-            margin-bottom:30px;
-        ">
-            CONTACT ME
-        </h1>
+        <h1>CONTACT <span>ME</span></h1>
 
-
-        <!-- WHATSAPP BUTTON -->
-        <a
-            href="https://wa.me/601172267068"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="
-                display:block;
-                padding:20px;
-                margin-bottom:20px;
-                background:#25d366;
-                color:#ffffff;
-                text-decoration:none;
-                border-radius:12px;
-                font-size:20px;
-                font-weight:800;
-                box-shadow:0 4px 15px rgba(37,211,102,0.3);
-            "
-        >
-            📱 WhatsApp: +60 11 7226 7068
+        <a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> WhatsApp: +60 11 7226 7068
         </a>
 
-
-        <!-- EMAIL BUTTON -->
-        <a
-            href="mailto:mehedialif1999@gmail.com"
-            style="
-                display:block;
-                padding:20px;
-                margin-bottom:20px;
-                background:#ff7414;
-                color:#ffffff;
-                text-decoration:none;
-                border-radius:12px;
-                font-size:20px;
-                font-weight:800;
-                box-shadow:0 4px 15px rgba(255,116,20,0.3);
-            "
-        >
-            ✉️ Email: mehedialif1999@gmail.com
+        <a href="mailto:mehedialif1999@gmail.com" class="contact-btn email-btn">
+            <i class="fa-solid fa-envelope" style="font-size: 20px;"></i> Email: mehedialif1999@gmail.com
         </a>
 
-
-        <!-- LINKEDIN BUTTON -->
-        <a
-            href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="
-                display:block;
-                padding:20px;
-                margin-bottom:30px;
-                background:#0a66c2;
-                color:#ffffff;
-                text-decoration:none;
-                border-radius:12px;
-                font-size:20px;
-                font-weight:800;
-                box-shadow:0 4px 15px rgba(10,102,194,0.3);
-            "
-        >
-            💼 LinkedIn Profile
+        <a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331/" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn">
+            <i class="fa-brands fa-linkedin-in" style="font-size: 20px;"></i> LinkedIn Profile
         </a>
 
-
-        <!-- LOCATION AREA -->
-        <div style="
-            text-align:left;
-            border-top:1px solid #2d3748;
-            padding-top:20px;
-        ">
-
-            <p style="
-                font-size:18px;
-                color:#ffffff;
-                margin:10px 0;
-            ">
-                <strong style="color:#ff7414;">Home:</strong>
-                Rangpur Sadar, Bangladesh
+        <div class="location-box">
+            <p>
+                <strong><i class="fa-solid fa-house"></i> Home:</strong> Rangpur Sadar, Bangladesh
             </p>
-
-            <p style="
-                font-size:18px;
-                color:#ffffff;
-                margin:10px 0;
-            ">
-                <strong style="color:#ff7414;">Living Now:</strong>
-                Hang Tuah, Sungai Besi, Kuala Lumpur, Malaysia
+            <p>
+                <strong><i class="fa-solid fa-location-dot"></i> Living Now:</strong> Hang Tuah, Sungai Besi, Kuala Lumpur, Malaysia
             </p>
-
         </div>
 
-
-        <!-- BACK TO HOME -->
-        <div style="margin-top:40px;">
-            <a
-                href="index.html"
-                style="
-                    color:#c4c9d3;
-                    text-decoration:none;
-                    font-size:16px;
-                "
-            >
-                ← BACK TO HOME
-            </a>
-        </div>
+        <a href="index.html" class="back-btn">
+            ← BACK TO HOME
+        </a>
 
     </div>
 
 </body>
 </html>
+
+```
