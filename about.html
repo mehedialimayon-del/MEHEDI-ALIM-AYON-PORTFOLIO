@@ -151,4 +151,42 @@ body{
     font-size:.72rem;
     font-weight:800;
     letter-spacing:4px;
-    text
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.section-title{
+    margin:0 0 18px;
+    color:#f5e6d8;
+    font-size:clamp(2rem,4vw,3.2rem);
+    line-height:1.15;
+    letter-spacing:-1px;
+}
+
+.section-title span{
+    color:var(--orange);
+}
+
+.section-intro{
+    color:#cbbeb2;
+    font-size:1rem;
+    max-width:980px;
+    margin-bottom:28px;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.card{
+    background:linear-gradient(145deg,var(--card),var(--card-soft));
+    border:1px solid rgba(255,116,20,.15);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:var(--shadow);
