@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Communicationist - Mehedi Alim Ayon</title>
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,139 +18,91 @@ html {
 }
 
 body {
-
-    margin: 0;
-    padding: 0;
-
     min-height: 100vh;
-
     font-family: Arial, Helvetica, sans-serif;
-
-    color: #ffffff;
-
+    color: #f5f5f5;
     background:
-        radial-gradient(
-            circle at top right,
-            rgba(255,116,20,0.14),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at bottom left,
-            rgba(255,116,20,0.08),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #171717 0%,
-            #101010 50%,
-            #181818 100%
-        );
-
+        radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
+        linear-gradient(135deg, #171717 0%, #101010 50%, #181818 100%);
     line-height: 1.7;
 }
 
-
-/* =========================================================
-   MAIN CONTAINER
-========================================================= */
-
 .container {
-
     width: 100%;
-
     max-width: 1050px;
-
     margin: 0 auto;
-
     padding: 28px 22px 60px;
 }
 
-
-/* =========================================================
-   LOGO AREA
-========================================================= */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo-container {
-
     position: relative;
-
-    width: 100%;
-
+    overflow: hidden;
     text-align: center;
 
-    margin-bottom: 28px;
-
-    padding: 22px 25px;
-
-    border-radius: 22px;
-
-    /*
-       Light premium panel ONLY behind logo.
-       This keeps the dark logo/text visible.
-    */
-
     background:
-        linear-gradient(
-            135deg,
-            #f5eee7 0%,
-            #fffaf5 50%,
-            #eee1d5 100%
-        );
+        linear-gradient(135deg, #252525 0%, #171717 65%, #20160f 100%);
 
     border: 1px solid rgba(255,116,20,0.55);
+    border-radius: 28px;
+
+    padding: 30px 35px;
+    margin-bottom: 25px;
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.35),
-        0 0 25px rgba(255,116,20,0.08);
-
-    overflow: hidden;
+        0 20px 50px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
+.logo-container::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    top: -100px;
+    border-radius: 50%;
+    background: rgba(255,116,20,0.10);
+    pointer-events: none;
+}
 
 .logo {
-
+    position: relative;
+    z-index: 2;
     max-width: 450px;
-
     width: 100%;
-
     height: auto;
-
     display: block;
-
     margin: 0 auto;
-
     object-fit: contain;
 }
 
-
-/* =========================================================
+/* =====================================================
    DESIGNATION
-========================================================= */
+===================================================== */
 
 .designation-header {
-
-    color: #ff7414;
-
-    font-size: 2.1rem;
-
-    font-weight: 800;
-
     text-align: center;
-
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
     margin-bottom: 38px;
-
-    line-height: 1.35;
-
-    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
+.designation-header .orange {
+    color: #ff7414;
+}
 
-/* =========================================================
+/* =====================================================
    CONTENT BOX
-========================================================= */
+===================================================== */
 
 .content-box {
-
     background:
         linear-gradient(
             145deg,
@@ -166,11 +111,9 @@ body {
         );
 
     border: 1px solid rgba(255,255,255,0.08);
-
     border-left: 4px solid #ff7414;
 
     border-radius: 20px;
-
     padding: 35px 38px;
 
     margin-bottom: 28px;
@@ -181,171 +124,121 @@ body {
     transition: 0.3s ease;
 }
 
-
 .content-box:hover {
-
     transform: translateY(-3px);
-
     border-color: rgba(255,116,20,0.45);
-
     box-shadow:
         0 20px 45px rgba(0,0,0,0.42);
 }
 
-
-/* =========================================================
+/* =====================================================
    HEADINGS
-========================================================= */
+===================================================== */
 
 h2 {
-
     color: #ffffff;
-
     font-size: 1.8rem;
-
     line-height: 1.3;
 
     margin-bottom: 25px;
-
     padding-left: 16px;
 
     border-left: 4px solid #ff7414;
-
-    text-align: left;
 }
 
-
-/*
-   FIRST PART OF HEADING = ORANGE
-   REST OF HEADING = WHITE
-*/
-
+/* প্রথম অংশ Orange */
 .heading-orange {
-
     color: #ff7414;
-
-    font-weight: 800;
 }
 
-
-/* =========================================================
+/* =====================================================
    PARAGRAPH
-========================================================= */
+===================================================== */
 
 p {
-
     color: #cfcfcf;
-
     font-size: 1rem;
-
     line-height: 1.85;
-
     margin-bottom: 20px;
-
-    letter-spacing: 0.15px;
 }
 
-
 p:last-child {
-
     margin-bottom: 0;
 }
 
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
 
-/* =========================================================
-   STRONG
-========================================================= */
-
-strong {
-
+.highlight {
     color: #ff7414;
-
-    font-weight: 800;
+    font-weight: 700;
 }
 
-
-/* =========================================================
+/* =====================================================
    LIST
-========================================================= */
+===================================================== */
 
 ul {
-
     list-style: none;
-
-    margin: 15px 0 5px;
-
+    margin: 10px 0 25px;
     padding: 0;
 }
 
-
 li {
-
     position: relative;
 
     color: #d2d2d2;
-
     font-size: 1rem;
-
     line-height: 1.8;
 
-    padding: 17px 20px 17px 52px;
-
+    padding: 17px 20px 17px 48px;
     margin-bottom: 12px;
 
     background: rgba(255,255,255,0.035);
 
     border: 1px solid rgba(255,255,255,0.06);
-
     border-radius: 12px;
 }
 
-
 li::before {
-
     content: "✓";
 
     position: absolute;
-
     left: 18px;
+    top: 15px;
 
-    top: 16px;
-
-    width: 24px;
-
-    height: 24px;
+    width: 23px;
+    height: 23px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
 
     background: #ff7414;
-
-    color: #111111;
+    color: #111;
 
     font-size: 0.75rem;
-
     font-weight: 900;
 }
 
+li strong {
+    color: #ff7414;
+}
 
-/* =========================================================
+/* =====================================================
    BACK BUTTON
-========================================================= */
+===================================================== */
 
 .back-btn {
-
     display: block;
-
     width: 100%;
 
     text-align: center;
 
     margin-top: 35px;
-
     padding: 17px 20px;
 
     background:
@@ -356,18 +249,13 @@ li::before {
         );
 
     border: none;
-
     border-radius: 12px;
 
     color: #ffffff;
-
     text-decoration: none;
 
     font-weight: 800;
-
     font-size: 0.95rem;
-
-    letter-spacing: 0.5px;
 
     box-shadow:
         0 10px 25px rgba(255,116,20,0.25);
@@ -375,24 +263,20 @@ li::before {
     transition: 0.3s ease;
 }
 
-
 .back-btn:hover {
-
     transform: translateY(-2px);
 
     box-shadow:
         0 15px 30px rgba(255,116,20,0.35);
 }
 
-
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media screen and (max-width: 600px) {
 
     body {
-
         background:
             radial-gradient(
                 circle at top right,
@@ -404,217 +288,116 @@ li::before {
                 #181818 0%,
                 #111111 100%
             );
+
+        font-size: 16px;
     }
 
-
     .container {
-
         padding: 15px 12px 40px;
     }
 
-
-    /* LOGO */
-
     .logo-container {
-
-        padding: 17px 15px;
-
+        padding: 22px 18px;
         margin-bottom: 20px;
-
-        border-radius: 18px;
-
-        width: 100%;
+        border-radius: 22px;
     }
-
 
     .logo {
-
-        width: 100%;
-
-        max-width: 330px;
-
-        height: auto;
+        max-width: 100%;
     }
-
-
-    /* DESIGNATION */
 
     .designation-header {
-
-        font-size: 1.10rem;
-
+        font-size: 1rem;
         line-height: 1.4;
-
-        margin-bottom: 24px;
+        margin-bottom: 25px;
     }
-
-
-    /* CONTENT */
 
     .content-box {
-
         padding: 24px 20px;
-
         border-radius: 17px;
-
         margin-bottom: 20px;
-
         border-left-width: 3px;
     }
-
-
-    /* HEADING */
 
     h2 {
-
-        font-size: 1.20rem;
-
-        line-height: 1.4;
-
+        font-size: 1.25rem;
+        line-height: 1.35;
         padding-left: 11px;
-
         margin-bottom: 19px;
-
-        border-left-width: 3px;
     }
 
-
-    /* PARAGRAPH */
-
     p {
-
         font-size: 0.88rem;
-
         line-height: 1.75;
-
         margin-bottom: 17px;
     }
 
-
-    /* LIST */
-
     li {
-
         font-size: 0.86rem;
-
         line-height: 1.7;
-
-        padding: 14px 15px 14px 43px;
-
-        margin-bottom: 11px;
+        padding: 14px 15px 14px 42px;
     }
-
 
     li::before {
-
         left: 14px;
-
         top: 14px;
-
         width: 21px;
-
         height: 21px;
-
-        font-size: 0.68rem;
     }
-
-
-    /* BACK BUTTON */
 
     .back-btn {
-
         font-size: 0.85rem;
-
         padding: 15px;
     }
-
 }
 
-
-/* =========================================================
+/* =====================================================
    VERY SMALL PHONES
-========================================================= */
+===================================================== */
 
 @media screen and (max-width: 380px) {
 
     .logo-container {
-
-        padding: 14px 12px;
-
-        border-radius: 15px;
+        padding: 18px 14px;
     }
-
-
-    .logo {
-
-        max-width: 280px;
-    }
-
 
     .designation-header {
-
-        font-size: 1.02rem;
+        font-size: 0.92rem;
     }
 
-
     .content-box {
-
         padding: 21px 17px;
     }
 
-
     h2 {
-
-        font-size: 1.10rem;
-
-        line-height: 1.35;
+        font-size: 1.12rem;
     }
-
 
     p {
-
         font-size: 0.84rem;
-
-        line-height: 1.68;
     }
-
 
     li {
-
         font-size: 0.82rem;
     }
-
-
-    .back-btn {
-
-        font-size: 0.82rem;
-    }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <div class="container">
 
-
 <!-- =====================================================
-     KLUST LOGO
+     UNIVERSITY LOGO
 ===================================================== -->
 
 <div class="logo-container">
-
     <img
         src="https://i.postimg.cc/KY94HkkG/logo-klust.png"
         alt="KLUST Logo"
         class="logo"
     >
-
 </div>
 
 
@@ -623,9 +406,8 @@ li::before {
 ===================================================== -->
 
 <div class="designation-header">
-
-    Mehedi Alim Ayon || Communication || Master of Communication
-
+    <span class="orange">Mehedi Alim Ayon</span>
+    || Communication || Master of Communication
 </div>
 
 
@@ -638,3 +420,138 @@ li::before {
     <h2>
         <span class="heading-orange">About</span> KLUST
     </h2>
+
+    <p>
+        Kuala Lumpur University of Science and Technology (KLUST) is a
+        premier institution dedicated to academic excellence, innovative
+        research, and holistic student development. Established to foster
+        high-standard education, it provides an inspiring platform that
+        bridges scientific knowledge, technical expertise, and modern
+        humanistic practices. It stands out for its multicultural
+        environment and comprehensive curriculum across diverse disciplines.
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     MASTER OF COMMUNICATION
+===================================================== -->
+
+<div class="content-box">
+
+    <h2>
+        <span class="heading-orange">Master of Communication:</span>
+        Core Insights & Future
+    </h2>
+
+    <p>
+        The Master of Communication program at KLUST is meticulously
+        structured to navigate the complex dynamics of the modern digital,
+        corporate, and global business environment. It dives deep into
+        critical subjects such as organizational communication, strategic
+        messaging, digital media impact, cross-cultural collaboration, and
+        corporate social responsibility (CSR).
+    </p>
+
+    <p>
+        <strong class="highlight">What is taught:</strong>
+        Students explore how effective communication drives organizational
+        productivity, manages public trust, and aligns internal and external
+        goals. The future for graduates in this field is remarkably
+        promising, offering high-impact career pathways in corporate affairs,
+        media management, multinational leadership, and strategic consultancy.
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     JOURNEY TO MALAYSIA
+===================================================== -->
+
+<div class="content-box">
+
+    <h2>
+        <span class="heading-orange">My Journey</span>
+        to Malaysia & Academics
+    </h2>
+
+    <p>
+        Moving to Malaysia marked a transformative chapter in my professional
+        and academic life. As a thriving multicultural economic hub in
+        Southeast Asia, Malaysia offered an ideal ecosystem to explore how
+        diverse communities and global multinational corporations interact
+        and communicate.
+    </p>
+
+    <p>
+        Pursuing my Master of Communication here allowed me to blend my
+        foundational background with high-level corporate communication
+        strategies, achieving top-tier academic recognition with a
+        <span class="highlight">4.0 CGPA.</span>
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<div class="content-box">
+
+    <h2>
+        <span class="heading-orange">What I Have Learned</span>
+        & Acquired Skills
+    </h2>
+
+    <p>
+        Through rigorous coursework and practical research modules during
+        my Master's program, I have mastered essential industry skills,
+        including:
+    </p>
+
+    <ul>
+
+        <li>
+            <strong>Cross-Cultural Communication:</strong>
+            Designing culturally-adaptive messaging to foster harmony and
+            engagement in diverse corporate environments.
+        </li>
+
+        <li>
+            <strong>Digital Media Strategies:</strong>
+            Analyzing how digital networks, social media, and online
+            platforms influence consumer behavior and brand reputation.
+        </li>
+
+        <li>
+            <strong>Organizational Dynamics:</strong>
+            Implementing multi-channel feedback systems to optimize employee
+            engagement and workplace productivity.
+        </li>
+
+        <li>
+            <strong>Strategic Research:</strong>
+            Conducting empirical studies on corporate communication
+            frameworks, transparency, and trust-building.
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- =====================================================
+     BACK HOME
+===================================================== -->
+
+<a href="index.html" class="back-btn">
+    ← BACK TO HOME
+</a>
+
+</div>
+
+</body>
+</html>
