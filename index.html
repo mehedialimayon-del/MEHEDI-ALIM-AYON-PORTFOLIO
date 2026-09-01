@@ -125,18 +125,15 @@ a {
 
 
 /* =========================================================
-   SOCIAL ICONS
+   SOCIAL ICONS (UPDATED FOR INLINE DISPLAY UNDER PROFESSION)
 ========================================================= */
 
 .social-icons {
-    position: absolute;
-
-    top: 20px;
-    right: 20px;
-
     display: flex;
-    gap: 10px;
-
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 25px 0;
     z-index: 20;
 }
 
@@ -159,17 +156,25 @@ a {
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 .linkedin,
 .email {
     background: rgba(255,116,20,0.20);
     border: 1px solid #ff7414;
+    color: #ffffff;
 }
 
 .whatsapp {
     background: rgba(37,211,102,0.20);
     border: 1px solid #25d366;
+    color: #ffffff;
 }
 
 
@@ -265,7 +270,7 @@ a {
 ========================================================= */
 
 .profession {
-    margin: 0 0 30px;
+    margin: 0 0 15px;
 
     color: #ff7414;
 
@@ -465,18 +470,17 @@ a {
     }
 
     .social-icons {
-        top: 8px !important;
-        right: 8px !important;
-        gap: 6px !important;
+        margin: 10px 0 15px 0 !important;
+        gap: 10px !important;
     }
 
     .social-icons a {
-        width: 28px !important;
-        height: 28px !important;
+        width: 38px !important;
+        height: 38px !important;
 
-        flex: 0 0 28px !important;
+        flex: 0 0 38px !important;
 
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 
     .main-content {
@@ -505,7 +509,7 @@ a {
     .profession {
         font-size: 11px !important;
 
-        margin: 0 0 12px !important;
+        margin: 0 0 8px !important;
 
         min-height: 18px !important;
     }
@@ -913,74 +917,12 @@ a {
 
 
     /* =====================================================
-       SOCIAL ICONS
+       SOCIAL ICONS (DESKTOP ALIGNMENT)
     ===================================================== */
 
     .social-icons {
-        position: absolute !important;
-
-        top: 28px !important;
-
-        right: 32px !important;
-
-        display: flex !important;
-
-        gap: 12px !important;
-
-        z-index: 30 !important;
-    }
-
-    .social-icons a {
-        width: 48px !important;
-
-        height: 48px !important;
-
-        flex: 0 0 48px !important;
-
-        border-radius: 50% !important;
-
-        display: flex !important;
-
-        align-items: center !important;
-
-        justify-content: center !important;
-
-        color: #ffffff !important;
-
-        background:
-            rgba(4,12,22,0.72) !important;
-
-        backdrop-filter: blur(12px);
-
-        -webkit-backdrop-filter: blur(12px);
-
-        font-size: 19px !important;
-
-        transition: 0.3s ease;
-    }
-
-    .linkedin,
-    .email {
-        border:
-            1px solid rgba(255,116,20,0.8) !important;
-
-        color: #ff8a1f !important;
-    }
-
-    .whatsapp {
-        border:
-            1px solid #25d366 !important;
-
-        color: #25d366 !important;
-    }
-
-    .social-icons a:hover {
-        transform:
-            translateY(-4px)
-            scale(1.08);
-
-        box-shadow:
-            0 0 20px rgba(255,116,20,0.35);
+        justify-content: flex-start !important;
+        margin: 15px 0 20px 0 !important;
     }
 
 
@@ -1106,7 +1048,7 @@ a {
 
     .profession {
         margin:
-            0 0 25px !important;
+            0 0 15px !important;
 
         min-height: 25px !important;
 
@@ -1147,7 +1089,7 @@ a {
 
         max-width: 570px;
 
-        margin-top: 25px;
+        margin-top: 15px;
 
         color: #d1d5db;
 
@@ -1179,7 +1121,7 @@ a {
     }
 
     .button-row:first-of-type {
-        margin-top: 65px;
+        margin-top: 20px;
     }
 
     .menu-button {
@@ -1478,44 +1420,6 @@ a {
         src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
     >
 
-
-    <!-- SOCIAL ICONS -->
-
-    <div class="social-icons">
-
-        <a
-            class="linkedin"
-            href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-        >
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-
-
-        <a
-            class="email"
-            href="mailto:mehedialif1999@gmail.com"
-            aria-label="Email"
-        >
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-
-
-        <a
-            class="whatsapp"
-            href="https://wa.me/601172267068"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-        >
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-    </div>
-
-
     <div class="hero-gradient"></div>
 
 </div>
@@ -1554,6 +1458,41 @@ a {
         <span class="cursor">&nbsp;</span>
 
     </p>
+
+
+    <!-- SOCIAL ICONS (PLACED RIGHT BELOW PROFESSION) -->
+
+    <div class="social-icons">
+
+        <a
+            class="whatsapp"
+            href="https://wa.me/601172267068"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a
+            class="email"
+            href="mailto:mehedialif1999@gmail.com"
+            aria-label="Email"
+        >
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a
+            class="linkedin"
+            href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+    </div>
 
 
 
