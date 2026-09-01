@@ -617,7 +617,7 @@ a {
 
 
 /* =========================================================
-   DESKTOP / LAPTOP (PERFECT ALL-IN-ONE SCREEN FIT)
+   DESKTOP / LAPTOP (NO BORDER & CENTERED PERSON)
 ========================================================= */
 
 @media (min-width:601px) {
@@ -665,17 +665,19 @@ a {
 
 
     /* =====================================================
-       DESKTOP HERO CONTAINER
+       DESKTOP HERO CONTAINER (SHIFTED LEFT & CENTERED)
     ===================================================== */
 
     .hero {
         position: absolute !important;
 
+        left: 48vw !important;
+
         right: 0 !important;
 
         top: 0 !important;
 
-        width: 50vw !important;
+        width: 52vw !important;
 
         height: 100vh !important;
 
@@ -688,23 +690,24 @@ a {
         box-shadow: none !important;
 
         z-index: 1;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
     }
 
     .hero-image {
-        position: absolute !important;
-
-        right: 0 !important;
-
-        top: 0 !important;
+        position: relative !important;
 
         width: 100% !important;
 
-        height: 100% !important;
+        height: 100vh !important;
 
-        /* BoxFit: contain ensure full photo (top to bottom tie) fits inside screen */
         object-fit: contain !important;
 
-        object-position: right center !important;
+        object-position: center center !important;
 
         border-radius: 0 !important;
 
@@ -713,35 +716,49 @@ a {
         box-shadow: none !important;
 
         z-index: 2 !important;
+
+        /* Soft Mask Gradient to remove any box borders */
+        -webkit-mask-image:
+            linear-gradient(
+                to right,
+                transparent 0%,
+                black 15%,
+                black 85%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 5%,
+                black 95%,
+                transparent 100%
+            );
+        -webkit-mask-composite: source-in;
+        mask-image:
+            linear-gradient(
+                to right,
+                transparent 0%,
+                black 15%,
+                black 85%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 5%,
+                black 95%,
+                transparent 100%
+            );
+        mask-composite: intersect;
     }
 
 
     /* =====================================================
-       SMOOTH SHADOW OVERLAY
+       REMOVE HEAVY GRADIENT OVERLAY
     ===================================================== */
 
     .hero-gradient {
-        display: block !important;
-
-        position: absolute !important;
-
-        inset: 0 !important;
-
-        width: 100% !important;
-
-        height: 100% !important;
-
-        background:
-            linear-gradient(
-                to right,
-                #030712 0%,
-                rgba(3, 7, 18, 0.85) 15%,
-                transparent 60%
-            ) !important;
-
-        z-index: 3 !important;
-
-        pointer-events: none;
+        display: none !important;
     }
 
 
@@ -774,9 +791,9 @@ a {
 
         top: 0 !important;
 
-        width: 52% !important;
+        width: 50% !important;
 
-        max-width: 680px !important;
+        max-width: 650px !important;
 
         height: 100vh !important;
 
@@ -1075,8 +1092,6 @@ a {
         src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
     >
 
-    <div class="hero-gradient"></div>
-
 </div>
 
 
@@ -1236,7 +1251,7 @@ a {
 
 
     <!-- =================================================
-         STATS (3 DROPS / CARDS)
+         STATS
     ================================================== -->
 
     <div class="stats-container">
