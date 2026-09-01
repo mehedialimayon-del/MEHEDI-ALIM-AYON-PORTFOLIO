@@ -125,7 +125,7 @@ a {
 
 
 /* =========================================================
-   SOCIAL ICONS (UPDATED FOR INLINE DISPLAY UNDER PROFESSION)
+   SOCIAL ICONS
 ========================================================= */
 
 .social-icons {
@@ -458,8 +458,7 @@ a {
 
 
 /* =========================================================
-   MOBILE
-   600px AND BELOW
+   MOBILE (600px AND BELOW)
 ========================================================= */
 
 @media (max-width:600px) {
@@ -655,8 +654,7 @@ a {
 
 
 /* =========================================================
-   PREMIUM LAPTOP / DESKTOP
-   MOBILE DOES NOT COME HERE
+   PREMIUM LAPTOP / DESKTOP (UPDATED FOR AESTHETIC PORTRAIT LOOK)
 ========================================================= */
 
 @media (min-width:601px) {
@@ -670,23 +668,7 @@ a {
 
         overflow: hidden !important;
 
-        background:
-            radial-gradient(
-                circle at 78% 48%,
-                rgba(255,116,20,0.13),
-                transparent 28%
-            ),
-            radial-gradient(
-                circle at 92% 85%,
-                rgba(255,116,20,0.06),
-                transparent 25%
-            ),
-            linear-gradient(
-                135deg,
-                #020711 0%,
-                #07111f 48%,
-                #02060d 100%
-            ) !important;
+        background: #060911 !important;
     }
 
     body {
@@ -706,88 +688,38 @@ a {
 
         background:
             radial-gradient(
-                circle at 78% 48%,
-                rgba(255,116,20,0.10),
-                transparent 28%
+                circle at 20% 50%,
+                rgba(255,116,20,0.08),
+                transparent 45%
             ),
             linear-gradient(
                 135deg,
-                #020711 0%,
-                #07111f 48%,
-                #02060d 100%
+                #030712 0%,
+                #0a101d 50%,
+                #02050b 100%
             );
+    }
 
-        border: 1px solid rgba(255,255,255,0.12);
-
-        border-radius: 20px;
-
-        box-shadow:
-            inset 0 0 100px rgba(0,0,0,0.55),
-            0 20px 60px rgba(0,0,0,0.45);
+    .page::before,
+    .page::after,
+    .hero::before,
+    .hero::after {
+        display: none !important;
     }
 
 
     /* =====================================================
-       DECORATIVE BACKGROUND
-    ===================================================== */
-
-    .page::before {
-        content: "";
-
-        position: absolute;
-
-        right: -10%;
-        top: -35%;
-
-        width: 65%;
-        height: 150%;
-
-        border:
-            1px solid rgba(255,116,20,0.10);
-
-        border-radius: 50%;
-
-        transform: rotate(-12deg);
-
-        pointer-events: none;
-    }
-
-    .page::after {
-        content: "";
-
-        position: absolute;
-
-        right: 3%;
-        bottom: 5%;
-
-        width: 28%;
-        height: 28%;
-
-        background:
-            radial-gradient(
-                circle,
-                rgba(255,116,20,0.15) 1px,
-                transparent 1.5px
-            );
-
-        background-size: 14px 14px;
-
-        opacity: 0.35;
-
-        pointer-events: none;
-    }
-
-
-    /* =====================================================
-       HERO FULL SCREEN
+       DESKTOP HERO & IMAGE (RECTANGULAR PORTRAIT WITH SHADOW)
     ===================================================== */
 
     .hero {
         position: absolute !important;
 
-        inset: 0 !important;
+        right: 0 !important;
 
-        width: 100% !important;
+        top: 0 !important;
+
+        width: 50vw !important;
 
         height: 100vh !important;
 
@@ -802,117 +734,67 @@ a {
         z-index: 1;
     }
 
-
-    /* =====================================================
-       PROFILE PHOTO
-    ===================================================== */
-
-  .hero-image {
+    .hero-image {
         position: absolute !important;
 
-        width: min(40vw,620px) !important;
-
-        height: min(40vw,620px) !important;
-
-        max-width: none !important;
-
-        right: 7vw !important;
+        right: 3vw !important;
 
         top: 50% !important;
 
-        transform:
-            translateY(-50%) !important;
+        transform: translateY(-50%) !important;
+
+        width: calc(44vw - 20px) !important;
+
+        height: 88vh !important;
+
+        max-width: 560px !important;
+
+        max-height: 820px !important;
 
         object-fit: cover !important;
 
-        object-position: center 2% !important;
+        object-position: center 8% !important;
 
-        border-radius: 50% !important;
+        border-radius: 20px !important;
 
-        border:
-            7px solid rgba(255,255,255,0.92) !important;
-
-        outline:
-            3px solid #ff7414 !important;
-
-        outline-offset: 7px;
+        border: 1px solid rgba(255, 116, 20, 0.3) !important;
 
         box-shadow:
-            0 0 0 15px rgba(255,116,20,0.08),
-            0 0 0 30px rgba(255,116,20,0.035),
-            0 0 45px rgba(255,116,20,0.45),
-            0 25px 70px rgba(0,0,0,0.75);
+            -20px 0 50px rgba(0, 0, 0, 0.7),
+            0 15px 40px rgba(0, 0, 0, 0.8),
+            0 0 30px rgba(255, 116, 20, 0.15) !important;
 
-        z-index: 4 !important;
-    }
-
-    /* =====================================================
-       PHOTO RINGS
-    ===================================================== */
-
-    .hero::before {
-        content: "";
-
-        position: absolute;
-
-        width: min(43vw,670px);
-
-        height: min(43vw,670px);
-
-        right: calc(7vw - 25px);
-
-        top: 50%;
-
-        transform:
-            translateY(-50%);
-
-        border:
-            2px solid rgba(255,116,20,0.55);
-
-        border-radius: 50%;
-
-        box-shadow:
-            0 0 30px rgba(255,116,20,0.12),
-            inset 0 0 30px rgba(255,116,20,0.05);
-
-        z-index: 2;
-
-        pointer-events: none;
-    }
-
-    .hero::after {
-        content: "";
-
-        position: absolute;
-
-        width: min(47vw,730px);
-
-        height: min(47vw,730px);
-
-        right: calc(7vw - 55px);
-
-        top: 50%;
-
-        transform:
-            translateY(-50%);
-
-        border:
-            1px solid rgba(255,116,20,0.18);
-
-        border-radius: 50%;
-
-        z-index: 2;
-
-        pointer-events: none;
+        z-index: 2 !important;
     }
 
 
     /* =====================================================
-       REMOVE OLD GRADIENT
+       SMOOTH DARK FADE / SHADOW OVERLAY BETWEEN IMAGE & BUTTONS
     ===================================================== */
 
     .hero-gradient {
-        display: none !important;
+        display: block !important;
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        background:
+            linear-gradient(
+                to right,
+                #080e1a 0%,
+                rgba(8, 14, 26, 0.85) 25%,
+                rgba(8, 14, 26, 0.3) 55%,
+                transparent 100%
+            ) !important;
+
+        z-index: 3 !important;
+
+        pointer-events: none;
     }
 
 
@@ -927,7 +809,7 @@ a {
 
 
     /* =====================================================
-       LEFT CONTENT
+       LEFT CONTENT (TEXTS AND BUTTONS)
     ===================================================== */
 
     .main-content {
@@ -937,7 +819,7 @@ a {
 
         top: 0 !important;
 
-        width: 52% !important;
+        width: 54% !important;
 
         max-width: none !important;
 
@@ -945,13 +827,9 @@ a {
 
         margin: 0 !important;
 
-        padding:
-            7vh
-            2vw
-            5vh
-            4.5vw !important;
+        padding: 5vh 3vw 5vh 6vw !important;
 
-        z-index: 20 !important;
+        z-index: 10 !important;
 
         text-align: left !important;
 
@@ -966,47 +844,25 @@ a {
 
 
     /* =====================================================
-       WELCOME
+       WELCOME BADGE
     ===================================================== */
 
     .main-content::before {
-        content:
-            "WELCOME TO MY PORTFOLIO";
+        content: "WELCOME TO MY PORTFOLIO";
 
         display: block;
 
-        color: #e5e7eb;
+        color: #ff7414;
 
-        font-size:
-            clamp(10px,0.8vw,14px);
+        font-size: clamp(10px, 0.8vw, 13px);
 
-        font-weight: 700;
+        font-weight: 800;
 
-        letter-spacing: 4px;
+        letter-spacing: 3px;
 
-        margin:
-            0 0 24px 55px;
+        margin: 0 0 15px 0;
 
-        opacity: 0.9;
-    }
-
-    .main-content::after {
-        content: "";
-
-        position: absolute;
-
-        left: 4.5vw;
-
-        top: calc(50% - 35vh);
-
-        width: 42px;
-
-        height: 3px;
-
-        background: #ff7414;
-
-        box-shadow:
-            0 0 15px rgba(255,116,20,0.8);
+        opacity: 0.95;
     }
 
 
@@ -1015,13 +871,11 @@ a {
     ===================================================== */
 
     .name {
-        margin:
-            0 0 14px !important;
+        margin: 0 0 10px !important;
 
-        font-size:
-            clamp(42px,4.4vw,76px) !important;
+        font-size: clamp(38px, 4vw, 68px) !important;
 
-        line-height: 0.95 !important;
+        line-height: 1.05 !important;
 
         font-weight: 900 !important;
 
@@ -1031,8 +885,7 @@ a {
 
         color: #ffffff !important;
 
-        text-shadow:
-            0 5px 25px rgba(0,0,0,0.75);
+        text-shadow: 0 5px 20px rgba(0,0,0,0.9);
 
         max-width: 650px;
     }
@@ -1047,19 +900,17 @@ a {
     ===================================================== */
 
     .profession {
-        margin:
-            0 0 15px !important;
+        margin: 0 0 10px !important;
 
         min-height: 25px !important;
 
         color: #ff7414 !important;
 
-        font-size:
-            clamp(12px,1vw,17px) !important;
+        font-size: clamp(13px, 1.1vw, 17px) !important;
 
         font-weight: 800 !important;
 
-        line-height: 1.5 !important;
+        line-height: 1.4 !important;
 
         letter-spacing: 1px !important;
 
@@ -1078,35 +929,6 @@ a {
 
 
     /* =====================================================
-       DESCRIPTION
-    ===================================================== */
-
-    .profession::after {
-        content:
-            "Dedicated professional with a strong background in agriculture, effective communication, and key account management. Committed to delivering innovative solutions and building lasting relationships.";
-
-        display: block;
-
-        max-width: 570px;
-
-        margin-top: 15px;
-
-        color: #d1d5db;
-
-        font-size:
-            clamp(12px,0.9vw,16px);
-
-        font-weight: 400;
-
-        line-height: 1.8;
-
-        letter-spacing: 0.2px;
-
-        text-transform: none;
-    }
-
-
-    /* =====================================================
        BUTTONS
     ===================================================== */
 
@@ -1115,26 +937,25 @@ a {
 
         display: flex;
 
-        gap: 10px;
+        gap: 12px;
 
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .button-row:first-of-type {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .menu-button {
-        border:
-            1px solid rgba(255,116,20,0.65) !important;
+        border: 1px solid rgba(255,116,20,0.5) !important;
 
         border-radius: 10px !important;
 
         background:
             linear-gradient(
                 145deg,
-                rgba(30,39,56,0.92),
-                rgba(10,16,28,0.96)
+                rgba(23, 31, 46, 0.9),
+                rgba(12, 17, 28, 0.95)
             ) !important;
 
         backdrop-filter: blur(12px);
@@ -1142,9 +963,8 @@ a {
         -webkit-backdrop-filter: blur(12px);
 
         box-shadow:
-            inset 0 1px 0 rgba(255,255,255,0.035),
-            inset 0 0 20px rgba(255,116,20,0.025),
-            0 7px 20px rgba(0,0,0,0.28);
+            inset 0 1px 0 rgba(255,255,255,0.05),
+            0 8px 20px rgba(0, 0, 0, 0.4);
 
         transition:
             transform .3s ease,
@@ -1154,16 +974,13 @@ a {
     }
 
     .menu-button:hover {
-        transform:
-            translateY(-3px)
-            scale(1.015);
+        transform: translateY(-3px) scale(1.02);
 
-        border-color:
-            #ff7414 !important;
+        border-color: #ff7414 !important;
 
         box-shadow:
-            0 10px 28px rgba(255,116,20,0.18),
-            inset 0 0 18px rgba(255,116,20,0.05);
+            0 10px 25px rgba(255,116,20,0.25),
+            inset 0 0 15px rgba(255,116,20,0.1);
     }
 
 
@@ -1180,8 +997,7 @@ a {
 
         padding: 7px !important;
 
-        font-size:
-            clamp(10px,0.9vw,13px) !important;
+        font-size: clamp(10px, 0.85vw, 13px) !important;
 
         line-height: 1.15 !important;
 
@@ -1198,8 +1014,7 @@ a {
 
         height: 52px !important;
 
-        font-size:
-            clamp(11px,1vw,14px) !important;
+        font-size: clamp(11px, 0.95vw, 14px) !important;
     }
 
 
@@ -1212,31 +1027,29 @@ a {
 
         height: 52px !important;
 
-        font-size:
-            clamp(11px,1vw,14px) !important;
+        font-size: clamp(11px, 0.95vw, 14px) !important;
 
         background:
             linear-gradient(
                 135deg,
                 #ff7414 0%,
-                #ff8a32 48%,
+                #ff8a32 50%,
                 #ff7414 100%
             ) !important;
 
-        border:
-            1px solid #ff8a32 !important;
+        border: 1px solid #ff8a32 !important;
 
         box-shadow:
-            0 8px 24px rgba(255,116,20,0.20),
-            inset 0 1px 0 rgba(255,255,255,0.20) !important;
+            0 8px 22px rgba(255,116,20,0.3),
+            inset 0 1px 0 rgba(255,255,255,0.3) !important;
     }
 
     .bottom-button:hover {
-        filter: brightness(1.08);
+        filter: brightness(1.1);
 
         box-shadow:
-            0 12px 30px rgba(255,116,20,0.30),
-            inset 0 1px 0 rgba(255,255,255,0.25) !important;
+            0 12px 28px rgba(255,116,20,0.4),
+            inset 0 1px 0 rgba(255,255,255,0.4) !important;
     }
 
 
@@ -1249,13 +1062,11 @@ a {
 
         display: flex !important;
 
-        gap: 10px !important;
+        gap: 12px !important;
 
-        margin:
-            15px 0 0 !important;
+        margin: 15px 0 0 !important;
 
-        justify-content:
-            space-between !important;
+        justify-content: space-between !important;
     }
 
     .stat-card {
@@ -1263,44 +1074,36 @@ a {
 
         min-width: 0 !important;
 
-        min-height: 68px !important;
+        min-height: 65px !important;
 
-        padding:
-            9px 5px !important;
+        padding: 8px 5px !important;
 
         border-radius: 9px !important;
 
         background:
             linear-gradient(
                 145deg,
-                rgba(255,255,255,0.045),
-                rgba(255,255,255,0.012)
+                rgba(255,255,255,0.04),
+                rgba(255,255,255,0.01)
             ) !important;
 
-        border:
-            1px solid rgba(255,116,20,0.25) !important;
+        border: 1px solid rgba(255,116,20,0.25) !important;
 
-        box-shadow:
-            inset 0 0 15px rgba(255,116,20,0.015),
-            0 5px 18px rgba(0,0,0,0.20);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
     .stat-card h2 {
         color: #ff7414 !important;
 
-        font-size:
-            clamp(19px,1.8vw,27px) !important;
+        font-size: clamp(18px, 1.6vw, 25px) !important;
 
-        margin:
-            0 0 3px !important;
+        margin: 0 0 2px !important;
 
-        text-shadow:
-            0 0 12px rgba(255,116,20,0.22);
+        text-shadow: 0 0 12px rgba(255,116,20,0.3);
     }
 
     .stat-card p {
-        font-size:
-            clamp(7px,0.6vw,9px) !important;
+        font-size: clamp(7px, 0.6vw, 9px) !important;
 
         letter-spacing: 0.6px !important;
 
@@ -1316,86 +1119,34 @@ a {
 @media (min-width:601px) and (max-width:1000px) {
 
     .main-content {
-        width: 55% !important;
+        width: 58% !important;
 
         padding-left: 4vw !important;
     }
 
     .name {
-        font-size: 38px !important;
+        font-size: 34px !important;
     }
 
     .profession {
-        font-size: 14px !important;
-    }
-
-    .profession::after {
-        font-size: 12px;
-        max-width: 430px;
+        font-size: 13px !important;
     }
 
     .hero-image {
-        width: 330px !important;
-        height: 330px !important;
+        width: 36vw !important;
 
-        right: 6vw !important;
-    }
+        height: 80vh !important;
 
-    .hero::before {
-        width: 370px;
-        height: 370px;
-
-        right: calc(6vw - 20px);
-    }
-
-    .hero::after {
-        width: 420px;
-        height: 420px;
-
-        right: calc(6vw - 45px);
+        right: 2vw !important;
     }
 
     .top-button {
-        font-size: 10px !important;
+        font-size: 9.5px !important;
     }
 
     .middle-button,
     .bottom-button {
-        font-size: 12px !important;
-    }
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-========================================================= */
-
-@media (min-width:1200px) {
-
-    .hero-image {
-        width: min(40vw,620px) !important;
-        height: min(40vw,620px) !important;
-    }
-
-    .main-content {
-        padding-left: 5vw !important;
-    }
-}
-
-
-/* =========================================================
-   VERY LARGE DESKTOP
-========================================================= */
-
-@media (min-width:1600px) {
-
-    .hero-image {
-        width: 570px !important;
-        height: 570px !important;
-    }
-
-    .main-content {
-        padding-left: 6vw !important;
+        font-size: 11.5px !important;
     }
 }
 
@@ -1460,7 +1211,7 @@ a {
     </p>
 
 
-    <!-- SOCIAL ICONS (PLACED RIGHT BELOW PROFESSION) -->
+    <!-- SOCIAL ICONS -->
 
     <div class="social-icons">
 
