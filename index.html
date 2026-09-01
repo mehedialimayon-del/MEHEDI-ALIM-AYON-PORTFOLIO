@@ -654,7 +654,7 @@ a {
 
 
 /* =========================================================
-   PREMIUM LAPTOP / DESKTOP (UPDATED FOR AESTHETIC PORTRAIT LOOK)
+   DESKTOP / LAPTOP (REVISED FULL HEIGHT & TOP TO BOTTOM FIT)
 ========================================================= */
 
 @media (min-width:601px) {
@@ -688,7 +688,7 @@ a {
 
         background:
             radial-gradient(
-                circle at 20% 50%,
+                circle at 15% 50%,
                 rgba(255,116,20,0.08),
                 transparent 45%
             ),
@@ -700,16 +700,9 @@ a {
             );
     }
 
-    .page::before,
-    .page::after,
-    .hero::before,
-    .hero::after {
-        display: none !important;
-    }
-
 
     /* =====================================================
-       DESKTOP HERO & IMAGE (RECTANGULAR PORTRAIT WITH SHADOW)
+       DESKTOP HERO CONTAINER
     ===================================================== */
 
     .hero {
@@ -719,7 +712,7 @@ a {
 
         top: 0 !important;
 
-        width: 50vw !important;
+        width: 55vw !important;
 
         height: 100vh !important;
 
@@ -737,39 +730,40 @@ a {
     .hero-image {
         position: absolute !important;
 
-        right: 3vw !important;
+        right: 0 !important;
 
-        top: 50% !important;
+        top: 0 !important;
 
-        transform: translateY(-50%) !important;
+        transform: none !important;
 
-        width: calc(44vw - 20px) !important;
+        width: 52vw !important;
 
-        height: 88vh !important;
+        height: 100vh !important;
 
-        max-width: 560px !important;
+        max-width: none !important;
 
-        max-height: 820px !important;
+        max-height: none !important;
 
         object-fit: cover !important;
 
-        object-position: center 8% !important;
+        object-position: center 0% !important;
 
-        border-radius: 20px !important;
+        border-radius: 0 !important;
 
-        border: 1px solid rgba(255, 116, 20, 0.3) !important;
+        border: none !important;
 
-        box-shadow:
-            -20px 0 50px rgba(0, 0, 0, 0.7),
-            0 15px 40px rgba(0, 0, 0, 0.8),
-            0 0 30px rgba(255, 116, 20, 0.15) !important;
+        box-shadow: none !important;
 
         z-index: 2 !important;
+
+        /* Corner rounding on left for smooth framing */
+        border-top-left-radius: 24px !important;
+        border-bottom-left-radius: 24px !important;
     }
 
 
     /* =====================================================
-       SMOOTH DARK FADE / SHADOW OVERLAY BETWEEN IMAGE & BUTTONS
+       SMOOTH SHADOW OVERLAY (EDGE-TO-EDGE BLENDING)
     ===================================================== */
 
     .hero-gradient {
@@ -786,9 +780,9 @@ a {
         background:
             linear-gradient(
                 to right,
-                #080e1a 0%,
-                rgba(8, 14, 26, 0.85) 25%,
-                rgba(8, 14, 26, 0.3) 55%,
+                #030712 0%,
+                rgba(3, 7, 18, 0.9) 20%,
+                rgba(3, 7, 18, 0.4) 50%,
                 transparent 100%
             ) !important;
 
@@ -799,7 +793,7 @@ a {
 
 
     /* =====================================================
-       SOCIAL ICONS (DESKTOP ALIGNMENT)
+       SOCIAL ICONS
     ===================================================== */
 
     .social-icons {
@@ -809,7 +803,7 @@ a {
 
 
     /* =====================================================
-       LEFT CONTENT (TEXTS AND BUTTONS)
+       LEFT CONTENT AREA
     ===================================================== */
 
     .main-content {
@@ -819,15 +813,15 @@ a {
 
         top: 0 !important;
 
-        width: 54% !important;
+        width: 52% !important;
 
-        max-width: none !important;
+        max-width: 750px !important;
 
         height: 100vh !important;
 
         margin: 0 !important;
 
-        padding: 5vh 3vw 5vh 6vw !important;
+        padding: 5vh 2vw 5vh 5vw !important;
 
         z-index: 10 !important;
 
@@ -873,7 +867,7 @@ a {
     .name {
         margin: 0 0 10px !important;
 
-        font-size: clamp(38px, 4vw, 68px) !important;
+        font-size: clamp(36px, 3.8vw, 64px) !important;
 
         line-height: 1.05 !important;
 
@@ -886,8 +880,6 @@ a {
         color: #ffffff !important;
 
         text-shadow: 0 5px 20px rgba(0,0,0,0.9);
-
-        max-width: 650px;
     }
 
     .refresh-name {
@@ -1119,13 +1111,13 @@ a {
 @media (min-width:601px) and (max-width:1000px) {
 
     .main-content {
-        width: 58% !important;
+        width: 55% !important;
 
-        padding-left: 4vw !important;
+        padding-left: 3vw !important;
     }
 
     .name {
-        font-size: 34px !important;
+        font-size: 32px !important;
     }
 
     .profession {
@@ -1133,11 +1125,7 @@ a {
     }
 
     .hero-image {
-        width: 36vw !important;
-
-        height: 80vh !important;
-
-        right: 2vw !important;
+        width: 48vw !important;
     }
 
     .top-button {
