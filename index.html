@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +97,7 @@ a {
 
 
 /* =========================================================
-   HERO (MOBILE DEFAULT - UNTOUCHED)
+   HERO (MOBILE DEFAULT)
 ========================================================= */
 
 .hero {
@@ -225,7 +226,7 @@ a {
 
 
 /* =========================================================
-   NAME
+   NAME & QUOTE
 ========================================================= */
 
 .name {
@@ -247,16 +248,10 @@ a {
 
 .refresh-name {
     color: inherit;
-
     text-decoration: none;
-
     cursor: pointer;
-
     display: inline-block;
-
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .refresh-name:active {
@@ -264,13 +259,23 @@ a {
     opacity: 0.8;
 }
 
+.personal-quote {
+    font-size: 14px;
+    font-style: italic;
+    color: #d1d5db;
+    margin: 5px auto 20px;
+    max-width: 90%;
+    line-height: 1.5;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-weight: 300;
+}
 
 /* =========================================================
    TYPEWRITER
 ========================================================= */
 
 .profession {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 
     color: #ff7414;
 
@@ -301,10 +306,6 @@ a {
     width: 3px;
 
     animation: blink 1s infinite;
-}
-
-.sub-details {
-    display: none;
 }
 
 .desktop-cta {
@@ -480,7 +481,7 @@ a {
 
 
 /* =========================================================
-   MOBILE (600px AND BELOW - EXACT ORIGINAL UNTOUCHED)
+   MOBILE (600px AND BELOW)
 ========================================================= */
 
 @media (max-width:600px) {
@@ -530,9 +531,16 @@ a {
     .profession {
         font-size: 11px !important;
 
-        margin: 0 0 8px !important;
+        margin: 0 0 4px !important;
 
         min-height: 18px !important;
+    }
+    
+    .personal-quote {
+        font-size: 11.5px !important;
+        margin: 0 auto 15px !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
     }
 
     .button-row {
@@ -648,7 +656,7 @@ a {
 
 
 /* =========================================================
-   DESKTOP / LAPTOP (EXACT IMAGE LOOK & LAYOUT MATCH)
+   DESKTOP / LAPTOP
 ========================================================= */
 
 @media (min-width:601px) {
@@ -658,7 +666,7 @@ a {
         width: 100vw;
         height: 100vh;
         overflow: hidden !important;
-        background: #030406 !important;
+        background: #06090e !important;
     }
 
     body {
@@ -676,40 +684,52 @@ a {
         justify-content: space-between;
         padding: 40px 60px 30px;
         background:
-            radial-gradient(circle at 50% 35%, rgba(255, 116, 20, 0.15) 0%, rgba(0, 0, 0, 0) 50%),
-            radial-gradient(circle at 80% 40%, rgba(255, 116, 20, 0.08) 0%, rgba(0, 0, 0, 0) 40%),
-            url("https://i.postimg.cc/9f48G43r/world-map-dots.png") no-repeat center right / contain,
-            linear-gradient(135deg, #05070a 0%, #0a0d14 50%, #030406 100%);
+            radial-gradient(circle at 60% 40%, rgba(255, 116, 20, 0.22) 0%, rgba(10, 14, 22, 0.85) 45%, rgba(6, 9, 14, 1) 100%),
+            linear-gradient(135deg, #040609 0%, #090d16 50%, #030406 100%);
     }
 
-    /* BACKGROUND GLOW RINGS */
-    .page::after {
+    /* MAP BACKGROUND EFFECT */
+    .page::before {
         content: "";
         position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 450px;
-        height: 450px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 116, 20, 0.25) 0%, rgba(255, 116, 20, 0) 70%);
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 80%;
+        background: url('https://i.postimg.cc/9f48G43r/world-map-dots.png') no-repeat center right / contain;
+        opacity: 0.25;
         pointer-events: none;
         z-index: 1;
     }
 
-    /* CENTER HERO IMAGE (IMAGE MATCH) */
+    /* CENTER HERO IMAGE & GREY BG BACKDROP */
     .hero {
         position: absolute !important;
         top: 42% !important;
-        left: 50% !important;
+        left: 55% !important;
         transform: translate(-50%, -50%) !important;
-        width: 320px !important;
-        height: 440px !important;
+        width: 360px !important;
+        height: 480px !important;
         min-height: auto !important;
         background: transparent !important;
         box-shadow: none !important;
         z-index: 5 !important;
         overflow: visible !important;
+    }
+
+    /* GREY BG / BACKDROP BEHIND PHOTO */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 290px;
+        height: 390px;
+        background: radial-gradient(circle, #2a3240 0%, #151a24 100%);
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(255, 116, 20, 0.35);
+        z-index: -1;
     }
 
     .hero-image {
@@ -720,9 +740,9 @@ a {
         border-radius: 0 !important;
         border: none !important;
         box-shadow: none !important;
-        filter: drop-shadow(0 0 25px rgba(255, 116, 20, 0.4));
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+        filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     }
 
     .hero-gradient {
@@ -734,8 +754,8 @@ a {
         position: relative !important;
         left: 0 !important;
         top: 0 !important;
-        width: 40% !important;
-        max-width: 500px !important;
+        width: 42% !important;
+        max-width: 520px !important;
         height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -749,15 +769,15 @@ a {
     .main-content::before {
         content: "WELCOME TO MY PORTFOLIO";
         display: block;
-        color: #e5e7eb;
+        color: #ff7414;
         font-size: 13px;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 2.5px;
         margin-bottom: 8px;
     }
 
     .name {
-        margin: 0 0 6px !important;
+        margin: 0 0 10px !important;
         font-size: 42px !important;
         line-height: 1.05 !important;
         font-weight: 900 !important;
@@ -767,21 +787,23 @@ a {
         text-shadow: none !important;
     }
 
+    /* TYPEWRITER MODE (DESKTOP) */
     .profession {
-        display: none !important;
-    }
-
-    .sub-details {
         display: block !important;
-        font-size: 14px;
-        color: #d1d5db;
-        line-height: 1.6;
-        margin-bottom: 22px;
+        margin: 0 0 10px !important;
+        color: #ff7414 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.5px !important;
+        text-align: left !important;
+        min-height: 28px !important;
     }
-
-    .sub-details span {
-        color: #ff7414;
-        font-weight: 700;
+    
+    .personal-quote {
+        font-size: 15px !important;
+        margin: 0 0 25px 0 !important;
+        text-align: left !important;
+        max-width: 100% !important;
     }
 
     .desktop-cta {
@@ -789,16 +811,16 @@ a {
         align-items: center;
         justify-content: center;
         width: fit-content;
-        padding: 10px 22px;
+        padding: 12px 24px;
         border: 1.5px solid #ff7414;
         border-radius: 6px;
         color: #ffffff;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 800;
         letter-spacing: 1.5px;
         text-decoration: none;
-        background: rgba(255, 116, 20, 0.05);
-        box-shadow: 0 0 15px rgba(255, 116, 20, 0.2);
+        background: rgba(255, 116, 20, 0.08);
+        box-shadow: 0 0 15px rgba(255, 116, 20, 0.25);
         transition: all 0.3s ease;
     }
 
@@ -811,7 +833,7 @@ a {
         display: none !important;
     }
 
-    /* RIGHT SIDE SOCIAL ICONS (FLOATING) */
+    /* RIGHT SIDE SOCIAL ICONS */
     .desktop-right-socials {
         display: flex !important;
         flex-direction: column;
@@ -823,14 +845,14 @@ a {
     }
 
     .desktop-right-socials a {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 6px;
+        border-radius: 8px;
         border: 1px solid rgba(255, 116, 20, 0.4);
-        background: rgba(10, 15, 25, 0.8);
+        background: rgba(10, 15, 25, 0.85);
         color: #ffffff;
         text-decoration: none;
         font-size: 16px;
@@ -843,12 +865,11 @@ a {
         box-shadow: 0 0 15px rgba(255, 116, 20, 0.5);
     }
 
-    /* HIDE STATS ON DESKTOP TOP TO MATCH FULL BOTTOM LAYOUT */
     .stats-container {
         display: none !important;
     }
 
-    /* BOTTOM DOCK (GLASSMORPHISM CARDS CONTAINER) */
+    /* BOTTOM DOCK (GLASS CARDS) */
     .desktop-dock-wrapper {
         position: absolute;
         bottom: 25px;
@@ -863,7 +884,7 @@ a {
         display: grid !important;
         grid-template-columns: repeat(6, 1fr) !important;
         gap: 12px !important;
-        background: rgba(10, 14, 22, 0.75);
+        background: rgba(10, 14, 22, 0.8);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -893,9 +914,9 @@ a {
 
     .menu-button:hover,
     .menu-button.active-card {
-        background: rgba(255, 116, 20, 0.12) !important;
+        background: rgba(255, 116, 20, 0.15) !important;
         border-color: #ff7414 !important;
-        box-shadow: 0 0 20px rgba(255, 116, 20, 0.25), inset 0 0 10px rgba(255, 116, 20, 0.15) !important;
+        box-shadow: 0 0 20px rgba(255, 116, 20, 0.3), inset 0 0 10px rgba(255, 116, 20, 0.15) !important;
         transform: translateY(-4px) !important;
     }
 
@@ -929,7 +950,6 @@ a {
         font-weight: 400;
     }
 
-    /* CARD-SPECIFIC HIGHLIGHT FROM IMAGE */
     .about-card {
         background: rgba(255, 116, 20, 0.15) !important;
         border-color: #ff7414 !important;
@@ -987,7 +1007,7 @@ a {
 
 
 
-    <!-- TYPEWRITER (MOBILE) -->
+    <!-- TYPEWRITER EFFECT (BOTH MOBILE & DESKTOP) -->
 
     <p class="profession">
 
@@ -996,12 +1016,11 @@ a {
         <span class="cursor">&nbsp;</span>
 
     </p>
-
-    <!-- DESKTOP SUB DETAILS -->
-    <div class="sub-details">
-        <b>Education:</b> <span>Agriculturists, COMMUNICATIONIST</span><br>
-        <b>Professional:</b> <span>Key Accounts Manager</span>
-    </div>
+    
+    <!-- PERSONAL QUOTE -->
+    <p class="personal-quote">
+        "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
+    </p>
 
     <!-- DESKTOP CALL TO ACTION -->
     <a href="contact.html" class="desktop-cta">
