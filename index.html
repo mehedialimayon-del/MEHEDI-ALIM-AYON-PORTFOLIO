@@ -96,7 +96,7 @@ a {
 
 
 /* =========================================================
-   HERO
+   HERO (MOBILE DEFAULT)
 ========================================================= */
 
 .hero {
@@ -458,7 +458,7 @@ a {
 
 
 /* =========================================================
-   MOBILE (600px AND BELOW)
+   MOBILE (600px AND BELOW - UNTOUCHED ORIGINAL)
 ========================================================= */
 
 @media (max-width:600px) {
@@ -617,7 +617,7 @@ a {
 
 
 /* =========================================================
-   DESKTOP / LAPTOP (NO BORDER & CENTERED PERSON)
+   DESKTOP / LAPTOP (CIRCULAR FRAME STYLE)
 ========================================================= */
 
 @media (min-width:601px) {
@@ -651,9 +651,9 @@ a {
 
         background:
             radial-gradient(
-                circle at 15% 50%,
+                circle at 20% 50%,
                 rgba(255,116,20,0.08),
-                transparent 45%
+                transparent 50%
             ),
             linear-gradient(
                 135deg,
@@ -665,19 +665,19 @@ a {
 
 
     /* =====================================================
-       DESKTOP HERO CONTAINER (SHIFTED LEFT & CENTERED)
+       DESKTOP HERO CONTAINER (CIRCULAR FRAME CONTAINER)
     ===================================================== */
 
     .hero {
         position: absolute !important;
 
-        left: 48vw !important;
+        left: 50vw !important;
 
         right: 0 !important;
 
         top: 0 !important;
 
-        width: 52vw !important;
+        width: 50vw !important;
 
         height: 100vh !important;
 
@@ -701,60 +701,32 @@ a {
     .hero-image {
         position: relative !important;
 
-        width: 100% !important;
+        width: min(380px, 40vh) !important;
 
-        height: 100vh !important;
+        height: min(380px, 40vh) !important;
 
-        object-fit: contain !important;
+        object-fit: cover !important;
 
-        object-position: center center !important;
+        object-position: center top !important;
 
-        border-radius: 0 !important;
+        border-radius: 50% !important;
 
-        border: none !important;
+        border: 4px solid #ff7414 !important;
 
-        box-shadow: none !important;
+        box-shadow:
+            0 0 25px rgba(255,116,20,0.4),
+            0 0 50px rgba(0,0,0,0.7) !important;
 
         z-index: 2 !important;
 
-        /* Soft Mask Gradient to remove any box borders */
-        -webkit-mask-image:
-            linear-gradient(
-                to right,
-                transparent 0%,
-                black 15%,
-                black 85%,
-                transparent 100%
-            ),
-            linear-gradient(
-                to bottom,
-                transparent 0%,
-                black 5%,
-                black 95%,
-                transparent 100%
-            );
-        -webkit-mask-composite: source-in;
-        mask-image:
-            linear-gradient(
-                to right,
-                transparent 0%,
-                black 15%,
-                black 85%,
-                transparent 100%
-            ),
-            linear-gradient(
-                to bottom,
-                transparent 0%,
-                black 5%,
-                black 95%,
-                transparent 100%
-            );
-        mask-composite: intersect;
+        -webkit-mask-image: none !important;
+
+        mask-image: none !important;
     }
 
 
     /* =====================================================
-       REMOVE HEAVY GRADIENT OVERLAY
+       REMOVE GRADIENT OVERLAY
     ===================================================== */
 
     .hero-gradient {
@@ -791,9 +763,9 @@ a {
 
         top: 0 !important;
 
-        width: 50% !important;
+        width: 52% !important;
 
-        max-width: 650px !important;
+        max-width: 660px !important;
 
         height: 100vh !important;
 
@@ -1091,6 +1063,8 @@ a {
         alt="Mehedi Alim Ayon"
         src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg"
     >
+
+    <div class="hero-gradient"></div>
 
 </div>
 
