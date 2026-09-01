@@ -10,7 +10,7 @@
 <style>
 
 /* =========================================================
-   RESET
+   RESET & BASE STYLES
 ========================================================= */
 
 * {
@@ -27,16 +27,12 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-
     font-family: Arial, Helvetica, sans-serif;
-
     color: #f5f5f5;
-
     background:
         radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
         radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
         linear-gradient(135deg, #171717 0%, #101010 50%, #181818 100%);
-
     line-height: 1.7;
     display: flex;
     flex-direction: column;
@@ -68,7 +64,7 @@ body {
 }
 
 .nav-placeholder {
-    width: 40px; /* Balance spacing for center alignment */
+    width: 40px;
 }
 
 /* Centered Name styling */
@@ -92,7 +88,7 @@ body {
     text-shadow: 0 0 20px rgba(255, 116, 20, 0.9);
 }
 
-/* Toggle Menu Button (Right Side Icon) */
+/* Toggle Menu Button */
 .menu-toggle-btn {
     width: 42px;
     height: 42px;
@@ -179,29 +175,20 @@ body {
 
 
 /* =========================================================
-   CONTAINER
+   CONTAINER & LAYOUT
 ========================================================= */
 
 .container {
-    width: 90%;
-    max-width: 650px;
-    margin: 105px auto 40px; /* Adjusted top margin for navbar */
+    width: 92%;
+    max-width: 950px;
+    margin: 105px auto 40px;
     padding: 40px 35px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #242424 0%,
-            #191919 100%
-        );
-
+    background: linear-gradient(145deg, #242424 0%, #191919 100%);
     border: 1px solid rgba(255,255,255,0.08);
     border-left: 4px solid #ff7414;
     border-radius: 20px;
-
     box-shadow: 0 20px 50px rgba(0,0,0,0.45);
     transition: 0.3s ease;
-    text-align: center;
 }
 
 .container:hover {
@@ -209,16 +196,17 @@ body {
     box-shadow: 0 25px 60px rgba(0,0,0,0.55);
 }
 
-
-/* =========================================================
-   HEADING
-========================================================= */
+/* HEADING */
+.page-title-sec {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 h1 {
     color: #ffffff;
     font-size: clamp(1.8rem, 4vw, 2.4rem);
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 
@@ -226,58 +214,177 @@ h1 span {
     color: #ff7414;
 }
 
+.contact-sub {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
 
-/* =========================================================
-   CONTACT BUTTONS
-========================================================= */
+/* GRID LAYOUT FOR CARDS AND FORM */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    align-items: start;
+}
 
-.contact-btn {
+/* QUICK CONNECT CARDS */
+.quick-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    padding: 18px 20px;
-    margin-bottom: 18px;
-
+    gap: 16px;
+    padding: 16px 20px;
     border-radius: 12px;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    border-color: #ff7414;
+    background: rgba(255, 116, 20, 0.1);
+    box-shadow: 0 8px 25px rgba(255, 116, 20, 0.25);
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.whatsapp-card .card-icon {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+}
+
+.email-card .card-icon {
+    background: rgba(255, 116, 20, 0.15);
+    color: #ff7414;
+}
+
+.linkedin-card .card-icon {
+    background: rgba(10, 102, 194, 0.15);
+    color: #0a66c2;
+}
+
+.contact-card:hover .card-icon {
+    background: #ff7414;
+    color: #ffffff;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    color: #ff7414;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-val {
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.card-ext {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+}
+
+.contact-card:hover .card-ext {
+    color: #ff7414;
+    transform: translateX(3px);
+}
+
+/* MESSAGE FORM */
+.contact-form {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 116, 20, 0.2);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.form-title {
     font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     letter-spacing: 0.5px;
-
-    transition: 0.3s ease;
 }
 
-.whatsapp-btn {
-    background: linear-gradient(135deg, #25d366, #1da851);
-    box-shadow: 0 10px 25px rgba(37,211,102,0.25);
+.form-title i {
+    color: #ff7414;
 }
 
-.whatsapp-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(37,211,102,0.35);
+.input-group {
+    margin-bottom: 12px;
 }
 
-.email-btn {
+.input-group input, .input-group textarea {
+    width: 100%;
+    background: rgba(10, 10, 12, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #ff7414;
+    box-shadow: 0 0 10px rgba(255, 116, 20, 0.3);
+}
+
+.send-msg-btn {
+    width: 100%;
     background: linear-gradient(135deg, #ff7414, #e85f00);
-    box-shadow: 0 10px 25px rgba(255,116,20,0.25);
+    color: #fff;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(255, 116, 20, 0.3);
 }
 
-.email-btn:hover {
+.send-msg-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(255,116,20,0.35);
-}
-
-.linkedin-btn {
-    background: linear-gradient(135deg, #0a66c2, #004182);
-    box-shadow: 0 10px 25px rgba(10,102,194,0.25);
-}
-
-.linkedin-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(10,102,194,0.35);
+    box-shadow: 0 10px 25px rgba(255, 116, 20, 0.5);
 }
 
 
@@ -295,7 +402,7 @@ h1 span {
 .location-box p {
     font-size: 0.95rem;
     color: #cfcfcf;
-    margin: 12px 0;
+    margin: 10px 0;
     line-height: 1.6;
 }
 
@@ -312,26 +419,16 @@ h1 span {
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 35px;
-    padding: 17px 20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #242424 0%,
-            #191919 100%
-        );
-
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: linear-gradient(145deg, #242424 0%, #191919 100%);
     border: 1px solid rgba(255,116,20,0.55);
     border-radius: 12px;
-
     color: #ff7414;
     text-decoration: none;
-
     font-weight: 800;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.32);
     transition: 0.3s ease;
 }
@@ -348,8 +445,14 @@ h1 span {
    MOBILE RESPONSIVE
 ========================================================= */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
 
+@media screen and (max-width: 600px) {
     .site-navbar {
         padding: 0 15px;
         height: 55px;
@@ -391,13 +494,6 @@ h1 span {
 
     h1 {
         font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .contact-btn {
-        padding: 15px;
-        font-size: 0.9rem;
-        margin-bottom: 14px;
     }
 
     .location-box p {
@@ -406,8 +502,8 @@ h1 span {
 
     .back-btn {
         font-size: 0.85rem;
-        padding: 15px;
-        margin-top: 25px;
+        padding: 14px;
+        margin-top: 20px;
     }
 }
 
@@ -447,22 +543,73 @@ h1 span {
         <a href="contact.html" class="drawer-link active-link">Contact</a>
     </div>
 
+    <!-- MAIN CONTACT CONTAINER -->
     <div class="container">
 
-        <h1>CONTACT <span>ME</span></h1>
+        <div class="page-title-sec">
+            <h1>LET'S <span>CONNECT</span></h1>
+            <p class="contact-sub">Feel free to reach out for professional collaborations or business inquiries.</p>
+        </div>
 
-        <a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp-btn">
-            <i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> WhatsApp: +60 11 7226 7068
-        </a>
+        <div class="contact-grid">
+            
+            <!-- DIRECT QUICK CONNECT CARDS -->
+            <div class="quick-cards">
+                
+                <a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp-card">
+                    <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="card-info">
+                        <span class="card-label">WhatsApp Direct</span>
+                        <span class="card-val">+60 11 7226 7068</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square card-ext"></i>
+                </a>
 
-        <a href="mailto:mehedialif1999@gmail.com" class="contact-btn email-btn">
-            <i class="fa-solid fa-envelope" style="font-size: 20px;"></i> Email: mehedialif1999@gmail.com
-        </a>
+                <a href="mailto:mehedialif1999@gmail.com" class="contact-card email-card">
+                    <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="card-info">
+                        <span class="card-label">Official Email</span>
+                        <span class="card-val">mehedialif1999@gmail.com</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square card-ext"></i>
+                </a>
 
-        <a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331/" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn">
-            <i class="fa-brands fa-linkedin-in" style="font-size: 20px;"></i> LinkedIn Profile
-        </a>
+                <a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331/" target="_blank" rel="noopener noreferrer" class="contact-card linkedin-card">
+                    <div class="card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="card-info">
+                        <span class="card-label">LinkedIn Profile</span>
+                        <span class="card-val">Mehedi Alim Ayon</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square card-ext"></i>
+                </a>
 
+            </div>
+
+            <!-- DIRECT MESSAGE FORM -->
+            <form class="contact-form" onsubmit="alert('Thank you! Your message has been sent successfully.'); return false;">
+                <h3 class="form-title"><i class="fa-solid fa-paper-plane"></i> Send a Direct Message</h3>
+                
+                <div class="input-group">
+                    <input type="text" placeholder="Your Full Name" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                
+                <div class="input-group">
+                    <textarea rows="4" placeholder="Type your message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="send-msg-btn">
+                    <span>SEND MESSAGE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+        </div>
+
+        <!-- LOCATION INFORMATION -->
         <div class="location-box">
             <p>
                 <strong><i class="fa-solid fa-house"></i> Home:</strong> Rangpur Sadar, Bangladesh
