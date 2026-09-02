@@ -79,8 +79,10 @@ a {
 .btn-hover:hover {
     transform: translateY(-2px) scale(1.02);
     border-color: #ff7414 !important;
+
     box-shadow:
         0 6px 15px rgba(255,116,20,0.25);
+
     filter: brightness(1.15);
 }
 
@@ -132,8 +134,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 12px;
+
     margin: 10px 0 15px 0;
+
     z-index: 20;
 }
 
@@ -156,24 +161,33 @@ a {
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .social-icons a:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.4);
 }
 
 .linkedin,
 .email {
     background: rgba(255,116,20,0.20);
+
     border: 1px solid #ff7414;
+
     color: #ffffff;
 }
 
 .whatsapp {
     background: rgba(37,211,102,0.20);
+
     border: 1px solid #25d366;
+
     color: #ffffff;
 }
 
@@ -247,10 +261,16 @@ a {
 
 .refresh-name {
     color: inherit;
+
     text-decoration: none;
+
     cursor: pointer;
+
     display: inline-block;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .refresh-name:active {
@@ -260,14 +280,23 @@ a {
 
 .personal-quote {
     font-size: 14px;
+
     font-style: italic;
+
     color: #d1d5db;
+
     margin: 5px auto 20px;
+
     max-width: 90%;
+
     line-height: 1.5;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.5);
+
     font-weight: 300;
 }
+
 
 /* =========================================================
    TYPEWRITER
@@ -320,6 +349,7 @@ a {
 }
 
 @keyframes blink {
+
     0%,100% {
         opacity: 1;
     }
@@ -480,7 +510,7 @@ a {
 
 
 /* =========================================================
-   MOBILE (600px AND BELOW)
+   MOBILE — KEEP EXACTLY AS YOUR CURRENT VERSION
 ========================================================= */
 
 @media (max-width:600px) {
@@ -534,11 +564,14 @@ a {
 
         min-height: 18px !important;
     }
-    
+
     .personal-quote {
         font-size: 11.5px !important;
+
         margin: 0 auto 15px !important;
+
         text-align: center !important;
+
         line-height: 1.4 !important;
     }
 
@@ -562,6 +595,7 @@ a {
         display: flex !important;
 
         align-items: center !important;
+
         justify-content: center !important;
 
         text-align: center !important;
@@ -577,11 +611,20 @@ a {
         word-break: keep-all !important;
 
         overflow-wrap: normal !important;
-        
+
         height: auto !important;
+
         padding: 4px !important;
-        background: linear-gradient(145deg, rgba(37,43,59,0.8), rgba(26,32,44,0.8)) !important;
-        border: 1.5px solid #ff7414 !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(37,43,59,0.8),
+                rgba(26,32,44,0.8)
+            ) !important;
+
+        border:
+            1.5px solid #ff7414 !important;
     }
 
     .top-button {
@@ -655,7 +698,11 @@ a {
 
 
 /* =========================================================
-   DESKTOP / LAPTOP (NO BACKDROP BOX, DIRECT BLEND & MAPPING)
+   =========================================================
+   DESKTOP PREMIUM DESIGN
+   601px+
+   MOBILE ABOVE THIS POINT IS UNTOUCHED
+   =========================================================
 ========================================================= */
 
 @media (min-width:601px) {
@@ -664,8 +711,10 @@ a {
     body {
         width: 100vw;
         height: 100vh;
+
         overflow: hidden !important;
-        background: #06090e !important;
+
+        background: #030507 !important;
     }
 
     body {
@@ -673,288 +722,1675 @@ a {
         padding: 0;
     }
 
+
+    /* =====================================================
+       MAIN PAGE
+    ===================================================== */
+
     .page {
+
         width: 100vw;
         height: 100vh;
+
+        min-height: 680px;
+
         position: relative;
+
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 30px 50px 25px;
+
+        display: block;
+
+        padding: 0;
+
         background:
-            radial-gradient(circle at 62% 45%, rgba(255, 116, 20, 0.18) 0%, rgba(10, 14, 22, 0.9) 50%, rgba(6, 9, 14, 1) 100%),
-            linear-gradient(135deg, #040609 0%, #090d16 55%, #030406 100%);
+
+            radial-gradient(
+                circle at 72% 48%,
+                rgba(255,116,20,0.20) 0%,
+                rgba(255,116,20,0.08) 18%,
+                rgba(8,11,17,0.95) 48%,
+                #030507 78%
+            ),
+
+            linear-gradient(
+                135deg,
+                #020304 0%,
+                #080b11 45%,
+                #030405 100%
+            );
     }
 
-    /* MAPPING & GEOMETRIC PATTERN OVERLAY */
+
+    /* =====================================================
+       AMBIENT LIGHT
+    ===================================================== */
+
     .page::before {
+
         content: "";
+
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 55%;
-        height: 100%;
-        background-image: 
-            radial-gradient(rgba(255, 116, 20, 0.15) 1px, transparent 1px),
-            linear-gradient(to right, rgba(255, 116, 20, 0.03) 1px, transparent 1px);
-        background-size: 35px 35px, 70px 70px;
+
+        top: -15%;
+        right: -5%;
+
+        width: 65%;
+        height: 125%;
+
+        background:
+
+            radial-gradient(
+                ellipse at center,
+                rgba(255,116,20,0.14) 0%,
+                rgba(255,116,20,0.05) 30%,
+                transparent 65%
+            );
+
         pointer-events: none;
-        z-index: 1;
-        opacity: 0.4;
+
+        z-index: 0;
+
+        filter: blur(15px);
     }
 
-    /* CENTER HERO CONTAINER (DIRECT PERSON INTEGRATION WITHOUT GREY BOX) */
-    .hero {
-        position: absolute !important;
-        top: 40% !important;
-        left: 56% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 380px !important;
-        height: 500px !important;
-        min-height: auto !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        z-index: 5 !important;
-        overflow: visible !important;
-    }
 
-    /* NO GREY BACKDROP BOX - SOFT GLOW BEHIND THE PERSON */
-    .hero::before {
+    /* =====================================================
+       DIAGONAL PREMIUM LINES
+    ===================================================== */
+
+    .page::after {
+
         content: "";
+
         position: absolute;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 320px;
-        height: 420px;
-        background: radial-gradient(circle, rgba(255, 116, 20, 0.18) 0%, rgba(15, 22, 36, 0.4) 60%, transparent 100%);
-        border-radius: 50%;
-        filter: blur(25px);
-        z-index: -1;
+
+        width: 600px;
+        height: 130%;
+
+        top: -15%;
+        left: 52%;
+
+        transform: rotate(27deg);
+
+        background:
+
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255,116,20,0.025) 35%,
+                rgba(255,116,20,0.08) 50%,
+                rgba(255,116,20,0.025) 65%,
+                transparent 100%
+            );
+
+        border-left:
+            1px solid rgba(255,116,20,0.15);
+
+        border-right:
+            1px solid rgba(255,116,20,0.08);
+
+        pointer-events: none;
+
+        z-index: 1;
     }
 
-    .hero-image {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center top !important;
-        border-radius: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-        filter: drop-shadow(0 20px 30px rgba(0,0,0,0.7));
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+
+    /* =====================================================
+       TOP NAVIGATION
+    ===================================================== */
+
+    .page > .desktop-nav {
+
+        display: flex;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: 82px;
+
+        align-items: center;
+
+        padding:
+            0 30px;
+
+        border-bottom:
+            1px solid rgba(255,116,20,0.12);
+
+        background:
+            rgba(3,5,7,0.72);
+
+        backdrop-filter:
+            blur(18px);
+
+        -webkit-backdrop-filter:
+            blur(18px);
+
+        z-index: 50;
     }
 
-    .hero-gradient {
-        display: none !important;
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .desktop-logo {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        text-decoration: none;
+
+        color: #ffffff;
+
+        min-width: 235px;
     }
 
-    /* LEFT CONTENT AREA */
+    .desktop-logo-mark {
+
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border:
+            2px solid #ff7414;
+
+        color: #ff7414;
+
+        font-size: 23px;
+
+        font-weight: 900;
+
+        transform: rotate(45deg);
+
+        position: relative;
+    }
+
+    .desktop-logo-mark span {
+
+        transform: rotate(-45deg);
+
+        display: block;
+    }
+
+    .desktop-logo-text {
+
+        display: flex;
+
+        flex-direction: column;
+
+        line-height: 1;
+    }
+
+    .desktop-logo-text strong {
+
+        font-size: 17px;
+
+        letter-spacing: 1.5px;
+
+        color: #ffffff;
+    }
+
+    .desktop-logo-text small {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        color: #ff7414;
+
+        margin-top: 4px;
+    }
+
+
+    /* =====================================================
+       NAV LINKS
+    ===================================================== */
+
+    .desktop-nav-links {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 29px;
+
+        flex: 1;
+    }
+
+    .desktop-nav-links a {
+
+        position: relative;
+
+        color: #cfd3d8;
+
+        text-decoration: none;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.8px;
+
+        text-transform: uppercase;
+
+        transition:
+            color 0.3s ease;
+    }
+
+    .desktop-nav-links a::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: -10px;
+
+        width: 0;
+        height: 2px;
+
+        background: #ff7414;
+
+        box-shadow:
+            0 0 8px rgba(255,116,20,0.8);
+
+        transition:
+            width 0.3s ease;
+    }
+
+    .desktop-nav-links a:hover,
+    .desktop-nav-links a:first-child {
+
+        color: #ffffff;
+    }
+
+    .desktop-nav-links a:hover::after,
+    .desktop-nav-links a:first-child::after {
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       NAV CTA
+    ===================================================== */
+
+    .desktop-nav-cta {
+
+        min-width: 150px;
+
+        height: 42px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        border:
+            1px solid #ff7414;
+
+        border-radius: 5px;
+
+        color: #ff7414;
+
+        text-decoration: none;
+
+        font-size: 11px;
+
+        font-weight: 900;
+
+        letter-spacing: 1px;
+
+        transition: all 0.3s ease;
+    }
+
+    .desktop-nav-cta:hover {
+
+        background: #ff7414;
+
+        color: #ffffff;
+
+        box-shadow:
+            0 0 25px rgba(255,116,20,0.45);
+    }
+
+
+    /* =====================================================
+       LEFT MAIN CONTENT
+    ===================================================== */
+
     .main-content {
-        position: relative !important;
-        left: 0 !important;
-        top: 0 !important;
-        width: 42% !important;
-        max-width: 520px !important;
+
+        position: absolute !important;
+
+        left: 7% !important;
+
+        top: 50% !important;
+
+        transform:
+            translateY(-50%) !important;
+
+        width: 43% !important;
+
+        max-width: 610px !important;
+
         height: auto !important;
+
         margin: 0 !important;
+
         padding: 0 !important;
-        z-index: 10 !important;
+
+        z-index: 20 !important;
+
         text-align: left !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
+
+        display: block !important;
+    }
+
+
+    /* =====================================================
+       SMALL ORANGE INTRO
+    ===================================================== */
+
+    .main-content::before {
+
+        content:
+            "WELCOME TO MY PROFESSIONAL PORTFOLIO";
+
+        display: block;
+
+        color: #ff7414;
+
+        font-size: 11px;
+
+        font-weight: 900;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+
+        position: relative;
+
+        padding-left: 48px;
     }
 
     .main-content::before {
-        content: "WELCOME TO MY PORTFOLIO";
-        display: block;
-        color: #ff7414;
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 2.5px;
-        margin-bottom: 8px;
+
+        text-shadow:
+            0 0 12px rgba(255,116,20,0.35);
     }
+
+
+    /* =====================================================
+       NAME
+    ===================================================== */
 
     .name {
-        margin: 0 0 10px !important;
-        font-size: 42px !important;
-        line-height: 1.05 !important;
-        font-weight: 900 !important;
-        letter-spacing: 1px !important;
-        text-align: left !important;
-        color: #ffffff !important;
-        text-shadow: none !important;
+
+        margin:
+            0 0 16px !important;
+
+        font-size:
+            clamp(48px, 5vw, 76px) !important;
+
+        line-height:
+            0.98 !important;
+
+        letter-spacing:
+            -1.5px !important;
+
+        font-weight:
+            950 !important;
+
+        color:
+            #ffffff !important;
+
+        text-align:
+            left !important;
+
+        text-shadow:
+            0 5px 25px rgba(0,0,0,0.5) !important;
     }
 
-    /* TYPEWRITER MODE (DESKTOP) */
+    .refresh-name {
+
+        color:
+            #ffffff !important;
+
+        text-decoration:
+            none !important;
+    }
+
+
+    /* =====================================================
+       TYPEWRITER
+    ===================================================== */
+
     .profession {
-        display: block !important;
-        margin: 0 0 10px !important;
-        color: #ff7414 !important;
-        font-size: 18px !important;
-        font-weight: 800 !important;
-        letter-spacing: 1.5px !important;
-        text-align: left !important;
-        min-height: 28px !important;
+
+        display:
+            block !important;
+
+        margin:
+            0 0 22px !important;
+
+        color:
+            #ff7414 !important;
+
+        font-size:
+            17px !important;
+
+        line-height:
+            1.3 !important;
+
+        font-weight:
+            900 !important;
+
+        letter-spacing:
+            1.5px !important;
+
+        min-height:
+            25px !important;
+
+        text-align:
+            left !important;
     }
-    
+
+    .typed-text {
+
+        color:
+            #ff7414 !important;
+
+        text-shadow:
+            0 0 15px rgba(255,116,20,0.35);
+    }
+
+    .cursor {
+
+        background:
+            #ff7414 !important;
+
+        width:
+            2px !important;
+
+        box-shadow:
+            0 0 10px #ff7414;
+    }
+
+
+    /* =====================================================
+       ORANGE DIVIDER
+    ===================================================== */
+
+    .profession::after {
+
+        content: "";
+
+        display: block;
+
+        width: 62px;
+
+        height: 3px;
+
+        background:
+            #ff7414;
+
+        margin-top: 18px;
+
+        box-shadow:
+            0 0 12px rgba(255,116,20,0.7);
+    }
+
+
+    /* =====================================================
+       QUOTE
+    ===================================================== */
+
     .personal-quote {
-        font-size: 14.5px !important;
-        margin: 0 0 20px 0 !important;
-        text-align: left !important;
-        max-width: 100% !important;
+
+        max-width:
+            570px !important;
+
+        margin:
+            0 0 27px 0 !important;
+
+        color:
+            #bfc4ca !important;
+
+        font-size:
+            15px !important;
+
+        line-height:
+            1.75 !important;
+
+        font-weight:
+            300 !important;
+
+        font-style:
+            italic !important;
+
+        text-align:
+            left !important;
+
+        text-shadow:
+            none !important;
     }
+
+
+    /* =====================================================
+       DESKTOP CTA
+    ===================================================== */
 
     .desktop-cta {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        padding: 12px 24px;
-        border: 1.5px solid #ff7414;
-        border-radius: 6px;
-        color: #ffffff;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        background: rgba(255, 116, 20, 0.08);
-        box-shadow: 0 0 15px rgba(255, 116, 20, 0.25);
-        transition: all 0.3s ease;
+
+        display:
+            inline-flex !important;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        gap:
+            14px;
+
+        height:
+            46px;
+
+        padding:
+            0 25px;
+
+        color:
+            #ffffff;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff7414,
+                #ff8a28
+            );
+
+        border:
+            1px solid #ff7414;
+
+        border-radius:
+            5px;
+
+        text-decoration:
+            none;
+
+        font-size:
+            11px;
+
+        font-weight:
+            900;
+
+        letter-spacing:
+            1.3px;
+
+        box-shadow:
+            0 8px 25px
+            rgba(255,116,20,0.25);
+
+        transition:
+            all 0.3s ease;
+    }
+
+    .desktop-cta::after {
+
+        content:
+            "→";
+
+        font-size:
+            19px;
+
+        line-height:
+            1;
     }
 
     .desktop-cta:hover {
-        background: #ff7414;
-        box-shadow: 0 0 25px rgba(255, 116, 20, 0.6);
+
+        transform:
+            translateY(-3px);
+
+        box-shadow:
+            0 12px 35px
+            rgba(255,116,20,0.45);
     }
+
+
+    /* =====================================================
+       HIDE MOBILE SOCIAL
+    ===================================================== */
 
     .social-icons {
-        display: none !important;
+
+        display:
+            none !important;
     }
 
-    /* RIGHT SIDE SOCIAL ICONS (SAFE POSITION INSIDE SCREEN) */
+
+    /* =====================================================
+       HERO / PORTRAIT
+    ===================================================== */
+
+    .hero {
+
+        position:
+            absolute !important;
+
+        top:
+            82px !important;
+
+        right:
+            10% !important;
+
+        left:
+            auto !important;
+
+        transform:
+            none !important;
+
+        width:
+            440px !important;
+
+        height:
+            calc(100vh - 105px) !important;
+
+        min-height:
+            550px !important;
+
+        max-height:
+            700px !important;
+
+        background:
+            transparent !important;
+
+        box-shadow:
+            none !important;
+
+        overflow:
+            visible !important;
+
+        z-index:
+            8 !important;
+    }
+
+
+    /* =====================================================
+       PORTRAIT GLOW
+    ===================================================== */
+
+    .hero::before {
+
+        content:
+            "";
+
+        position:
+            absolute;
+
+        top:
+            43%;
+
+        left:
+            50%;
+
+        transform:
+            translate(-50%,-50%);
+
+        width:
+            420px;
+
+        height:
+            540px;
+
+        background:
+            radial-gradient(
+                ellipse,
+                rgba(255,116,20,0.25) 0%,
+                rgba(255,116,20,0.12) 30%,
+                rgba(255,116,20,0.04) 52%,
+                transparent 72%
+            );
+
+        filter:
+            blur(22px);
+
+        z-index:
+            -3;
+    }
+
+
+    /* =====================================================
+       PORTRAIT DIAGONAL FRAME
+    ===================================================== */
+
+    .hero::after {
+
+        content:
+            "";
+
+        position:
+            absolute;
+
+        top:
+            8%;
+
+        left:
+            4%;
+
+        width:
+            90%;
+
+        height:
+            78%;
+
+        border:
+            1px solid
+            rgba(255,116,20,0.45);
+
+        transform:
+            rotate(-16deg);
+
+        box-shadow:
+            0 0 30px
+            rgba(255,116,20,0.08);
+
+        z-index:
+            -2;
+
+        pointer-events:
+            none;
+    }
+
+
+    /* =====================================================
+       ACTUAL IMAGE
+    ===================================================== */
+
+    .hero-image {
+
+        width:
+            100% !important;
+
+        height:
+            100% !important;
+
+        object-fit:
+            contain !important;
+
+        object-position:
+            center bottom !important;
+
+        display:
+            block !important;
+
+        border:
+            none !important;
+
+        border-radius:
+            0 !important;
+
+        box-shadow:
+            none !important;
+
+        filter:
+            drop-shadow(
+                0 25px 35px
+                rgba(0,0,0,0.8)
+            ) !important;
+
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                #000 72%,
+                rgba(0,0,0,0.98) 84%,
+                rgba(0,0,0,0) 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to bottom,
+                #000 72%,
+                rgba(0,0,0,0.98) 84%,
+                rgba(0,0,0,0) 100%
+            );
+    }
+
+    .hero-gradient {
+
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       RIGHT STAT PANEL
+    ===================================================== */
+
+    .desktop-stats-panel {
+
+        position:
+            absolute;
+
+        top:
+            50%;
+
+        right:
+            2.5%;
+
+        transform:
+            translateY(-50%);
+
+        width:
+            145px;
+
+        height:
+            530px;
+
+        border:
+            1px solid
+            rgba(255,116,20,0.55);
+
+        border-radius:
+            20px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12,15,20,0.92),
+                rgba(5,7,10,0.78)
+            );
+
+        box-shadow:
+            inset 0 0 30px
+            rgba(255,116,20,0.04),
+            0 20px 60px
+            rgba(0,0,0,0.55);
+
+        backdrop-filter:
+            blur(14px);
+
+        -webkit-backdrop-filter:
+            blur(14px);
+
+        z-index:
+            30;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-evenly;
+    }
+
+    .desktop-stat {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+
+        position:
+            relative;
+
+        padding:
+            4px 10px;
+    }
+
+    .desktop-stat:not(:last-child)::after {
+
+        content:
+            "";
+
+        position:
+            absolute;
+
+        left:
+            22px;
+
+        right:
+            22px;
+
+        bottom:
+            -25px;
+
+        height:
+            1px;
+
+        background:
+            rgba(255,116,20,0.25);
+    }
+
+    .desktop-stat-icon {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        margin:
+            0 auto 8px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        color:
+            #ff7414;
+
+        font-size:
+            21px;
+    }
+
+    .desktop-stat-number {
+
+        color:
+            #ff7414;
+
+        font-size:
+            31px;
+
+        font-weight:
+            950;
+
+        line-height:
+            1;
+
+        text-shadow:
+            0 0 18px
+            rgba(255,116,20,0.2);
+    }
+
+    .desktop-stat-label {
+
+        margin-top:
+            9px;
+
+        color:
+            #d8dbe0;
+
+        font-size:
+            9px;
+
+        line-height:
+            1.5;
+
+        letter-spacing:
+            1.1px;
+
+        text-transform:
+            uppercase;
+
+        font-weight:
+            700;
+    }
+
+
+    /* =====================================================
+       DESKTOP SOCIALS
+    ===================================================== */
+
     .desktop-right-socials {
-        display: flex !important;
-        flex-direction: column;
-        gap: 12px;
-        position: absolute;
-        right: 25px;
-        bottom: 145px;
-        z-index: 25;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+        position:
+            absolute;
+
+        left:
+            2.2%;
+
+        bottom:
+            105px;
+
+        z-index:
+            35;
+    }
+
+    .desktop-right-socials::before {
+
+        content:
+            "CONNECT";
+
+        position:
+            absolute;
+
+        bottom:
+            100%;
+
+        left:
+            0;
+
+        margin-bottom:
+            12px;
+
+        color:
+            #777d85;
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            2px;
+
+        writing-mode:
+            vertical-rl;
+
+        transform:
+            rotate(180deg);
     }
 
     .desktop-right-socials a {
-        width: 38px;
-        height: 38px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        border: 1px solid rgba(255, 116, 20, 0.4);
-        background: rgba(10, 15, 25, 0.85);
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 15px;
-        transition: all 0.3s ease;
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            1px solid
+            rgba(255,116,20,0.5);
+
+        border-radius:
+            50%;
+
+        background:
+            rgba(8,11,16,0.82);
+
+        color:
+            #ffffff;
+
+        text-decoration:
+            none;
+
+        font-size:
+            14px;
+
+        transition:
+            all 0.3s ease;
     }
 
     .desktop-right-socials a:hover {
-        border-color: #ff7414;
-        background: #ff7414;
-        box-shadow: 0 0 15px rgba(255, 116, 20, 0.5);
+
+        color:
+            #ffffff;
+
+        background:
+            #ff7414;
+
+        border-color:
+            #ff7414;
+
+        box-shadow:
+            0 0 20px
+            rgba(255,116,20,0.55);
+
+        transform:
+            translateX(4px);
     }
 
-    .stats-container {
-        display: none !important;
-    }
 
-    /* BOTTOM DOCK (GLASS CARDS) */
+    /* =====================================================
+       BOTTOM NAVIGATION AREA
+    ===================================================== */
+
     .desktop-dock-wrapper {
-        position: relative;
-        width: calc(100% - 80px);
-        max-width: 1240px;
-        margin: 0 auto;
-        z-index: 15;
+
+        position:
+            absolute;
+
+        left:
+            50%;
+
+        bottom:
+            25px;
+
+        transform:
+            translateX(-50%);
+
+        width:
+            74%;
+
+        max-width:
+            1050px;
+
+        z-index:
+            40;
     }
 
     .desktop-dock {
-        display: grid !important;
-        grid-template-columns: repeat(6, 1fr) !important;
-        gap: 10px !important;
-        background: rgba(10, 14, 22, 0.85);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 10px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+        display:
+            grid !important;
+
+        grid-template-columns:
+            repeat(4,1fr) !important;
+
+        gap:
+            9px !important;
+
+        padding:
+            0 !important;
+
+        background:
+            transparent !important;
+
+        border:
+            none !important;
+
+        box-shadow:
+            none !important;
+
+        backdrop-filter:
+            none !important;
+
+        -webkit-backdrop-filter:
+            none !important;
     }
 
     .button-row {
-        display: contents !important;
+
+        display:
+            contents !important;
     }
 
-    /* DESKTOP GLASS CARDS */
+
+    /* =====================================================
+       BOTTOM CARDS
+    ===================================================== */
+
     .menu-button {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-        padding: 12px 8px !important;
-        height: 95px !important;
-        background: rgba(18, 24, 38, 0.6) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 8px !important;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-        box-shadow: none !important;
+
+        height:
+            82px !important;
+
+        min-height:
+            82px !important;
+
+        display:
+            grid !important;
+
+        grid-template-columns:
+            40px 1fr !important;
+
+        grid-template-rows:
+            auto auto !important;
+
+        column-gap:
+            11px;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            start !important;
+
+        text-align:
+            left !important;
+
+        padding:
+            13px 15px !important;
+
+        border:
+            1px solid
+            rgba(255,116,20,0.28) !important;
+
+        border-radius:
+            9px !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(17,22,31,0.94),
+                rgba(7,10,15,0.92)
+            ) !important;
+
+        box-shadow:
+            inset 0 0 20px
+            rgba(255,255,255,0.015) !important;
+
+        transition:
+            all 0.35s ease !important;
     }
 
-    .menu-button:hover,
-    .menu-button.active-card {
-        background: rgba(255, 116, 20, 0.15) !important;
-        border-color: #ff7414 !important;
-        box-shadow: 0 0 20px rgba(255, 116, 20, 0.3), inset 0 0 10px rgba(255, 116, 20, 0.15) !important;
-        transform: translateY(-4px) !important;
+
+    .menu-button:hover {
+
+        transform:
+            translateY(-5px) !important;
+
+        border-color:
+            #ff7414 !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(45,25,13,0.95),
+                rgba(13,14,18,0.95)
+            ) !important;
+
+        box-shadow:
+            0 15px 30px
+            rgba(0,0,0,0.4),
+            0 0 25px
+            rgba(255,116,20,0.14) !important;
     }
+
+
+    /* =====================================================
+       CARD ICON
+    ===================================================== */
 
     .menu-icon {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: rgba(255, 116, 20, 0.15);
-        border: 1px solid rgba(255, 116, 20, 0.4);
-        color: #ff7414;
-        font-size: 13px;
-        margin-bottom: 6px;
+
+        grid-row:
+            1 / 3;
+
+        grid-column:
+            1;
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        margin:
+            0 !important;
+
+        display:
+            flex !important;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            50%;
+
+        background:
+            rgba(255,116,20,0.09);
+
+        border:
+            1px solid
+            rgba(255,116,20,0.35);
+
+        color:
+            #ff7414;
+
+        font-size:
+            15px;
+
+        box-shadow:
+            0 0 15px
+            rgba(255,116,20,0.04);
     }
+
+
+    /* =====================================================
+       CARD TITLE
+    ===================================================== */
 
     .menu-title-text {
-        font-size: 10.5px !important;
-        font-weight: 800 !important;
-        color: #ffffff !important;
-        letter-spacing: 0.5px !important;
-        margin-bottom: 3px;
+
+        grid-column:
+            2;
+
+        grid-row:
+            1;
+
+        font-size:
+            10px !important;
+
+        font-weight:
+            900 !important;
+
+        color:
+            #ffffff !important;
+
+        letter-spacing:
+            0.7px !important;
+
+        line-height:
+            1.15;
+
+        margin:
+            0 !important;
     }
+
+
+    /* =====================================================
+       CARD DESCRIPTION
+    ===================================================== */
 
     .card-desc {
-        display: block !important;
-        font-size: 8px;
-        color: #9ca3af;
-        line-height: 1.1;
-        font-weight: 400;
+
+        grid-column:
+            2;
+
+        grid-row:
+            2;
+
+        display:
+            block !important;
+
+        font-size:
+            8px !important;
+
+        line-height:
+            1.25 !important;
+
+        color:
+            #858c96 !important;
+
+        font-weight:
+            400;
+
+        margin-top:
+            2px;
     }
 
+
+    /* =====================================================
+       ABOUT CARD
+    ===================================================== */
+
     .about-card {
-        background: rgba(255, 116, 20, 0.15) !important;
-        border-color: #ff7414 !important;
-        box-shadow: 0 0 20px rgba(255, 116, 20, 0.3) !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,116,20,0.14),
+                rgba(12,15,21,0.95)
+            ) !important;
+
+        border-color:
+            rgba(255,116,20,0.65) !important;
+
+        box-shadow:
+            inset 0 0 25px
+            rgba(255,116,20,0.04),
+            0 0 20px
+            rgba(255,116,20,0.06) !important;
     }
+
+
+    /* =====================================================
+       PROFILE / CV + LET'S TALK
+       FULL WIDTH BOTTOM BUTTONS
+    ===================================================== */
+
+    .desktop-dock .bottom-button {
+
+        height:
+            48px !important;
+
+        min-height:
+            48px !important;
+
+        display:
+            flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        flex-direction:
+            row !important;
+
+        gap:
+            10px;
+
+        padding:
+            0 18px !important;
+
+        border-radius:
+            6px !important;
+
+        font-size:
+            10px !important;
+    }
+
+
+    .desktop-dock .bottom-button .menu-icon {
+
+        width:
+            auto;
+
+        height:
+            auto;
+
+        border:
+            none;
+
+        background:
+            transparent;
+
+        box-shadow:
+            none;
+
+        font-size:
+            14px;
+
+        margin:
+            0 !important;
+    }
+
+
+    .desktop-dock .bottom-button .menu-title-text {
+
+        font-size:
+            10px !important;
+    }
+
+
+    .desktop-dock .bottom-button .card-desc {
+
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       CV ORANGE BUTTON
+    ===================================================== */
+
+    .desktop-dock .bottom-button:nth-child(5) {
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff7414,
+                #ff8624
+            ) !important;
+
+        border-color:
+            #ff7414 !important;
+
+        color:
+            #ffffff !important;
+
+        box-shadow:
+            0 8px 25px
+            rgba(255,116,20,0.18) !important;
+    }
+
+
+    /* =====================================================
+       LET'S TALK DARK BUTTON
+    ===================================================== */
+
+    .desktop-dock .bottom-button:nth-child(6) {
+
+        background:
+            rgba(10,13,18,0.9) !important;
+
+        border-color:
+            rgba(255,116,20,0.45) !important;
+    }
+
+
+    /* =====================================================
+       DESKTOP RESPONSIVE TUNING
+    ===================================================== */
+
+    @media (max-height:760px) {
+
+        .hero {
+
+            width:
+                390px !important;
+
+            height:
+                calc(100vh - 95px) !important;
+        }
+
+        .desktop-stats-panel {
+
+            height:
+                465px;
+
+            width:
+                125px;
+        }
+
+        .desktop-stat-number {
+
+            font-size:
+                27px;
+        }
+
+        .desktop-dock-wrapper {
+
+            bottom:
+                16px;
+        }
+
+        .menu-button {
+
+            height:
+                72px !important;
+
+            min-height:
+                72px !important;
+        }
+
+        .desktop-dock .bottom-button {
+
+            height:
+                43px !important;
+
+            min-height:
+                43px !important;
+        }
+
+        .name {
+
+            font-size:
+                58px !important;
+        }
+    }
+
+
+    @media (min-width:1500px) {
+
+        .hero {
+
+            right:
+                13% !important;
+
+            width:
+                490px !important;
+        }
+
+        .desktop-stats-panel {
+
+            right:
+                3.5%;
+        }
+
+        .main-content {
+
+            left:
+                8% !important;
+
+            max-width:
+                650px !important;
+        }
+
+        .desktop-dock-wrapper {
+
+            width:
+                70%;
+        }
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP NAV HTML FALLBACK
+========================================================= */
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-logo,
+.desktop-nav-links,
+.desktop-nav-cta,
+.desktop-stats-panel {
+    display: none;
 }
 
 </style>
@@ -964,6 +2400,69 @@ a {
 <body>
 
 <div class="page">
+
+
+<!-- =====================================================
+     DESKTOP NAVIGATION
+===================================================== -->
+
+<div class="desktop-nav">
+
+    <a href="index.html" class="desktop-logo">
+
+        <div class="desktop-logo-mark">
+            <span>M</span>
+        </div>
+
+        <div class="desktop-logo-text">
+            <strong>MEHEDI</strong>
+            <small>ALIM AYON</small>
+        </div>
+
+    </a>
+
+
+    <div class="desktop-nav-links">
+
+        <a href="index.html">HOME</a>
+
+        <a href="agriculturist.html">
+            AGRICULTURIST
+        </a>
+
+        <a href="communicationist.html">
+            COMMUNICATIONIST
+        </a>
+
+        <a href="kam.html">
+            KEY ACCOUNT MANAGER
+        </a>
+
+        <a href="about.html">
+            ABOUT ME
+        </a>
+
+        <a href="gallery.html">
+            GALLERY
+        </a>
+
+        <a href="resume.html">
+            CV
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+    </div>
+
+
+    <a href="contact.html" class="desktop-nav-cta">
+        LET'S TALK
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</div>
 
 
 <!-- =====================================================
@@ -983,15 +2482,12 @@ a {
 </div>
 
 
-
 <!-- =====================================================
      MAIN CONTENT
 ===================================================== -->
 
 <div class="main-content">
 
-
-    <!-- NAME -->
 
     <h1 class="name">
 
@@ -1006,8 +2502,7 @@ a {
     </h1>
 
 
-
-    <!-- TYPEWRITER EFFECT (BOTH MOBILE & DESKTOP) -->
+    <!-- TYPEWRITER -->
 
     <p class="profession">
 
@@ -1016,19 +2511,29 @@ a {
         <span class="cursor">&nbsp;</span>
 
     </p>
-    
+
+
     <!-- PERSONAL QUOTE -->
+
     <p class="personal-quote">
-        "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
+
+        "Rooted in agricultural innovation, driven by meaningful
+        connections, and dedicated to cultivating partnerships
+        that yield lasting global impact."
+
     </p>
 
-    <!-- DESKTOP CALL TO ACTION -->
+
+    <!-- DESKTOP CTA -->
+
     <a href="contact.html" class="desktop-cta">
+
         LET'S CREATE IMPACT TOGETHER
+
     </a>
 
 
-    <!-- SOCIAL ICONS (MOBILE) -->
+    <!-- MOBILE SOCIAL ICONS -->
 
     <div class="social-icons">
 
@@ -1039,16 +2544,22 @@ a {
             rel="noopener noreferrer"
             aria-label="WhatsApp"
         >
+
             <i class="fa-brands fa-whatsapp"></i>
+
         </a>
+
 
         <a
             class="email"
             href="mailto:mehedialif1999@gmail.com"
             aria-label="Email"
         >
+
             <i class="fa-solid fa-envelope"></i>
+
         </a>
+
 
         <a
             class="linkedin"
@@ -1057,31 +2568,56 @@ a {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
         >
+
             <i class="fa-brands fa-linkedin-in"></i>
+
         </a>
 
     </div>
 
 
     <!-- =================================================
-         STATS (MOBILE)
+         MOBILE STATS
     ================================================== -->
 
     <div class="stats-container">
 
         <div class="stat-card">
-            <h2 class="counter" data-target="11">0</h2>
-            <p>Countries Sourced</p>
+
+            <h2 class="counter" data-target="11">
+                0
+            </h2>
+
+            <p>
+                Countries Sourced
+            </p>
+
         </div>
 
-        <div class="stat-card">
-            <h2 class="counter" data-target="900">0</h2>
-            <p>Products Managed</p>
-        </div>
 
         <div class="stat-card">
-            <h2 class="counter" data-target="100">0</h2>
-            <p>% Client Focus</p>
+
+            <h2 class="counter" data-target="900">
+                0
+            </h2>
+
+            <p>
+                Products Managed
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="100">
+                0
+            </h2>
+
+            <p>
+                % Client Focus
+            </p>
+
         </div>
 
     </div>
@@ -1090,61 +2626,269 @@ a {
 
 
 <!-- =====================================================
-     DESKTOP DOCK / BUTTONS (BOTTOM GLASS GRID)
+     DESKTOP RIGHT STAT PANEL
+===================================================== -->
+
+<div class="desktop-stats-panel">
+
+
+    <div class="desktop-stat">
+
+        <div class="desktop-stat-icon">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+
+        <div class="desktop-stat-number">
+            11+
+        </div>
+
+        <div class="desktop-stat-label">
+            Countries<br>
+            Sourced
+        </div>
+
+    </div>
+
+
+    <div class="desktop-stat">
+
+        <div class="desktop-stat-icon">
+            <i class="fa-solid fa-cube"></i>
+        </div>
+
+        <div class="desktop-stat-number">
+            900+
+        </div>
+
+        <div class="desktop-stat-label">
+            Products<br>
+            Managed
+        </div>
+
+    </div>
+
+
+    <div class="desktop-stat">
+
+        <div class="desktop-stat-icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <div class="desktop-stat-number">
+            100+
+        </div>
+
+        <div class="desktop-stat-label">
+            % Client<br>
+            Focus
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DESKTOP BOTTOM DOCK
 ===================================================== -->
 
 <div class="desktop-dock-wrapper">
+
     <div class="desktop-dock">
 
-        <a href="about.html" class="menu-button middle-button btn-hover about-card">
-            <div class="menu-icon"><i class="fa-regular fa-user"></i></div>
-            <div class="menu-title-text">ABOUT ME</div>
-            <div class="card-desc">Discover my journey, skills, and values</div>
+
+        <!-- ABOUT -->
+
+        <a
+            href="about.html"
+            class="menu-button middle-button btn-hover about-card"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                ABOUT ME
+            </div>
+
+            <div class="card-desc">
+                Discover my journey, skills, and values
+            </div>
+
         </a>
 
-        <a href="agriculturist.html" class="menu-button top-button btn-hover">
-            <div class="menu-icon"><i class="fa-solid fa-seedling"></i></div>
-            <div class="menu-title-text">AGRICULTURIST</div>
-            <div class="card-desc">Leveraging sustainable agriculture expertise</div>
+
+        <!-- AGRICULTURIST -->
+
+        <a
+            href="agriculturist.html"
+            class="menu-button top-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-solid fa-seedling"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                AGRICULTURIST
+            </div>
+
+            <div class="card-desc">
+                Leveraging sustainable agriculture expertise
+            </div>
+
         </a>
 
-        <a href="communicationist.html" class="menu-button top-button btn-hover">
-            <div class="menu-icon"><i class="fa-solid fa-headset"></i></div>
-            <div class="menu-title-text">COMMUNICATIONIST</div>
-            <div class="card-desc">Connecting people and ideas effectively</div>
+
+        <!-- COMMUNICATIONIST -->
+
+        <a
+            href="communicationist.html"
+            class="menu-button top-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-solid fa-headset"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                COMMUNICATIONIST
+            </div>
+
+            <div class="card-desc">
+                Connecting people and ideas effectively
+            </div>
+
         </a>
 
-        <a href="kam.html" class="menu-button top-button btn-hover">
-            <div class="menu-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <div class="menu-title-text">KEY ACCOUNT MANAGER</div>
-            <div class="card-desc">Driving value and strategic growth</div>
+
+        <!-- KEY ACCOUNT MANAGER -->
+
+        <a
+            href="kam.html"
+            class="menu-button top-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                KEY ACCOUNT MANAGER
+            </div>
+
+            <div class="card-desc">
+                Driving value and strategic growth
+            </div>
+
         </a>
 
-        <a href="resume.html" class="menu-button bottom-button btn-hover">
-            <div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div>
-            <div class="menu-title-text">PROFILE / CV</div>
-            <div class="card-desc">View professional timeline & credentials</div>
+
+        <!-- PROFILE / CV -->
+
+        <a
+            href="resume.html"
+            class="menu-button bottom-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-regular fa-file-lines"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                PROFILE / CV
+            </div>
+
+            <div class="card-desc">
+                View professional timeline & credentials
+            </div>
+
         </a>
 
-        <a href="contact.html" class="menu-button bottom-button btn-hover">
-            <div class="menu-icon"><i class="fa-regular fa-comments"></i></div>
-            <div class="menu-title-text">LET'S TALK</div>
-            <div class="card-desc">Discuss opportunities to collaborate</div>
+
+        <!-- LET'S TALK -->
+
+        <a
+            href="contact.html"
+            class="menu-button bottom-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-regular fa-comments"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                LET'S TALK
+            </div>
+
+            <div class="card-desc">
+                Discuss opportunities to collaborate
+            </div>
+
         </a>
+
 
     </div>
+
 </div>
 
 
-<!-- RIGHT SIDE SOCIALS FOR DESKTOP -->
+<!-- =====================================================
+     DESKTOP SOCIALS
+===================================================== -->
+
 <div class="desktop-right-socials">
-    <a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://wa.me/601172267068" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="mailto:mehedialif1999@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-</div>
+
+    <a
+        href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+    >
+
+        <i class="fa-brands fa-linkedin-in"></i>
+
+    </a>
+
+
+    <a
+        href="https://wa.me/601172267068"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <a
+        href="mailto:mehedialif1999@gmail.com"
+        aria-label="Email"
+    >
+
+        <i class="fa-solid fa-envelope"></i>
+
+    </a>
 
 </div>
 
+
+</div>
 
 
 <!-- =====================================================
@@ -1153,66 +2897,165 @@ a {
 
 <script>
 
-/* TYPEWRITER EFFECT */
-const typedTextSpan = document.querySelector(".typed-text");
-const textArray = ["AGRICULTURIST", "COMMUNICATIONIST", "KEY ACCOUNT MANAGER"];
+/* =========================================================
+   TYPEWRITER EFFECT
+========================================================= */
+
+const typedTextSpan =
+    document.querySelector(".typed-text");
+
+const textArray = [
+    "AGRICULTURIST",
+    "COMMUNICATIONIST",
+    "KEY ACCOUNT MANAGER"
+];
+
 let textIndex = 0;
+
 let charIndex = 0;
 
+
 function type() {
-    if (charIndex < textArray[textIndex].length) {
-        typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
+
+    if (
+        charIndex <
+        textArray[textIndex].length
+    ) {
+
+        typedTextSpan.textContent +=
+            textArray[textIndex].charAt(charIndex);
+
         charIndex++;
+
         setTimeout(type, 100);
+
     } else {
+
         setTimeout(erase, 2000);
+
     }
+
 }
+
 
 function erase() {
+
     if (charIndex > 0) {
-        typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+
+        typedTextSpan.textContent =
+            textArray[textIndex].substring(
+                0,
+                charIndex - 1
+            );
+
         charIndex--;
+
         setTimeout(erase, 50);
+
     } else {
-        textIndex = (textIndex + 1) % textArray.length;
+
+        textIndex =
+            (textIndex + 1) %
+            textArray.length;
+
         setTimeout(type, 500);
+
     }
+
 }
 
 
-/* COUNTER ANIMATION */
-const counters = document.querySelectorAll(".counter");
+/* =========================================================
+   COUNTER ANIMATION
+========================================================= */
+
+const counters =
+    document.querySelectorAll(".counter");
+
+
 counters.forEach(counter => {
+
     counter.innerText = "0";
+
     const updateCounter = () => {
-        const target = +counter.getAttribute("data-target");
-        const current = +counter.innerText;
-        const increment = target / 50;
+
+        const target =
+            +counter.getAttribute("data-target");
+
+        const current =
+            +counter.innerText;
+
+        const increment =
+            target / 50;
+
 
         if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 30);
+
+            counter.innerText =
+                Math.ceil(
+                    current + increment
+                );
+
+            setTimeout(
+                updateCounter,
+                30
+            );
+
         } else {
-            counter.innerText = target + "+";
+
+            counter.innerText =
+                target + "+";
+
         }
+
     };
+
     updateCounter();
+
 });
 
 
-/* BUTTON CLICK EFFECT */
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(type, 1000);
+/* =========================================================
+   DOM LOADED
+========================================================= */
 
-    const buttons = document.querySelectorAll(".menu-button");
-    buttons.forEach(button => {
-        button.addEventListener("click", function() {
-            buttons.forEach(b => b.classList.remove("visited-btn"));
-            this.classList.add("visited-btn");
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        setTimeout(type, 1000);
+
+
+        const buttons =
+            document.querySelectorAll(
+                ".menu-button"
+            );
+
+
+        buttons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    buttons.forEach(
+                        b =>
+                            b.classList.remove(
+                                "visited-btn"
+                            )
+                    );
+
+                    this.classList.add(
+                        "visited-btn"
+                    );
+
+                }
+            );
+
         });
-    });
-});
+
+    }
+);
 
 </script>
 
