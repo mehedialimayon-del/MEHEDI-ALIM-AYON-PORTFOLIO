@@ -2,98 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1024, initial-scale=1.0">
 <title>Mehedi Alim Ayon - Professional Portfolio</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 *{box-sizing:border-box}
-html,body{width:100%;max-width:100%;margin:0;padding:0;overflow-x:hidden!important;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{font-family:Arial,sans-serif;color:#fff;background:linear-gradient(180deg,#111827 0%,#101622 55%,#080c14 100%)}
-img{max-width:100%}.hero picture{display:block;width:100%;height:100%}
+html,body{width:100vw;height:100vh;overflow:hidden!important;background:#030507!important;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#fff}
+img{max-width:100%}
 a{-webkit-tap-highlight-color:transparent}
-.page{width:100%;max-width:100%;min-height:100vh;overflow-x:hidden}
-.btn-hover{transition:all .3s ease-in-out;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.btn-hover:hover{transform:translateY(-2px) scale(1.02);border-color:#ff7414!important;box-shadow:0 6px 15px rgba(255,116,20,.25);filter:brightness(1.15)}
-.menu-button:active,.menu-button.visited-btn{background:#ff7414!important;color:#fff!important;border-color:#ff7414!important;box-shadow:0 0 15px rgba(255,116,20,.6)!important}
 
-.hero{width:100%;height:60vh;min-height:420px;position:relative;overflow:hidden;background:#111827;box-shadow:0 10px 30px rgba(0,0,0,.6)}
-.hero-image{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}
-.social-icons{display:flex;justify-content:center;align-items:center;gap:12px;margin:10px 0 15px;z-index:20}
-.social-icons a{width:40px;height:40px;flex:0 0 40px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;text-decoration:none;font-size:18px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .3s ease,box-shadow .3s ease}
-.social-icons a:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 5px 15px rgba(0,0,0,.4)}
-.linkedin,.email{background:rgba(255,116,20,.20);border:1px solid #ff7414;color:#fff}
-.whatsapp{background:rgba(37,211,102,.20);border:1px solid #25d366;color:#fff}
-.hero-gradient{position:absolute;left:0;right:0;bottom:0;width:100%;height:50%;background:linear-gradient(to bottom,rgba(8,12,20,0),rgba(8,12,20,1));pointer-events:none;z-index:2}
-.main-content{width:100%;max-width:850px;margin:-50px auto 0;padding:20px 20px 40px;text-align:center;position:relative;z-index:10}
-.name{margin:0 0 8px;color:#fff;font-size:38px;line-height:1.15;font-weight:900;letter-spacing:1.5px;text-shadow:0 4px 15px rgba(0,0,0,.8)}
-.refresh-name{color:inherit;text-decoration:none;cursor:pointer;display:inline-block;transition:transform .2s ease,opacity .2s ease}
-.refresh-name:active{transform:scale(.97);opacity:.8}
-.personal-quote{font-size:14px;font-style:italic;color:#d1d5db;margin:5px auto 20px;max-width:90%;line-height:1.5;text-shadow:0 2px 4px rgba(0,0,0,.5);font-weight:300}
-.profession{margin:0 0 8px;color:#ff7414;font-size:15px;line-height:1.35;font-weight:800;letter-spacing:1px;text-transform:uppercase;min-height:22px}
-.typed-text{color:#ff7414}.cursor{display:inline-block;background:#ff7414;margin-left:2px;width:3px;animation:blink 1s infinite}
-.desktop-cta{display:none}.card-desc{display:none}.desktop-right-socials{display:none}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
-.button-row{width:100%;display:flex;gap:10px;margin-bottom:10px}
-.menu-button{min-width:0;display:flex;align-items:center;justify-content:center;padding:8px;color:#fff;text-decoration:none;text-align:center;font-weight:900;background:linear-gradient(145deg,rgba(37,43,59,.8),rgba(26,32,44,.8));border:2px solid #ff7414;border-radius:8px;overflow:hidden;overflow-wrap:anywhere;word-break:normal;flex-shrink:1;position:relative}
-.menu-icon{display:none}
-.top-button{flex:1 1 0;min-height:65px;font-size:14px;line-height:1.15}
-.middle-button{flex:1 1 0;height:55px;font-size:16px;line-height:1.15}
-.bottom-button{flex:1 1 0;height:55px;font-size:16px;line-height:1.15;background:#ff7414;border:2px solid #ff7414}
-
-.stats-container{display:flex;justify-content:space-around;margin:15px 0 10px;gap:10px}
-.stat-card{background:rgba(255,255,255,.04);padding:10px 8px;border-radius:8px;border:1px solid rgba(255,116,20,.3);text-align:center;flex:1;backdrop-filter:blur(5px)}
-.stat-card h2{color:#ff7414;font-size:1.5rem;margin:0 0 2px;font-weight:900}
-.stat-card p{margin:0;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:#d1d5db}
-
-@media(max-width:600px){
-.hero{height:55vh!important;min-height:330px!important}
-.social-icons{margin:8px 0 12px!important;gap:8px!important}
-.social-icons a{width:36px!important;height:36px!important;flex:0 0 36px!important;font-size:15px!important}
-.main-content{width:100%!important;max-width:100%!important;margin:-30px auto 0!important;padding:5px 10px 15px!important;text-align:center!important}
-.name{font-size:22px!important;line-height:1.1!important;letter-spacing:.5px!important;white-space:nowrap!important;margin:0 0 4px!important}
-.profession{font-size:11px!important;margin:0 0 4px!important;min-height:18px!important}
-.personal-quote{font-size:11.5px!important;margin:0 auto 15px!important;text-align:center!important;line-height:1.4!important}
-.button-row{display:flex!important;justify-content:center!important;align-items:center!important;width:100%!important;gap:5px!important;margin-bottom:6px!important;flex-direction:row!important}
-.menu-button{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;box-sizing:border-box!important;border-radius:7px!important;font-weight:800!important;white-space:normal!important;word-break:keep-all!important;overflow-wrap:normal!important;height:auto!important;padding:4px!important;background:linear-gradient(145deg,rgba(37,43,59,.8),rgba(26,32,44,.8))!important;border:1.5px solid #ff7414!important}
-.top-button{flex:1 1 0!important;min-width:0!important;min-height:50px!important;font-size:8.5px!important;font-weight:900!important;letter-spacing:.3px!important;line-height:1.15!important;padding:4px 1px!important;color:#fff!important;border:1.5px solid rgba(255,116,20,.8)!important;text-shadow:0 0 4px rgba(255,116,20,.6)!important;box-shadow:inset 0 0 8px rgba(255,116,20,.15)!important}
-.middle-button,.bottom-button{flex:1 1 0!important;min-width:0!important;height:42px!important;font-size:11px!important;line-height:1.12!important;padding:4px!important}
-.bottom-button{background:#ff7414!important}
-.stats-container{margin:8px 0 0!important;gap:5px!important}
-.stat-card{padding:6px 3px!important}
-.stat-card h2{font-size:1rem!important;margin-bottom:2px!important}
-.stat-card p{font-size:.5rem!important}
-.desktop-dock-wrapper{display:none!important}
-}
-
-.desktop-nav{display:none}
-.desktop-logo,.desktop-nav-links,.desktop-nav-cta,.desktop-stats-panel{display:none}
-
-@media(min-width:901px){
-html,body{width:100vw;height:100vh;overflow:hidden!important;background:#030507!important}
-body{margin:0;padding:0}
 .page{width:100vw;height:100vh;min-height:650px;position:relative;overflow:hidden;display:block;padding:0;background:radial-gradient(circle at 63% 50%,rgba(255,116,20,.18) 0%,rgba(255,116,20,.07) 20%,rgba(8,11,17,.96) 48%,#030507 78%),linear-gradient(135deg,#020304 0%,#080b11 45%,#030405 100%)}
 .page::before{content:"";position:absolute;top:-15%;right:-5%;width:65%;height:125%;background:radial-gradient(ellipse at center,rgba(255,116,20,.14) 0%,rgba(255,116,20,.05) 30%,transparent 65%);pointer-events:none;z-index:0;filter:blur(15px)}
 .page::after{content:"";position:absolute;width:600px;height:130%;top:-15%;left:52%;transform:rotate(27deg);background:linear-gradient(90deg,transparent 0%,rgba(255,116,20,.025) 35%,rgba(255,116,20,.08) 50%,rgba(255,116,20,.025) 65%,transparent 100%);border-left:1px solid rgba(255,116,20,.15);border-right:1px solid rgba(255,116,20,.08);pointer-events:none;z-index:1}
 
-.page>.desktop-nav{display:flex;position:absolute;top:0;left:0;right:0;height:74px;align-items:center;padding:0 30px;border-bottom:1px solid rgba(255,116,20,.16);background:rgba(3,5,7,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:100}
-.desktop-logo{display:flex!important;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:235px}
+.desktop-nav{display:flex;position:absolute;top:0;left:0;right:0;height:74px;align-items:center;padding:0 30px;border-bottom:1px solid rgba(255,116,20,.16);background:rgba(3,5,7,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:100}
+.desktop-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:235px}
 .desktop-logo-mark{width:45px;height:45px;display:flex;align-items:center;justify-content:center;border:2px solid #ff7414;color:#ff7414;font-size:23px;font-weight:900;transform:rotate(45deg);position:relative}
 .desktop-logo-mark span{transform:rotate(-45deg);display:block}
 .desktop-logo-text{display:flex;flex-direction:column;line-height:1}
 .desktop-logo-text strong{font-size:17px;letter-spacing:1.5px;color:#fff}
 .desktop-logo-text small{font-size:12px;letter-spacing:2px;color:#ff7414;margin-top:4px}
-.desktop-nav-links{display:flex!important;align-items:center;justify-content:center;gap:24px;flex:1}
+.desktop-nav-links{display:flex;align-items:center;justify-content:center;gap:24px;flex:1}
 .desktop-nav-links a{position:relative;color:#ffffff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:.85px;text-transform:uppercase;transition:color .25s ease,transform .25s ease,background .25s ease,box-shadow .25s ease;text-shadow:0 1px 9px rgba(255,255,255,.22);padding:10px 8px;border-radius:5px}
 .desktop-nav-links a::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:#ff7414;box-shadow:0 0 8px rgba(255,116,20,.8);transition:width .3s ease}
 .desktop-nav-links a:hover,.desktop-nav-links a:first-child{color:#fff;background:rgba(255,255,255,.055);box-shadow:0 0 14px rgba(255,255,255,.035)}
 .desktop-nav-links a:hover::after,.desktop-nav-links a:first-child::after{width:100%}
 .desktop-nav-links a:hover{transform:translateY(-1px);text-shadow:0 0 10px rgba(255,255,255,.35)}
-.desktop-nav-cta{display:flex!important;min-width:150px;height:42px;align-items:center;justify-content:center;gap:10px;border:1px solid #ff7414;border-radius:6px;color:#fff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1px;background:rgba(255,116,20,.10);box-shadow:inset 0 0 15px rgba(255,116,20,.08),0 0 18px rgba(255,116,20,.08);transition:all .3s ease}
+.desktop-nav-cta{display:flex;min-width:150px;height:42px;align-items:center;justify-content:center;gap:10px;border:1px solid #ff7414;border-radius:6px;color:#fff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1px;background:rgba(255,116,20,.10);box-shadow:inset 0 0 15px rgba(255,116,20,.08),0 0 18px rgba(255,116,20,.08);transition:all .3s ease}
 .desktop-nav-cta:hover{background:#ff7414;color:#fff;box-shadow:0 0 25px rgba(255,116,20,.45);transform:translateY(-1px)}
 
-.hero{position:absolute!important;top:74px!important;left:4.8%!important;right:auto!important;transform:none!important;width:440px!important;height:calc(100vh - 74px)!important;min-height:550px!important;max-height:none!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;z-index:8!important}
+.hero{position:absolute!important;top:74px!important;left:4.8%!important;right:auto!important;transform:none!important;width:440px!important;height:calc(100vh - 74px)!important;min-height:550px!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;z-index:8!important}
 .hero::before{content:"";position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:470px;height:610px;background:radial-gradient(ellipse,rgba(255,116,20,.22) 0%,rgba(255,116,20,.10) 30%,rgba(255,116,20,.03) 52%,transparent 72%);filter:blur(22px);z-index:-3}
 .hero::after{content:"";position:absolute;top:7%;left:1%;width:98%;height:80%;border:1px solid rgba(255,116,20,.28);transform:rotate(-10deg);box-shadow:0 0 30px rgba(255,116,20,.06);z-index:-2;pointer-events:none}
 .hero picture{position:relative;width:100%;height:100%;display:block!important}
@@ -106,15 +46,17 @@ body{margin:0;padding:0}
 .refresh-name{color:#fff!important;text-decoration:none!important}
 .profession{display:block!important;margin:0 0 18px!important;color:#ff7414!important;font-size:17px!important;line-height:1.3!important;font-weight:900!important;letter-spacing:1.5px!important;min-height:25px!important;text-align:left!important}
 .typed-text{color:#ff7414!important;text-shadow:0 0 15px rgba(255,116,20,.35)}
-.cursor{background:#ff7414!important;width:2px!important;box-shadow:0 0 10px #ff7414}
+.cursor{background:#ff7414!important;width:2px!important;box-shadow:0 0 10px #ff7414;display:inline-block;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .profession::after{content:"";display:block;width:74px;height:3px;background:#ff7414;margin-top:13px;box-shadow:0 0 12px rgba(255,116,20,.7)}
-.personal-quote{max-width:570px!important;margin:0 0 20px 0!important;color:#d8dce1!important;font-size:15px!important;line-height:1.65!important;font-weight:300!important;font-style:italic!important;text-align:left!important;text-shadow:none!important}
+.personal-quote{max-width:570px!important;margin:0 0 20px 0!important;color:#d8dce1!important;font-size:15px!important;line-height:1.65!important;font-weight:300!important;font-style:italic!important;text-align:left!important}
 .desktop-cta{display:inline-flex!important;margin-top:4px!important;align-items:center;justify-content:center;gap:14px;height:48px;padding:0 27px;color:#fff;background:linear-gradient(135deg,#ff7414,#ff8a28);border:1px solid #ff7414;border-radius:6px;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.3px;box-shadow:0 8px 25px rgba(255,116,20,.25);transition:all .3s ease;margin-bottom:0}
 .desktop-cta::after{content:"→";font-size:19px;line-height:1}
 .desktop-cta:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(255,116,20,.45)}
 
 .social-icons{display:none!important}
 .stats-container{display:none!important}
+.mobile-view-buttons{display:none!important}
 
 .desktop-stats-panel{position:absolute;top:49%;right:2.8%;transform:translateY(-50%);width:142px;height:500px;border:1px solid rgba(255,116,20,.55);border-radius:20px;background:linear-gradient(180deg,rgba(12,15,20,.94),rgba(5,7,10,.80));box-shadow:inset 0 0 30px rgba(255,116,20,.04),0 20px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:30;display:flex!important;flex-direction:column;align-items:center;justify-content:space-evenly}
 .desktop-stat{width:100%;text-align:center;position:relative;padding:4px 10px}
@@ -125,7 +67,7 @@ body{margin:0;padding:0}
 
 .desktop-dock-wrapper{display:block!important;position:absolute;left:22px;right:22px;bottom:18px;height:170px;padding:9px 11px;border:1px solid rgba(255,116,20,.28);border-radius:16px;background:rgba(3,6,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 14px 45px rgba(0,0,0,.5);z-index:60}
 .desktop-dock{width:100%;height:100%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:9px}
-.desktop-dock .menu-button{height:auto!important;min-height:0!important;padding:0 18px!important;border:1px solid rgba(255,116,20,.58)!important;border-radius:10px!important;background:linear-gradient(145deg,rgba(14,19,27,.96),rgba(7,11,17,.96))!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;gap:14px;overflow:hidden;box-shadow:inset 0 0 20px rgba(255,116,20,.025);color:#fff!important}
+.desktop-dock .menu-button{height:auto!important;min-height:0!important;padding:0 18px!important;border:1px solid rgba(255,116,20,.58)!important;border-radius:10px!important;background:linear-gradient(145deg,rgba(14,19,27,.96),rgba(7,11,17,.96))!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;gap:14px;overflow:hidden;box-shadow:inset 0 0 20px rgba(255,116,20,.025);color:#fff!important;text-decoration:none}
 .desktop-dock .menu-button:hover{border-color:#ff7414!important;background:linear-gradient(145deg,rgba(31,25,21,.98),rgba(10,13,18,.98))!important;box-shadow:inset 0 0 24px rgba(255,116,20,.07),0 7px 22px rgba(0,0,0,.35)!important}
 .desktop-dock .menu-icon{display:flex!important;align-items:center;justify-content:center;flex:0 0 32px;width:32px;color:#ff7414;font-size:21px}
 .desktop-dock .menu-title-text{font-size:15px!important;line-height:1.15!important;font-weight:950!important;letter-spacing:.5px;color:#fff!important;text-shadow:0 0 10px rgba(255,255,255,.16),0 1px 10px rgba(0,0,0,.45)}
@@ -146,24 +88,6 @@ body{margin:0;padding:0}
 .desktop-right-socials::before{content:"CONNECT";position:absolute;bottom:100%;left:3px;margin-bottom:10px;color:#8d939b;font-size:7px;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg)}
 .desktop-right-socials a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,116,20,.62);border-radius:50%;background:rgba(8,11,16,.92);color:#fff;text-decoration:none;font-size:14px;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,.3)}
 .desktop-right-socials a:hover{color:#fff;background:#ff7414;border-color:#ff7414;box-shadow:0 0 20px rgba(255,116,20,.55);transform:translateX(4px)}
-
-@media(max-height:760px){
-.hero{width:390px!important;height:calc(100vh - 74px)!important}
-.main-content{left:43.5%!important;width:40%!important;top:40%!important}
-.desktop-stats-panel{height:420px;width:125px}
-.desktop-stat-number{font-size:27px}
-.name{font-size:56px!important}
-.personal-quote{font-size:14px!important;line-height:1.55!important;margin-bottom:17px!important}
-.desktop-cta{height:44px}
-.desktop-dock-wrapper{height:158px;bottom:14px}
-.desktop-right-socials{bottom:190px}
-}
-@media(min-width:1500px){
-.hero{left:5.3%!important;width:490px!important}
-.main-content{left:45.5%!important;width:38%!important;max-width:650px!important;top:43%!important}
-.desktop-stats-panel{right:3%;width:150px}
-}
-}
 </style>
 </head>
 
@@ -190,7 +114,7 @@ body{margin:0;padding:0}
 
 <div class="hero">
 <picture>
-<source media="(min-width:901px)" srcset="https://i.postimg.cc/mDdPbSj1/IMG-20260811-WA0002.png">
+<source media="(min-width:1px)" srcset="https://i.postimg.cc/mDdPbSj1/IMG-20260811-WA0002.png">
 <img class="hero-image" alt="Mehedi Alim Ayon" src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg">
 </picture>
 <div class="hero-gradient"></div>
@@ -201,18 +125,6 @@ body{margin:0;padding:0}
 <p class="profession"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
 <p class="personal-quote">"Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."</p>
 <a href="contact.html" class="desktop-cta">LET'S CREATE IMPACT TOGETHER</a>
-
-<div class="social-icons">
-<a class="whatsapp" href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<a class="email" href="mailto:mehedialif1999@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-<a class="linkedin" href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-
-<div class="stats-container">
-<div class="stat-card"><h2 class="counter" data-target="11">0</h2><p>Countries Sourced</p></div>
-<div class="stat-card"><h2 class="counter" data-target="900">0</h2><p>Products Managed</p></div>
-<div class="stat-card"><h2 class="counter" data-target="100">0</h2><p>% Client Focus</p></div>
-</div>
 </div>
 
 <div class="desktop-stats-panel">
@@ -243,9 +155,9 @@ body{margin:0;padding:0}
 <div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div>
 <div><div class="menu-title-text">PROFILE / CV</div><div class="card-desc">View professional timeline & credentials</div></div>
 </a>
-<a href="gallery.html" class="menu-button bottom-button btn-hover talk-card">
+<a href="contact.html" class="menu-button bottom-button btn-hover talk-card">
 <div class="menu-icon"><i class="fa-regular fa-comments"></i></div>
-<div><div class="menu-title-text">GALLERY</div><div class="card-desc">Explore snapshots and visual highlights of professional milestones</div></div>
+<div><div class="menu-title-text">LET'S TALK</div><div class="card-desc">Discuss opportunities to collaborate</div></div>
 </a>
 </div>
 </div>
@@ -255,6 +167,7 @@ body{margin:0;padding:0}
 <a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 <a href="mailto:mehedialif1999@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
 </div>
+
 </div>
 
 <script>
