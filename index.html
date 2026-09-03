@@ -5,17 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Mehedi Alim Ayon - Professional Portfolio</title>
 
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -29,10 +25,10 @@
 
 html,
 body {
-    width: 100%;
-    max-width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -41,243 +37,101 @@ body {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
-
-    background:
-        linear-gradient(
-            180deg,
-            #111827 0%,
-            #101622 55%,
-            #080c14 100%
-        );
-}
-
-img {
-    max-width: 100%;
+    background: #080c14;
 }
 
 a {
     -webkit-tap-highlight-color: transparent;
 }
 
-
-/* =========================================================
-   PAGE
-========================================================= */
-
 .page {
     width: 100%;
-    max-width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
 }
 
 
 /* =========================================================
-   GENERAL HOVER
-========================================================= */
-
-.btn-hover {
-    transition:
-        all 0.3s ease-in-out;
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.btn-hover:hover {
-    transform:
-        translateY(-3px)
-        scale(1.015);
-
-    border-color:
-        #ff7414 !important;
-
-    box-shadow:
-        0 10px 25px
-        rgba(255,116,20,0.25);
-
-    filter:
-        brightness(1.12);
-}
-
-.menu-button:active,
-.menu-button.visited-btn {
-    background:
-        #ff7414 !important;
-
-    color:
-        #ffffff !important;
-
-    border-color:
-        #ff7414 !important;
-
-    box-shadow:
-        0 0 18px
-        rgba(255,116,20,0.6) !important;
-}
-
-
-/* =========================================================
-   MOBILE HERO DEFAULT
+   DEFAULT / MOBILE HERO
 ========================================================= */
 
 .hero {
-
     width: 100%;
-    height: 60vh;
-    min-height: 420px;
-
+    height: 55vh;
+    min-height: 330px;
     position: relative;
     overflow: hidden;
-
     background: #111827;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .hero-image {
-
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
     object-position: center top;
 }
 
-
-/* =========================================================
-   HERO GRADIENT
-========================================================= */
-
 .hero-gradient {
-
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
-
     width: 100%;
     height: 50%;
-
     background:
         linear-gradient(
             to bottom,
             rgba(8,12,20,0),
             rgba(8,12,20,1)
         );
-
     pointer-events: none;
-
     z-index: 2;
 }
 
 
 /* =========================================================
-   MAIN CONTENT
+   MOBILE MAIN CONTENT
 ========================================================= */
 
 .main-content {
-
     width: 100%;
     max-width: 850px;
-
-    margin:
-        -50px auto 0;
-
-    padding:
-        20px 20px 40px;
-
+    margin: -30px auto 0;
+    padding: 5px 10px 15px;
     text-align: center;
-
     position: relative;
     z-index: 10;
 }
 
-
-/* =========================================================
-   NAME
-========================================================= */
-
 .name {
-
-    margin:
-        0 0 8px;
-
+    margin: 0 0 4px;
     color: #ffffff;
-
-    font-size: 38px;
-
-    line-height: 1.15;
-
+    font-size: 22px;
+    line-height: 1.1;
     font-weight: 900;
-
-    letter-spacing: 1.5px;
-
-    text-shadow:
-        0 4px 15px
-        rgba(0,0,0,0.8);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .refresh-name {
-
     color: inherit;
-
     text-decoration: none;
-
     cursor: pointer;
-
-    display: inline-block;
-
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
 }
-
-.refresh-name:active {
-
-    transform:
-        scale(0.97);
-
-    opacity:
-        0.8;
-}
-
-
-/* =========================================================
-   PROFESSION
-========================================================= */
 
 .profession {
-
-    margin:
-        0 0 8px;
-
-    color:
-        #ff7414;
-
-    font-size:
-        15px;
-
-    line-height:
-        1.35;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        1px;
-
-    text-transform:
-        uppercase;
-
-    min-height:
-        22px;
+    margin: 0 0 4px;
+    color: #ff7414;
+    font-size: 11px;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 18px;
 }
 
 .typed-text {
@@ -285,173 +139,70 @@ a {
 }
 
 .cursor {
-
-    display:
-        inline-block;
-
-    background-color:
-        #ff7414;
-
-    margin-left:
-        2px;
-
-    width:
-        3px;
-
-    animation:
-        blink 1s infinite;
+    display: inline-block;
+    background-color: #ff7414;
+    margin-left: 2px;
+    width: 2px;
+    height: 14px;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
-
     0%,100% {
         opacity: 1;
     }
-
     50% {
         opacity: 0;
     }
 }
 
-
-/* =========================================================
-   QUOTE
-========================================================= */
-
 .personal-quote {
-
-    font-size:
-        14px;
-
-    font-style:
-        italic;
-
-    color:
-        #d1d5db;
-
-    margin:
-        5px auto 20px;
-
-    max-width:
-        90%;
-
-    line-height:
-        1.5;
-
-    text-shadow:
-        0 2px 4px
-        rgba(0,0,0,0.5);
-
-    font-weight:
-        300;
+    font-size: 11.5px;
+    font-style: italic;
+    color: #d1d5db;
+    margin: 0 auto 15px;
+    max-width: 90%;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-weight: 300;
 }
 
 
 /* =========================================================
-   DESKTOP CTA
-========================================================= */
-
-.desktop-cta {
-    display: none;
-}
-
-
-/* =========================================================
-   SOCIAL ICONS MOBILE
+   MOBILE SOCIAL
 ========================================================= */
 
 .social-icons {
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    align-items:
-        center;
-
-    gap:
-        12px;
-
-    margin:
-        10px 0 15px;
-
-    z-index:
-        20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 12px;
+    z-index: 20;
 }
 
 .social-icons a {
-
-    width:
-        40px;
-
-    height:
-        40px;
-
-    flex:
-        0 0 40px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    border-radius:
-        50%;
-
-    color:
-        #ffffff;
-
-    text-decoration:
-        none;
-
-    font-size:
-        18px;
-
-    backdrop-filter:
-        blur(8px);
-
-    -webkit-backdrop-filter:
-        blur(8px);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.social-icons a:hover {
-
-    transform:
-        translateY(-2px)
-        scale(1.05);
-
-    box-shadow:
-        0 5px 15px
-        rgba(0,0,0,0.4);
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .linkedin,
 .email {
-
-    background:
-        rgba(255,116,20,0.20);
-
-    border:
-        1px solid #ff7414;
+    background: rgba(255,116,20,0.20);
+    border: 1px solid #ff7414;
 }
 
 .whatsapp {
-
-    background:
-        rgba(37,211,102,0.20);
-
-    border:
-        1px solid #25d366;
+    background: rgba(37,211,102,0.20);
+    border: 1px solid #25d366;
 }
 
 
@@ -462,44 +213,28 @@ a {
 .button-row {
     width: 100%;
     display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 5px;
+    margin-bottom: 6px;
 }
 
 .menu-button {
-
     min-width: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    padding: 8px;
-
+    padding: 4px;
     color: #ffffff;
-
     text-decoration: none;
-
     text-align: center;
-
-    font-weight: 900;
-
+    font-weight: 800;
     background:
         linear-gradient(
             145deg,
             rgba(37,43,59,0.8),
             rgba(26,32,44,0.8)
         );
-
-    border:
-        2px solid #ff7414;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
+    border: 1.5px solid #ff7414;
+    border-radius: 7px;
     position: relative;
 }
 
@@ -508,39 +243,38 @@ a {
 }
 
 .top-button {
-
     flex: 1 1 0;
-
-    min-height: 65px;
-
-    font-size: 14px;
-
+    min-height: 50px;
+    font-size: 8.5px;
     line-height: 1.15;
 }
 
 .middle-button {
-
     flex: 1 1 0;
-
-    height: 55px;
-
-    font-size: 16px;
-
-    line-height: 1.15;
+    height: 42px;
+    font-size: 11px;
+    line-height: 1.12;
 }
 
 .bottom-button {
-
     flex: 1 1 0;
+    height: 42px;
+    font-size: 11px;
+    line-height: 1.12;
+    background: #ff7414;
+    border-color: #ff7414;
+}
 
-    height: 55px;
+.card-desc {
+    display: none;
+}
 
-    font-size: 16px;
+.desktop-cta {
+    display: none;
+}
 
-    line-height: 1.15;
-
-    background:
-        #ff7414;
+.desktop-right-socials {
+    display: none;
 }
 
 
@@ -549,383 +283,69 @@ a {
 ========================================================= */
 
 .stats-container {
-
-    display:
-        flex;
-
-    justify-content:
-        space-around;
-
-    margin:
-        15px 0 10px;
-
-    gap:
-        10px;
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 0 0;
+    gap: 5px;
 }
 
 .stat-card {
-
-    background:
-        rgba(255,255,255,0.04);
-
-    padding:
-        10px 8px;
-
-    border-radius:
-        8px;
-
-    border:
-        1px solid
-        rgba(255,116,20,0.3);
-
-    text-align:
-        center;
-
-    flex:
-        1;
-
-    backdrop-filter:
-        blur(5px);
+    background: rgba(255,255,255,0.04);
+    padding: 6px 3px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,116,20,0.3);
+    text-align: center;
+    flex: 1;
+    backdrop-filter: blur(5px);
 }
 
 .stat-card h2 {
-
-    color:
-        #ff7414;
-
-    font-size:
-        1.5rem;
-
-    margin:
-        0 0 2px;
-
-    font-weight:
-        900;
+    color: #ff7414;
+    font-size: 1rem;
+    margin: 0 0 2px;
+    font-weight: 900;
 }
 
 .stat-card p {
-
-    margin:
-        0;
-
-    font-size:
-        0.7rem;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        0.5px;
-
-    color:
-        #d1d5db;
+    margin: 0;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #d1d5db;
 }
 
 
 /* =========================================================
-   DESKTOP NAV DEFAULT HIDDEN
+   DESKTOP NAV - DEFAULT HIDDEN
 ========================================================= */
 
-.desktop-nav,
-.desktop-logo,
-.desktop-nav-links,
-.desktop-nav-cta,
-.desktop-stats-panel,
-.desktop-dock-wrapper,
-.desktop-right-socials {
+.desktop-nav {
+    display: none;
+}
+
+.desktop-dock-wrapper {
+    display: none;
+}
+
+.desktop-stats-panel {
     display: none;
 }
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width:600px) {
-
-    .hero {
-
-        height:
-            55vh !important;
-
-        min-height:
-            330px !important;
-    }
-
-    .social-icons {
-
-        margin:
-            8px 0 12px !important;
-
-        gap:
-            8px !important;
-    }
-
-    .social-icons a {
-
-        width:
-            36px !important;
-
-        height:
-            36px !important;
-
-        flex:
-            0 0 36px !important;
-
-        font-size:
-            15px !important;
-    }
-
-    .main-content {
-
-        width:
-            100% !important;
-
-        max-width:
-            100% !important;
-
-        margin:
-            -30px auto 0 !important;
-
-        padding:
-            5px 10px 15px !important;
-
-        text-align:
-            center !important;
-    }
-
-    .name {
-
-        font-size:
-            22px !important;
-
-        line-height:
-            1.1 !important;
-
-        letter-spacing:
-            0.5px !important;
-
-        white-space:
-            nowrap !important;
-
-        margin:
-            0 0 4px !important;
-    }
-
-    .profession {
-
-        font-size:
-            11px !important;
-
-        margin:
-            0 0 4px !important;
-
-        min-height:
-            18px !important;
-    }
-
-    .personal-quote {
-
-        font-size:
-            11.5px !important;
-
-        margin:
-            0 auto 15px !important;
-
-        text-align:
-            center !important;
-
-        line-height:
-            1.4 !important;
-    }
-
-    .button-row {
-
-        display:
-            flex !important;
-
-        justify-content:
-            center !important;
-
-        align-items:
-            center !important;
-
-        width:
-            100% !important;
-
-        gap:
-            5px !important;
-
-        margin-bottom:
-            6px !important;
-
-        flex-direction:
-            row !important;
-    }
-
-    .menu-button {
-
-        display:
-            flex !important;
-
-        align-items:
-            center !important;
-
-        justify-content:
-            center !important;
-
-        text-align:
-            center !important;
-
-        box-sizing:
-            border-box !important;
-
-        border-radius:
-            7px !important;
-
-        font-weight:
-            800 !important;
-
-        white-space:
-            normal !important;
-
-        word-break:
-            keep-all !important;
-
-        overflow-wrap:
-            normal !important;
-
-        height:
-            auto !important;
-
-        padding:
-            4px !important;
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(37,43,59,0.8),
-                rgba(26,32,44,0.8)
-            ) !important;
-
-        border:
-            1.5px solid
-            #ff7414 !important;
-    }
-
-    .top-button {
-
-        flex:
-            1 1 0 !important;
-
-        min-width:
-            0 !important;
-
-        min-height:
-            50px !important;
-
-        font-size:
-            8.5px !important;
-
-        letter-spacing:
-            0.3px !important;
-
-        line-height:
-            1.15 !important;
-
-        padding:
-            4px 1px !important;
-
-        border:
-            1.5px solid
-            rgba(255,116,20,0.8) !important;
-
-        text-shadow:
-            0 0 4px
-            rgba(255,116,20,0.6) !important;
-
-        box-shadow:
-            inset 0 0 8px
-            rgba(255,116,20,0.15) !important;
-    }
-
-    .middle-button,
-    .bottom-button {
-
-        flex:
-            1 1 0 !important;
-
-        min-width:
-            0 !important;
-
-        height:
-            42px !important;
-
-        font-size:
-            11px !important;
-
-        line-height:
-            1.12 !important;
-
-        padding:
-            4px !important;
-    }
-
-    .bottom-button {
-
-        background:
-            #ff7414 !important;
-    }
-
-    .stats-container {
-
-        margin:
-            8px 0 0 !important;
-
-        gap:
-            5px !important;
-    }
-
-    .stat-card {
-
-        padding:
-            6px 3px !important;
-    }
-
-    .stat-card h2 {
-
-        font-size:
-            1rem !important;
-    }
-
-    .stat-card p {
-
-        font-size:
-            0.5rem !important;
-    }
-}
-
-
-/* =========================================================
    DESKTOP PREMIUM
+   901px+
 ========================================================= */
 
-@media (min-width:601px) {
+@media (min-width:901px) {
 
     html,
     body {
-
-        width:
-            100%;
-
-        height:
-            100%;
-
-        overflow:
-            hidden !important;
-
-        background:
-            #030507 !important;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden !important;
+        background: #030507;
     }
 
     body {
@@ -933,36 +353,17 @@ a {
         padding: 0;
     }
 
-
-    /* =====================================================
-       FULL SCREEN PAGE
-    ===================================================== */
-
     .page {
-
-        width:
-            100vw;
-
-        height:
-            100vh;
-
-        min-height:
-            650px;
-
-        max-height:
-            100vh;
-
-        position:
-            relative;
-
-        overflow:
-            hidden;
-
+        width: 100vw;
+        height: 100vh;
+        min-height: 650px;
+        position: relative;
+        overflow: hidden;
         background:
 
             radial-gradient(
-                circle at 63% 50%,
-                rgba(255,116,20,0.18) 0%,
+                circle at 63% 48%,
+                rgba(255,116,20,0.17) 0%,
                 rgba(255,116,20,0.07) 20%,
                 rgba(8,11,17,0.96) 48%,
                 #030507 78%
@@ -982,27 +383,14 @@ a {
     ===================================================== */
 
     .page::before {
-
-        content:
-            "";
-
-        position:
-            absolute;
-
-        top:
-            -15%;
-
-        right:
-            -5%;
-
-        width:
-            65%;
-
-        height:
-            125%;
+        content: "";
+        position: absolute;
+        top: -15%;
+        right: -5%;
+        width: 65%;
+        height: 125%;
 
         background:
-
             radial-gradient(
                 ellipse at center,
                 rgba(255,116,20,0.14) 0%,
@@ -1010,46 +398,21 @@ a {
                 transparent 65%
             );
 
-        pointer-events:
-            none;
-
-        z-index:
-            0;
-
-        filter:
-            blur(15px);
+        pointer-events: none;
+        z-index: 0;
+        filter: blur(15px);
     }
 
-
-    /* =====================================================
-       DIAGONAL LINE
-    ===================================================== */
-
     .page::after {
-
-        content:
-            "";
-
-        position:
-            absolute;
-
-        width:
-            600px;
-
-        height:
-            130%;
-
-        top:
-            -15%;
-
-        left:
-            52%;
-
-        transform:
-            rotate(27deg);
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 130%;
+        top: -15%;
+        left: 52%;
+        transform: rotate(27deg);
 
         background:
-
             linear-gradient(
                 90deg,
                 transparent 0%,
@@ -1059,67 +422,40 @@ a {
                 transparent 100%
             );
 
-        border-left:
-            1px solid
-            rgba(255,116,20,0.15);
+        border-left: 1px solid rgba(255,116,20,0.15);
+        border-right: 1px solid rgba(255,116,20,0.08);
 
-        border-right:
-            1px solid
-            rgba(255,116,20,0.08);
-
-        pointer-events:
-            none;
-
-        z-index:
-            1;
+        pointer-events: none;
+        z-index: 1;
     }
 
 
     /* =====================================================
-       DESKTOP NAVIGATION
+       TOP NAVIGATION
     ===================================================== */
 
     .desktop-nav {
+        display: flex !important;
 
-        display:
-            flex !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
 
-        position:
-            absolute;
+        height: 76px;
 
-        top:
-            0;
+        align-items: center;
 
-        left:
-            0;
+        padding: 0 30px;
 
-        right:
-            0;
+        border-bottom: 1px solid rgba(255,116,20,0.14);
 
-        height:
-            76px;
+        background: rgba(3,5,7,0.86);
 
-        align-items:
-            center;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
 
-        padding:
-            0 30px;
-
-        border-bottom:
-            1px solid
-            rgba(255,116,20,0.12);
-
-        background:
-            rgba(3,5,7,0.82);
-
-        backdrop-filter:
-            blur(18px);
-
-        -webkit-backdrop-filter:
-            blur(18px);
-
-        z-index:
-            100;
+        z-index: 100;
     }
 
 
@@ -1128,106 +464,55 @@ a {
     ===================================================== */
 
     .desktop-logo {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
 
-        display:
-            flex !important;
+        text-decoration: none;
+        color: #ffffff;
 
-        align-items:
-            center;
-
-        gap:
-            12px;
-
-        text-decoration:
-            none;
-
-        color:
-            #ffffff;
-
-        width:
-            220px;
-
-        flex-shrink:
-            0;
+        min-width: 220px;
     }
 
     .desktop-logo-mark {
+        width: 43px;
+        height: 43px;
 
-        width:
-            43px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        height:
-            43px;
+        border: 2px solid #ff7414;
+        color: #ff7414;
 
-        display:
-            flex;
+        font-size: 22px;
+        font-weight: 900;
 
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        border:
-            2px solid
-            #ff7414;
-
-        color:
-            #ff7414;
-
-        font-size:
-            22px;
-
-        font-weight:
-            900;
-
-        transform:
-            rotate(45deg);
+        transform: rotate(45deg);
     }
 
     .desktop-logo-mark span {
-
-        transform:
-            rotate(-45deg);
+        transform: rotate(-45deg);
+        display: block;
     }
 
     .desktop-logo-text {
-
-        display:
-            flex;
-
-        flex-direction:
-            column;
-
-        line-height:
-            1;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
     }
 
     .desktop-logo-text strong {
-
-        font-size:
-            17px;
-
-        letter-spacing:
-            1.5px;
-
-        color:
-            #ffffff;
+        font-size: 17px;
+        letter-spacing: 1.5px;
+        color: #ffffff;
     }
 
     .desktop-logo-text small {
-
-        font-size:
-            11px;
-
-        letter-spacing:
-            2px;
-
-        color:
-            #ff7414;
-
-        margin-top:
-            4px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: #ff7414;
+        margin-top: 4px;
     }
 
 
@@ -1236,99 +521,60 @@ a {
     ===================================================== */
 
     .desktop-nav-links {
+        display: flex !important;
 
-        display:
-            flex !important;
+        align-items: center;
+        justify-content: center;
 
-        align-items:
-            center;
+        gap: clamp(16px, 2vw, 30px);
 
-        justify-content:
-            center;
-
-        gap:
-            clamp(16px, 2vw, 29px);
-
-        flex:
-            1;
-
-        height:
-            100%;
+        flex: 1;
+        min-width: 0;
     }
 
     .desktop-nav-links a {
+        position: relative;
 
-        position:
-            relative;
+        color: #cfd3d8;
+        text-decoration: none;
 
-        color:
-            #cfd3d8;
+        font-size: clamp(9px, 0.72vw, 11px);
 
-        text-decoration:
-            none;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
 
-        font-size:
-            10px;
+        white-space: nowrap;
 
-        font-weight:
-            700;
-
-        letter-spacing:
-            0.6px;
-
-        text-transform:
-            uppercase;
-
-        white-space:
-            nowrap;
-
-        transition:
-            color 0.3s ease;
+        transition: color 0.3s ease;
     }
 
     .desktop-nav-links a::after {
+        content: "";
 
-        content:
-            "";
+        position: absolute;
+        left: 0;
+        bottom: -9px;
 
-        position:
-            absolute;
+        width: 0;
+        height: 2px;
 
-        left:
-            0;
-
-        bottom:
-            -9px;
-
-        width:
-            0;
-
-        height:
-            2px;
-
-        background:
-            #ff7414;
+        background: #ff7414;
 
         box-shadow:
-            0 0 8px
-            rgba(255,116,20,0.8);
+            0 0 8px rgba(255,116,20,0.8);
 
-        transition:
-            width 0.3s ease;
+        transition: width 0.3s ease;
     }
 
     .desktop-nav-links a:hover,
     .desktop-nav-links a:first-child {
-
-        color:
-            #ffffff;
+        color: #ffffff;
     }
 
     .desktop-nav-links a:hover::after,
     .desktop-nav-links a:first-child::after {
-
-        width:
-            100%;
+        width: 100%;
     }
 
 
@@ -1337,141 +583,77 @@ a {
     ===================================================== */
 
     .desktop-nav-cta {
+        display: flex !important;
 
-        display:
-            flex !important;
+        width: 130px;
+        height: 40px;
 
-        width:
-            125px;
+        flex: 0 0 130px;
 
-        height:
-            40px;
+        align-items: center;
+        justify-content: center;
 
-        align-items:
-            center;
+        gap: 8px;
 
-        justify-content:
-            center;
+        border: 1px solid #ff7414;
+        border-radius: 5px;
 
-        gap:
-            8px;
+        color: #ff7414;
+        text-decoration: none;
 
-        border:
-            1px solid
-            #ff7414;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.8px;
 
-        border-radius:
-            5px;
-
-        color:
-            #ff7414;
-
-        text-decoration:
-            none;
-
-        font-size:
-            10px;
-
-        font-weight:
-            900;
-
-        letter-spacing:
-            1px;
-
-        flex-shrink:
-            0;
-
-        transition:
-            all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .desktop-nav-cta:hover {
-
-        background:
-            #ff7414;
-
-        color:
-            #ffffff;
-
-        box-shadow:
-            0 0 25px
-            rgba(255,116,20,0.45);
+        background: #ff7414;
+        color: #ffffff;
+        box-shadow: 0 0 25px rgba(255,116,20,0.45);
     }
 
 
     /* =====================================================
-       HERO IMAGE
+       HERO / PORTRAIT
     ===================================================== */
 
     .hero {
+        position: absolute !important;
 
-        position:
-            absolute !important;
+        top: 76px !important;
+        left: 3.5% !important;
 
-        top:
-            76px !important;
+        width: 390px !important;
 
-        left:
-            4% !important;
+        height: calc(100vh - 76px) !important;
 
-        width:
-            430px !important;
+        min-height: 574px !important;
 
-        height:
-            calc(100vh - 76px) !important;
+        background: transparent !important;
 
-        min-height:
-            574px !important;
+        box-shadow: none !important;
 
-        max-height:
-            calc(100vh - 76px) !important;
+        overflow: visible !important;
 
-        margin:
-            0 !important;
-
-        background:
-            transparent !important;
-
-        box-shadow:
-            none !important;
-
-        overflow:
-            visible !important;
-
-        z-index:
-            8 !important;
+        z-index: 8 !important;
     }
 
-
-    /* =====================================================
-       IMAGE GLOW
-    ===================================================== */
-
     .hero::before {
+        content: "";
 
-        content:
-            "";
+        position: absolute;
 
-        position:
-            absolute;
+        top: 47%;
+        left: 50%;
 
-        top:
-            45%;
+        transform: translate(-50%,-50%);
 
-        left:
-            50%;
-
-        transform:
-            translate(-50%,-50%);
-
-        width:
-            440px;
-
-        height:
-            570px;
+        width: 430px;
+        height: 560px;
 
         background:
-
             radial-gradient(
                 ellipse,
                 rgba(255,116,20,0.22) 0%,
@@ -1480,152 +662,103 @@ a {
                 transparent 72%
             );
 
-        filter:
-            blur(22px);
+        filter: blur(22px);
 
-        z-index:
-            -3;
+        z-index: -3;
     }
-
-
-    /* =====================================================
-       IMAGE FRAME
-    ===================================================== */
 
     .hero::after {
+        content: "";
 
-        content:
-            "";
+        position: absolute;
 
-        position:
-            absolute;
+        top: 7%;
+        left: 3%;
 
-        top:
-            7%;
+        width: 94%;
+        height: 76%;
 
-        left:
-            3%;
+        border: 1px solid rgba(255,116,20,0.30);
 
-        width:
-            94%;
-
-        height:
-            78%;
-
-        border:
-            1px solid
-            rgba(255,116,20,0.25);
-
-        transform:
-            rotate(-10deg);
+        transform: rotate(-10deg);
 
         box-shadow:
-            0 0 30px
-            rgba(255,116,20,0.06);
+            0 0 30px rgba(255,116,20,0.06);
 
-        z-index:
-            -2;
+        z-index: -2;
 
-        pointer-events:
-            none;
+        pointer-events: none;
     }
 
-
     .hero-image {
+        width: 100% !important;
+        height: 100% !important;
 
-        width:
-            100% !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
 
-        height:
-            100% !important;
+        display: block !important;
 
-        object-fit:
-            contain !important;
-
-        object-position:
-            center bottom !important;
-
-        display:
-            block !important;
-
-        border:
-            none !important;
-
-        border-radius:
-            0 !important;
+        border: none !important;
+        border-radius: 0 !important;
 
         filter:
             drop-shadow(
-                0 25px 35px
-                rgba(0,0,0,0.8)
+                0 25px 35px rgba(0,0,0,0.8)
             ) !important;
 
         -webkit-mask-image:
-
             linear-gradient(
                 to bottom,
-                #000 72%,
+                #000 70%,
                 rgba(0,0,0,0.98) 84%,
                 rgba(0,0,0,0) 100%
             );
 
         mask-image:
-
             linear-gradient(
                 to bottom,
-                #000 72%,
+                #000 70%,
                 rgba(0,0,0,0.98) 84%,
                 rgba(0,0,0,0) 100%
             );
     }
 
     .hero-gradient {
-        display:
-            none !important;
+        display: none !important;
     }
 
 
     /* =====================================================
-       MAIN CONTENT RIGHT
+       MAIN CONTENT
+       MIDDLE AREA
     ===================================================== */
 
     .main-content {
+        position: absolute !important;
 
-        position:
-            absolute !important;
+        left: 32% !important;
+        top: 76px !important;
 
-        left:
-            45% !important;
+        width: 48% !important;
 
-        top:
-            46% !important;
+        max-width: 650px !important;
 
-        transform:
-            translateY(-50%) !important;
+        height: calc(100vh - 76px - 185px) !important;
 
-        width:
-            39% !important;
+        margin: 0 !important;
 
-        max-width:
-            610px !important;
+        padding: 0 !important;
 
-        height:
-            auto !important;
+        display: flex !important;
 
-        margin:
-            0 !important;
+        flex-direction: column !important;
 
-        padding:
-            0 !important;
+        justify-content: center !important;
 
-        z-index:
-            20 !important;
+        text-align: left !important;
 
-        text-align:
-            left !important;
-
-        display:
-            block !important;
+        z-index: 20 !important;
     }
 
 
@@ -1634,31 +767,23 @@ a {
     ===================================================== */
 
     .main-content::before {
-
         content:
             "AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
 
-        display:
-            block;
+        display: block;
 
-        color:
-            #ff7414;
+        color: #ff7414;
 
-        font-size:
-            10px;
+        font-size: clamp(9px, 0.75vw, 11px);
 
-        font-weight:
-            900;
+        font-weight: 900;
 
-        letter-spacing:
-            2.7px;
+        letter-spacing: 2.8px;
 
-        margin-bottom:
-            17px;
+        margin-bottom: 17px;
 
         text-shadow:
-            0 0 12px
-            rgba(255,116,20,0.35);
+            0 0 12px rgba(255,116,20,0.35);
     }
 
 
@@ -1667,31 +792,30 @@ a {
     ===================================================== */
 
     .name {
-
-        margin:
-            0 0 15px !important;
+        margin: 0 0 14px !important;
 
         font-size:
-            clamp(42px, 4vw, 62px) !important;
+            clamp(42px, 4vw, 64px) !important;
 
-        line-height:
-            0.98 !important;
+        line-height: 0.98 !important;
 
-        letter-spacing:
-            -1.8px !important;
+        letter-spacing: -1.5px !important;
 
-        font-weight:
-            950 !important;
+        font-weight: 950 !important;
 
-        color:
-            #ffffff !important;
+        color: #ffffff !important;
 
-        text-align:
-            left !important;
+        text-align: left !important;
+
+        white-space: normal !important;
 
         text-shadow:
-            0 5px 25px
-            rgba(0,0,0,0.5) !important;
+            0 5px 25px rgba(0,0,0,0.5) !important;
+    }
+
+    .refresh-name {
+        color: #ffffff !important;
+        text-decoration: none !important;
     }
 
 
@@ -1700,81 +824,52 @@ a {
     ===================================================== */
 
     .profession {
+        display: block !important;
 
-        display:
-            block !important;
+        margin: 0 0 20px !important;
 
-        margin:
-            0 0 20px !important;
-
-        color:
-            #ff7414 !important;
+        color: #ff7414 !important;
 
         font-size:
-            16px !important;
+            clamp(14px, 1.25vw, 17px) !important;
 
-        line-height:
-            1.3 !important;
+        line-height: 1.3 !important;
 
-        font-weight:
-            900 !important;
+        font-weight: 900 !important;
 
-        letter-spacing:
-            1.4px !important;
+        letter-spacing: 1.4px !important;
 
-        min-height:
-            24px !important;
+        min-height: 24px !important;
 
-        text-align:
-            left !important;
+        text-align: left !important;
     }
 
     .typed-text {
-        color:
-            #ff7414 !important;
+        color: #ff7414 !important;
+
+        text-shadow:
+            0 0 15px rgba(255,116,20,0.35);
     }
 
     .cursor {
-
-        background:
-            #ff7414 !important;
-
-        width:
-            2px !important;
-
-        box-shadow:
-            0 0 10px
-            #ff7414;
+        background: #ff7414 !important;
+        width: 2px !important;
     }
 
-
-    /* =====================================================
-       ORANGE DIVIDER
-    ===================================================== */
-
     .profession::after {
+        content: "";
 
-        content:
-            "";
+        display: block;
 
-        display:
-            block;
+        width: 80px;
+        height: 3px;
 
-        width:
-            78px;
+        background: #ff7414;
 
-        height:
-            3px;
-
-        background:
-            #ff7414;
-
-        margin-top:
-            15px;
+        margin-top: 15px;
 
         box-shadow:
-            0 0 12px
-            rgba(255,116,20,0.7);
+            0 0 12px rgba(255,116,20,0.7);
     }
 
 
@@ -1783,33 +878,22 @@ a {
     ===================================================== */
 
     .personal-quote {
+        max-width: 570px !important;
 
-        max-width:
-            570px !important;
+        margin: 0 0 22px 0 !important;
 
-        margin:
-            0 0 20px 0 !important;
-
-        color:
-            #bfc4ca !important;
+        color: #bfc4ca !important;
 
         font-size:
-            14px !important;
+            clamp(12px, 1.05vw, 15px) !important;
 
-        line-height:
-            1.65 !important;
+        line-height: 1.65 !important;
 
-        font-weight:
-            300 !important;
+        font-weight: 300 !important;
 
-        font-style:
-            italic !important;
+        font-style: italic !important;
 
-        text-align:
-            left !important;
-
-        text-shadow:
-            none !important;
+        text-align: left !important;
     }
 
 
@@ -1818,95 +902,69 @@ a {
     ===================================================== */
 
     .desktop-cta {
+        display: inline-flex !important;
 
-        display:
-            inline-flex !important;
+        width: fit-content;
 
-        align-items:
-            center;
+        align-items: center;
+        justify-content: center;
 
-        justify-content:
-            center;
+        gap: 14px;
 
-        gap:
-            12px;
+        height: 46px;
 
-        height:
-            47px;
+        padding: 0 25px;
 
-        padding:
-            0 25px;
-
-        color:
-            #ffffff;
+        color: #ffffff;
 
         background:
-
             linear-gradient(
                 135deg,
                 #ff7414,
                 #ff8a28
             );
 
-        border:
-            1px solid
-            #ff7414;
+        border: 1px solid #ff7414;
 
-        border-radius:
-            6px;
+        border-radius: 6px;
 
-        text-decoration:
-            none;
+        text-decoration: none;
 
-        font-size:
-            10px;
+        font-size: 10px;
 
-        font-weight:
-            900;
+        font-weight: 900;
 
-        letter-spacing:
-            1.2px;
+        letter-spacing: 1.1px;
 
         box-shadow:
-            0 8px 25px
-            rgba(255,116,20,0.25);
+            0 8px 25px rgba(255,116,20,0.25);
 
-        transition:
-            all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .desktop-cta::after {
-
-        content:
-            "→";
-
-        font-size:
-            18px;
+        content: "→";
+        font-size: 18px;
     }
 
     .desktop-cta:hover {
-
-        transform:
-            translateY(-3px);
+        transform: translateY(-3px);
 
         box-shadow:
-            0 12px 35px
-            rgba(255,116,20,0.45);
+            0 12px 35px rgba(255,116,20,0.45);
     }
 
 
     /* =====================================================
-       HIDE MOBILE SOCIALS
+       HIDE MOBILE ELEMENTS
     ===================================================== */
 
     .social-icons {
-        display:
-            none !important;
+        display: none !important;
     }
 
     .stats-container {
-        display:
-            none !important;
+        display: none !important;
     }
 
 
@@ -1915,37 +973,24 @@ a {
     ===================================================== */
 
     .desktop-stats-panel {
+        display: flex !important;
 
-        display:
-            flex !important;
+        position: absolute;
 
-        position:
-            absolute;
+        top: 50%;
+        right: 2.3%;
 
-        top:
-            48%;
+        transform: translateY(-50%);
 
-        right:
-            2.5%;
+        width: 125px;
 
-        transform:
-            translateY(-50%);
+        height: 410px;
 
-        width:
-            135px;
+        border: 1px solid rgba(255,116,20,0.55);
 
-        height:
-            420px;
-
-        border:
-            1px solid
-            rgba(255,116,20,0.55);
-
-        border-radius:
-            20px;
+        border-radius: 18px;
 
         background:
-
             linear-gradient(
                 180deg,
                 rgba(12,15,20,0.94),
@@ -1953,259 +998,166 @@ a {
             );
 
         box-shadow:
+            inset 0 0 30px rgba(255,116,20,0.04),
+            0 20px 60px rgba(0,0,0,0.55);
 
-            inset 0 0 30px
-            rgba(255,116,20,0.04),
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
 
-            0 20px 60px
-            rgba(0,0,0,0.55);
+        z-index: 30;
 
-        backdrop-filter:
-            blur(14px);
+        flex-direction: column;
 
-        -webkit-backdrop-filter:
-            blur(14px);
+        align-items: center;
 
-        z-index:
-            30;
-
-        flex-direction:
-            column;
-
-        align-items:
-            center;
-
-        justify-content:
-            space-evenly;
+        justify-content: space-evenly;
     }
 
-
     .desktop-stat {
-
-        width:
-            100%;
-
-        text-align:
-            center;
-
-        position:
-            relative;
-
-        padding:
-            4px 8px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        padding: 4px 8px;
     }
 
     .desktop-stat:not(:last-child)::after {
+        content: "";
 
-        content:
-            "";
+        position: absolute;
 
-        position:
-            absolute;
+        left: 20px;
+        right: 20px;
 
-        left:
-            20px;
+        bottom: -18px;
 
-        right:
-            20px;
-
-        bottom:
-            -20px;
-
-        height:
-            1px;
+        height: 1px;
 
         background:
             rgba(255,116,20,0.25);
     }
 
     .desktop-stat-icon {
+        width: 36px;
+        height: 36px;
 
-        width:
-            38px;
+        margin: 0 auto 6px;
 
-        height:
-            38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        margin:
-            0 auto 7px;
+        color: #ff7414;
 
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        color:
-            #ff7414;
-
-        font-size:
-            20px;
+        font-size: 20px;
     }
 
     .desktop-stat-number {
+        color: #ff7414;
 
-        color:
-            #ff7414;
+        font-size: 27px;
 
-        font-size:
-            29px;
+        font-weight: 950;
 
-        font-weight:
-            950;
-
-        line-height:
-            1;
+        line-height: 1;
 
         text-shadow:
-            0 0 18px
-            rgba(255,116,20,0.2);
+            0 0 18px rgba(255,116,20,0.2);
     }
 
     .desktop-stat-label {
+        margin-top: 7px;
 
-        margin-top:
-            8px;
+        color: #d8dbe0;
 
-        color:
-            #d8dbe0;
+        font-size: 8px;
 
-        font-size:
-            8px;
+        line-height: 1.4;
 
-        line-height:
-            1.45;
+        letter-spacing: 1px;
 
-        letter-spacing:
-            1px;
+        text-transform: uppercase;
 
-        text-transform:
-            uppercase;
-
-        font-weight:
-            700;
+        font-weight: 700;
     }
 
 
     /* =====================================================
-       DESKTOP BOTTOM DOCK
-       THIS WAS HIDDEN IN YOUR OLD CODE
-========================================================= */
+       ★ DESKTOP BOTTOM DOCK
+       THIS IS THE IMPORTANT FIX
+    ===================================================== */
 
     .desktop-dock-wrapper {
+        display: block !important;
 
-        display:
-            block !important;
+        position: absolute;
 
-        position:
-            absolute;
+        left: 2%;
 
-        left:
-            2%;
+        right: 2%;
 
-        right:
-            2%;
+        bottom: 18px;
 
-        bottom:
-            14px;
+        height: 135px;
 
-        height:
-            138px;
+        z-index: 60;
 
-        z-index:
-            80;
-
-        pointer-events:
-            none;
-    }
-
-
-    .desktop-dock {
-
-        width:
-            100%;
-
-        height:
-            100%;
-
-        display:
-            grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        grid-template-rows:
-            76px 52px;
-
-        gap:
-            8px;
-
-        padding:
-            8px;
+        padding: 10px;
 
         border:
-            1px solid
-            rgba(255,116,20,0.25);
+            1px solid rgba(255,116,20,0.25);
 
-        border-radius:
-            15px;
+        border-radius: 14px;
 
         background:
-            rgba(5,8,13,0.78);
+            rgba(4,7,11,0.78);
 
-        backdrop-filter:
-            blur(16px);
+        backdrop-filter: blur(14px);
 
-        -webkit-backdrop-filter:
-            blur(16px);
+        -webkit-backdrop-filter: blur(14px);
 
         box-shadow:
-            0 15px 45px
-            rgba(0,0,0,0.5);
+            0 15px 50px rgba(0,0,0,0.45);
+    }
 
-        pointer-events:
-            auto;
+    .desktop-dock {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(6, 1fr);
+
+        gap: 10px;
     }
 
 
     /* =====================================================
-       DOCK BUTTONS
+       DOCK CARDS
     ===================================================== */
 
     .desktop-dock .menu-button {
+        min-width: 0;
 
-        width:
-            100%;
+        height: 100%;
 
-        height:
-            100%;
+        display: flex;
 
-        min-height:
-            0;
+        flex-direction: column;
 
-        display:
-            flex;
+        align-items: flex-start;
 
-        flex-direction:
-            row;
+        justify-content: center;
 
-        align-items:
-            center;
+        text-align: left;
 
-        justify-content:
-            flex-start;
+        padding: 14px 15px;
 
-        gap:
-            12px;
+        color: #ffffff;
 
-        padding:
-            8px 15px;
+        text-decoration: none;
 
         background:
-
             linear-gradient(
                 145deg,
                 rgba(18,24,34,0.95),
@@ -2213,20 +1165,25 @@ a {
             );
 
         border:
-            1px solid
-            rgba(255,116,20,0.42);
+            1px solid rgba(255,116,20,0.42);
 
-        border-radius:
-            10px;
+        border-radius: 10px;
 
-        text-align:
-            left;
+        overflow: hidden;
 
-        overflow:
-            hidden;
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
 
-        position:
-            relative;
+    .desktop-dock .menu-button:hover {
+        transform: translateY(-4px);
+
+        border-color: #ff7414;
+
+        box-shadow:
+            0 10px 30px rgba(255,116,20,0.20);
     }
 
 
@@ -2235,459 +1192,232 @@ a {
     ===================================================== */
 
     .desktop-dock .menu-icon {
+        display: flex !important;
 
-        display:
-            flex;
+        align-items: center;
+        justify-content: center;
 
-        align-items:
-            center;
+        width: 38px;
+        height: 38px;
 
-        justify-content:
-            center;
+        margin-bottom: 8px;
 
-        width:
-            40px;
+        color: #ff7414;
 
-        height:
-            40px;
-
-        flex:
-            0 0 40px;
-
-        color:
-            #ff7414;
-
-        font-size:
-            22px;
-
-        border:
-            1px solid
-            rgba(255,116,20,0.35);
-
-        border-radius:
-            50%;
-
-        background:
-            rgba(255,116,20,0.05);
+        font-size: 22px;
     }
 
 
     /* =====================================================
-       TITLE
+       DOCK TITLE
     ===================================================== */
 
     .desktop-dock .menu-title-text {
+        color: #ffffff;
 
-        color:
-            #ffffff;
+        font-size: 11px;
 
-        font-size:
-            12px;
+        font-weight: 900;
 
-        font-weight:
-            900;
+        letter-spacing: 0.4px;
 
-        letter-spacing:
-            0.3px;
+        line-height: 1.25;
 
-        line-height:
-            1.2;
+        text-transform: uppercase;
     }
 
 
     /* =====================================================
-       DESCRIPTION
+       DOCK DESCRIPTION
     ===================================================== */
 
     .desktop-dock .card-desc {
+        display: block !important;
 
-        display:
-            block;
+        margin-top: 6px;
 
-        color:
-            #aeb4bd;
+        color: #9ca3af;
 
-        font-size:
-            8px;
+        font-size: 8px;
 
-        line-height:
-            1.3;
+        line-height: 1.3;
 
-        margin-top:
-            3px;
+        max-width: 170px;
     }
 
 
     /* =====================================================
-       FIRST FOUR CARDS
-    ===================================================== */
-
-    .desktop-dock .about-card {
-        grid-column:
-            auto;
-    }
-
-    .desktop-dock .top-button {
-        min-height:
-            0;
-
-        height:
-            100%;
-
-        font-size:
-            12px;
-    }
-
-
-    /* =====================================================
-       PROFILE / CV FULL WIDTH
+       PROFILE / CV SPECIAL CARD
     ===================================================== */
 
     .desktop-dock .bottom-button {
-
-        grid-column:
-            1 / -1;
-
-        height:
-            100%;
-
-        min-height:
-            0;
-
         background:
-
             linear-gradient(
                 135deg,
-                #f56a0a,
-                #ff7d17
+                #e95f00,
+                #ff7414
             );
 
-        border:
-            1px solid
-            #ff7414;
-
-        display:
-            flex;
-
-        justify-content:
-            flex-start;
-
-        color:
-            #ffffff;
+        border-color: #ff7414;
     }
 
-    .desktop-dock .bottom-button .menu-icon {
-
-        color:
-            #ffffff;
-
-        border-color:
-            rgba(255,255,255,0.35);
-
-        background:
-            rgba(255,255,255,0.10);
-    }
-
+    .desktop-dock .bottom-button .menu-icon,
+    .desktop-dock .bottom-button .menu-title-text,
     .desktop-dock .bottom-button .card-desc {
-
-        color:
-            rgba(255,255,255,0.82);
+        color: #ffffff;
     }
 
 
     /* =====================================================
-       DESKTOP SOCIALS
+       LEFT SOCIALS
     ===================================================== */
 
     .desktop-right-socials {
+        display: flex !important;
 
-        display:
-            flex !important;
+        flex-direction: column;
 
-        flex-direction:
-            column;
+        gap: 8px;
 
-        gap:
-            8px;
+        position: absolute;
 
-        position:
-            absolute;
+        left: 1.7%;
 
-        left:
-            1.5%;
+        bottom: 190px;
 
-        top:
-            50%;
-
-        transform:
-            translateY(-50%);
-
-        z-index:
-            35;
+        z-index: 70;
     }
 
     .desktop-right-socials::before {
+        content: "CONNECT";
 
-        content:
-            "CONNECT";
+        position: absolute;
 
-        position:
-            absolute;
+        bottom: 100%;
 
-        bottom:
-            100%;
+        left: 0;
 
-        left:
-            7px;
+        margin-bottom: 10px;
 
-        margin-bottom:
-            10px;
+        color: #777d85;
 
-        color:
-            #777d85;
+        font-size: 7px;
 
-        font-size:
-            7px;
+        letter-spacing: 2px;
 
-        letter-spacing:
-            2px;
+        writing-mode: vertical-rl;
 
-        writing-mode:
-            vertical-rl;
-
-        transform:
-            rotate(180deg);
+        transform: rotate(180deg);
     }
 
     .desktop-right-socials a {
+        width: 34px;
+        height: 34px;
 
-        width:
-            34px;
+        display: flex;
 
-        height:
-            34px;
+        align-items: center;
+        justify-content: center;
 
-        display:
-            flex;
+        border: 1px solid rgba(255,116,20,0.5);
 
-        align-items:
-            center;
+        border-radius: 50%;
 
-        justify-content:
-            center;
+        background: rgba(8,11,16,0.85);
 
-        border:
-            1px solid
-            rgba(255,116,20,0.5);
+        color: #ffffff;
 
-        border-radius:
-            50%;
+        text-decoration: none;
 
-        background:
-            rgba(8,11,16,0.82);
+        font-size: 13px;
 
-        color:
-            #ffffff;
-
-        text-decoration:
-            none;
-
-        font-size:
-            13px;
-
-        transition:
-            all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .desktop-right-socials a:hover {
+        background: #ff7414;
 
-        background:
-            #ff7414;
-
-        border-color:
-            #ff7414;
+        border-color: #ff7414;
 
         box-shadow:
-            0 0 20px
-            rgba(255,116,20,0.55);
+            0 0 20px rgba(255,116,20,0.55);
 
-        transform:
-            translateX(4px);
+        transform: translateX(4px);
     }
 
 
     /* =====================================================
-       SHORT SCREEN
-       1366x768 ETC.
+       DESKTOP HEIGHT OPTIMIZATION
     ===================================================== */
 
-    @media (max-height:800px) {
+    @media (max-height:760px) {
 
         .desktop-nav {
-            height:
-                68px;
+            height: 70px;
         }
 
         .hero {
-
-            top:
-                68px !important;
-
-            height:
-                calc(100vh - 68px) !important;
-
-            min-height:
-                0 !important;
+            top: 70px !important;
+            height: calc(100vh - 70px) !important;
         }
 
         .main-content {
-
-            top:
-                39% !important;
-        }
-
-        .name {
-
-            font-size:
-                48px !important;
-
-            margin-bottom:
-                10px !important;
-        }
-
-        .main-content::before {
-
-            font-size:
-                9px;
-
-            margin-bottom:
-                11px;
-        }
-
-        .profession {
-
-            font-size:
-                14px !important;
-
-            margin-bottom:
-                13px !important;
-        }
-
-        .profession::after {
-
-            margin-top:
-                10px;
-        }
-
-        .personal-quote {
-
-            font-size:
-                12px !important;
-
-            line-height:
-                1.45 !important;
-
-            margin-bottom:
-                14px !important;
-        }
-
-        .desktop-cta {
-
-            height:
-                40px;
-
-            padding:
-                0 20px;
-        }
-
-        .desktop-stats-panel {
-
-            height:
-                350px;
-
-            width:
-                112px;
-        }
-
-        .desktop-stat-number {
-
-            font-size:
-                24px;
-        }
-
-        .desktop-stat-icon {
-
-            width:
-                30px;
-
-            height:
-                30px;
-
-            font-size:
-                17px;
-        }
-
-        .desktop-stat-label {
-
-            font-size:
-                7px;
+            top: 70px !important;
+            height: calc(100vh - 70px - 155px) !important;
         }
 
         .desktop-dock-wrapper {
-
-            bottom:
-                8px;
-
-            height:
-                112px;
+            bottom: 10px;
+            height: 120px;
         }
 
         .desktop-dock {
-
-            grid-template-rows:
-                59px 41px;
-
-            gap:
-                6px;
-
-            padding:
-                6px;
-        }
-
-        .desktop-dock .menu-icon {
-
-            width:
-                31px;
-
-            height:
-                31px;
-
-            flex-basis:
-                31px;
-
-            font-size:
-                16px;
-        }
-
-        .desktop-dock .menu-title-text {
-
-            font-size:
-                9px;
-        }
-
-        .desktop-dock .card-desc {
-
-            font-size:
-                7px;
+            gap: 7px;
         }
 
         .desktop-dock .menu-button {
+            padding: 10px;
+        }
 
-            gap:
-                8px;
+        .desktop-dock .menu-icon {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
 
-            padding:
-                5px 10px;
+        .desktop-dock .menu-title-text {
+            font-size: 9px;
+        }
+
+        .desktop-dock .card-desc {
+            font-size: 7px;
+            margin-top: 4px;
+        }
+
+        .desktop-stats-panel {
+            height: 370px;
+        }
+
+        .desktop-stat-number {
+            font-size: 24px;
+        }
+
+        .name {
+            font-size: 52px !important;
+        }
+
+        .personal-quote {
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+        }
+
+        .desktop-cta {
+            height: 42px;
+        }
+
+        .desktop-right-socials {
+            bottom: 150px;
         }
     }
 
@@ -2696,45 +1426,40 @@ a {
        LARGE DESKTOP
     ===================================================== */
 
-    @media (min-width:1500px) {
+    @media (min-width:1400px) {
 
         .hero {
-
-            left:
-                5% !important;
-
-            width:
-                490px !important;
+            left: 5% !important;
+            width: 440px !important;
         }
 
         .main-content {
-
-            left:
-                45% !important;
-
-            width:
-                39% !important;
-
-            max-width:
-                650px !important;
+            left: 34% !important;
+            width: 48% !important;
+            max-width: 680px !important;
         }
 
         .desktop-stats-panel {
-
-            right:
-                2.8%;
-
-            width:
-                150px;
+            right: 2.7%;
+            width: 140px;
         }
 
         .desktop-dock-wrapper {
+            left: 2%;
+            right: 2%;
+            height: 145px;
+        }
 
-            left:
-                2%;
+        .desktop-dock .menu-button {
+            padding: 15px 17px;
+        }
 
-            right:
-                2%;
+        .desktop-dock .menu-title-text {
+            font-size: 11px;
+        }
+
+        .desktop-dock .card-desc {
+            font-size: 8.5px;
         }
     }
 
@@ -2742,71 +1467,40 @@ a {
 
 
 /* =========================================================
-   VERY WIDE SCREEN
+   TYPEWRITER / COUNTER VISIBILITY
 ========================================================= */
 
-@media (min-width:1800px) {
+.desktop-dock-wrapper .menu-button {
+    cursor: pointer;
+}
 
-    .desktop-nav {
-        height:
-            82px;
-    }
 
-    .hero {
+/* =========================================================
+   VISITED BUTTON
+========================================================= */
 
-        top:
-            82px !important;
+.visited-btn {
+    border-color: #ff7414 !important;
+}
 
-        height:
-            calc(100vh - 82px) !important;
 
-        width:
-            530px !important;
-    }
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
 
-    .main-content {
-
-        left:
-            44% !important;
-
-        width:
-            40% !important;
-    }
+@media (max-width:380px) {
 
     .name {
-
-        font-size:
-            65px !important;
+        font-size: 20px !important;
     }
 
-    .personal-quote {
-
-        font-size:
-            15px !important;
+    .top-button {
+        font-size: 7.5px !important;
     }
 
-    .desktop-stats-panel {
-
-        width:
-            155px;
-
-        height:
-            480px;
-    }
-
-    .desktop-dock-wrapper {
-
-        bottom:
-            16px;
-
-        height:
-            145px;
-    }
-
-    .desktop-dock {
-
-        grid-template-rows:
-            79px 53px;
+    .middle-button,
+    .bottom-button {
+        font-size: 10px !important;
     }
 }
 
@@ -2826,10 +1520,8 @@ a {
 
 <div class="desktop-nav">
 
-    <a
-        href="index.html"
-        class="desktop-logo"
-    >
+    <a href="index.html"
+       class="desktop-logo">
 
         <div class="desktop-logo-mark">
             <span>M</span>
@@ -2883,10 +1575,8 @@ a {
     </div>
 
 
-    <a
-        href="contact.html"
-        class="desktop-nav-cta"
-    >
+    <a href="contact.html"
+       class="desktop-nav-cta">
 
         LET'S TALK
 
@@ -2940,9 +1630,7 @@ a {
 
         <span class="typed-text"></span>
 
-        <span class="cursor">
-            &nbsp;
-        </span>
+        <span class="cursor">&nbsp;</span>
 
     </p>
 
@@ -2960,10 +1648,8 @@ a {
 
     <!-- DESKTOP CTA -->
 
-    <a
-        href="contact.html"
-        class="desktop-cta"
-    >
+    <a href="contact.html"
+       class="desktop-cta">
 
         LET'S CREATE IMPACT TOGETHER
 
@@ -2983,9 +1669,7 @@ a {
             rel="noopener noreferrer"
             aria-label="WhatsApp"
         >
-
             <i class="fa-brands fa-whatsapp"></i>
-
         </a>
 
 
@@ -2994,9 +1678,7 @@ a {
             href="mailto:mehedialif1999@gmail.com"
             aria-label="Email"
         >
-
             <i class="fa-solid fa-envelope"></i>
-
         </a>
 
 
@@ -3007,9 +1689,7 @@ a {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
         >
-
             <i class="fa-brands fa-linkedin-in"></i>
-
         </a>
 
     </div>
@@ -3023,10 +1703,8 @@ a {
 
         <div class="stat-card">
 
-            <h2
-                class="counter"
-                data-target="11"
-            >
+            <h2 class="counter"
+                data-target="11">
                 0
             </h2>
 
@@ -3039,10 +1717,8 @@ a {
 
         <div class="stat-card">
 
-            <h2
-                class="counter"
-                data-target="900"
-            >
+            <h2 class="counter"
+                data-target="900">
                 0
             </h2>
 
@@ -3055,10 +1731,8 @@ a {
 
         <div class="stat-card">
 
-            <h2
-                class="counter"
-                data-target="100"
-            >
+            <h2 class="counter"
+                data-target="100">
                 0
             </h2>
 
@@ -3083,9 +1757,7 @@ a {
     <div class="desktop-stat">
 
         <div class="desktop-stat-icon">
-
             <i class="fa-solid fa-globe"></i>
-
         </div>
 
         <div class="desktop-stat-number">
@@ -3093,10 +1765,8 @@ a {
         </div>
 
         <div class="desktop-stat-label">
-
             Countries<br>
             Sourced
-
         </div>
 
     </div>
@@ -3105,9 +1775,7 @@ a {
     <div class="desktop-stat">
 
         <div class="desktop-stat-icon">
-
             <i class="fa-solid fa-cube"></i>
-
         </div>
 
         <div class="desktop-stat-number">
@@ -3115,10 +1783,8 @@ a {
         </div>
 
         <div class="desktop-stat-label">
-
             Products<br>
             Managed
-
         </div>
 
     </div>
@@ -3127,9 +1793,7 @@ a {
     <div class="desktop-stat">
 
         <div class="desktop-stat-icon">
-
             <i class="fa-solid fa-users"></i>
-
         </div>
 
         <div class="desktop-stat-number">
@@ -3137,10 +1801,8 @@ a {
         </div>
 
         <div class="desktop-stat-label">
-
             % Client<br>
             Focus
-
         </div>
 
     </div>
@@ -3149,7 +1811,7 @@ a {
 
 
 <!-- =====================================================
-     DESKTOP BOTTOM DOCK
+     ★ DESKTOP BOTTOM NAVIGATION
 ===================================================== -->
 
 <div class="desktop-dock-wrapper">
@@ -3157,11 +1819,11 @@ a {
     <div class="desktop-dock">
 
 
-        <!-- ABOUT -->
+        <!-- ABOUT ME -->
 
         <a
             href="about.html"
-            class="menu-button middle-button btn-hover about-card"
+            class="menu-button middle-button btn-hover"
         >
 
             <div class="menu-icon">
@@ -3170,16 +1832,12 @@ a {
 
             </div>
 
-            <div>
+            <div class="menu-title-text">
+                ABOUT ME
+            </div>
 
-                <div class="menu-title-text">
-                    ABOUT ME
-                </div>
-
-                <div class="card-desc">
-                    Discover my journey, skills & values
-                </div>
-
+            <div class="card-desc">
+                Discover my journey, skills, and values
             </div>
 
         </a>
@@ -3198,16 +1856,12 @@ a {
 
             </div>
 
-            <div>
+            <div class="menu-title-text">
+                AGRICULTURIST
+            </div>
 
-                <div class="menu-title-text">
-                    AGRICULTURIST
-                </div>
-
-                <div class="card-desc">
-                    Sustainable agriculture expertise
-                </div>
-
+            <div class="card-desc">
+                Sustainable agriculture expertise
             </div>
 
         </a>
@@ -3226,16 +1880,12 @@ a {
 
             </div>
 
-            <div>
+            <div class="menu-title-text">
+                COMMUNICATIONIST
+            </div>
 
-                <div class="menu-title-text">
-                    COMMUNICATIONIST
-                </div>
-
-                <div class="card-desc">
-                    Connecting people & ideas
-                </div>
-
+            <div class="card-desc">
+                Connecting people and ideas
             </div>
 
         </a>
@@ -3254,16 +1904,12 @@ a {
 
             </div>
 
-            <div>
+            <div class="menu-title-text">
+                KEY ACCOUNT MANAGER
+            </div>
 
-                <div class="menu-title-text">
-                    KEY ACCOUNT MANAGER
-                </div>
-
-                <div class="card-desc">
-                    Strategic growth & relationships
-                </div>
-
+            <div class="card-desc">
+                Driving strategic growth
             </div>
 
         </a>
@@ -3282,16 +1928,36 @@ a {
 
             </div>
 
-            <div>
+            <div class="menu-title-text">
+                PROFILE / CV
+            </div>
 
-                <div class="menu-title-text">
-                    PROFILE / CV
-                </div>
+            <div class="card-desc">
+                Professional timeline & credentials
+            </div>
 
-                <div class="card-desc">
-                    View my professional journey & credentials
-                </div>
+        </a>
 
+
+        <!-- LET'S TALK -->
+
+        <a
+            href="contact.html"
+            class="menu-button bottom-button btn-hover"
+        >
+
+            <div class="menu-icon">
+
+                <i class="fa-regular fa-comments"></i>
+
+            </div>
+
+            <div class="menu-title-text">
+                LET'S TALK
+            </div>
+
+            <div class="card-desc">
+                Discuss opportunities to collaborate
             </div>
 
         </a>
@@ -3352,6 +2018,7 @@ a {
 
 <script>
 
+
 /* =========================================================
    TYPEWRITER
 ========================================================= */
@@ -3382,21 +2049,20 @@ function type() {
     ) {
 
         typedTextSpan.textContent +=
-            textArray[textIndex]
-                .charAt(charIndex);
+            textArray[textIndex].charAt(charIndex);
 
         charIndex++;
 
         setTimeout(
             type,
-            85
+            90
         );
 
     } else {
 
         setTimeout(
             erase,
-            1800
+            2000
         );
 
     }
@@ -3411,11 +2077,10 @@ function erase() {
     ) {
 
         typedTextSpan.textContent =
-            textArray[textIndex]
-                .substring(
-                    0,
-                    charIndex - 1
-                );
+            textArray[textIndex].substring(
+                0,
+                charIndex - 1
+            );
 
         charIndex--;
 
@@ -3448,23 +2113,18 @@ function erase() {
 ========================================================= */
 
 const counters =
-    document.querySelectorAll(
-        ".counter"
-    );
+    document.querySelectorAll(".counter");
 
 
 counters.forEach(
     counter => {
 
-        counter.innerText =
-            "0";
+        counter.innerText = "0";
 
         const updateCounter = () => {
 
             const target =
-                +counter.getAttribute(
-                    "data-target"
-                );
+                +counter.getAttribute("data-target");
 
             const current =
                 +counter.innerText;
@@ -3472,15 +2132,13 @@ counters.forEach(
             const increment =
                 target / 50;
 
-
             if (
                 current < target
             ) {
 
                 counter.innerText =
                     Math.ceil(
-                        current +
-                        increment
+                        current + increment
                     );
 
                 setTimeout(
@@ -3513,7 +2171,7 @@ document.addEventListener(
 
         setTimeout(
             type,
-            700
+            800
         );
 
 
@@ -3551,6 +2209,7 @@ document.addEventListener(
 );
 
 </script>
+
 
 </body>
 
