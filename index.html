@@ -2,62 +2,298 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mehedi Alim Ayon - Professional Portfolio</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;min-height:100%;overflow-x:hidden}body{font-family:Arial,Helvetica,sans-serif;color:#fff;background:#05080d}a{-webkit-tap-highlight-color:transparent}.page{width:100%;min-height:100vh;position:relative;overflow:hidden}
-.hero{width:100%;height:55vh;min-height:330px;position:relative;overflow:hidden;background:#111827}.hero-image{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}.hero-gradient{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to bottom,transparent,#080c14 96%);z-index:2}
-.main-content{width:100%;max-width:850px;margin:-30px auto 0;padding:5px 10px 30px;text-align:center;position:relative;z-index:10}.name{margin:0 0 4px;color:#fff;font-size:22px;line-height:1.1;font-weight:900;letter-spacing:.5px;white-space:nowrap;text-shadow:0 4px 15px #000}.refresh-name{color:inherit;text-decoration:none}.profession{margin:0 0 4px;min-height:18px;color:#ff7414;font-size:11px;line-height:1.35;font-weight:900;letter-spacing:1px;text-transform:uppercase}.typed-text{color:#ff7414}.cursor{display:inline-block;width:2px;height:14px;background:#ff7414;margin-left:2px;animation:blink 1s infinite;vertical-align:-2px}@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}.personal-quote{max-width:95%;margin:0 auto 15px;color:#d1d5db;font-size:11.5px;line-height:1.4;font-style:italic;font-weight:300;text-shadow:0 2px 4px #000}
-.social-icons{display:flex;justify-content:center;align-items:center;gap:8px;margin:8px 0 12px}.social-icons a{width:36px;height:36px;flex:0 0 36px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;text-decoration:none;font-size:15px}.whatsapp{background:rgba(37,211,102,.2);border:1px solid #25d366}.linkedin,.email{background:rgba(255,116,20,.2);border:1px solid #ff7414}
-.stats-container{display:flex;gap:5px;margin:8px 0 14px}.stat-card{flex:1;min-width:0;padding:6px 3px;border:1px solid rgba(255,116,20,.3);border-radius:8px;background:rgba(255,255,255,.04);backdrop-filter:blur(5px);text-align:center}.stat-card h2{color:#ff7414;font-size:1rem;line-height:1;margin-bottom:3px;font-weight:900}.stat-card p{color:#d1d5db;font-size:.5rem;line-height:1.2;text-transform:uppercase;letter-spacing:.4px}
-.mobile-button-dock{display:flex;flex-direction:column;gap:7px;width:100%;margin-top:4px}.mobile-button-row{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.mobile-button,.mobile-button-wide{display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;text-decoration:none;font-weight:900;border:1.5px solid #ff7414;border-radius:7px;background:linear-gradient(145deg,rgba(37,43,59,.85),rgba(26,32,44,.85))}.mobile-button{min-height:43px;padding:5px 3px;font-size:9px;line-height:1.1}.mobile-button-wide{min-height:43px;gap:8px;font-size:10px;letter-spacing:.4px;background:#ff7414}.desktop-nav,.desktop-stats-panel,.desktop-right-socials,.desktop-dock-wrapper,.desktop-cta{display:none}
-@media(min-width:901px){html,body{height:100%;min-height:100vh;overflow:hidden;background:#030507}.page{width:100vw;height:100vh;min-height:650px;background:radial-gradient(circle at 63% 50%,rgba(255,116,20,.18),rgba(255,116,20,.07) 20%,rgba(8,11,17,.96) 48%,#030507 78%),linear-gradient(135deg,#020304,#080b11 45%,#030405)}.page:before{content:"";position:absolute;top:-15%;right:-5%;width:65%;height:125%;background:radial-gradient(ellipse,rgba(255,116,20,.14),rgba(255,116,20,.05) 30%,transparent 65%);filter:blur(15px);z-index:0}.page:after{content:"";position:absolute;width:600px;height:130%;top:-15%;left:52%;transform:rotate(27deg);background:linear-gradient(90deg,transparent,rgba(255,116,20,.025) 35%,rgba(255,116,20,.08) 50%,rgba(255,116,20,.025) 65%,transparent);border-left:1px solid rgba(255,116,20,.15);border-right:1px solid rgba(255,116,20,.08);z-index:1}
-.desktop-nav{display:flex;position:absolute;top:0;left:0;right:0;height:82px;align-items:center;padding:0 30px;border-bottom:1px solid rgba(255,116,20,.12);background:rgba(3,5,7,.82);backdrop-filter:blur(18px);z-index:100}.desktop-logo{display:flex;align-items:center;gap:12px;width:205px;min-width:205px;text-decoration:none;color:#fff}.desktop-logo-mark{width:45px;height:45px;display:flex;align-items:center;justify-content:center;border:2px solid #ff7414;color:#ff7414;font-size:23px;font-weight:900;transform:rotate(45deg)}.desktop-logo-mark span{transform:rotate(-45deg)}.desktop-logo-text{display:flex;flex-direction:column;line-height:1}.desktop-logo-text strong{font-size:17px;letter-spacing:1.5px}.desktop-logo-text small{margin-top:4px;color:#ff7414;font-size:12px;letter-spacing:2px}.desktop-nav-links{display:flex;flex:1;align-items:center;justify-content:center;gap:clamp(13px,1.6vw,27px)}.desktop-nav-links a{position:relative;color:#cfd3d8;text-decoration:none;font-size:clamp(9px,.72vw,11px);font-weight:700;letter-spacing:.65px;text-transform:uppercase;white-space:nowrap}.desktop-nav-links a:after{content:"";position:absolute;left:0;bottom:-10px;width:0;height:2px;background:#ff7414;transition:.3s}.desktop-nav-links a:hover,.desktop-nav-links a:first-child{color:#fff}.desktop-nav-links a:hover:after,.desktop-nav-links a:first-child:after{width:100%}.desktop-nav-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:125px;min-width:125px;height:42px;margin-left:18px;border:1px solid #ff7414;border-radius:5px;color:#ff7414;text-decoration:none;font-size:10px;font-weight:900;letter-spacing:1px;white-space:nowrap}
-.hero{position:absolute!important;top:82px!important;left:5.2%!important;width:430px!important;height:calc(100vh - 82px)!important;min-height:550px!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;z-index:8}.hero:before{content:"";position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:440px;height:570px;background:radial-gradient(ellipse,rgba(255,116,20,.22),rgba(255,116,20,.1) 30%,rgba(255,116,20,.03) 52%,transparent 72%);filter:blur(22px);z-index:-3}.hero:after{content:"";position:absolute;top:8%;left:3%;width:94%;height:78%;border:1px solid rgba(255,116,20,.32);transform:rotate(-10deg);z-index:-2}.hero-image{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;filter:drop-shadow(0 25px 35px rgba(0,0,0,.8))!important;-webkit-mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.98) 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.98) 84%,transparent 100%)}.hero-gradient{display:none!important}
-.main-content{position:absolute!important;left:45.5%!important;top:43%!important;transform:none!important;width:38%!important;max-width:610px!important;margin:0!important;padding:0!important;text-align:left!important;z-index:20}.main-content:before{content:"AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";display:block;margin-bottom:20px;color:#ff7414;font-size:11px;font-weight:900;letter-spacing:3px}.name{margin:0 0 17px!important;font-size:clamp(44px,4.15vw,64px)!important;line-height:.98!important;letter-spacing:-1.5px!important;font-weight:950!important;text-align:left!important;white-space:normal!important}.profession{display:block!important;margin:0 0 23px!important;color:#ff7414!important;font-size:17px!important;line-height:1.3!important;font-weight:900!important;letter-spacing:1.5px!important;text-align:left!important}.profession:after{content:"";display:block;width:82px;height:3px;margin-top:18px;background:#ff7414;box-shadow:0 0 12px rgba(255,116,20,.7)}.personal-quote{max-width:570px!important;margin:0 0 28px!important;color:#bfc4ca!important;font-size:15px!important;line-height:1.75!important;text-align:left!important}.social-icons,.stats-container,.mobile-button-dock{display:none!important}.desktop-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;height:52px;padding:0 30px;color:#fff;background:linear-gradient(135deg,#ff7414,#ff8a28);border:1px solid #ff7414;border-radius:6px;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.3px}.desktop-cta:after{content:"→";font-size:19px}
-.desktop-stats-panel{display:flex;position:absolute;top:50%;right:2.7%;transform:translateY(-50%);width:142px;height:500px;padding:10px 0;border:1px solid rgba(255,116,20,.55);border-radius:20px;background:linear-gradient(180deg,rgba(12,15,20,.94),rgba(5,7,10,.8));backdrop-filter:blur(14px);z-index:30;flex-direction:column;align-items:center;justify-content:space-evenly}.desktop-stat{width:100%;position:relative;padding:4px 10px;text-align:center}.desktop-stat:not(:last-child):after{content:"";position:absolute;left:22px;right:22px;bottom:-24px;height:1px;background:rgba(255,116,20,.25)}.desktop-stat-icon{width:40px;height:40px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;color:#ff7414;font-size:21px}.desktop-stat-number{color:#ff7414;font-size:31px;font-weight:950;line-height:1}.desktop-stat-label{margin-top:9px;color:#d8dbe0;font-size:9px;line-height:1.5;letter-spacing:1.1px;text-transform:uppercase;font-weight:700}
-.desktop-right-socials{display:flex;flex-direction:column;gap:10px;position:absolute;left:2.2%;bottom:95px;z-index:35}.desktop-right-socials:before{content:"CONNECT";position:absolute;bottom:100%;left:0;margin-bottom:12px;color:#777d85;font-size:7px;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg)}.desktop-right-socials a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,116,20,.5);border-radius:50%;background:rgba(8,11,16,.82);color:#fff;text-decoration:none;font-size:14px}.desktop-right-socials a:hover{background:#ff7414;border-color:#ff7414}
-.desktop-dock-wrapper{display:block;position:absolute;left:2%;right:2%;bottom:20px;z-index:70}.desktop-dock{width:100%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:82px 68px;gap:10px;padding:12px;border:1px solid rgba(255,116,20,.18);border-radius:16px;background:rgba(5,8,13,.72);backdrop-filter:blur(14px);box-shadow:0 20px 50px rgba(0,0,0,.45)}.menu-button{position:relative;display:flex;align-items:center;gap:15px;min-width:0;padding:13px 18px;color:#fff;text-decoration:none;border:1px solid rgba(255,116,20,.45);border-radius:10px;background:linear-gradient(145deg,rgba(20,27,39,.92),rgba(10,15,23,.92));transition:.3s;overflow:hidden}.menu-button:hover{transform:translateY(-3px);border-color:#ff7414;box-shadow:0 10px 25px rgba(255,116,20,.18)}.menu-icon{width:44px;min-width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#ff7414;font-size:26px}.menu-title-text{font-size:14px;font-weight:900;line-height:1.2}.card-desc{display:block;margin-top:6px;color:#aeb4bc;font-size:10px;line-height:1.3}.menu-button:after{content:"›";position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:25px}.about-card{grid-column:1;grid-row:1}.top-button:nth-of-type(2){grid-column:2;grid-row:1}.top-button:nth-of-type(3){grid-column:3;grid-row:1}.top-button:nth-of-type(4){grid-column:4;grid-row:1}.bottom-button{background:linear-gradient(135deg,#ff7414,#ff861e);border-color:#ff7414}.bottom-button:nth-of-type(5){grid-column:1/3;grid-row:2}.bottom-button:nth-of-type(6){grid-column:3/5;grid-row:2}
+*{box-sizing:border-box}
+html,body{width:100%;max-width:100%;margin:0;padding:0;overflow-x:hidden!important;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:Arial,sans-serif;color:#fff;background:linear-gradient(180deg,#111827 0%,#101622 55%,#080c14 100%)}
+img{max-width:100%}.hero picture{display:block;width:100%;height:100%}
+a{-webkit-tap-highlight-color:transparent}
+.page{width:100%;max-width:100%;min-height:100vh;overflow-x:hidden}
+.btn-hover{transition:all .3s ease-in-out;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-hover:hover{transform:translateY(-2px) scale(1.02);border-color:#ff7414!important;box-shadow:0 6px 15px rgba(255,116,20,.25);filter:brightness(1.15)}
+.menu-button:active,.menu-button.visited-btn{background:#ff7414!important;color:#fff!important;border-color:#ff7414!important;box-shadow:0 0 15px rgba(255,116,20,.6)!important}
+
+.hero{width:100%;height:60vh;min-height:420px;position:relative;overflow:hidden;background:#111827;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.hero-image{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}
+.social-icons{display:flex;justify-content:center;align-items:center;gap:12px;margin:10px 0 15px;z-index:20}
+.social-icons a{width:40px;height:40px;flex:0 0 40px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;text-decoration:none;font-size:18px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .3s ease,box-shadow .3s ease}
+.social-icons a:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 5px 15px rgba(0,0,0,.4)}
+.linkedin,.email{background:rgba(255,116,20,.20);border:1px solid #ff7414;color:#fff}
+.whatsapp{background:rgba(37,211,102,.20);border:1px solid #25d366;color:#fff}
+.hero-gradient{position:absolute;left:0;right:0;bottom:0;width:100%;height:50%;background:linear-gradient(to bottom,rgba(8,12,20,0),rgba(8,12,20,1));pointer-events:none;z-index:2}
+.main-content{width:100%;max-width:850px;margin:-50px auto 0;padding:20px 20px 40px;text-align:center;position:relative;z-index:10}
+.name{margin:0 0 8px;color:#fff;font-size:38px;line-height:1.15;font-weight:900;letter-spacing:1.5px;text-shadow:0 4px 15px rgba(0,0,0,.8)}
+.refresh-name{color:inherit;text-decoration:none;cursor:pointer;display:inline-block;transition:transform .2s ease,opacity .2s ease}
+.refresh-name:active{transform:scale(.97);opacity:.8}
+.personal-quote{font-size:14px;font-style:italic;color:#d1d5db;margin:5px auto 20px;max-width:90%;line-height:1.5;text-shadow:0 2px 4px rgba(0,0,0,.5);font-weight:300}
+.profession{margin:0 0 8px;color:#ff7414;font-size:15px;line-height:1.35;font-weight:800;letter-spacing:1px;text-transform:uppercase;min-height:22px}
+.typed-text{color:#ff7414}.cursor{display:inline-block;background:#ff7414;margin-left:2px;width:3px;animation:blink 1s infinite}
+.desktop-cta{display:none}.card-desc{display:none}.desktop-right-socials{display:none}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+.button-row{width:100%;display:flex;gap:10px;margin-bottom:10px}
+.menu-button{min-width:0;display:flex;align-items:center;justify-content:center;padding:8px;color:#fff;text-decoration:none;text-align:center;font-weight:900;background:linear-gradient(145deg,rgba(37,43,59,.8),rgba(26,32,44,.8));border:2px solid #ff7414;border-radius:8px;overflow:hidden;overflow-wrap:anywhere;word-break:normal;flex-shrink:1;position:relative}
+.menu-icon{display:none}
+.top-button{flex:1 1 0;min-height:65px;font-size:14px;line-height:1.15}
+.middle-button{flex:1 1 0;height:55px;font-size:16px;line-height:1.15}
+.bottom-button{flex:1 1 0;height:55px;font-size:16px;line-height:1.15;background:#ff7414;border:2px solid #ff7414}
+
+.stats-container{display:flex;justify-content:space-around;margin:15px 0 10px;gap:10px}
+.stat-card{background:rgba(255,255,255,.04);padding:10px 8px;border-radius:8px;border:1px solid rgba(255,116,20,.3);text-align:center;flex:1;backdrop-filter:blur(5px)}
+.stat-card h2{color:#ff7414;font-size:1.5rem;margin:0 0 2px;font-weight:900}
+.stat-card p{margin:0;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:#d1d5db}
+
+@media(max-width:600px){
+.hero{height:55vh!important;min-height:330px!important}
+.social-icons{margin:8px 0 12px!important;gap:8px!important}
+.social-icons a{width:36px!important;height:36px!important;flex:0 0 36px!important;font-size:15px!important}
+.main-content{width:100%!important;max-width:100%!important;margin:-30px auto 0!important;padding:5px 10px 15px!important;text-align:center!important}
+.name{font-size:22px!important;line-height:1.1!important;letter-spacing:.5px!important;white-space:nowrap!important;margin:0 0 4px!important}
+.profession{font-size:11px!important;margin:0 0 4px!important;min-height:18px!important}
+.personal-quote{font-size:11.5px!important;margin:0 auto 15px!important;text-align:center!important;line-height:1.4!important}
+.button-row{display:flex!important;justify-content:center!important;align-items:center!important;width:100%!important;gap:5px!important;margin-bottom:6px!important;flex-direction:row!important}
+.menu-button{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;box-sizing:border-box!important;border-radius:7px!important;font-weight:800!important;white-space:normal!important;word-break:keep-all!important;overflow-wrap:normal!important;height:auto!important;padding:4px!important;background:linear-gradient(145deg,rgba(37,43,59,.8),rgba(26,32,44,.8))!important;border:1.5px solid #ff7414!important}
+.top-button{flex:1 1 0!important;min-width:0!important;min-height:50px!important;font-size:8.5px!important;font-weight:900!important;letter-spacing:.3px!important;line-height:1.15!important;padding:4px 1px!important;color:#fff!important;border:1.5px solid rgba(255,116,20,.8)!important;text-shadow:0 0 4px rgba(255,116,20,.6)!important;box-shadow:inset 0 0 8px rgba(255,116,20,.15)!important}
+.middle-button,.bottom-button{flex:1 1 0!important;min-width:0!important;height:42px!important;font-size:11px!important;line-height:1.12!important;padding:4px!important}
+.bottom-button{background:#ff7414!important}
+.stats-container{margin:8px 0 0!important;gap:5px!important}
+.stat-card{padding:6px 3px!important}
+.stat-card h2{font-size:1rem!important;margin-bottom:2px!important}
+.stat-card p{font-size:.5rem!important}
+.desktop-dock-wrapper{display:none!important}
 }
-@media(min-width:901px) and (max-width:1200px){.desktop-logo{width:180px;min-width:180px}.desktop-nav-links{gap:11px}.desktop-nav-links a{font-size:8.5px}.desktop-nav-cta{width:105px;min-width:105px;margin-left:10px;font-size:9px}.hero{left:4%!important;width:360px!important}.main-content{left:39%!important;width:43%!important}.name{font-size:clamp(39px,4.1vw,54px)!important}.personal-quote{font-size:13px!important}.desktop-stats-panel{right:1.5%;width:118px}.desktop-stat-number{font-size:26px}.desktop-dock{grid-template-rows:74px 62px}.menu-title-text{font-size:12px}.card-desc{font-size:9px}}
-@media(min-width:901px) and (max-height:760px){.hero{width:370px!important}.main-content{top:41%!important}.main-content:before{margin-bottom:12px;font-size:9px}.name{font-size:50px!important;margin-bottom:11px!important}.profession{margin-bottom:15px!important;font-size:14px!important}.profession:after{margin-top:11px}.personal-quote{font-size:12px!important;line-height:1.5!important;margin-bottom:17px!important}.desktop-cta{height:44px}.desktop-stats-panel{height:420px}.desktop-dock{grid-template-rows:68px 55px;padding:9px}.menu-button{padding:9px 13px}.menu-icon{width:35px;min-width:35px;height:35px;font-size:21px}.menu-title-text{font-size:11px}.card-desc{display:none}}
-@media(min-width:1500px){.hero{left:6%!important;width:490px!important}.main-content{left:45.5%!important;width:38%!important;max-width:650px!important}.desktop-stats-panel{right:2.8%;width:150px}}
-@media(max-width:600px){.page{min-height:100vh;overflow-x:hidden;overflow-y:auto}}
-@media(max-width:360px){.name{font-size:20px}.mobile-button{font-size:8px}.stat-card p{font-size:4.5px}}
+
+.desktop-nav{display:none}
+.desktop-logo,.desktop-nav-links,.desktop-nav-cta,.desktop-stats-panel{display:none}
+
+@media(min-width:901px){
+html,body{width:100vw;height:100vh;overflow:hidden!important;background:#030507!important}
+body{margin:0;padding:0}
+.page{width:100vw;height:100vh;min-height:650px;position:relative;overflow:hidden;display:block;padding:0;background:radial-gradient(circle at 63% 50%,rgba(255,116,20,.18) 0%,rgba(255,116,20,.07) 20%,rgba(8,11,17,.96) 48%,#030507 78%),linear-gradient(135deg,#020304 0%,#080b11 45%,#030405 100%)}
+.page::before{content:"";position:absolute;top:-15%;right:-5%;width:65%;height:125%;background:radial-gradient(ellipse at center,rgba(255,116,20,.14) 0%,rgba(255,116,20,.05) 30%,transparent 65%);pointer-events:none;z-index:0;filter:blur(15px)}
+.page::after{content:"";position:absolute;width:600px;height:130%;top:-15%;left:52%;transform:rotate(27deg);background:linear-gradient(90deg,transparent 0%,rgba(255,116,20,.025) 35%,rgba(255,116,20,.08) 50%,rgba(255,116,20,.025) 65%,transparent 100%);border-left:1px solid rgba(255,116,20,.15);border-right:1px solid rgba(255,116,20,.08);pointer-events:none;z-index:1}
+
+.page>.desktop-nav{display:flex;position:absolute;top:0;left:0;right:0;height:74px;align-items:center;padding:0 30px;border-bottom:1px solid rgba(255,116,20,.16);background:rgba(3,5,7,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:100}
+.desktop-logo{display:flex!important;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:235px}
+.desktop-logo-mark{width:45px;height:45px;display:flex;align-items:center;justify-content:center;border:2px solid #ff7414;color:#ff7414;font-size:23px;font-weight:900;transform:rotate(45deg);position:relative}
+.desktop-logo-mark span{transform:rotate(-45deg);display:block}
+.desktop-logo-text{display:flex;flex-direction:column;line-height:1}
+.desktop-logo-text strong{font-size:17px;letter-spacing:1.5px;color:#fff}
+.desktop-logo-text small{font-size:12px;letter-spacing:2px;color:#ff7414;margin-top:4px}
+.desktop-nav-links{display:flex!important;align-items:center;justify-content:center;gap:24px;flex:1}
+.desktop-nav-links a{position:relative;color:#ffffff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:.85px;text-transform:uppercase;transition:color .25s ease,transform .25s ease,background .25s ease,box-shadow .25s ease;text-shadow:0 1px 9px rgba(255,255,255,.22);padding:10px 8px;border-radius:5px}
+.desktop-nav-links a::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:#ff7414;box-shadow:0 0 8px rgba(255,116,20,.8);transition:width .3s ease}
+.desktop-nav-links a:hover,.desktop-nav-links a:first-child{color:#fff;background:rgba(255,255,255,.055);box-shadow:0 0 14px rgba(255,255,255,.035)}
+.desktop-nav-links a:hover::after,.desktop-nav-links a:first-child::after{width:100%}
+.desktop-nav-links a:hover{transform:translateY(-1px);text-shadow:0 0 10px rgba(255,255,255,.35)}
+.desktop-nav-cta{display:flex!important;min-width:150px;height:42px;align-items:center;justify-content:center;gap:10px;border:1px solid #ff7414;border-radius:6px;color:#fff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1px;background:rgba(255,116,20,.10);box-shadow:inset 0 0 15px rgba(255,116,20,.08),0 0 18px rgba(255,116,20,.08);transition:all .3s ease}
+.desktop-nav-cta:hover{background:#ff7414;color:#fff;box-shadow:0 0 25px rgba(255,116,20,.45);transform:translateY(-1px)}
+
+.hero{position:absolute!important;top:74px!important;left:4.8%!important;right:auto!important;transform:none!important;width:440px!important;height:calc(100vh - 74px)!important;min-height:550px!important;max-height:none!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;z-index:8!important}
+.hero::before{content:"";position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:470px;height:610px;background:radial-gradient(ellipse,rgba(255,116,20,.22) 0%,rgba(255,116,20,.10) 30%,rgba(255,116,20,.03) 52%,transparent 72%);filter:blur(22px);z-index:-3}
+.hero::after{content:"";position:absolute;top:7%;left:1%;width:98%;height:80%;border:1px solid rgba(255,116,20,.28);transform:rotate(-10deg);box-shadow:0 0 30px rgba(255,116,20,.06);z-index:-2;pointer-events:none}
+.hero picture{position:relative;width:100%;height:100%;display:block!important}
+.hero-image{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;display:block!important;border:none!important;border-radius:0!important;box-shadow:none!important;filter:drop-shadow(0 25px 35px rgba(0,0,0,.8)) contrast(1.04) saturate(1.04)!important;-webkit-mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.98) 84%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.98) 84%,rgba(0,0,0,0) 100%)}
+.hero-gradient{display:none!important}
+
+.main-content{position:absolute!important;left:45.5%!important;top:44.5%!important;transform:translateY(-50%)!important;width:39%!important;max-width:610px!important;height:auto!important;margin:0!important;padding:0!important;z-index:20!important;text-align:left!important;display:block!important}
+.main-content::before{content:"AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";display:block;color:#ff7414;font-size:11px;font-weight:900;letter-spacing:3px;margin-bottom:17px;position:relative;padding-left:0;text-shadow:0 0 12px rgba(255,116,20,.35)}
+.name{margin:0 0 14px!important;font-size:clamp(46px,4.3vw,66px)!important;line-height:.94!important;letter-spacing:-1.5px!important;font-weight:950!important;color:#fff!important;text-align:left!important;text-shadow:0 5px 25px rgba(0,0,0,.5)!important}
+.refresh-name{color:#fff!important;text-decoration:none!important}
+.profession{display:block!important;margin:0 0 18px!important;color:#ff7414!important;font-size:17px!important;line-height:1.3!important;font-weight:900!important;letter-spacing:1.5px!important;min-height:25px!important;text-align:left!important}
+.typed-text{color:#ff7414!important;text-shadow:0 0 15px rgba(255,116,20,.35)}
+.cursor{background:#ff7414!important;width:2px!important;box-shadow:0 0 10px #ff7414}
+.profession::after{content:"";display:block;width:74px;height:3px;background:#ff7414;margin-top:13px;box-shadow:0 0 12px rgba(255,116,20,.7)}
+.personal-quote{max-width:570px!important;margin:0 0 20px 0!important;color:#d8dce1!important;font-size:15px!important;line-height:1.65!important;font-weight:300!important;font-style:italic!important;text-align:left!important;text-shadow:none!important}
+.desktop-cta{display:inline-flex!important;margin-top:4px!important;align-items:center;justify-content:center;gap:14px;height:48px;padding:0 27px;color:#fff;background:linear-gradient(135deg,#ff7414,#ff8a28);border:1px solid #ff7414;border-radius:6px;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.3px;box-shadow:0 8px 25px rgba(255,116,20,.25);transition:all .3s ease;margin-bottom:0}
+.desktop-cta::after{content:"→";font-size:19px;line-height:1}
+.desktop-cta:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(255,116,20,.45)}
+
+.social-icons{display:none!important}
+.stats-container{display:none!important}
+
+.desktop-stats-panel{position:absolute;top:49%;right:2.8%;transform:translateY(-50%);width:142px;height:500px;border:1px solid rgba(255,116,20,.55);border-radius:20px;background:linear-gradient(180deg,rgba(12,15,20,.94),rgba(5,7,10,.80));box-shadow:inset 0 0 30px rgba(255,116,20,.04),0 20px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:30;display:flex!important;flex-direction:column;align-items:center;justify-content:space-evenly}
+.desktop-stat{width:100%;text-align:center;position:relative;padding:4px 10px}
+.desktop-stat:not(:last-child)::after{content:"";position:absolute;left:22px;right:22px;bottom:-24px;height:1px;background:rgba(255,116,20,.25)}
+.desktop-stat-icon{width:40px;height:40px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;color:#ff7414;font-size:21px}
+.desktop-stat-number{color:#ff7414;font-size:31px;font-weight:950;line-height:1;text-shadow:0 0 18px rgba(255,116,20,.2)}
+.desktop-stat-label{margin-top:9px;color:#f0f1f3;font-size:9px;line-height:1.5;letter-spacing:1.1px;text-transform:uppercase;font-weight:800}
+
+.desktop-dock-wrapper{display:block!important;position:absolute;left:22px;right:22px;bottom:18px;height:170px;padding:9px 11px;border:1px solid rgba(255,116,20,.28);border-radius:16px;background:rgba(3,6,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 14px 45px rgba(0,0,0,.5);z-index:60}
+.desktop-dock{width:100%;height:100%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:9px}
+.desktop-dock .menu-button{height:auto!important;min-height:0!important;padding:0 18px!important;border:1px solid rgba(255,116,20,.58)!important;border-radius:10px!important;background:linear-gradient(145deg,rgba(14,19,27,.96),rgba(7,11,17,.96))!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;gap:14px;overflow:hidden;box-shadow:inset 0 0 20px rgba(255,116,20,.025);color:#fff!important}
+.desktop-dock .menu-button:hover{border-color:#ff7414!important;background:linear-gradient(145deg,rgba(31,25,21,.98),rgba(10,13,18,.98))!important;box-shadow:inset 0 0 24px rgba(255,116,20,.07),0 7px 22px rgba(0,0,0,.35)!important}
+.desktop-dock .menu-icon{display:flex!important;align-items:center;justify-content:center;flex:0 0 32px;width:32px;color:#ff7414;font-size:21px}
+.desktop-dock .menu-title-text{font-size:15px!important;line-height:1.15!important;font-weight:950!important;letter-spacing:.5px;color:#fff!important;text-shadow:0 0 10px rgba(255,255,255,.16),0 1px 10px rgba(0,0,0,.45)}
+.desktop-dock .card-desc{display:block!important;margin-top:6px;font-size:10px!important;line-height:1.3!important;color:#e0e4e8!important;font-weight:700!important;text-shadow:0 1px 5px rgba(0,0,0,.5)}
+.desktop-dock .menu-button::after{content:"›";margin-left:auto;font-size:25px;color:#fff;font-weight:900;text-shadow:0 0 8px rgba(255,255,255,.3)}
+.desktop-dock .bottom-button{background:linear-gradient(135deg,#ff7414,#ff8a28)!important;border-color:#ff7414!important}
+.desktop-dock .bottom-button .menu-title-text{color:#fff!important;font-size:15px!important;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.desktop-dock .bottom-button .card-desc{color:#fff!important;opacity:.9}
+.desktop-dock .bottom-button::after{color:#fff}
+.desktop-dock .about-card{grid-column:1;grid-row:1}
+.desktop-dock .agri-card{grid-column:2;grid-row:1}
+.desktop-dock .comm-card{grid-column:3;grid-row:1}
+.desktop-dock .kam-card{grid-column:4;grid-row:1}
+.desktop-dock .profile-card{grid-column:1 / 3;grid-row:2}
+.desktop-dock .talk-card{grid-column:3 / 5;grid-row:2}
+
+.desktop-right-socials{display:flex!important;flex-direction:column;gap:10px;position:absolute;left:24px;bottom:205px;z-index:80}
+.desktop-right-socials::before{content:"CONNECT";position:absolute;bottom:100%;left:3px;margin-bottom:10px;color:#8d939b;font-size:7px;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg)}
+.desktop-right-socials a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,116,20,.62);border-radius:50%;background:rgba(8,11,16,.92);color:#fff;text-decoration:none;font-size:14px;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,.3)}
+.desktop-right-socials a:hover{color:#fff;background:#ff7414;border-color:#ff7414;box-shadow:0 0 20px rgba(255,116,20,.55);transform:translateX(4px)}
+
+@media(max-height:760px){
+.hero{width:390px!important;height:calc(100vh - 74px)!important}
+.main-content{left:43.5%!important;width:40%!important;top:40%!important}
+.desktop-stats-panel{height:420px;width:125px}
+.desktop-stat-number{font-size:27px}
+.name{font-size:56px!important}
+.personal-quote{font-size:14px!important;line-height:1.55!important;margin-bottom:17px!important}
+.desktop-cta{height:44px}
+.desktop-dock-wrapper{height:158px;bottom:14px}
+.desktop-right-socials{bottom:190px}
+}
+@media(min-width:1500px){
+.hero{left:5.3%!important;width:490px!important}
+.main-content{left:45.5%!important;width:38%!important;max-width:650px!important;top:43%!important}
+.desktop-stats-panel{right:3%;width:150px}
+}
+}
 </style>
 </head>
+
 <body>
 <div class="page">
-<nav class="desktop-nav">
-<a href="index.html" class="desktop-logo"><div class="desktop-logo-mark"><span>M</span></div><div class="desktop-logo-text"><strong>MEHEDI</strong><small>ALIM AYON</small></div></a>
-<div class="desktop-nav-links"><a href="index.html">HOME</a><a href="agriculturist.html">AGRICULTURIST</a><a href="communicationist.html">COMMUNICATIONIST</a><a href="kam.html">KEY ACCOUNT MANAGER</a><a href="about.html">ABOUT ME</a><a href="gallery.html">GALLERY</a><a href="resume.html">CV</a><a href="contact.html">CONTACT</a></div>
+
+<div class="desktop-nav">
+<a href="index.html" class="desktop-logo">
+<div class="desktop-logo-mark"><span>M</span></div>
+<div class="desktop-logo-text"><strong>MEHEDI</strong><small>ALIM AYON</small></div>
+</a>
+<div class="desktop-nav-links">
+<a href="index.html">HOME</a>
+<a href="agriculturist.html">AGRICULTURIST</a>
+<a href="communicationist.html">COMMUNICATIONIST</a>
+<a href="kam.html">KEY ACCOUNT MANAGER</a>
+<a href="about.html">ABOUT ME</a>
+<a href="gallery.html">GALLERY</a>
+<a href="resume.html">CV</a>
+<a href="contact.html">CONTACT</a>
+</div>
 <a href="contact.html" class="desktop-nav-cta">LET'S TALK <i class="fa-solid fa-arrow-right"></i></a>
-</nav>
-<section class="hero"><img class="hero-image" src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg" alt="Mehedi Alim Ayon"><div class="hero-gradient"></div></section>
-<main class="main-content">
-<h1 class="name"><a href="javascript:void(0)" onclick="location.reload()" class="refresh-name">MEHEDI ALIM AYON</a></h1>
+</div>
+
+<div class="hero">
+<picture>
+<source media="(min-width:901px)" srcset="https://i.postimg.cc/6pQpYZfq/Whats-App-Image-2026-08-20-at-22-51-32.jpg">
+<img class="hero-image" alt="Mehedi Alim Ayon" src="https://i.postimg.cc/nc4qDWyQ/IMG-20260811-WA0002.jpg">
+</picture>
+<div class="hero-gradient"></div>
+</div>
+
+<div class="main-content">
+<h1 class="name"><a href="javascript:void(0);" onclick="location.reload();" class="refresh-name">MEHEDI ALIM AYON</a></h1>
 <p class="profession"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
 <p class="personal-quote">"Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."</p>
 <a href="contact.html" class="desktop-cta">LET'S CREATE IMPACT TOGETHER</a>
-<div class="social-icons"><a class="whatsapp" href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a><a class="email" href="mailto:mehedialif1999@gmail.com"><i class="fa-solid fa-envelope"></i></a><a class="linkedin" href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></div>
-<div class="stats-container"><div class="stat-card"><h2 class="counter" data-target="11">0</h2><p>Countries Sourced</p></div><div class="stat-card"><h2 class="counter" data-target="900">0</h2><p>Products Managed</p></div><div class="stat-card"><h2 class="counter" data-target="100">0</h2><p>% Client Focus</p></div></div>
-<div class="mobile-button-dock"><div class="mobile-button-row"><a href="about.html" class="mobile-button">ABOUT ME</a><a href="agriculturist.html" class="mobile-button">AGRICULTURIST</a><a href="communicationist.html" class="mobile-button">COMMUNICATIONIST</a></div><div class="mobile-button-row"><a href="kam.html" class="mobile-button">KEY ACCOUNT MANAGER</a><a href="gallery.html" class="mobile-button">GALLERY</a><a href="resume.html" class="mobile-button">PROFILE / CV</a></div><a href="contact.html" class="mobile-button-wide"><i class="fa-regular fa-comments"></i> LET'S TALK <i class="fa-solid fa-arrow-right"></i></a></div>
-</main>
-<aside class="desktop-stats-panel"><div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-globe"></i></div><div class="desktop-stat-number">11+</div><div class="desktop-stat-label">Countries<br>Sourced</div></div><div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-cube"></i></div><div class="desktop-stat-number">900+</div><div class="desktop-stat-label">Products<br>Managed</div></div><div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-users"></i></div><div class="desktop-stat-number">100+</div><div class="desktop-stat-label">% Client<br>Focus</div></div></aside>
-<div class="desktop-dock-wrapper"><div class="desktop-dock">
-<a href="about.html" class="menu-button about-card"><div class="menu-icon"><i class="fa-regular fa-user"></i></div><div><div class="menu-title-text">ABOUT ME</div><div class="card-desc">Discover my journey, skills, and values</div></div></a>
-<a href="agriculturist.html" class="menu-button top-button"><div class="menu-icon"><i class="fa-solid fa-seedling"></i></div><div><div class="menu-title-text">AGRICULTURIST</div><div class="card-desc">Leveraging sustainable agriculture expertise</div></div></a>
-<a href="communicationist.html" class="menu-button top-button"><div class="menu-icon"><i class="fa-solid fa-headset"></i></div><div><div class="menu-title-text">COMMUNICATIONIST</div><div class="card-desc">Connecting people and ideas effectively</div></div></a>
-<a href="kam.html" class="menu-button top-button"><div class="menu-icon"><i class="fa-solid fa-briefcase"></i></div><div><div class="menu-title-text">KEY ACCOUNT MANAGER</div><div class="card-desc">Driving value and strategic growth</div></div></a>
-<a href="resume.html" class="menu-button bottom-button"><div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div><div><div class="menu-title-text">PROFILE / CV</div><div class="card-desc">View professional timeline & credentials</div></div></a>
-<a href="contact.html" class="menu-button bottom-button"><div class="menu-icon"><i class="fa-regular fa-comments"></i></div><div><div class="menu-title-text">LET'S TALK</div><div class="card-desc">Discuss opportunities to collaborate</div></div></a>
-</div></div>
-<div class="desktop-right-socials"><a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:mehedialif1999@gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
+
+<div class="social-icons">
+<a class="whatsapp" href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="email" href="mailto:mehedialif1999@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+<a class="linkedin" href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
 </div>
+
+<div class="stats-container">
+<div class="stat-card"><h2 class="counter" data-target="11">0</h2><p>Countries Sourced</p></div>
+<div class="stat-card"><h2 class="counter" data-target="900">0</h2><p>Products Managed</p></div>
+<div class="stat-card"><h2 class="counter" data-target="100">0</h2><p>% Client Focus</p></div>
+</div>
+</div>
+
+<div class="desktop-stats-panel">
+<div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-globe"></i></div><div class="desktop-stat-number desktop-counter" data-target="11">0</div><div class="desktop-stat-label">Countries<br>Sourced</div></div>
+<div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-cube"></i></div><div class="desktop-stat-number desktop-counter" data-target="900">0</div><div class="desktop-stat-label">Products<br>Managed</div></div>
+<div class="desktop-stat"><div class="desktop-stat-icon"><i class="fa-solid fa-users"></i></div><div class="desktop-stat-number desktop-counter" data-target="100">0</div><div class="desktop-stat-label">% Client<br>Focus</div></div>
+</div>
+
+<div class="desktop-dock-wrapper">
+<div class="desktop-dock">
+<a href="about.html" class="menu-button middle-button btn-hover about-card">
+<div class="menu-icon"><i class="fa-regular fa-user"></i></div>
+<div><div class="menu-title-text">ABOUT ME</div><div class="card-desc">Discover my journey, skills, and values</div></div>
+</a>
+<a href="agriculturist.html" class="menu-button top-button btn-hover agri-card">
+<div class="menu-icon"><i class="fa-solid fa-seedling"></i></div>
+<div><div class="menu-title-text">AGRICULTURIST</div><div class="card-desc">Leveraging sustainable agriculture expertise</div></div>
+</a>
+<a href="communicationist.html" class="menu-button top-button btn-hover comm-card">
+<div class="menu-icon"><i class="fa-solid fa-headset"></i></div>
+<div><div class="menu-title-text">COMMUNICATIONIST</div><div class="card-desc">Connecting people and ideas effectively</div></div>
+</a>
+<a href="kam.html" class="menu-button top-button btn-hover kam-card">
+<div class="menu-icon"><i class="fa-solid fa-briefcase"></i></div>
+<div><div class="menu-title-text">KEY ACCOUNT MANAGER</div><div class="card-desc">Driving value and strategic growth</div></div>
+</a>
+<a href="resume.html" class="menu-button bottom-button btn-hover profile-card">
+<div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div>
+<div><div class="menu-title-text">PROFILE / CV</div><div class="card-desc">View professional timeline & credentials</div></div>
+</a>
+<a href="contact.html" class="menu-button bottom-button btn-hover talk-card">
+<div class="menu-icon"><i class="fa-regular fa-comments"></i></div>
+<div><div class="menu-title-text">LET'S TALK</div><div class="card-desc">Discuss opportunities to collaborate</div></div>
+</a>
+</div>
+</div>
+
+<div class="desktop-right-socials">
+<a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://wa.me/601172267068" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="mailto:mehedialif1999@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+
 <script>
-const typedTextSpan=document.querySelector('.typed-text'),textArray=['AGRICULTURIST','COMMUNICATIONIST','KEY ACCOUNT MANAGER'];let textIndex=0,charIndex=0;
-function type(){if(charIndex<textArray[textIndex].length){typedTextSpan.textContent+=textArray[textIndex].charAt(charIndex++);setTimeout(type,100)}else setTimeout(erase,2000)}function erase(){if(charIndex>0){typedTextSpan.textContent=textArray[textIndex].substring(0,--charIndex);setTimeout(erase,50)}else{textIndex=(textIndex+1)%textArray.length;setTimeout(type,500)}}
-document.querySelectorAll('.counter').forEach(c=>{const target=+c.dataset.target;let n=0;function u(){n+=Math.max(1,Math.ceil(target/50));if(n<target){c.textContent=n;setTimeout(u,30)}else c.textContent=target+'+'}u()});setTimeout(type,800);
+const typedTextSpan=document.querySelector(".typed-text");
+const textArray=["AGRICULTURIST","COMMUNICATIONIST","KEY ACCOUNT MANAGER"];
+let textIndex=0,charIndex=0;
+function type(){
+if(charIndex<textArray[textIndex].length){typedTextSpan.textContent+=textArray[textIndex].charAt(charIndex);charIndex++;setTimeout(type,100)}
+else{setTimeout(erase,2000)}
+}
+function erase(){
+if(charIndex>0){typedTextSpan.textContent=textArray[textIndex].substring(0,charIndex-1);charIndex--;setTimeout(erase,50)}
+else{textIndex=(textIndex+1)%textArray.length;setTimeout(type,500)}
+}
+
+function animateCounter(el){
+const target=Number(el.getAttribute("data-target"))||0;
+const duration=1200;
+const start=performance.now();
+function tick(now){
+const progress=Math.min((now-start)/duration,1);
+const eased=1-Math.pow(1-progress,3);
+const value=Math.floor(eased*target);
+el.textContent=value+(progress>=1?"+":"");
+if(progress<1) requestAnimationFrame(tick);
+}
+el.textContent="0";
+requestAnimationFrame(tick);
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+setTimeout(type,1000);
+document.querySelectorAll(".counter,.desktop-counter").forEach(animateCounter);
+const buttons=document.querySelectorAll(".menu-button");
+buttons.forEach(button=>button.addEventListener("click",function(){
+buttons.forEach(b=>b.classList.remove("visited-btn"));
+this.classList.add("visited-btn");
+}));
+});
 </script>
-</body></html>
+</body>
+</html>
