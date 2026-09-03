@@ -11,7 +11,7 @@
 body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidden}
 
 /* ================================================= */
-/* 1. DESKTOP VIEW (Default for large screens)       */
+/* 1. DESKTOP VIEW                                   */
 /* ================================================= */
 .page{width:100vw;height:100vh;min-height:650px;position:relative;overflow:hidden;display:block;background:radial-gradient(circle at 63% 50%,rgba(255,116,20,.18) 0%,rgba(255,116,20,.07) 20%,rgba(8,11,17,.96) 48%,#030507 78%),linear-gradient(135deg,#020304 0%,#080b11 45%,#030405 100%)}
 .page::before{content:"";position:absolute;top:-15%;right:-5%;width:65%;height:125%;background:radial-gradient(ellipse at center,rgba(255,116,20,.14) 0%,rgba(255,116,20,.05) 30%,transparent 65%);pointer-events:none;z-index:0;filter:blur(15px)}
@@ -61,24 +61,24 @@ body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidde
 .desktop-dock .menu-title-text{font-size:15px!important;font-weight:950!important;color:#fff!important}
 .desktop-dock .card-desc{display:block!important;margin-top:6px;font-size:10px!important;color:#e0e4e8!important;font-weight:700!important}
 .desktop-dock .menu-button::after{content:"›";margin-left:auto;font-size:25px;color:#fff;font-weight:900}
-.desktop-dock .bottom-button{background:linear-gradient(135deg,#ff7414,#ff8a28)!important;border-color:#ff7414!important}
+.desktop-dock .gallery-card{background:linear-gradient(135deg,#ff7414,#ff8a28)!important;border-color:#ff7414!important}
+.desktop-dock .gallery-card .menu-icon, .desktop-dock .gallery-card .menu-title-text, .desktop-dock .gallery-card .card-desc, .desktop-dock .gallery-card::after{color:#fff!important}
 .desktop-dock .about-card{grid-column:1;grid-row:1}
 .desktop-dock .agri-card{grid-column:2;grid-row:1}
 .desktop-dock .comm-card{grid-column:3;grid-row:1}
 .desktop-dock .kam-card{grid-column:4;grid-row:1}
 .desktop-dock .profile-card{grid-column:1 / 3;grid-row:2}
-.desktop-dock .talk-card{grid-column:3 / 5;grid-row:2}
+.desktop-dock .gallery-card{grid-column:3 / 5;grid-row:2}
 
 .desktop-right-socials{display:flex;flex-direction:column;gap:10px;position:absolute;left:24px;bottom:205px;z-index:80}
 .desktop-right-socials::before{content:"CONNECT";position:absolute;bottom:100%;left:3px;margin-bottom:10px;color:#8d939b;font-size:7px;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg)}
 .desktop-right-socials a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,116,20,.62);border-radius:50%;background:rgba(8,11,16,.92);color:#fff;text-decoration:none;font-size:14px}
 
-/* Mobile specific container hidden on desktop */
 .mobile-portfolio { display: none; }
 
 
 /* ================================================= */
-/* 2. MOBILE VIEW (Activated automatically on phones) */
+/* 2. MOBILE VIEW                                    */
 /* ================================================= */
 @media screen and (max-width: 768px) {
   .page, .desktop-nav, .hero, .main-content, .desktop-stats-panel, .desktop-dock-wrapper, .desktop-right-socials {
@@ -177,8 +177,6 @@ body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidde
   .m-menu-icon { color: #ff7414; font-size: 18px; flex: 0 0 24px; text-align: center; }
   .m-menu-text strong { display: block; font-size: 11px; font-weight: 900; color: #fff; margin-bottom: 2px; }
   .m-menu-text span { display: block; font-size: 8px; color: #94a3b8; line-height: 1.2; }
-  .m-menu-btn.full-width { grid-column: span 2; background: linear-gradient(135deg,#ff7414,#ff8a28); border-color: #ff7414; }
-  .m-menu-btn.full-width .m-menu-icon, .m-menu-btn.full-width .m-menu-text strong, .m-menu-btn.full-width .m-menu-text span { color: #fff; }
 }
 </style>
 </head>
@@ -247,9 +245,9 @@ body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidde
         <div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div>
         <div><div class="menu-title-text">PROFILE / CV</div><div class="card-desc">View professional timeline & credentials</div></div>
       </a>
-      <a href="contact.html" class="menu-button talk-card">
-        <div class="menu-icon"><i class="fa-regular fa-comments"></i></div>
-        <div><div class="menu-title-text">LET'S TALK</div><div class="card-desc">Discuss opportunities to collaborate</div></div>
+      <a href="gallery.html" class="menu-button gallery-card">
+        <div class="menu-icon"><i class="fa-regular fa-image"></i></div>
+        <div><div class="menu-title-text">GALLERY</div><div class="card-desc">Explore moments & captures</div></div>
       </a>
     </div>
   </div>
@@ -296,7 +294,7 @@ body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidde
 
     <a href="contact.html" class="m-cta">LET'S CREATE IMPACT TOGETHER <i class="fa-solid fa-arrow-right"></i></a>
 
-    <!-- Mobile Menu Buttons (Including Gallery and Let's Talk) -->
+    <!-- Mobile Menu Buttons -->
     <div class="m-menu-grid">
       <a href="about.html" class="m-menu-btn">
         <div class="m-menu-icon"><i class="fa-regular fa-user"></i></div>
@@ -314,30 +312,28 @@ body{font-family:Arial,sans-serif;color:#fff;background:#030507;overflow-x:hidde
         <div class="m-menu-icon"><i class="fa-solid fa-briefcase"></i></div>
         <div class="m-menu-text"><strong>KAM</strong><span>Strategic growth</span></div>
       </a>
-      <a href="gallery.html" class="m-menu-btn">
-        <div class="m-menu-icon"><i class="fa-regular fa-image"></i></div>
-        <div class="m-menu-text"><strong>GALLERY</strong><span>Explore moments</span></div>
-      </a>
       <a href="resume.html" class="m-menu-btn">
         <div class="m-menu-icon"><i class="fa-regular fa-file-lines"></i></div>
         <div class="m-menu-text"><strong>CV / PROFILE</strong><span>Timeline & credentials</span></div>
       </a>
-      <a href="contact.html" class="m-menu-btn full-width">
-        <div class="m-menu-icon"><i class="fa-regular fa-comments"></i></div>
-        <div class="m-menu-text"><strong>LET'S TALK</strong><span>Discuss opportunities</span></div>
+      <a href="gallery.html" class="m-menu-btn">
+        <div class="m-menu-icon"><i class="fa-regular fa-image"></i></div>
+        <div class="m-menu-text"><strong>GALLERY</strong><span>Explore moments</span></div>
       </a>
     </div>
   </div>
 </div>
 
 <script>
-const typedTextSpan = document.querySelector(".typed-text");
 const textArray = ["AGRICULTURIST", "COMMUNICATIONIST", "KEY ACCOUNT MANAGER"];
 let textIndex = 0, charIndex = 0;
 
 function type() {
+  const typedTextSpans = document.querySelectorAll(".typed-text");
   if (charIndex < textArray[textIndex].length) {
-    typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
+    typedTextSpans.forEach(span => {
+      span.textContent += textArray[textIndex].charAt(charIndex);
+    });
     charIndex++;
     setTimeout(type, 100);
   } else {
@@ -345,8 +341,11 @@ function type() {
   }
 }
 function erase() {
+  const typedTextSpans = document.querySelectorAll(".typed-text");
   if (charIndex > 0) {
-    typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+    typedTextSpans.forEach(span => {
+      span.textContent = textArray[textIndex].substring(0, charIndex - 1);
+    });
     charIndex--;
     setTimeout(erase, 50);
   } else {
