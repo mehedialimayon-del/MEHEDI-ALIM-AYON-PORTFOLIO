@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -14,9 +15,7 @@
     content="ZtVoX_hDDnlEpPzqVAKHiQFwOSCVchx1_x_G7cmrxng"
 />
 
-<title>
-    Mehedi Alim Ayon - Professional Portfolio
-</title>
+<title>Mehedi Alim Ayon - Professional Portfolio</title>
 
 <link
     rel="stylesheet"
@@ -29,7 +28,6 @@
     href="assets/images/mehedi-hero-final.png"
     fetchpriority="high"
 >
-
 
 <style>
 
@@ -63,20 +61,16 @@ body{
 ========================================================= */
 
 .page{
-
     width:100vw;
     height:100vh;
-
     min-height:750px;
 
     position:relative;
-
     overflow:hidden;
 
     display:block;
 
     background:
-
         radial-gradient(
             circle at 65% 45%,
             rgba(255,116,20,.20) 0%,
@@ -84,7 +78,6 @@ body{
             rgba(8,11,17,.96) 50%,
             #030507 80%
         ),
-
         linear-gradient(
             135deg,
             #020304 0%,
@@ -93,9 +86,7 @@ body{
         );
 }
 
-
 .page::before{
-
     content:"";
 
     position:absolute;
@@ -107,7 +98,6 @@ body{
     height:140%;
 
     background:
-
         radial-gradient(
             ellipse at center,
             rgba(255,116,20,.18) 0%,
@@ -122,9 +112,7 @@ body{
     filter:blur(20px);
 }
 
-
 .page::after{
-
     content:"";
 
     position:absolute;
@@ -138,7 +126,6 @@ body{
     transform:rotate(27deg);
 
     background:
-
         linear-gradient(
             90deg,
             transparent 0%,
@@ -162,7 +149,6 @@ body{
 ========================================================= */
 
 .desktop-nav{
-
     display:flex;
 
     position:absolute;
@@ -187,11 +173,8 @@ body{
     z-index:100;
 }
 
-
 .desktop-logo{
-
     display:flex;
-
     align-items:center;
 
     gap:12px;
@@ -203,14 +186,11 @@ body{
     min-width:235px;
 }
 
-
 .desktop-logo-mark{
-
     width:45px;
     height:45px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -219,7 +199,6 @@ body{
     color:#ff7414;
 
     font-size:23px;
-
     font-weight:900;
 
     transform:rotate(45deg);
@@ -227,39 +206,27 @@ body{
     position:relative;
 }
 
-
 .desktop-logo-mark span{
-
     transform:rotate(-45deg);
-
     display:block;
 }
 
-
 .desktop-logo-text{
-
     display:flex;
-
     flex-direction:column;
 
     line-height:1;
 }
 
-
 .desktop-logo-text strong{
-
     font-size:17px;
-
     letter-spacing:1.5px;
 
     color:#fff;
 }
 
-
 .desktop-logo-text small{
-
     font-size:12px;
-
     letter-spacing:2px;
 
     color:#ff7414;
@@ -267,13 +234,10 @@ body{
     margin-top:4px;
 }
 
-
 .desktop-nav-links{
-
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     gap:20px;
@@ -281,52 +245,44 @@ body{
     flex:1;
 }
 
-
 .desktop-nav-links a{
-
     position:relative;
 
-    color:#ffffff;
+    color:#fff;
 
     text-decoration:none;
 
     font-size:11px;
-
     font-weight:900;
 
     letter-spacing:.85px;
 
     text-transform:uppercase;
 
-    transition:
-        color .25s ease,
-        transform .25s ease,
-        background .25s ease,
-        box-shadow .25s ease;
-
-    text-shadow:
-        0 1px 9px rgba(255,255,255,.22);
-
     padding:10px 8px;
 
     border-radius:5px;
 
     white-space:nowrap;
+
+    text-shadow:
+        0 1px 9px rgba(255,255,255,.22);
+
+    transition:
+        color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
 }
 
-
 .desktop-nav-links a::after{
-
     content:"";
 
     position:absolute;
 
     left:0;
-
     bottom:-7px;
 
     width:0;
-
     height:2px;
 
     background:#ff7414;
@@ -337,36 +293,25 @@ body{
     transition:width .3s ease;
 }
 
-
 .desktop-nav-links a:hover,
 .desktop-nav-links a:first-child{
-
     color:#fff;
 
     background:rgba(255,255,255,.055);
-
-    box-shadow:
-        0 0 14px rgba(255,255,255,.035);
 }
-
 
 .desktop-nav-links a:hover::after,
 .desktop-nav-links a:first-child::after{
-
     width:100%;
 }
 
-
 .desktop-nav-cta{
-
     display:flex;
 
     min-width:150px;
-
     height:42px;
 
     align-items:center;
-
     justify-content:center;
 
     gap:10px;
@@ -380,7 +325,6 @@ body{
     text-decoration:none;
 
     font-size:11px;
-
     font-weight:900;
 
     letter-spacing:1px;
@@ -395,31 +339,26 @@ body{
 
 /* =========================================================
    DESKTOP HERO
-   HEAD CUT FIXED
 ========================================================= */
 
 .hero{
-
     position:absolute !important;
 
-    top:84px !important;
-
+    top:76px !important;
     left:2.8% !important;
 
-    width:500px !important;
+    width:520px !important;
 
-    height:calc(100vh - 245px) !important;
+    height:calc(100vh - 205px) !important;
 
-    min-height:500px !important;
-
-    max-height:680px !important;
+    min-height:540px !important;
+    max-height:720px !important;
 
     z-index:8 !important;
 
     display:flex !important;
 
     align-items:flex-end !important;
-
     justify-content:center !important;
 
     overflow:visible !important;
@@ -429,40 +368,29 @@ body{
 /* ORANGE GLOW */
 
 .hero::before{
-
     content:"";
 
     position:absolute;
 
-    top:49%;
-
+    top:48%;
     left:50%;
 
     transform:translate(-50%,-50%);
 
-    width:590px;
-
-    height:630px;
+    width:610px;
+    height:680px;
 
     background:
-
         radial-gradient(
-
             ellipse at center,
-
-            rgba(255,132,38,.58) 0%,
-
-            rgba(255,116,20,.38) 23%,
-
-            rgba(255,103,10,.20) 44%,
-
+            rgba(255,132,38,.62) 0%,
+            rgba(255,116,20,.40) 23%,
+            rgba(255,103,10,.21) 44%,
             rgba(255,90,0,.07) 62%,
-
             transparent 79%
-
         );
 
-    filter:blur(27px);
+    filter:blur(28px);
 
     z-index:-3;
 
@@ -470,27 +398,22 @@ body{
 }
 
 
-/* TILTED ORANGE FRAME */
+/* TILTED FRAME */
 
 .hero::after{
-
     content:"";
 
     position:absolute;
 
-    top:3%;
-
+    top:4%;
     left:5%;
 
     width:90%;
-
     height:91%;
 
-    border:
-        1px solid rgba(255,116,20,.52);
+    border:1px solid rgba(255,116,20,.52);
 
-    transform:
-        rotate(-7deg);
+    transform:rotate(-7deg);
 
     box-shadow:
         0 0 38px rgba(255,116,20,.16);
@@ -500,73 +423,54 @@ body{
     pointer-events:none;
 
     -webkit-mask-image:
-
         linear-gradient(
-
             135deg,
-
             rgba(0,0,0,1) 48%,
-
             rgba(0,0,0,.55) 76%,
-
             transparent 100%
-
         );
 
     mask-image:
-
         linear-gradient(
-
             135deg,
-
             rgba(0,0,0,1) 48%,
-
             rgba(0,0,0,.55) 76%,
-
             transparent 100%
-
         );
 }
 
 
-/* PERSON */
+/* DESKTOP PORTRAIT */
 
 .hero-image{
-
     position:relative !important;
 
     width:auto !important;
 
-    height:96% !important;
+    height:118% !important;
 
-    max-width:100% !important;
+    max-width:none !important;
 
     object-fit:contain !important;
-
     object-position:center bottom !important;
 
     display:block !important;
 
-    transform:none !important;
+    transform:
+        translateY(8px)
+        scale(1.12) !important;
 
     transform-origin:center bottom !important;
 
     z-index:5 !important;
 
     filter:
-
         brightness(1.04)
-
         contrast(1.06)
-
         saturate(1.05)
-
-        drop-shadow(
-            0 20px 30px rgba(0,0,0,.72)
-        ) !important;
+        drop-shadow(0 22px 32px rgba(0,0,0,.72)) !important;
 
     -webkit-mask-image:none !important;
-
     mask-image:none !important;
 }
 
@@ -576,15 +480,12 @@ body{
 ========================================================= */
 
 .main-content{
-
     position:absolute !important;
 
     left:43.5% !important;
-
     top:41% !important;
 
-    transform:
-        translateY(-50%) !important;
+    transform:translateY(-50%) !important;
 
     width:41% !important;
 
@@ -595,18 +496,14 @@ body{
     text-align:left !important;
 }
 
-
 .main-content::before{
-
-    content:
-        "AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
+    content:"AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
 
     display:block;
 
     color:#ff7414;
 
     font-size:11px;
-
     font-weight:900;
 
     letter-spacing:2.5px;
@@ -617,14 +514,10 @@ body{
         0 0 12px rgba(255,116,20,.35);
 }
 
-
 .name{
+    margin:0 0 10px !important;
 
-    margin:
-        0 0 10px !important;
-
-    font-size:
-        clamp(42px,4vw,62px) !important;
+    font-size:clamp(42px,4vw,62px) !important;
 
     line-height:.94 !important;
 
@@ -635,21 +528,15 @@ body{
     color:#fff !important;
 }
 
-
 .refresh-name{
-
     color:#fff !important;
-
     text-decoration:none !important;
 }
 
-
 .profession{
-
     display:block !important;
 
-    margin:
-        0 0 14px !important;
+    margin:0 0 14px !important;
 
     color:#ff7414 !important;
 
@@ -662,9 +549,7 @@ body{
     min-height:22px !important;
 }
 
-
 .cursor{
-
     background:#ff7414 !important;
 
     width:2px !important;
@@ -674,15 +559,11 @@ body{
 
     display:inline-block;
 
-    animation:
-        blink 1s infinite;
+    animation:blink 1s infinite;
 }
 
-
 @keyframes blink{
-
-    0%,
-    100%{
+    0%,100%{
         opacity:1;
     }
 
@@ -691,15 +572,12 @@ body{
     }
 }
 
-
 .profession::after{
-
     content:"";
 
     display:block;
 
     width:68px;
-
     height:3px;
 
     background:#ff7414;
@@ -710,13 +588,10 @@ body{
         0 0 12px rgba(255,116,20,.7);
 }
 
-
 .personal-quote{
-
     max-width:560px !important;
 
-    margin:
-        0 0 16px 0 !important;
+    margin:0 0 16px 0 !important;
 
     color:#d8dce1 !important;
 
@@ -729,43 +604,36 @@ body{
     font-style:italic !important;
 }
 
-
 .desktop-cta{
-
     display:inline-flex !important;
 
     margin-top:2px !important;
 
     align-items:center;
-
     justify-content:center;
 
     gap:12px;
 
     height:44px;
 
-    padding:
-        0 24px;
+    padding:0 24px;
 
     color:#fff;
 
     background:
-
         linear-gradient(
             135deg,
             #ff7414,
             #ff8a28
         );
 
-    border:
-        1px solid #ff7414;
+    border:1px solid #ff7414;
 
     border-radius:6px;
 
     text-decoration:none;
 
     font-size:10px;
-
     font-weight:900;
 
     letter-spacing:1.2px;
@@ -780,27 +648,21 @@ body{
 ========================================================= */
 
 .desktop-stats-panel{
-
     position:absolute;
 
     top:43%;
-
     right:2.5%;
 
-    transform:
-        translateY(-50%);
+    transform:translateY(-50%);
 
     width:135px;
-
     height:450px;
 
-    border:
-        1px solid rgba(255,116,20,.55);
+    border:1px solid rgba(255,116,20,.55);
 
     border-radius:18px;
 
     background:
-
         linear-gradient(
             180deg,
             rgba(12,15,20,.94),
@@ -808,16 +670,10 @@ body{
         );
 
     box-shadow:
+        inset 0 0 30px rgba(255,116,20,.04),
+        0 20px 60px rgba(0,0,0,.55);
 
-        inset
-        0 0 30px
-        rgba(255,116,20,.04),
-
-        0 20px 60px
-        rgba(0,0,0,.55);
-
-    backdrop-filter:
-        blur(14px);
+    backdrop-filter:blur(14px);
 
     z-index:30;
 
@@ -826,56 +682,43 @@ body{
     flex-direction:column;
 
     align-items:center;
-
     justify-content:space-evenly;
 }
 
-
 .desktop-stat{
-
     width:100%;
 
     text-align:center;
 
     position:relative;
 
-    padding:
-        2px 8px;
+    padding:2px 8px;
 }
 
-
 .desktop-stat:not(:last-child)::after{
-
     content:"";
 
     position:absolute;
 
     left:20px;
-
     right:20px;
 
     bottom:-20px;
 
     height:1px;
 
-    background:
-        rgba(255,116,20,.25);
+    background:rgba(255,116,20,.25);
 }
 
-
 .desktop-stat-icon{
-
     width:35px;
-
     height:35px;
 
-    margin:
-        0 auto 6px;
+    margin:0 auto 6px;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     color:#ff7414;
@@ -883,9 +726,7 @@ body{
     font-size:19px;
 }
 
-
 .desktop-stat-number{
-
     color:#ff7414;
 
     font-size:27px;
@@ -895,9 +736,7 @@ body{
     line-height:1;
 }
 
-
 .desktop-stat-label{
-
     margin-top:7px;
 
     color:#f0f1f3;
@@ -919,30 +758,23 @@ body{
 ========================================================= */
 
 .desktop-dock-wrapper{
-
     position:absolute;
 
     left:20px;
-
     right:20px;
-
     bottom:14px;
 
     height:148px;
 
-    padding:
-        8px 10px;
+    padding:8px 10px;
 
-    border:
-        1px solid rgba(255,116,20,.28);
+    border:1px solid rgba(255,116,20,.28);
 
     border-radius:14px;
 
-    background:
-        rgba(3,6,10,.82);
+    background:rgba(3,6,10,.82);
 
-    backdrop-filter:
-        blur(14px);
+    backdrop-filter:blur(14px);
 
     box-shadow:
         0 14px 45px rgba(0,0,0,.5);
@@ -950,40 +782,29 @@ body{
     z-index:60;
 }
 
-
 .desktop-dock{
-
     width:100%;
-
     height:100%;
 
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
-    grid-template-rows:
-        1fr 1fr;
+    grid-template-rows:1fr 1fr;
 
     gap:8px;
 }
 
-
 .desktop-dock .menu-button{
-
     height:auto !important;
 
-    padding:
-        0 14px !important;
+    padding:0 14px !important;
 
-    border:
-        1px solid rgba(255,116,20,.58) !important;
+    border:1px solid rgba(255,116,20,.58) !important;
 
-    border-radius:
-        8px !important;
+    border-radius:8px !important;
 
     background:
-
         linear-gradient(
             145deg,
             rgba(14,19,27,.96),
@@ -1003,17 +824,13 @@ body{
     min-width:0;
 }
 
-
 .desktop-dock .menu-icon{
-
     display:flex !important;
 
     align-items:center;
-
     justify-content:center;
 
-    flex:
-        0 0 28px;
+    flex:0 0 28px;
 
     width:28px;
 
@@ -1022,9 +839,7 @@ body{
     font-size:18px;
 }
 
-
 .desktop-dock .menu-title-text{
-
     font-size:13px !important;
 
     font-weight:950 !important;
@@ -1032,9 +847,7 @@ body{
     color:#fff !important;
 }
 
-
 .desktop-dock .card-desc{
-
     display:block !important;
 
     margin-top:3px;
@@ -1046,9 +859,7 @@ body{
     font-weight:700 !important;
 }
 
-
 .desktop-dock .menu-button::after{
-
     content:"›";
 
     margin-left:auto;
@@ -1060,24 +871,17 @@ body{
     font-weight:900;
 }
 
-
-/* ORANGE BUTTONS */
-
 .desktop-dock .profile-card,
 .desktop-dock .gallery-card{
-
     background:
-
         linear-gradient(
             135deg,
             #ff7414,
             #ff8a28
         ) !important;
 
-    border-color:
-        #ff7414 !important;
+    border-color:#ff7414 !important;
 }
-
 
 .desktop-dock .profile-card .menu-icon,
 .desktop-dock .profile-card .menu-title-text,
@@ -1087,73 +891,50 @@ body{
 .desktop-dock .gallery-card .menu-title-text,
 .desktop-dock .gallery-card .card-desc,
 .desktop-dock .gallery-card::after{
-
     color:#fff !important;
 }
 
 
-/* ROW 1 */
+/* DESKTOP DOCK ROW 1 */
 
 .desktop-dock .about-card{
-
     grid-column:1;
-
     grid-row:1;
 }
-
 
 .desktop-dock .agri-card{
-
     grid-column:2;
-
     grid-row:1;
 }
-
 
 .desktop-dock .comm-card{
-
     grid-column:3;
-
     grid-row:1;
 }
-
 
 .desktop-dock .kam-card{
-
     grid-column:4;
-
     grid-row:1;
 }
 
 
-/* ROW 2 */
+/* DESKTOP DOCK ROW 2 */
 
 .desktop-dock .profile-card{
-
-    grid-column:
-        1 / 2;
-
+    grid-column:1;
     grid-row:2;
 }
-
 
 .desktop-dock .gallery-card{
-
-    grid-column:
-        2 / 4;
-
+    grid-column:2 / 4;
     grid-row:2;
 }
 
-
 .desktop-dock .framework-card{
-
     grid-column:4;
-
     grid-row:2;
 
     background:
-
         linear-gradient(
             145deg,
             rgba(14,19,27,.98),
@@ -1164,9 +945,7 @@ body{
         rgba(255,116,20,.68) !important;
 }
 
-
 .desktop-dock .framework-card .menu-icon{
-
     color:#ff7414 !important;
 }
 
@@ -1176,7 +955,6 @@ body{
 ========================================================= */
 
 .desktop-right-socials{
-
     display:flex;
 
     flex-direction:column;
@@ -1186,21 +964,17 @@ body{
     position:absolute;
 
     left:20px;
-
     bottom:175px;
 
     z-index:80;
 }
 
-
 .desktop-right-socials::before{
-
     content:"CONNECT";
 
     position:absolute;
 
     bottom:100%;
-
     left:2px;
 
     margin-bottom:8px;
@@ -1211,33 +985,25 @@ body{
 
     letter-spacing:2px;
 
-    writing-mode:
-        vertical-rl;
+    writing-mode:vertical-rl;
 
-    transform:
-        rotate(180deg);
+    transform:rotate(180deg);
 }
 
-
 .desktop-right-socials a{
-
     width:32px;
-
     height:32px;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
-    border:
-        1px solid rgba(255,116,20,.62);
+    border:1px solid rgba(255,116,20,.62);
 
     border-radius:50%;
 
-    background:
-        rgba(8,11,16,.92);
+    background:rgba(8,11,16,.92);
 
     color:#fff;
 
@@ -1248,164 +1014,120 @@ body{
 
 
 .mobile-portfolio{
-
     display:none;
 }
 
 
 /* =========================================================
-   DESKTOP / LAPTOP SHORT HEIGHT FIX
+   LAPTOP / SHORT DESKTOP
 ========================================================= */
 
 @media screen and (min-width:769px) and (max-height:850px){
 
     .page{
-
         min-height:650px;
     }
 
-
     .hero{
+        top:76px !important;
 
-        top:80px !important;
+        left:2.8% !important;
 
-        height:
-            calc(100vh - 235px) !important;
+        width:500px !important;
+
+        height:calc(100vh - 190px) !important;
 
         min-height:0 !important;
 
         max-height:none !important;
-
-        width:470px !important;
-
-        left:3.5% !important;
     }
-
 
     .hero-image{
-
-        height:92% !important;
-
         width:auto !important;
 
-        max-width:100% !important;
+        height:112% !important;
 
-        transform:none !important;
+        max-width:none !important;
+
+        transform:
+            translateY(5px)
+            scale(1.07) !important;
     }
-
 
     .hero::before{
-
-        width:520px;
-
-        height:520px;
+        width:560px;
+        height:560px;
     }
-
-
-    .hero::after{
-
-        top:2%;
-
-        height:94%;
-    }
-
 
     .main-content{
-
-        top:38.5% !important;
+        top:39% !important;
     }
 
-
     .desktop-stats-panel{
-
-        top:39%;
+        top:40%;
 
         height:390px;
     }
 
-
     .desktop-dock-wrapper{
-
         height:145px;
-
         bottom:12px;
     }
 
-
     .desktop-right-socials{
-
         bottom:170px;
     }
 }
 
 
 /* =========================================================
-   MEDIUM DESKTOP / LAPTOP WIDTH
+   MEDIUM LAPTOP WIDTH
 ========================================================= */
 
 @media screen and (min-width:769px) and (max-width:1250px){
 
     .desktop-nav{
-
-        padding:
-            0 18px;
+        padding:0 18px;
     }
 
-
     .desktop-logo{
-
         min-width:185px;
     }
 
-
     .desktop-nav-links{
-
         gap:8px;
     }
 
-
     .desktop-nav-links a{
-
         font-size:9px;
 
-        padding:
-            10px 5px;
+        padding:10px 5px;
     }
 
-
     .desktop-nav-cta{
-
         min-width:125px;
 
         font-size:9px;
     }
 
-
     .hero{
+        left:1.5% !important;
 
-        left:2% !important;
-
-        width:430px !important;
+        width:480px !important;
     }
 
-
     .main-content{
-
         left:41% !important;
 
         width:43% !important;
     }
 
-
     .name{
-
         font-size:
             clamp(34px,4vw,52px) !important;
     }
 
-
     .desktop-stats-panel{
-
         right:1.5%;
 
         width:120px;
@@ -1415,7 +1137,6 @@ body{
 
 /* =========================================================
    MOBILE
-   UNCHANGED
 ========================================================= */
 
 @media screen and (max-width:768px){
@@ -1427,13 +1148,11 @@ body{
     .desktop-stats-panel,
     .desktop-dock-wrapper,
     .desktop-right-socials{
-
         display:none !important;
     }
 
 
     .mobile-portfolio{
-
         display:flex !important;
 
         width:100%;
@@ -1441,12 +1160,10 @@ body{
         min-height:100vh;
 
         background:
-
             radial-gradient(
-                circle at 50% 16%,
-                rgba(255,116,20,.23) 0%,
-                rgba(255,116,20,.07) 30%,
-                rgba(8,11,17,.96) 61%,
+                circle at 50% 15%,
+                rgba(255,116,20,.18) 0%,
+                rgba(8,11,17,.96) 60%,
                 #030507 100%
             );
 
@@ -1454,37 +1171,36 @@ body{
 
         align-items:center;
 
-        padding:
-            20px 15px 40px 15px;
+        padding:10px 14px 30px 14px !important;
     }
 
 
-    .m-nav{
+    /* MOBILE NAV */
 
+    .m-nav{
         width:100%;
 
         display:flex;
 
-        justify-content:
-            space-between;
+        justify-content:space-between;
 
         align-items:center;
 
-        padding-bottom:15px;
+        padding-bottom:9px !important;
 
         border-bottom:
             1px solid rgba(255,116,20,.2);
 
-        margin-bottom:15px;
+        margin-bottom:6px !important;
+
+        min-height:58px !important;
 
         position:relative;
 
         z-index:20;
     }
 
-
     .m-logo{
-
         display:flex;
 
         align-items:center;
@@ -1496,44 +1212,33 @@ body{
         color:#fff;
     }
 
-
     .m-logo-mark{
-
-        width:35px;
-
-        height:35px;
+        width:32px !important;
+        height:32px !important;
 
         display:flex;
 
         align-items:center;
-
         justify-content:center;
 
-        border:
-            2px solid #ff7414;
+        border:2px solid #ff7414;
 
         color:#ff7414;
 
-        font-size:18px;
+        font-size:16px !important;
 
         font-weight:900;
 
-        transform:
-            rotate(45deg);
+        transform:rotate(45deg);
     }
 
-
     .m-logo-mark span{
-
-        transform:
-            rotate(-45deg);
+        transform:rotate(-45deg);
 
         display:block;
     }
 
-
     .m-logo-text{
-
         display:flex;
 
         flex-direction:column;
@@ -1541,34 +1246,26 @@ body{
         line-height:1.1;
     }
 
-
     .m-logo-text strong{
-
-        font-size:14px;
+        font-size:13px !important;
 
         letter-spacing:1px;
 
         color:#fff;
     }
 
-
     .m-logo-text small{
-
-        font-size:10px;
+        font-size:9px !important;
 
         letter-spacing:1.5px;
 
         color:#ff7414;
     }
 
-
     .m-nav-cta{
+        padding:8px 12px !important;
 
-        padding:
-            8px 14px;
-
-        border:
-            1px solid #ff7414;
+        border:1px solid #ff7414;
 
         border-radius:5px;
 
@@ -1576,7 +1273,7 @@ body{
 
         text-decoration:none;
 
-        font-size:10px;
+        font-size:9px !important;
 
         font-weight:900;
 
@@ -1585,66 +1282,57 @@ body{
     }
 
 
-    /* MOBILE HERO */
+    /* =====================================================
+       MOBILE HERO
+    ===================================================== */
 
     .m-hero{
-
         position:relative;
 
-        width:330px;
+        width:min(92vw,330px) !important;
 
-        height:440px;
+        height:48vh !important;
 
-        margin:
-            0 auto 17px;
+        min-height:330px !important;
+        max-height:430px !important;
 
-        display:flex;
+        margin:0 auto 5px !important;
 
-        align-items:flex-end;
+        display:flex !important;
 
-        justify-content:center;
+        align-items:flex-end !important;
 
-        overflow:visible;
+        justify-content:center !important;
+
+        overflow:visible !important;
     }
 
 
     .m-hero::before{
-
         content:"";
 
         position:absolute;
 
-        top:46%;
-
+        top:49% !important;
         left:50%;
 
         transform:
             translate(-50%,-50%);
 
-        width:390px;
-
-        height:470px;
+        width:105% !important;
+        height:105% !important;
 
         background:
-
             radial-gradient(
-
                 ellipse at center,
+                rgba(255,132,38,.58) 0%,
+                rgba(255,116,20,.36) 26%,
+                rgba(255,100,10,.17) 48%,
+                rgba(255,90,0,.06) 65%,
+                transparent 80%
+            ) !important;
 
-                rgba(255,132,38,.62) 0%,
-
-                rgba(255,116,20,.40) 24%,
-
-                rgba(255,100,10,.20) 46%,
-
-                rgba(255,90,0,.07) 63%,
-
-                transparent 78%
-
-            );
-
-        filter:
-            blur(23px);
+        filter:blur(22px);
 
         z-index:1;
 
@@ -1653,24 +1341,20 @@ body{
 
 
     .m-hero::after{
-
         content:"";
 
         position:absolute;
 
-        top:6%;
+        top:6% !important;
+        left:7% !important;
 
-        left:6%;
-
-        width:88%;
-
-        height:87%;
+        width:86% !important;
+        height:88% !important;
 
         border:
             1px solid rgba(255,116,20,.50);
 
-        transform:
-            rotate(-7deg);
+        transform:rotate(-7deg);
 
         box-shadow:
             0 0 30px rgba(255,116,20,.17);
@@ -1678,236 +1362,190 @@ body{
         z-index:2;
 
         pointer-events:none;
-
-        -webkit-mask-image:
-
-            linear-gradient(
-                135deg,
-                #000 45%,
-                rgba(0,0,0,.50) 78%,
-                transparent 100%
-            );
-
-        mask-image:
-
-            linear-gradient(
-                135deg,
-                #000 45%,
-                rgba(0,0,0,.50) 78%,
-                transparent 100%
-            );
     }
 
 
     .m-hero img{
-
         position:relative;
 
-        width:auto;
+        width:auto !important;
 
-        height:102%;
+        height:100% !important;
 
-        max-width:none;
+        max-width:none !important;
 
-        object-fit:contain;
+        object-fit:contain !important;
 
         object-position:
-            center bottom;
+            center bottom !important;
 
         display:block;
 
-        transform:
-            translateY(7px)
-            scale(1.07);
-
-        transform-origin:
-            center bottom;
+        transform:none !important;
 
         z-index:3;
 
         filter:
-
             brightness(1.04)
-
             contrast(1.06)
-
             saturate(1.05)
-
             drop-shadow(
-                0 18px 27px
-                rgba(0,0,0,.72)
-            )
-
-            drop-shadow(
-                0 0 15px
-                rgba(255,116,20,.10)
+                0 18px 27px rgba(0,0,0,.72)
             );
 
-        -webkit-mask-image:
-            none !important;
-
-        mask-image:
-            none !important;
+        -webkit-mask-image:none !important;
+        mask-image:none !important;
     }
 
 
-    .m-content{
+    /* =====================================================
+       MOBILE CONTENT
+    ===================================================== */
 
+    .m-content{
         text-align:center;
 
         width:100%;
 
-        max-width:400px;
+        max-width:420px !important;
 
         z-index:10;
     }
 
-
     .m-sub-tag{
-
         color:#ff7414;
 
-        font-size:9px;
+        font-size:8px !important;
 
         font-weight:900;
 
-        letter-spacing:2px;
+        letter-spacing:1.6px !important;
 
-        margin-bottom:8px;
+        margin-bottom:5px !important;
+
+        line-height:1.3 !important;
 
         text-shadow:
             0 0 10px rgba(255,116,20,.3);
     }
 
-
     .m-name{
+        font-size:25px !important;
 
-        font-size:28px;
+        line-height:1 !important;
 
         font-weight:950;
 
         color:#fff;
 
-        margin-bottom:10px;
+        margin-bottom:6px !important;
 
         letter-spacing:-.5px;
     }
 
-
     .m-name a{
-
         color:#fff;
 
         text-decoration:none;
     }
 
-
     .m-profession{
-
         color:#ff7414;
 
-        font-size:13px;
+        font-size:11px !important;
 
         font-weight:900;
 
         letter-spacing:1px;
 
-        margin-bottom:12px;
+        margin-bottom:7px !important;
 
-        min-height:20px;
+        min-height:17px !important;
     }
 
-
     .m-profession::after{
-
         content:"";
 
         display:block;
 
-        width:45px;
+        width:42px !important;
 
         height:2px;
 
         background:#ff7414;
 
-        margin:
-            6px auto 0;
+        margin:4px auto 0 !important;
 
         box-shadow:
             0 0 8px rgba(255,116,20,.7);
     }
 
-
     .m-quote{
-
         color:#d8dce1;
 
-        font-size:12px;
+        font-size:10.5px !important;
 
-        line-height:1.5;
+        line-height:1.42 !important;
 
         font-weight:300;
 
         font-style:italic;
 
-        margin-bottom:18px;
+        margin-bottom:11px !important;
 
-        padding:
-            0 5px;
+        padding:0 8px !important;
     }
 
 
-    .m-stats{
+    /* MOBILE STATS */
 
+    .m-stats{
         display:grid;
 
         grid-template-columns:
             repeat(3,1fr);
 
-        gap:10px;
+        gap:7px !important;
 
         width:100%;
 
-        margin-bottom:20px;
+        margin-bottom:12px !important;
     }
 
-
     .m-stat{
-
         background:
             rgba(12,15,20,.85);
 
         border:
             1px solid rgba(255,116,20,.3);
 
-        border-radius:10px;
+        border-radius:8px !important;
 
-        padding:
-            10px 5px;
+        min-height:64px !important;
+
+        padding:7px 3px !important;
 
         text-align:center;
     }
 
-
     .m-stat-num{
-
         color:#ff7414;
 
-        font-size:18px;
+        font-size:17px !important;
 
         font-weight:950;
 
-        margin-bottom:3px;
+        margin-bottom:2px !important;
     }
 
-
     .m-stat-lbl{
+        font-size:7px !important;
 
-        font-size:8px;
+        line-height:1.2 !important;
 
         text-transform:uppercase;
 
-        letter-spacing:1px;
+        letter-spacing:.7px !important;
 
         color:#cbd5e1;
 
@@ -1915,8 +1553,9 @@ body{
     }
 
 
-    .m-socials{
+    /* MOBILE SOCIAL */
 
+    .m-socials{
         display:flex;
 
         justify-content:center;
@@ -1926,17 +1565,13 @@ body{
         margin-bottom:18px;
     }
 
-
     .m-socials a{
-
         width:36px;
-
         height:36px;
 
         display:flex;
 
         align-items:center;
-
         justify-content:center;
 
         border:
@@ -1955,12 +1590,12 @@ body{
     }
 
 
-    .m-cta{
+    /* MOBILE CTA */
 
+    .m-cta{
         display:inline-flex;
 
         align-items:center;
-
         justify-content:center;
 
         gap:10px;
@@ -1970,7 +1605,6 @@ body{
         height:44px;
 
         background:
-
             linear-gradient(
                 135deg,
                 #ff7414,
@@ -1996,8 +1630,9 @@ body{
     }
 
 
-    .m-menu-grid{
+    /* MOBILE MENU */
 
+    .m-menu-grid{
         display:grid;
 
         grid-template-columns:
@@ -2008,11 +1643,8 @@ body{
         width:100%;
     }
 
-
     .m-menu-btn{
-
         background:
-
             linear-gradient(
                 145deg,
                 rgba(14,19,27,.96),
@@ -2024,8 +1656,7 @@ body{
 
         border-radius:8px;
 
-        padding:
-            12px 10px;
+        padding:12px 10px;
 
         text-decoration:none;
 
@@ -2040,22 +1671,17 @@ body{
         text-align:left;
     }
 
-
     .m-menu-icon{
-
         color:#ff7414;
 
         font-size:18px;
 
-        flex:
-            0 0 24px;
+        flex:0 0 24px;
 
         text-align:center;
     }
 
-
     .m-menu-text strong{
-
         display:block;
 
         font-size:11px;
@@ -2067,9 +1693,7 @@ body{
         margin-bottom:2px;
     }
 
-
     .m-menu-text span{
-
         display:block;
 
         font-size:8px;
@@ -2079,22 +1703,17 @@ body{
         line-height:1.2;
     }
 
-
     .m-menu-btn.profile-highlight,
     .m-menu-btn.gallery-highlight{
-
         background:
-
             linear-gradient(
                 135deg,
                 #ff7414,
                 #ff8a28
             ) !important;
 
-        border-color:
-            #ff7414 !important;
+        border-color:#ff7414 !important;
     }
-
 
     .m-menu-btn.profile-highlight .m-menu-icon,
     .m-menu-btn.profile-highlight .m-menu-text strong,
@@ -2102,15 +1721,11 @@ body{
     .m-menu-btn.gallery-highlight .m-menu-icon,
     .m-menu-btn.gallery-highlight .m-menu-text strong,
     .m-menu-btn.gallery-highlight .m-menu-text span{
-
         color:#fff !important;
     }
 
-
     .m-menu-btn.framework-wide{
-
-        grid-column:
-            1 / -1;
+        grid-column:1 / -1;
     }
 
 }
@@ -2130,10 +1745,9 @@ body{
 <div class="page">
 
 
-    <!-- NAVIGATION -->
+    <!-- DESKTOP NAV -->
 
     <div class="desktop-nav">
-
 
         <a
             href="index.html"
@@ -2141,21 +1755,14 @@ body{
         >
 
             <div class="desktop-logo-mark">
-
                 <span>M</span>
-
             </div>
-
 
             <div class="desktop-logo-text">
 
-                <strong>
-                    MEHEDI
-                </strong>
+                <strong>MEHEDI</strong>
 
-                <small>
-                    ALIM AYON
-                </small>
+                <small>ALIM AYON</small>
 
             </div>
 
@@ -2164,51 +1771,41 @@ body{
 
         <div class="desktop-nav-links">
 
-
             <a href="index.html">
                 HOME
             </a>
-
 
             <a href="agriculturist.html">
                 AGRICULTURIST
             </a>
 
-
             <a href="communicationist.html">
                 COMMUNICATIONIST
             </a>
-
 
             <a href="kam.html">
                 KEY ACCOUNT MANAGER
             </a>
 
-
             <a href="about.html">
                 ABOUT ME
             </a>
-
 
             <a href="frameworks.html">
                 FRAMEWORKS
             </a>
 
-
             <a href="gallery.html">
                 GALLERY
             </a>
-
 
             <a href="resume.html">
                 CV
             </a>
 
-
             <a href="contact.html">
                 CONTACT
             </a>
-
 
         </div>
 
@@ -2223,7 +1820,6 @@ body{
             <i class="fa-solid fa-arrow-right"></i>
 
         </a>
-
 
     </div>
 
@@ -2243,10 +1839,9 @@ body{
     </div>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- DESKTOP MAIN CONTENT -->
 
     <div class="main-content">
-
 
         <h1 class="name">
 
@@ -2267,19 +1862,14 @@ body{
 
             <span class="typed-text"></span>
 
-            <span class="cursor">
-                &nbsp;
-            </span>
+            <span class="cursor">&nbsp;</span>
 
         </p>
 
 
         <p class="personal-quote">
 
-            "Rooted in agricultural innovation,
-            driven by meaningful connections,
-            and dedicated to cultivating partnerships
-            that yield lasting global impact."
+            "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
 
         </p>
 
@@ -2293,7 +1883,6 @@ body{
 
         </a>
 
-
     </div>
 
 
@@ -2304,13 +1893,11 @@ body{
 
         <div class="desktop-stat">
 
-
             <div class="desktop-stat-icon">
 
                 <i class="fa-solid fa-globe"></i>
 
             </div>
-
 
             <div
                 class="desktop-stat-number desktop-counter"
@@ -2319,30 +1906,24 @@ body{
                 0
             </div>
 
-
             <div class="desktop-stat-label">
 
                 Countries
-
                 <br>
-
                 Sourced
 
             </div>
-
 
         </div>
 
 
         <div class="desktop-stat">
 
-
             <div class="desktop-stat-icon">
 
                 <i class="fa-solid fa-cube"></i>
 
             </div>
-
 
             <div
                 class="desktop-stat-number desktop-counter"
@@ -2351,30 +1932,24 @@ body{
                 0
             </div>
 
-
             <div class="desktop-stat-label">
 
                 Products
-
                 <br>
-
                 Managed
 
             </div>
-
 
         </div>
 
 
         <div class="desktop-stat">
 
-
             <div class="desktop-stat-icon">
 
                 <i class="fa-solid fa-users"></i>
 
             </div>
-
 
             <div
                 class="desktop-stat-number desktop-counter"
@@ -2383,17 +1958,13 @@ body{
                 0
             </div>
 
-
             <div class="desktop-stat-label">
 
                 % Client
-
                 <br>
-
                 Focus
 
             </div>
-
 
         </div>
 
@@ -2401,17 +1972,12 @@ body{
     </div>
 
 
-    <!-- =================================================
-         DESKTOP DOCK
-    ================================================= -->
+    <!-- DESKTOP DOCK -->
 
     <div class="desktop-dock-wrapper">
 
-
         <div class="desktop-dock">
 
-
-            <!-- ABOUT -->
 
             <a
                 href="about.html"
@@ -2424,29 +1990,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         ABOUT ME
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Discover my journey, skills, and values
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- AGRICULTURIST -->
 
             <a
                 href="agriculturist.html"
@@ -2459,29 +2016,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         AGRICULTURIST
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Leveraging sustainable agriculture expertise
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- COMMUNICATIONIST -->
 
             <a
                 href="communicationist.html"
@@ -2494,29 +2042,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         COMMUNICATIONIST
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Connecting people and ideas effectively
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- KAM -->
 
             <a
                 href="kam.html"
@@ -2529,29 +2068,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         KEY ACCOUNT MANAGER
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Driving value and strategic growth
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- CV -->
 
             <a
                 href="resume.html"
@@ -2564,29 +2094,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         PROFILE / CV
-
                     </div>
 
-
                     <div class="card-desc">
-
                         View professional timeline & credentials
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- GALLERY -->
 
             <a
                 href="gallery.html"
@@ -2599,29 +2120,20 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         GALLERY
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Explore moments & captures
-
                     </div>
 
                 </div>
 
-
             </a>
 
-
-            <!-- ORIGINAL FRAMEWORKS -->
 
             <a
                 href="frameworks.html"
@@ -2634,30 +2146,22 @@ body{
 
                 </div>
 
-
                 <div>
 
                     <div class="menu-title-text">
-
                         ORIGINAL FRAMEWORKS
-
                     </div>
 
-
                     <div class="card-desc">
-
                         Models, insights & publications
-
                     </div>
 
                 </div>
-
 
             </a>
 
 
         </div>
-
 
     </div>
 
@@ -2666,43 +2170,32 @@ body{
 
     <div class="desktop-right-socials">
 
-
         <a
             href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <i class="fa-brands fa-linkedin-in"></i>
-
         </a>
-
 
         <a
             href="https://wa.me/601172267068"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <i class="fa-brands fa-whatsapp"></i>
-
         </a>
-
 
         <a
             href="mailto:mehedialif1999@gmail.com"
         >
-
             <i class="fa-solid fa-envelope"></i>
-
         </a>
-
 
     </div>
 
 
 </div>
-
 
 
 <!-- =====================================================
@@ -2712,8 +2205,9 @@ body{
 <div class="mobile-portfolio">
 
 
-    <div class="m-nav">
+    <!-- MOBILE NAV -->
 
+    <div class="m-nav">
 
         <a
             href="index.html"
@@ -2721,11 +2215,8 @@ body{
         >
 
             <div class="m-logo-mark">
-
                 <span>M</span>
-
             </div>
-
 
             <div class="m-logo-text">
 
@@ -2753,12 +2244,10 @@ body{
 
         </a>
 
-
     </div>
 
 
-
-    <!-- MOBILE HERO - UNCHANGED -->
+    <!-- MOBILE HERO -->
 
     <div class="m-hero">
 
@@ -2772,6 +2261,7 @@ body{
     </div>
 
 
+    <!-- MOBILE CONTENT -->
 
     <div class="m-content">
 
@@ -2785,7 +2275,6 @@ body{
 
         <h1 class="m-name">
 
-
             <a
                 href="javascript:void(0);"
                 onclick="location.reload();"
@@ -2794,7 +2283,6 @@ body{
                 MEHEDI ALIM AYON
 
             </a>
-
 
         </h1>
 
@@ -2810,14 +2298,12 @@ body{
 
         <p class="m-quote">
 
-            "Rooted in agricultural innovation,
-            driven by meaningful connections,
-            and dedicated to cultivating partnerships
-            that yield lasting global impact."
+            "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
 
         </p>
 
 
+        <!-- MOBILE STATS -->
 
         <div class="m-stats">
 
@@ -2828,20 +2314,14 @@ body{
                     class="m-stat-num counter"
                     data-target="11"
                 >
-
                     0
-
                 </div>
 
-
                 <div class="m-stat-lbl">
-
                     Countries Sourced
-
                 </div>
 
             </div>
-
 
 
             <div class="m-stat">
@@ -2850,20 +2330,14 @@ body{
                     class="m-stat-num counter"
                     data-target="900"
                 >
-
                     0
-
                 </div>
 
-
                 <div class="m-stat-lbl">
-
                     Products Managed
-
                 </div>
 
             </div>
-
 
 
             <div class="m-stat">
@@ -2872,16 +2346,11 @@ body{
                     class="m-stat-num counter"
                     data-target="100"
                 >
-
                     0
-
                 </div>
 
-
                 <div class="m-stat-lbl">
-
                     % Client Focus
-
                 </div>
 
             </div>
@@ -2890,6 +2359,7 @@ body{
         </div>
 
 
+        <!-- MOBILE SOCIAL -->
 
         <div class="m-socials">
 
@@ -2928,6 +2398,7 @@ body{
         </div>
 
 
+        <!-- MOBILE CTA -->
 
         <a
             href="contact.html"
@@ -2941,6 +2412,7 @@ body{
         </a>
 
 
+        <!-- MOBILE MENU -->
 
         <div class="m-menu-grid">
 
@@ -2956,26 +2428,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         ABOUT ME
-
                     </strong>
 
                     <span>
-
                         My journey & skills
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -2989,26 +2454,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         AGRICULTURIST
-
                     </strong>
 
                     <span>
-
                         Agri expertise
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -3022,26 +2480,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         COMMUNICATION
-
                     </strong>
 
                     <span>
-
                         Connecting people
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -3055,26 +2506,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         KAM
-
                     </strong>
 
                     <span>
-
                         Strategic growth
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -3088,26 +2532,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         CV / PROFILE
-
                     </strong>
 
                     <span>
-
                         Timeline & credentials
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -3121,26 +2558,19 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         GALLERY
-
                     </strong>
 
                     <span>
-
                         Explore moments
-
                     </span>
 
                 </div>
 
-
             </a>
-
 
 
             <a
@@ -3154,23 +2584,17 @@ body{
 
                 </div>
 
-
                 <div class="m-menu-text">
 
                     <strong>
-
                         ORIGINAL FRAMEWORKS
-
                     </strong>
 
                     <span>
-
                         Commercial models, insights & publications
-
                     </span>
 
                 </div>
-
 
             </a>
 
@@ -3184,310 +2608,158 @@ body{
 </div>
 
 
-
 <!-- =====================================================
      JAVASCRIPT
 ===================================================== -->
 
 <script>
 
-
 const textArray = [
-
     "AGRICULTURIST",
-
     "COMMUNICATIONIST",
-
     "KEY ACCOUNT MANAGER"
-
 ];
 
-
 let textIndex = 0;
-
 let charIndex = 0;
-
 
 
 function type(){
 
-
     const typedTextSpans =
+        document.querySelectorAll(".typed-text");
 
-        document.querySelectorAll(
-            ".typed-text"
-        );
+    if(charIndex < textArray[textIndex].length){
 
+        typedTextSpans.forEach(span => {
 
-    if(
+            span.textContent +=
+                textArray[textIndex].charAt(charIndex);
 
-        charIndex <
-
-        textArray[textIndex].length
-
-    ){
-
-
-        typedTextSpans.forEach(
-
-            span => {
-
-                span.textContent +=
-
-                    textArray[textIndex]
-
-                    .charAt(charIndex);
-
-            }
-
-        );
-
+        });
 
         charIndex++;
 
-
-        setTimeout(
-
-            type,
-
-            100
-
-        );
-
+        setTimeout(type,100);
 
     }else{
 
-
-        setTimeout(
-
-            erase,
-
-            2000
-
-        );
+        setTimeout(erase,2000);
 
     }
 
 }
-
 
 
 function erase(){
 
-
     const typedTextSpans =
-
-        document.querySelectorAll(
-            ".typed-text"
-        );
-
+        document.querySelectorAll(".typed-text");
 
     if(charIndex > 0){
 
+        typedTextSpans.forEach(span => {
 
-        typedTextSpans.forEach(
+            span.textContent =
+                textArray[textIndex].substring(
+                    0,
+                    charIndex - 1
+                );
 
-            span => {
-
-
-                span.textContent =
-
-                    textArray[textIndex]
-
-                    .substring(
-
-                        0,
-
-                        charIndex - 1
-
-                    );
-
-            }
-
-        );
-
+        });
 
         charIndex--;
 
-
-        setTimeout(
-
-            erase,
-
-            50
-
-        );
-
+        setTimeout(erase,50);
 
     }else{
 
-
         textIndex =
-
             (textIndex + 1) %
-
             textArray.length;
 
-
-        setTimeout(
-
-            type,
-
-            500
-
-        );
+        setTimeout(type,500);
 
     }
 
 }
 
 
-
-/* =========================================================
-   COUNTERS
-========================================================= */
+/* COUNTER */
 
 function animateCounter(el){
 
-
     const target =
-
         Number(
-
-            el.getAttribute(
-                "data-target"
-            )
-
+            el.getAttribute("data-target")
         ) || 0;
-
 
     const duration = 1200;
 
-
     const start =
-
         performance.now();
-
 
 
     function tick(now){
 
-
         const progress =
-
             Math.min(
-
-                (now - start) /
-
-                duration,
-
+                (now-start)/duration,
                 1
-
             );
-
 
         const eased =
-
             1 -
-
             Math.pow(
-
-                1 - progress,
-
+                1-progress,
                 3
-
             );
-
 
         const value =
-
             Math.floor(
-
-                eased * target
-
+                eased*target
             );
-
 
         el.textContent =
-
             value +
-
             (
-
                 progress >= 1
-
                 ? "+"
-
                 : ""
-
             );
-
 
         if(progress < 1){
 
-
-            requestAnimationFrame(
-
-                tick
-
-            );
+            requestAnimationFrame(tick);
 
         }
 
     }
 
+    el.textContent="0";
 
-    el.textContent = "0";
-
-
-    requestAnimationFrame(
-
-        tick
-
-    );
+    requestAnimationFrame(tick);
 
 }
 
 
-
 document.addEventListener(
-
     "DOMContentLoaded",
-
     function(){
 
-
-        setTimeout(
-
-            type,
-
-            1000
-
-        );
-
+        setTimeout(type,1000);
 
         document
-
             .querySelectorAll(
-
                 ".counter,.desktop-counter"
-
             )
-
-            .forEach(
-
-                animateCounter
-
-            );
+            .forEach(animateCounter);
 
     }
-
 );
-
 
 </script>
 
 
 </body>
-
 </html>
