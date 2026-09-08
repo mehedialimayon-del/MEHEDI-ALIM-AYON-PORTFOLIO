@@ -1,358 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Professional Frameworks | Mehedi Alim Ayon</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    min-height:100vh;
-    font-family:Arial,sans-serif;
-    color:#fff;
-    background:
-        radial-gradient(circle at 75% 20%,rgba(255,116,20,.17),transparent 38%),
-        linear-gradient(135deg,#020304,#080b11,#030405);
-}
-
-.nav{
-    min-height:70px;
-    padding:14px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(255,116,20,.2);
-}
-
-.nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.home{
-    color:#ff7414 !important;
-}
-
-.container{
-    width:min(1160px,92%);
-    margin:auto;
-    padding:65px 0 80px;
-}
-
-.tag{
-    color:#ff7414;
-    font-size:10px;
-    letter-spacing:3px;
-    font-weight:900;
-    margin-bottom:12px;
-}
-
-h1{
-    font-size:clamp(35px,5vw,58px);
-    margin-bottom:16px;
-}
-
-.intro{
-    max-width:790px;
-    color:#adb5c0;
-    font-size:14px;
-    line-height:1.7;
-}
-
-.status{
-    display:inline-block;
-    margin-top:18px;
-    padding:8px 12px;
-    border-radius:30px;
-    border:1px solid rgba(255,116,20,.38);
-    color:#ff9a55;
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-    margin-top:50px;
-}
-
-.card{
-    overflow:hidden;
-    border:1px solid rgba(255,116,20,.35);
-    border-radius:17px;
-    background:#080b10;
-}
-
-.cover{
-    width:100%;
-    height:330px;
-    background:#030507;
-    overflow:hidden;
-}
-
-.cover img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:top;
-    display:block;
-}
-
-.content{
-    padding:27px;
-}
-
-.small{
-    color:#ff7414;
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.card h2{
-    margin:12px 0;
-    font-size:25px;
-    line-height:1.15;
-}
-
-.card p{
-    color:#aeb5bf;
-    font-size:13px;
-    line-height:1.65;
-}
-
-.badges{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-    margin:18px 0 23px;
-}
-
-.badge{
-    padding:6px 8px;
-    border-radius:4px;
-    background:rgba(255,116,20,.1);
-    color:#ff9149;
-    font-size:8px;
-    font-weight:900;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    color:#fff;
-    background:linear-gradient(135deg,#ff7414,#ff8a28);
-    padding:12px 17px;
-    border-radius:6px;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1px;
-    text-decoration:none;
-}
-
-.future{
-    min-height:540px;
-    padding:35px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    border-style:dashed;
-    opacity:.55;
-}
-
-.future i{
-    color:#ff7414;
-    font-size:35px;
-    margin-bottom:18px;
-}
-
-@media(max-width:768px){
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .cover{
-        height:auto;
-    }
-
-    .cover img{
-        height:auto;
-    }
-}
-
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#030507;color:#fff}
+.wrap{width:min(1180px,92%);margin:auto}
+.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,116,20,.22)}
+.brand{color:#fff;text-decoration:none;font-weight:900;letter-spacing:1.5px}.brand span{color:#ff7414}
+.back{color:#fff;text-decoration:none;border:1px solid #ff7414;border-radius:7px;padding:11px 16px;font-size:12px;font-weight:900}
+.hero{padding:76px 0 38px}.eyebrow{color:#ff7414;font-size:12px;font-weight:900;letter-spacing:3px}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:.95;margin:14px 0 18px}
+.hero p{max-width:760px;color:#bac0c8;line-height:1.75}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(300px,1fr));gap:25px;padding:25px 0 80px}
+.card{overflow:hidden;border:1px solid rgba(255,116,20,.38);border-radius:18px;background:linear-gradient(145deg,#0b0e13,#05070a);box-shadow:0 24px 70px rgba(0,0,0,.45)}
+.cover{background:#0c1115;overflow:hidden}
+.cover img{width:100%;height:auto;display:block;object-fit:contain}
+.body{padding:24px}.num{font-size:12px;color:#ff7414;font-weight:900;letter-spacing:2px}
+.body h2{font-size:25px;line-height:1.1;margin:10px 0}
+.tags{color:#ff7414;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.body p{color:#b9c0c8;font-size:14px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:12px 18px;border-radius:7px;background:linear-gradient(135deg,#ff7414,#ff8a28);color:#fff;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1px}
+.footer{padding:30px 0;border-top:1px solid rgba(255,116,20,.18);color:#747b84;font-size:12px}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.hero{padding-top:45px}.top{height:66px}.grid{padding-top:10px}}
 </style>
-
 </head>
-
 <body>
-
-<header class="nav">
-
-    <a href="frameworks.html">
-        <i class="fa-solid fa-arrow-left"></i>
-        &nbsp; ALL FRAMEWORKS
-    </a>
-
-    <a href="index.html" class="home">
-        HOME
-    </a>
-
+<div class="wrap">
+<header class="top">
+<a class="brand" href="index.html">MEHEDI <span>ALIM AYON</span></a>
+<a class="back" href="frameworks.html"><i class="fa-solid fa-arrow-left"></i> ALL FRAMEWORKS</a>
 </header>
 
+<section class="hero">
+<div class="eyebrow">ORIGINAL THINKING · FIELD EXECUTION · COMMERCIAL STRATEGY</div>
+<h1>Professional Frameworks<br>& Commercial Insights</h1>
+<p>A growing collection of original professional frameworks developed from field-level FMCG execution, key-account management, commercial observation and structured strategic thinking.</p>
+</section>
 
-<main class="container">
+<section class="grid">
 
-    <div class="tag">
-        ORIGINAL PROFESSIONAL WORK
-    </div>
+<article class="card">
+<div class="cover">
+<img src="assets/images/commercial-supremacy-cover.webp" alt="Architecting Commercial Supremacy cover" loading="eager">
+</div>
+<div class="body">
+<div class="num">FRAMEWORK 01 · SEPTEMBER 2026</div>
+<h2>Architecting Commercial Supremacy</h2>
+<div class="tags">FMCG · Distribution · Consumer Pull · Category Leadership</div>
+<p>A practical commercial framework showing how distribution and visibility can be converted into consumer pull, volume velocity, repeat purchase and sustainable category leadership.</p>
+<a class="btn" href="commercial-supremacy.html">EXPLORE FRAMEWORK <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
 
-    <h1>
-        Professional Frameworks
-    </h1>
+<article class="card">
+<div class="cover">
+<img src="assets/images/engineering-consumer-pull-cover.png" alt="Engineering Consumer Pull cover" loading="eager">
+</div>
+<div class="body">
+<div class="num">FRAMEWORK 02 · SEPTEMBER 2026</div>
+<h2>Engineering Consumer Pull</h2>
+<div class="tags">FMCG · Retail Conversion · Shopper Choice · Repeat Purchase</div>
+<p>The Six-Gate Retail Conversion Architecture explains how physical availability progresses through salience, meaning, trust, choice and repeat to create stronger consumer pull.</p>
+<a class="btn" href="engineering-consumer-pull.html">EXPLORE FRAMEWORK <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
 
-    <p class="intro">
-        Original commercial frameworks and applied professional models
-        developed from field experience, strategic observation, business
-        practice and independent professional analysis.
-    </p>
+</section>
 
-    <div class="status">
-        INDEPENDENT ORIGINAL WORK • NOT PEER REVIEWED
-    </div>
-
-
-    <section class="grid">
-
-
-        <!-- FRAMEWORK 01 -->
-
-        <article class="card">
-
-            <div class="cover">
-
-                <img
-                    src="assets/images/commercial-supremacy-cover.webp"
-                    alt="Architecting Commercial Supremacy"
-                >
-
-            </div>
-
-            <div class="content">
-
-                <div class="small">
-                    PROFESSIONAL FRAMEWORK 01
-                </div>
-
-                <h2>
-                    Architecting Commercial Supremacy
-                </h2>
-
-                <p>
-                    An independent commercial framework exploring the progression
-                    from market presence and visibility to consumer pull,
-                    velocity, repeat purchase and category leadership.
-                </p>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        ORIGINAL FRAMEWORK
-                    </span>
-
-                    <span class="badge">
-                        INDEPENDENT WORK
-                    </span>
-
-                    <span class="badge">
-                        NOT PEER REVIEWED
-                    </span>
-
-                </div>
-
-                <a href="commercial-supremacy.html" class="btn">
-                    EXPLORE FRAMEWORK
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!--
-        YOUR SECOND PROFESSIONAL FRAMEWORK:
-
-        আপনার দ্বিতীয় framework-এর exact title/file name
-        এখানে বসাতে হবে।
-
-        এখন future slot রেখে দিলাম যাতে কোনো ভুল নাম না দিই।
-        -->
-
-
-        <article class="card future">
-
-            <i class="fa-solid fa-diagram-project"></i>
-
-            <div class="small">
-                PROFESSIONAL FRAMEWORK 02
-            </div>
-
-            <h2>
-                Next Original Framework
-            </h2>
-
-            <p>
-                Reserved for the next professional model, field insight
-                or original strategic framework.
-            </p>
-
-        </article>
-
-
-        <article class="card future">
-
-            <i class="fa-solid fa-plus"></i>
-
-            <div class="small">
-                FUTURE FRAMEWORK
-            </div>
-
-            <h2>
-                Growing Collection
-            </h2>
-
-            <p>
-                New original professional frameworks will continue to be added.
-            </p>
-
-        </article>
-
-
-    </section>
-
-</main>
-
+<footer class="footer">© 2026 Mehedi Alim Ayon · Original Professional Frameworks</footer>
+</div>
 </body>
-
 </html>
