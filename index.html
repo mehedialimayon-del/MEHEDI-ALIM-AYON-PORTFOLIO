@@ -339,33 +339,37 @@ body{
 
 /* =========================================================
    DESKTOP HERO
+   FIXED: FULL PORTRAIT FIT
 ========================================================= */
 
-.hero-image{
-    width:100%!important;
-    height:100%!important;
-    object-fit:contain!important;
-    object-position:center bottom!important;
-    display:block!important;
-    filter:drop-shadow(0 25px 35px rgba(0,0,0,.85)) contrast(1.05) saturate(1.05)!important;
+.hero{
+    position:absolute !important;
 
-    transform:scale(.94)!important;
-    transform-origin:center bottom!important;
+    /*
+       Starts immediately below desktop navigation.
+       Ends above the desktop dock.
+       This keeps the FULL portrait visible.
+    */
 
-    -webkit-mask-image:linear-gradient(
-        to bottom,
-        rgba(0,0,0,1) 75%,
-        rgba(0,0,0,0.4) 92%,
-        rgba(0,0,0,0) 100%
-    )!important;
+    top:82px !important;
+    left:3.5% !important;
 
-    mask-image:linear-gradient(
-        to bottom,
-        rgba(0,0,0,1) 75%,
-        rgba(0,0,0,0.4) 92%,
-        rgba(0,0,0,0) 100%
-    );
+    width:470px !important;
+    height:calc(100vh - 255px) !important;
+
+    min-height:430px !important;
+    max-height:650px !important;
+
+    display:flex !important;
+
+    align-items:flex-end !important;
+    justify-content:center !important;
+
+    overflow:visible !important;
+
+    z-index:10 !important;
 }
+
 
 /* ORANGE GLOW */
 
@@ -442,26 +446,29 @@ body{
 }
 
 
-/* DESKTOP PORTRAIT */
+/* =========================================================
+   DESKTOP PORTRAIT
+   IMPORTANT:
+   NO 118% HEIGHT
+   NO SCALE 1.12
+   FULL IMAGE WILL FIT
+========================================================= */
 
 .hero-image{
     position:relative !important;
 
     width:auto !important;
+    height:100% !important;
 
-    height:118% !important;
-
-    max-width:none !important;
+    max-width:100% !important;
+    max-height:100% !important;
 
     object-fit:contain !important;
     object-position:center bottom !important;
 
     display:block !important;
 
-    transform:
-        translateY(8px)
-        scale(1.12) !important;
-
+    transform:none !important;
     transform-origin:center bottom !important;
 
     z-index:5 !important;
@@ -1022,6 +1029,7 @@ body{
 
 /* =========================================================
    LAPTOP / SHORT DESKTOP
+   FIXED FULL PORTRAIT
 ========================================================= */
 
 @media screen and (min-width:769px) and (max-height:850px){
@@ -1031,34 +1039,44 @@ body{
     }
 
     .hero{
-        top:76px !important;
+        top:78px !important;
 
         left:2.8% !important;
 
-        width:500px !important;
+        width:440px !important;
 
-        height:calc(100vh - 190px) !important;
+        height:calc(100vh - 245px) !important;
 
-        min-height:0 !important;
-
+        min-height:390px !important;
         max-height:none !important;
+
+        display:flex !important;
+
+        align-items:flex-end !important;
+        justify-content:center !important;
+
+        overflow:visible !important;
     }
 
     .hero-image{
         width:auto !important;
 
-        height:112% !important;
+        height:100% !important;
 
-        max-width:none !important;
+        max-width:100% !important;
+        max-height:100% !important;
 
-        transform:
-            translateY(5px)
-            scale(1.07) !important;
+        object-fit:contain !important;
+        object-position:center bottom !important;
+
+        transform:none !important;
+
+        transform-origin:center bottom !important;
     }
 
     .hero::before{
-        width:560px;
-        height:560px;
+        width:520px;
+        height:540px;
     }
 
     .main-content{
@@ -1115,7 +1133,7 @@ body{
     .hero{
         left:1.5% !important;
 
-        width:480px !important;
+        width:440px !important;
     }
 
     .main-content{
@@ -1139,6 +1157,7 @@ body{
 
 /* =========================================================
    MOBILE
+   ORIGINAL MOBILE VIEW — UNCHANGED
 ========================================================= */
 
 @media screen and (max-width:768px){
