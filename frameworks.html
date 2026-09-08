@@ -1,48 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Original Frameworks | Mehedi Alim Ayon</title>
 
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-    margin:0;
+    min-height:100vh;
     font-family:Arial,sans-serif;
-    background:#030507;
     color:#fff;
+    background:
+        radial-gradient(circle at 50% 20%,rgba(255,116,20,.18),transparent 38%),
+        linear-gradient(135deg,#020304,#090d13 50%,#030405);
 }
 
-.wrap{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-.top{
-    height:76px;
+.topbar{
+    height:74px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    padding:0 5%;
     border-bottom:1px solid rgba(255,116,20,.22);
+    background:rgba(3,5,7,.9);
 }
 
 .brand{
-    color:#fff;
     text-decoration:none;
+    color:#fff;
     font-weight:900;
     letter-spacing:1.5px;
 }
@@ -55,455 +52,275 @@ body{
     color:#fff;
     text-decoration:none;
     border:1px solid #ff7414;
-    border-radius:7px;
-    padding:11px 16px;
-    font-size:12px;
+    border-radius:6px;
+    padding:11px 18px;
+    font-size:11px;
     font-weight:900;
+    letter-spacing:1px;
 }
 
-.hero{
-    padding:76px 0 38px;
+.wrapper{
+    width:min(1100px,92%);
+    margin:0 auto;
+    padding:80px 0;
+}
+
+.heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 55px;
 }
 
 .eyebrow{
     color:#ff7414;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     letter-spacing:3px;
+    margin-bottom:14px;
 }
 
-.hero h1{
-    font-size:clamp(38px,6vw,72px);
-    line-height:.95;
-    margin:14px 0 18px;
+h1{
+    font-size:clamp(34px,5vw,58px);
+    line-height:1;
+    margin-bottom:18px;
 }
 
-.hero p{
-    max-width:760px;
-    color:#bac0c8;
-    line-height:1.75;
+.intro{
+    color:#b9c0c9;
+    line-height:1.7;
+    font-size:15px;
 }
 
+.status{
+    display:inline-block;
+    margin-top:18px;
+    padding:8px 12px;
+    border:1px solid rgba(255,116,20,.42);
+    border-radius:30px;
+    color:#ff9a55;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1px;
+}
 
-/* ==============================
-   FRAMEWORK GRID
-============================== */
-
-.grid{
+.categories{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    padding:25px 0 80px;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
 }
 
-
-/* ==============================
-   FRAMEWORK CARD
-============================== */
-
-.card{
+.category{
+    min-height:340px;
+    position:relative;
     overflow:hidden;
+    padding:36px;
     border:1px solid rgba(255,116,20,.38);
     border-radius:18px;
-
     background:
-        linear-gradient(
-            145deg,
-            #0b0e13,
-            #05070a
-        );
-
-    box-shadow:
-        0 24px 70px rgba(0,0,0,.45);
-
-    transition:
-        transform .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease;
+        linear-gradient(145deg,rgba(17,22,30,.96),rgba(6,8,12,.96));
+    text-decoration:none;
+    color:#fff;
+    transition:.3s ease;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-
-    border-color:
-        rgba(255,116,20,.75);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.60),
-        0 0 25px rgba(255,116,20,.08);
+.category:hover{
+    transform:translateY(-6px);
+    border-color:#ff7414;
+    box-shadow:0 22px 60px rgba(0,0,0,.48);
 }
 
-
-/* ==============================
-   COVER
-============================== */
-
-.cover{
-    aspect-ratio:3/4;
-    background:#0c1115;
-    overflow:hidden;
-    position:relative;
-}
-
-.cover img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:top;
-    display:block;
-
-    transition:transform .45s ease;
-}
-
-.card:hover .cover img{
-    transform:scale(1.025);
-}
-
-
-/* ==============================
-   BODY
-============================== */
-
-.body{
-    padding:24px;
-}
-
-.num{
-    font-size:12px;
+.icon{
+    width:62px;
+    height:62px;
+    border:1px solid #ff7414;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     color:#ff7414;
+    font-size:25px;
+    margin-bottom:35px;
+}
+
+.category small{
+    color:#ff7414;
+    font-size:10px;
     font-weight:900;
     letter-spacing:2px;
 }
 
-.body h2{
-    font-size:25px;
-    line-height:1.1;
-    margin:10px 0;
+.category h2{
+    font-size:30px;
+    margin:10px 0 14px;
 }
 
-.tags{
-    color:#ff7414;
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.body p{
-    color:#b9c0c8;
+.category p{
+    color:#adb5c0;
+    line-height:1.65;
+    max-width:420px;
     font-size:14px;
-    line-height:1.7;
 }
 
-
-/* ==============================
-   BUTTON
-============================== */
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    margin-top:16px;
-
-    padding:12px 18px;
-
-    border-radius:7px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff7414,
-            #ff8a28
-        );
-
+.open{
+    position:absolute;
+    bottom:30px;
+    left:36px;
     color:#fff;
-
-    text-decoration:none;
-
     font-size:11px;
     font-weight:900;
-    letter-spacing:1px;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    letter-spacing:1.2px;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 10px 28px rgba(255,116,20,.25);
+.open i{
+    margin-left:10px;
+    color:#ff7414;
 }
 
-
-/* ==============================
-   FOOTER
-============================== */
-
-.footer{
-    padding:30px 0;
-
-    border-top:
-        1px solid rgba(255,116,20,.18);
-
-    color:#747b84;
-
-    font-size:12px;
+.note{
+    margin-top:55px;
+    text-align:center;
+    color:#737b85;
+    font-size:11px;
+    line-height:1.6;
 }
 
+@media(max-width:768px){
 
-/* ==============================
-   MOBILE
-============================== */
-
-@media(max-width:650px){
-
-    .hero{
-        padding-top:45px;
+    .topbar{
+        height:64px;
+        padding:0 18px;
     }
 
-    .top{
-        height:66px;
+    .wrapper{
+        padding:50px 0;
     }
 
-    .grid{
-        padding-top:10px;
+    .categories{
+        grid-template-columns:1fr;
     }
 
+    .category{
+        min-height:300px;
+        padding:28px;
+    }
+
+    .open{
+        left:28px;
+    }
 }
 
 </style>
 
 </head>
 
-
 <body>
 
-<div class="wrap">
+<header class="topbar">
 
-
-<!-- ==============================
-     TOP NAV
-============================== -->
-
-<header class="top">
-
-    <a
-        class="brand"
-        href="index.html"
-    >
+    <a href="index.html" class="brand">
         MEHEDI <span>ALIM AYON</span>
     </a>
 
-
-    <a
-        class="back"
-        href="index.html"
-    >
-
+    <a href="index.html" class="back">
         <i class="fa-solid fa-arrow-left"></i>
-
-        PORTFOLIO
-
+        &nbsp; HOME
     </a>
 
 </header>
 
 
-<!-- ==============================
-     PAGE INTRO
-============================== -->
+<main class="wrapper">
 
-<section class="hero">
+    <section class="heading">
 
-    <div class="eyebrow">
+        <div class="eyebrow">
+            ORIGINAL WORK
+        </div>
 
-        ORIGINAL THINKING · FIELD EXECUTION · COMMERCIAL STRATEGY
+        <h1>
+            ORIGINAL FRAMEWORKS
+        </h1>
 
-    </div>
+        <p class="intro">
+            A growing collection of independent frameworks developed from
+            academic exploration, professional experience, field observations,
+            strategic thinking and applied problem-solving.
+        </p>
+
+        <div class="status">
+            INDEPENDENT WORK • NOT PEER REVIEWED UNLESS OTHERWISE STATED
+        </div>
+
+    </section>
 
 
-    <h1>
+    <section class="categories">
 
-        Frameworks &<br>
+        <a href="academic-frameworks.html" class="category">
 
-        Commercial Insights
+            <div class="icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
 
-    </h1>
+            <small>
+                RESEARCH & CONCEPTUAL WORK
+            </small>
+
+            <h2>
+                Academic Frameworks
+            </h2>
+
+            <p>
+                Explore original academic models, conceptual frameworks,
+                research-based ideas and scholarly work developed through
+                independent academic investigation.
+            </p>
+
+            <div class="open">
+                EXPLORE ACADEMIC FRAMEWORKS
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
 
 
-    <p>
+        <a href="professional-frameworks.html" class="category">
 
-        A growing collection of original frameworks developed from
-        field-level FMCG execution, key-account management,
-        commercial observation and structured strategic thinking.
+            <div class="icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
 
+            <small>
+                FIELD & COMMERCIAL INSIGHTS
+            </small>
+
+            <h2>
+                Professional Frameworks
+            </h2>
+
+            <p>
+                Explore original commercial models, management frameworks,
+                field-derived insights and professional concepts developed
+                through practical experience.
+            </p>
+
+            <div class="open">
+                EXPLORE PROFESSIONAL FRAMEWORKS
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+    </section>
+
+
+    <p class="note">
+        Frameworks presented here represent independent intellectual and
+        professional work. A framework should not be interpreted as a
+        peer-reviewed journal publication unless that status is explicitly stated.
     </p>
 
-</section>
-
-
-
-<!-- ==============================
-     FRAMEWORK GRID
-============================== -->
-
-<section class="grid">
-
-
-<!-- =====================================================
-     FRAMEWORK 01
-===================================================== -->
-
-<article class="card">
-
-    <div class="cover">
-
-        <img
-            src="assets/images/commercial-supremacy-cover.webp"
-            alt="Architecting Commercial Supremacy cover"
-            loading="eager"
-        >
-
-    </div>
-
-
-    <div class="body">
-
-        <div class="num">
-
-            FRAMEWORK 01 · SEPTEMBER 2026
-
-        </div>
-
-
-        <h2>
-
-            Architecting Commercial Supremacy
-
-        </h2>
-
-
-        <div class="tags">
-
-            FMCG · Distribution · Consumer Pull · Category Leadership
-
-        </div>
-
-
-        <p>
-
-            A practical commercial framework showing how distribution
-            and visibility can be converted into consumer pull,
-            volume velocity, repeat purchase and sustainable
-            category leadership.
-
-        </p>
-
-
-        <a
-            class="btn"
-            href="commercial-supremacy.html"
-        >
-
-            EXPLORE FRAMEWORK
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</article>
-
-
-
-<!-- =====================================================
-     FRAMEWORK 02
-===================================================== -->
-
-<article class="card">
-
-    <div class="cover">
-
-        <img
-            src="assets/images/framework-02-cover.png"
-            alt="Engineering Consumer Pull cover"
-            loading="lazy"
-        >
-
-    </div>
-
-
-    <div class="body">
-
-        <div class="num">
-
-            FRAMEWORK 02 · SEPTEMBER 2026
-
-        </div>
-
-
-        <h2>
-
-            Engineering Consumer Pull
-
-        </h2>
-
-
-        <div class="tags">
-
-            RETAIL · CONVERSION · CONSUMER BEHAVIOR · DEMAND CREATION
-
-        </div>
-
-
-        <p>
-
-            A commercial architecture for transforming market presence
-            into consumer preference through six connected conversion
-            gates — Presence, Salience, Meaning, Trust, Choice and Repeat.
-
-        </p>
-
-
-        <a
-            class="btn"
-            href="framework-02.html"
-        >
-
-            EXPLORE FRAMEWORK
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</article>
-
-
-</section>
-
-
-
-<!-- ==============================
-     FOOTER
-============================== -->
-
-<footer class="footer">
-
-    © 2026 Mehedi Alim Ayon · Original Frameworks
-
-</footer>
-
-
-</div>
+</main>
 
 </body>
-
 </html>
