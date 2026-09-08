@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Engineering Consumer Pull | Mehedi Alim Ayon</title>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#030507;
+    color:#fff;
+}
+
+.wrap{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+.top{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(255,116,20,.22);
+}
+
+.brand,
+.back{
+    color:#fff;
+    text-decoration:none;
+}
+
+.brand{
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.brand span{
+    color:#ff7414;
+}
+
+.back{
+    border:1px solid #ff7414;
+    border-radius:7px;
+    padding:10px 14px;
+    font-size:11px;
+    font-weight:900;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    display:grid;
+    grid-template-columns:minmax(300px,430px) 1fr;
+    gap:55px;
+    align-items:center;
+    padding:65px 0;
+}
+
+.cover{
+    border:1px solid rgba(255,116,20,.38);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,.55);
+}
+
+.cover img{
+    width:100%;
+    display:block;
+}
+
+.kicker{
+    font-size:11px;
+    color:#ff7414;
+    font-weight:900;
+    letter-spacing:2.5px;
+}
+
+.copy h1{
+    font-size:clamp(40px,6vw,72px);
+    line-height:.95;
+    margin:14px 0 18px;
+}
+
+.copy p{
+    color:#bcc3cb;
+    line-height:1.75;
+    max-width:680px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:24px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:13px 19px;
+    border-radius:7px;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.primary{
+    background:linear-gradient(135deg,#ff7414,#ff8a28);
+    color:#fff;
+}
+
+.secondary{
+    border:1px solid rgba(255,116,20,.75);
+    color:#fff;
+}
+
+
+/* =========================
+   CORE SECTION
+========================= */
+
+.section{
+    padding:45px 0;
+    border-top:1px solid rgba(255,116,20,.17);
+}
+
+.section h2{
+    font-size:30px;
+    margin:0 0 20px;
+}
+
+.section p{
+    color:#b9c1ca;
+    line-height:1.75;
+}
+
+
+/* =========================
+   SIX GATES
+========================= */
+
+.flow{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+    margin-top:26px;
+}
+
+.step{
+    min-height:130px;
+    border:1px solid rgba(255,116,20,.35);
+    background:#0a0e13;
+    border-radius:12px;
+    padding:16px;
+}
+
+.step b{
+    display:block;
+    color:#ff7414;
+    font-size:11px;
+    margin-bottom:10px;
+}
+
+.step strong{
+    font-size:14px;
+}
+
+.step span{
+    display:block;
+    color:#929aa4;
+    font-size:11px;
+    line-height:1.4;
+    margin-top:7px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+    margin-top:28px;
+    padding:22px;
+    border-left:3px solid #ff7414;
+    background:linear-gradient(
+        90deg,
+        rgba(255,116,20,.12),
+        transparent
+    );
+    font-size:20px;
+    line-height:1.55;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    padding:30px 0;
+    color:#737b85;
+    border-top:1px solid rgba(255,116,20,.16);
+    font-size:12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .hero{
+        grid-template-columns:1fr;
+        gap:28px;
+        padding-top:35px;
+    }
+
+    .cover{
+        max-width:420px;
+        margin:auto;
+    }
+
+    .flow{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .flow{
+        grid-template-columns:1fr;
+    }
+
+    .top{
+        height:66px;
+    }
+
+    .copy h1{
+        font-size:42px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="wrap">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="top">
+
+    <a
+        class="brand"
+        href="index.html"
+    >
+        MEHEDI <span>ALIM AYON</span>
+    </a>
+
+
+    <a
+        class="back"
+        href="frameworks.html"
+    >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        FRAMEWORKS
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     FRAMEWORK 02 HERO
+========================= -->
+
+<section class="hero">
+
+
+    <div class="cover">
+
+        <img
+            src="assets/images/framework-02-cover.png"
+            alt="Engineering Consumer Pull cover"
+        >
+
+    </div>
+
+
+
+    <div class="copy">
+
+
+        <div class="kicker">
+
+            FRAMEWORK 02 · RETAIL CONVERSION ARCHITECTURE · SEPTEMBER 2026
+
+        </div>
+
+
+        <h1>
+
+            Engineering Consumer Pull
+
+        </h1>
+
+
+        <p>
+
+            A practical commercial framework for understanding how
+            product presence can be systematically converted into
+            consumer demand. It connects visibility, relevance,
+            trust, choice and repeat purchase through six sequential
+            conversion gates.
+
+        </p>
+
+
+        <div class="actions">
+
+
+            <a
+                class="btn primary"
+                href="framework-02-reader.html"
+            >
+
+                READ FULL PUBLICATION
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </a>
+
+
+            <a
+                class="btn secondary"
+                href="frameworks.html"
+            >
+
+                BACK TO ALL FRAMEWORKS
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     SIX-GATE ARCHITECTURE
+========================= -->
+
+<section class="section">
+
+
+    <h2>
+
+        The Six-Gate Retail Conversion Architecture
+
+    </h2>
+
+
+    <p>
+
+        Consumer pull is not created by availability alone.
+        A product must successfully move through six connected
+        conversion gates — from being present in the market to
+        becoming a product consumers repeatedly choose.
+
+    </p>
+
+
+
+    <div class="flow">
+
+
+        <div class="step">
+
+            <b>01</b>
+
+            <strong>Presence</strong>
+
+            <span>
+                Be Available
+            </span>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <b>02</b>
+
+            <strong>Salience</strong>
+
+            <span>
+                Be Noticed
+            </span>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <b>03</b>
+
+            <strong>Meaning</strong>
+
+            <span>
+                Be Relevant
+            </span>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <b>04</b>
+
+            <strong>Trust</strong>
+
+            <span>
+                Build Confidence
+            </span>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <b>05</b>
+
+            <strong>Choice</strong>
+
+            <span>
+                Win Selection
+            </span>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <b>06</b>
+
+            <strong>Repeat</strong>
+
+            <span>
+                Sustain Demand
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="quote">
+
+        “Distribution creates availability. Successful conversion
+        gates transform that availability into consumer pull.”
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    Mehedi Alim Ayon · Agriculturist · Communicationist · Key Account Manager
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>
