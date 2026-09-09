@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Agriculturist - Mehedi Alim Ayon</title>
 
-<!-- FontAwesome Icons for Hamburger & Close Buttons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
 
 <style>
 
@@ -15,164 +20,257 @@
    RESET
 ========================================================= */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+body{
+    min-height:100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    color: #f5f5f5;
+    color:#f5f5f5;
 
     background:
-        radial-gradient(circle at top right, rgba(255,116,20,0.16), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(255,116,20,0.08), transparent 35%),
-        linear-gradient(135deg, #171717 0%, #101010 50%, #181818 100%);
+        radial-gradient(
+            circle at top right,
+            rgba(255,116,20,.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(255,116,20,.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #171717 0%,
+            #101010 50%,
+            #181818 100%
+        );
 
-    line-height: 1.7;
+    line-height:1.7;
 }
 
 
 /* =========================================================
-   PREMIUM CENTERED TOP NAVBAR WITH HAMBURGER MENU
+   NAVBAR
 ========================================================= */
 
-.site-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    background: rgba(18, 18, 18, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 116, 20, 0.4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-    z-index: 9999;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+.site-navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:65px;
+
+    background:
+        rgba(18,18,18,.88);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    border-bottom:
+        1px solid rgba(255,116,20,.4);
+
+    display:flex;
+
+    justify-content:
+        space-between;
+
+    align-items:center;
+
+    padding:
+        0 25px;
+
+    z-index:9999;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.6);
 }
 
-.nav-placeholder {
-    width: 40px; /* Left spacing balance */
+
+.nav-placeholder{
+    width:40px;
 }
 
-/* Centered Name styling */
-.nav-brand-centered {
-    color: #ffffff;
-    font-size: 1.15rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 0 0 12px rgba(255, 116, 20, 0.5);
-    transition: all 0.3s ease;
+
+.nav-brand-centered{
+
+    color:#fff;
+
+    font-size:1.15rem;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-decoration:none;
+
+    text-transform:
+        uppercase;
+
+    text-align:center;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,116,20,.5);
 }
 
-.nav-brand-centered span {
-    color: #ff7414;
+
+.nav-brand-centered span{
+    color:#ff7414;
 }
 
-.nav-brand-centered:hover {
-    text-shadow: 0 0 20px rgba(255, 116, 20, 0.9);
+
+.menu-toggle-btn{
+
+    width:42px;
+    height:42px;
+
+    background:
+        rgba(255,116,20,.12);
+
+    border:
+        1.5px solid
+        rgba(255,116,20,.6);
+
+    border-radius:12px;
+
+    color:#ff7414;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    transition:.3s ease;
 }
 
-/* Toggle Menu Button (Right Side Icon) */
-.menu-toggle-btn {
-    width: 42px;
-    height: 42px;
-    background: rgba(255, 116, 20, 0.12);
-    border: 1.5px solid rgba(255, 116, 20, 0.6);
-    border-radius: 12px;
-    color: #ff7414;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 116, 20, 0.2);
+
+.menu-toggle-btn:hover{
+
+    background:#ff7414;
+
+    color:#fff;
+
+    transform:
+        scale(1.05);
 }
 
-.menu-toggle-btn:hover {
-    background: #ff7414;
-    color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0 0 18px rgba(255, 116, 20, 0.6);
+
+/* =========================================================
+   DRAWER
+========================================================= */
+
+.nav-drawer{
+
+    position:fixed;
+
+    top:65px;
+    left:0;
+
+    width:100%;
+
+    background:
+        rgba(15,15,15,.96);
+
+    backdrop-filter:
+        blur(20px);
+
+    border-bottom:
+        2px solid #ff7414;
+
+    padding:
+        20px 0;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+    z-index:9998;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,.8);
 }
 
-/* Overlay Menu Drawer */
-.nav-drawer {
-    position: fixed;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background: rgba(15, 15, 15, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 2px solid #ff7414;
-    padding: 20px 0;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    z-index: 9998;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    animation: fadeInDown 0.3s ease-in-out forwards;
+
+.nav-drawer.active{
+    display:flex;
 }
 
-.nav-drawer.active {
-    display: flex;
+
+.drawer-link{
+
+    width:85%;
+
+    max-width:380px;
+
+    text-align:center;
+
+    padding:
+        12px 18px;
+
+    color:#e5e7eb;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-transform:
+        uppercase;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid
+        rgba(255,116,20,.2);
 }
 
-.drawer-link {
-    width: 85%;
-    max-width: 380px;
-    text-align: center;
-    padding: 12px 18px;
-    color: #e5e7eb;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 116, 20, 0.2);
-    transition: all 0.25s ease;
-}
 
 .drawer-link:hover,
-.drawer-link.active-link {
-    background: linear-gradient(135deg, #ff7414, #e85f00);
-    color: #ffffff;
-    border-color: #ff7414;
-    box-shadow: 0 6px 20px rgba(255, 116, 20, 0.4);
-    transform: translateY(-2px);
-}
+.drawer-link.active-link{
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background:
+        linear-gradient(
+            135deg,
+            #ff7414,
+            #e85f00
+        );
+
+    color:#fff;
 }
 
 
@@ -180,11 +278,16 @@ body {
    MAIN CONTAINER
 ========================================================= */
 
-.container {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 95px 22px 60px; /* Top padding for Navbar */
+.container{
+
+    width:100%;
+
+    max-width:1080px;
+
+    margin:auto;
+
+    padding:
+        95px 22px 60px;
 }
 
 
@@ -192,9 +295,11 @@ body {
    HERO
 ========================================================= */
 
-.profile-header {
-    position: relative;
-    overflow: hidden;
+.profile-header{
+
+    position:relative;
+
+    overflow:hidden;
 
     background:
         linear-gradient(
@@ -204,137 +309,199 @@ body {
             #20160f 100%
         );
 
-    border: 1px solid rgba(255,116,20,0.55);
+    border:
+        1px solid
+        rgba(255,116,20,.55);
 
-    border-radius: 28px;
+    border-radius:28px;
 
-    padding: 55px 45px;
+    padding:
+        55px 45px;
 
-    margin-bottom: 45px;
+    margin-bottom:32px;
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+        0 20px 50px
+        rgba(0,0,0,.45);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-between;
+
+    gap:30px;
 }
 
 
-.profile-header::after {
-    content: "";
-    position: absolute;
+.profile-header::after{
 
-    width: 230px;
-    height: 230px;
+    content:"";
 
-    right: -80px;
-    top: -80px;
+    position:absolute;
 
-    border-radius: 50%;
+    width:260px;
+    height:260px;
 
-    background: rgba(255,116,20,0.12);
+    right:-95px;
+    top:-95px;
 
-    pointer-events: none;
+    border-radius:50%;
+
+    background:
+        rgba(255,116,20,.12);
 }
 
 
-.profile-header::before {
-    content: "";
+.profile-content-left{
 
-    position: absolute;
+    position:relative;
 
-    width: 130px;
-    height: 130px;
+    z-index:2;
 
-    right: 70px;
-    bottom: -80px;
-
-    border-radius: 50%;
-
-    background: rgba(255,116,20,0.08);
-
-    pointer-events: none;
+    flex:1;
 }
 
 
-.profile-content-left {
-    position: relative;
-    z-index: 2;
-    flex: 1;
+.profile-logo-right{
+
+    position:relative;
+
+    z-index:2;
 }
 
 
-.profile-logo-right {
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
+.profile-logo-right img{
+
+    width:150px;
+
+    border-radius:50%;
+
+    border:
+        3px solid
+        rgba(255,116,20,.6);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.5);
 }
 
 
-.profile-logo-right img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid rgba(255,116,20,0.6);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    background: #111;
-    display: block;
+.profile-label{
+
+    color:#ff7414;
+
+    font-size:.78rem;
+
+    letter-spacing:4px;
+
+    font-weight:800;
+
+    margin-bottom:14px;
 }
 
 
-.profile-label {
-    position: relative;
-    z-index: 2;
+.profile-title{
 
-    color: #ff7414;
+    color:#fff;
 
-    font-size: 0.78rem;
+    font-size:
+        clamp(
+            2.3rem,
+            5vw,
+            4.2rem
+        );
 
-    letter-spacing: 4px;
+    line-height:1.04;
 
-    font-weight: 700;
+    font-weight:900;
 
-    margin-bottom: 15px;
-
-    text-transform: uppercase;
+    margin-bottom:18px;
 }
 
 
-.profile-title {
-    position: relative;
-    z-index: 2;
-
-    color: #ffffff;
-
-    font-size: clamp(2.3rem, 5vw, 4.2rem);
-
-    line-height: 1.05;
-
-    font-weight: 800;
-
-    margin-bottom: 18px;
+.profile-title span{
+    color:#ff7414;
 }
 
 
-.profile-title span {
-    color: #ff7414;
+.profile-subtitle{
+
+    color:#cfcfcf;
+
+    font-size:1rem;
+
+    line-height:1.8;
 }
 
 
-.profile-subtitle {
-    position: relative;
-    z-index: 2;
+/* =========================================================
+   QUICK IDENTITY STRIP
+========================================================= */
 
-    max-width: 850px;
+.identity-strip{
 
-    color: #cfcfcf;
+    display:grid;
 
-    font-size: 1rem;
+    grid-template-columns:
+        repeat(4,1fr);
 
-    line-height: 1.8;
+    gap:12px;
+
+    margin-bottom:30px;
+}
+
+
+.identity-card{
+
+    background:
+        linear-gradient(
+            145deg,
+            #252525,
+            #171717
+        );
+
+    border:
+        1px solid
+        rgba(255,116,20,.25);
+
+    border-radius:15px;
+
+    padding:
+        18px 15px;
+
+    text-align:center;
+}
+
+
+.identity-card i{
+
+    color:#ff7414;
+
+    font-size:1.35rem;
+
+    margin-bottom:9px;
+}
+
+
+.identity-card strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:.82rem;
+
+    margin-bottom:4px;
+}
+
+
+.identity-card span{
+
+    color:#949494;
+
+    font-size:.72rem;
 }
 
 
@@ -342,7 +509,7 @@ body {
    CONTENT BOX
 ========================================================= */
 
-.content-box {
+.content-box{
 
     background:
         linear-gradient(
@@ -351,89 +518,378 @@ body {
             #191919 100%
         );
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border:
+        1px solid
+        rgba(255,255,255,.08);
 
-    border-left: 4px solid #ff7414;
+    border-left:
+        4px solid
+        #ff7414;
 
-    border-radius: 20px;
+    border-radius:20px;
 
-    padding: 35px 38px;
+    padding:
+        35px 38px;
 
-    margin-bottom: 28px;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.32);
-
-    transition: 0.3s ease;
-}
-
-
-.content-box:hover {
-
-    transform: translateY(-3px);
-
-    border-color: rgba(255,116,20,0.45);
+    margin-bottom:28px;
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,0.42);
+        0 15px 35px
+        rgba(0,0,0,.32);
+
+    transition:.3s ease;
+}
+
+
+.content-box:hover{
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(255,116,20,.45);
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   SECTION META
 ========================================================= */
 
-h2 {
+.section-kicker{
 
-    color: #ffffff;
+    display:inline-block;
 
-    font-size: 1.8rem;
+    color:#ff7414;
 
-    line-height: 1.25;
+    font-size:.68rem;
 
-    margin-bottom: 25px;
+    font-weight:900;
 
-    padding-left: 16px;
+    letter-spacing:2.4px;
 
-    border-left: 4px solid #ff7414;
+    text-transform:
+        uppercase;
+
+    margin-bottom:10px;
 }
 
 
-h2::first-letter {
-    color: #ff7414;
+h2{
+
+    color:#fff;
+
+    font-size:1.8rem;
+
+    line-height:1.25;
+
+    margin-bottom:22px;
+
+    padding-left:16px;
+
+    border-left:
+        4px solid #ff7414;
+}
+
+
+p{
+
+    color:#cfcfcf;
+
+    font-size:1rem;
+
+    line-height:1.85;
+
+    margin-bottom:18px;
+}
+
+
+.highlight{
+
+    color:#ff7414;
+
+    font-weight:800;
 }
 
 
 /* =========================================================
-   PARAGRAPH
+   PREMIUM DATA CARDS
 ========================================================= */
 
-p {
+.premium-grid{
 
-    color: #cfcfcf;
+    display:grid;
 
-    font-size: 1rem;
+    grid-template-columns:
+        repeat(3,1fr);
 
-    line-height: 1.85;
+    gap:14px;
 
-    margin-bottom: 20px;
+    margin-top:24px;
 }
 
 
-p:last-child {
-    margin-bottom: 0;
+.premium-card{
+
+    min-height:150px;
+
+    padding:
+        22px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #222
+        );
+
+    border:
+        1px solid
+        rgba(255,116,20,.3);
+
+    border-radius:16px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.premium-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,116,20,.08);
+
+    right:-25px;
+    bottom:-25px;
+}
+
+
+.premium-card i{
+
+    color:#ff7414;
+
+    font-size:1.4rem;
+
+    margin-bottom:14px;
+}
+
+
+.premium-card h3{
+
+    color:#fff;
+
+    font-size:1rem;
+
+    margin-bottom:8px;
+}
+
+
+.premium-card p{
+
+    color:#aaa;
+
+    font-size:.82rem;
+
+    line-height:1.55;
+
+    margin:0;
 }
 
 
 /* =========================================================
-   HIGHLIGHT
+   SKILL PILLS
 ========================================================= */
 
-.highlight {
+.skill-pills{
 
-    color: #ff7414;
+    display:flex;
 
-    font-weight: 700;
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:22px;
+}
+
+
+.skill-pill{
+
+    padding:
+        9px 14px;
+
+    border-radius:999px;
+
+    background:
+        rgba(255,116,20,.09);
+
+    border:
+        1px solid
+        rgba(255,116,20,.42);
+
+    color:#ff9a51;
+
+    font-size:.78rem;
+
+    font-weight:800;
+}
+
+
+/* =========================================================
+   HALL LIFE
+========================================================= */
+
+.hall-feature{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,116,20,.08),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(255,116,20,.3);
+
+    border-radius:18px;
+
+    padding:
+        28px;
+
+    margin-top:22px;
+}
+
+
+.hall-feature h3{
+
+    color:#fff;
+
+    margin-bottom:12px;
+
+    font-size:1.15rem;
+}
+
+
+.roommate-card{
+
+    margin-top:24px;
+
+    padding:
+        22px 24px;
+
+    border-radius:16px;
+
+    border:
+        1px solid
+        rgba(255,116,20,.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,116,20,.12),
+            rgba(255,116,20,.03)
+        );
+}
+
+
+.roommate-card .name{
+
+    color:#ff7414;
+
+    font-size:1.25rem;
+
+    font-weight:900;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:15px;
+
+    padding-left:25px;
+}
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:7px;
+    top:4px;
+
+    width:2px;
+    height:calc(100% - 8px);
+
+    background:#ff7414;
+}
+
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:24px;
+}
+
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-25px;
+    top:7px;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:#ff7414;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(255,116,20,.15);
+}
+
+
+.timeline-item strong{
+
+    color:#fff;
+
+    display:block;
+
+    margin-bottom:5px;
+}
+
+
+.timeline-item span{
+
+    color:#aaa;
+
+    font-size:.88rem;
 }
 
 
@@ -441,160 +897,137 @@ p:last-child {
    LIST
 ========================================================= */
 
-ul {
+ul{
 
-    list-style: none;
+    list-style:none;
 
-    margin: 10px 0 25px;
+    padding:0;
 
-    padding: 0;
+    margin:
+        10px 0 25px;
 }
 
 
-li {
+li{
 
-    position: relative;
+    position:relative;
 
-    color: #d2d2d2;
+    color:#d2d2d2;
 
-    font-size: 1rem;
+    font-size:1rem;
 
-    line-height: 1.8;
+    line-height:1.8;
 
-    padding: 17px 20px 17px 48px;
+    padding:
+        17px 20px
+        17px 48px;
 
-    margin-bottom: 12px;
+    margin-bottom:12px;
 
-    background: rgba(255,255,255,0.035);
+    background:
+        rgba(255,255,255,.035);
 
-    border: 1px solid rgba(255,255,255,0.06);
+    border:
+        1px solid
+        rgba(255,255,255,.06);
 
-    border-radius: 12px;
+    border-radius:12px;
 }
 
 
-li::before {
+li::before{
 
-    content: "✓";
+    content:"✓";
 
-    position: absolute;
+    position:absolute;
 
-    left: 18px;
-    top: 15px;
+    left:18px;
+    top:15px;
 
-    width: 23px;
-    height: 23px;
+    width:23px;
+    height:23px;
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:center;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    background: #ff7414;
+    background:#ff7414;
 
-    color: #111;
+    color:#111;
 
-    font-size: 0.75rem;
+    font-size:.75rem;
 
-    font-weight: 900;
-}
-
-
-/* =========================================================
-   UNIVERSITY / AGRICULTURE LINK
-========================================================= */
-
-.agri-link {
-
-    display: inline-block;
-
-    color: #ff7414;
-
-    text-decoration: none;
-
-    font-weight: 800;
-
-    border: 1px solid #ff7414;
-
-    border-radius: 8px;
-
-    padding: 3px 10px;
-
-    margin: 0 3px;
-
-    transition: 0.3s ease;
-}
-
-
-.agri-link:hover {
-
-    background: #ff7414;
-
-    color: #111;
+    font-weight:900;
 }
 
 
 /* =========================================================
-   QUOTE BOX
+   QUOTE
 ========================================================= */
 
-.quote-box {
+.quote-box{
 
-    position: relative;
+    position:relative;
 
-    padding: 30px 32px;
+    padding:
+        30px 32px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,116,20,0.12),
-            rgba(255,116,20,0.035)
+            rgba(255,116,20,.12),
+            rgba(255,116,20,.035)
         );
 
-    border: 1px solid rgba(255,116,20,0.35);
+    border:
+        1px solid
+        rgba(255,116,20,.35);
 
-    border-radius: 18px;
-
-    margin-top: 10px;
+    border-radius:18px;
 }
 
 
-.quote-box::before {
+.quote-box p{
 
-    content: "“";
+    color:#fff;
 
-    position: absolute;
+    font-size:1.05rem;
 
-    left: 18px;
-    top: -12px;
+    font-weight:700;
 
-    color: #ff7414;
+    font-style:italic;
 
-    font-size: 5rem;
-
-    line-height: 1;
-
-    opacity: 0.35;
+    margin:0;
 }
 
 
-.quote-box p {
+/* =========================================================
+   LINK
+========================================================= */
 
-    color: #ffffff;
+.agri-link{
 
-    font-size: 1.05rem;
+    display:inline-block;
 
-    font-weight: 600;
+    color:#ff7414;
 
-    font-style: italic;
+    text-decoration:none;
 
-    margin: 0;
+    font-weight:800;
 
-    position: relative;
+    border:
+        1px solid #ff7414;
 
-    z-index: 2;
+    border-radius:8px;
+
+    padding:
+        3px 10px;
+
+    margin:
+        0 3px;
 }
 
 
@@ -602,17 +1035,18 @@ li::before {
    BACK BUTTON
 ========================================================= */
 
-.back-btn {
+.back-btn{
 
-    display: block;
+    display:block;
 
-    width: 100%;
+    width:100%;
 
-    text-align: center;
+    text-align:center;
 
-    margin-top: 35px;
+    margin-top:35px;
 
-    padding: 17px 20px;
+    padding:
+        17px 20px;
 
     background:
         linear-gradient(
@@ -621,33 +1055,13 @@ li::before {
             #e85f00
         );
 
-    border: none;
+    border-radius:12px;
 
-    border-radius: 12px;
+    color:#fff;
 
-    color: #ffffff;
+    text-decoration:none;
 
-    text-decoration: none;
-
-    font-weight: 800;
-
-    font-size: 0.95rem;
-
-    letter-spacing: 0.5px;
-
-    box-shadow:
-        0 10px 25px rgba(255,116,20,0.25);
-
-    transition: 0.3s ease;
-}
-
-
-.back-btn:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 15px 30px rgba(255,116,20,0.35);
+    font-weight:900;
 }
 
 
@@ -655,473 +1069,1074 @@ li::before {
    MOBILE
 ========================================================= */
 
-@media screen and (max-width: 600px) {
+@media(max-width:700px){
 
-    .site-navbar {
-        padding: 0 15px;
-        height: 55px;
+    .site-navbar{
+        height:55px;
+        padding:0 15px;
     }
 
-    .nav-placeholder {
-        width: 36px;
+    .nav-drawer{
+        top:55px;
     }
 
-    .nav-brand-centered {
-        font-size: 0.85rem;
-        letter-spacing: 1px;
+    .nav-brand-centered{
+        font-size:.85rem;
     }
 
-    .menu-toggle-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
-        border-radius: 9px;
+    .container{
+        padding:
+            75px 12px 40px;
     }
 
-    .nav-drawer {
-        top: 55px;
-        padding: 15px 0;
+    .profile-header{
+
+        padding:
+            32px 22px;
+
+        flex-direction:
+            column-reverse;
+
+        text-align:center;
     }
 
-    .drawer-link {
-        font-size: 0.8rem;
-        padding: 10px 14px;
+    .profile-logo-right img{
+        width:120px;
     }
 
-    body {
-
-        background:
-            radial-gradient(
-                circle at top right,
-                rgba(255,116,20,0.13),
-                transparent 40%
-            ),
-            linear-gradient(
-                145deg,
-                #181818 0%,
-                #111111 100%
-            );
-
-        font-size: 16px;
+    .profile-title{
+        font-size:2rem;
     }
 
-
-    .container {
-
-        padding: 75px 12px 40px;
+    .profile-subtitle{
+        font-size:.88rem;
     }
 
-
-    .profile-header {
-        padding: 34px 24px;
-        margin-bottom: 25px;
-        border-radius: 22px;
-        flex-direction: column-reverse;
-        text-align: center;
+    .identity-strip{
+        grid-template-columns:
+            1fr 1fr;
     }
 
-
-    .profile-logo-right img {
-        width: 120px;
-        margin: 0 auto;
+    .premium-grid{
+        grid-template-columns:1fr;
     }
 
+    .content-box{
 
-    .profile-label {
+        padding:
+            24px 20px;
 
-        font-size: 0.65rem;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 12px;
+        border-left-width:3px;
     }
 
-
-    .profile-title {
-
-        font-size: 2.05rem;
-
-        line-height: 1.08;
-
-        margin-bottom: 15px;
+    h2{
+        font-size:1.25rem;
     }
 
-
-    .profile-subtitle {
-
-        font-size: 0.88rem;
-
-        line-height: 1.65;
+    p{
+        font-size:.88rem;
     }
 
-
-    .content-box {
-
-        padding: 24px 20px;
-
-        border-radius: 17px;
-
-        margin-bottom: 20px;
-
-        border-left-width: 3px;
+    li{
+        font-size:.86rem;
     }
 
-
-    h2 {
-
-        font-size: 1.25rem;
-
-        line-height: 1.35;
-
-        padding-left: 11px;
-
-        margin-bottom: 19px;
+    .skill-pill{
+        font-size:.72rem;
     }
 
-
-    p {
-
-        font-size: 0.88rem;
-
-        line-height: 1.75;
-
-        margin-bottom: 17px;
-    }
-
-
-    li {
-
-        font-size: 0.86rem;
-
-        line-height: 1.7;
-
-        padding: 14px 15px 14px 42px;
-    }
-
-
-    li::before {
-
-        left: 14px;
-
-        top: 14px;
-
-        width: 21px;
-
-        height: 21px;
-    }
-
-
-    .quote-box {
-
-        padding: 25px 20px;
-    }
-
-
-    .quote-box p {
-
-        font-size: 0.9rem;
-
-        line-height: 1.7;
-    }
-
-
-    .back-btn {
-
-        font-size: 0.85rem;
-
-        padding: 15px;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media screen and (max-width: 380px) {
-
-    .nav-brand-centered {
-        font-size: 0.75rem;
-    }
-
-    .profile-title {
-
-        font-size: 1.8rem;
-    }
-
-
-    .profile-subtitle {
-
-        font-size: 0.82rem;
-    }
-
-
-    .content-box {
-
-        padding: 21px 17px;
-    }
-
-
-    h2 {
-
-        font-size: 1.12rem;
-    }
-
-
-    p {
-
-        font-size: 0.84rem;
-    }
-
-
-    li {
-
-        font-size: 0.82rem;
-    }
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- TOP CENTERED NAVBAR -->
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
 <nav class="site-navbar">
+
     <div class="nav-placeholder"></div>
-    
-    <a href="index.html" class="nav-brand-centered">
-        MEHEDI <span>ALIM AYON</span>
+
+    <a
+        href="index.html"
+        class="nav-brand-centered"
+    >
+        MEHEDI
+        <span>ALIM AYON</span>
     </a>
 
-    <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars" id="menuIcon"></i>
+    <button
+        class="menu-toggle-btn"
+        id="menuToggleBtn"
+        aria-label="Toggle Menu"
+    >
+        <i
+            class="fa-solid fa-bars"
+            id="menuIcon"
+        ></i>
     </button>
+
 </nav>
 
-<!-- DROPDOWN DRAWER MENU -->
-<div class="nav-drawer" id="navDrawer">
+
+<div
+    class="nav-drawer"
+    id="navDrawer"
+>
+
     <a href="index.html" class="drawer-link">Home</a>
+
     <a href="about.html" class="drawer-link">About Me</a>
-    <a href="agriculturist.html" class="drawer-link active-link">Agriculturist</a>
-    <a href="communicationist.html" class="drawer-link">Communicationist</a>
-    <a href="kam.html" class="drawer-link">Key Account Manager</a>
-    <a href="gallery.html" class="drawer-link">Gallery</a>
-    <a href="resume.html" class="drawer-link">Profile / CV</a>
-    <a href="contact.html" class="drawer-link">Contact</a>
+
+    <a href="agriculturist.html" class="drawer-link active-link">
+        Agriculturist
+    </a>
+
+    <a href="communicationist.html" class="drawer-link">
+        Communicationist
+    </a>
+
+    <a href="kam.html" class="drawer-link">
+        Key Account Manager
+    </a>
+
+    <a href="gallery.html" class="drawer-link">
+        Gallery
+    </a>
+
+    <a href="resume.html" class="drawer-link">
+        Profile / CV
+    </a>
+
+    <a href="contact.html" class="drawer-link">
+        Contact
+    </a>
+
 </div>
+
 
 <div class="container">
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="profile-header">
 
     <div class="profile-content-left">
+
         <div class="profile-label">
-            AGRICULTURIST
+            AGRICULTURIST · ACADEMIC ROOTS
         </div>
 
         <div class="profile-title">
+
             My Journey as an
             <span>AGRICULTURIST</span>
+
         </div>
 
         <div class="profile-subtitle">
-            Agricultural Economics & Rural Sociology professional with a strong
-            academic foundation, practical understanding of agriculture,
-            communication, leadership, rural development and a passion for
-            creating meaningful impact in the agricultural sector.
+
+            My agricultural journey began at Bangladesh Agricultural
+            University, where Agricultural Economics & Rural Sociology
+            taught me to understand agriculture not only through crops
+            and production, but through markets, people, economics,
+            rural communities, development and decision-making.
+
         </div>
+
     </div>
+
 
     <div class="profile-logo-right">
-        <img src="https://i.postimg.cc/vH2d6rV3/images-(2).png" alt="University Logo">
+
+        <img
+            src="https://i.postimg.cc/vH2d6rV3/images-(2).png"
+            alt="Bangladesh Agricultural University Logo"
+        >
+
     </div>
 
 </section>
 
 
+<!-- =========================================================
+     QUICK IDENTITY
+========================================================= -->
+
+<section class="identity-strip">
+
+    <div class="identity-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <strong>BAU</strong>
+        <span>Academic Foundation</span>
+    </div>
+
+    <div class="identity-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <strong>Agricultural Economics</strong>
+        <span>Markets · Policy · Development</span>
+    </div>
+
+    <div class="identity-card">
+        <i class="fa-solid fa-people-group"></i>
+        <strong>Rural Sociology</strong>
+        <span>People · Society · Community</span>
+    </div>
+
+    <div class="identity-card">
+        <i class="fa-solid fa-seedling"></i>
+        <strong>Agriculturist</strong>
+        <span>Knowledge into Impact</span>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BAU LEGACY
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>Bangladesh Agricultural University — Overview & Legacy</h2>
+    <div class="section-kicker">
+        THE INSTITUTION
+    </div>
+
+    <h2>
+        Bangladesh Agricultural University — Legacy, Research & Global Standing
+    </h2>
 
     <p>
 
-        <span class="highlight">Bangladesh Agricultural University (BAU)</span>
-        is one of the most important institutions for agricultural education,
-        research and innovation in Bangladesh.
+        <span class="highlight">
+        Bangladesh Agricultural University (BAU)
+        </span>
+
+        has been one of the most influential institutions in the
+        development of agricultural education, research and professional
+        capacity in Bangladesh.
 
     </p>
 
     <p>
 
-        The university has played a significant role in developing
-        agricultural professionals, researchers, scientists and leaders
-        who contribute to food security, rural development and the
-        advancement of the agricultural sector.
+        Its academic environment connects agriculture with
+        <span class="highlight">
+        food security, agricultural economics, technology,
+        rural development, agribusiness, fisheries, livestock
+        and sustainable resource management.
+        </span>
 
     </p>
 
     <p>
 
-        Studying at BAU gave me the opportunity to understand agriculture
-        not only as a science but also as a complete system connected with
-        economics, society, markets, rural communities and national development.
+        In the
+        <span class="highlight">
+        Times Higher Education World University Rankings 2026,
+        </span>
+
+        BAU is placed in the
+        <span class="highlight">
+        1001–1200 world ranking band
+        </span>
+
+        and
+        <span class="highlight">
+        601–800 in Life Sciences.
+        </span>
+
+        For me, BAU's importance goes beyond ranking:
+        it is the institution where agriculture became a complete
+        academic, social and professional perspective.
+
+    </p>
+
+
+    <div class="premium-grid">
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-flask"></i>
+
+            <h3>Research Culture</h3>
+
+            <p>
+                Applied research addressing food,
+                livelihoods, markets, climate,
+                rural development and agricultural
+                transformation.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-earth-asia"></i>
+
+            <h3>National Impact</h3>
+
+            <p>
+                Agricultural knowledge connected
+                directly with farmers, communities,
+                policy, markets and national
+                food systems.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-microscope"></i>
+
+            <h3>Academic Depth</h3>
+
+            <p>
+                A multidisciplinary agricultural
+                environment that connects science,
+                economics, society and innovation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BAU JOURNEY
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        MY BEGINNING
+    </div>
+
+    <h2>
+        My Journey at Bangladesh Agricultural University
+    </h2>
+
+    <p>
+
+        In
+        <span class="highlight">
+        2017,
+        </span>
+
+        I entered
+        <span class="highlight">
+        Bangladesh Agricultural University
+        </span>
+
+        and began my academic journey in
+        <span class="highlight">
+        Agricultural Economics & Rural Sociology.
+        </span>
+
+    </p>
+
+    <p>
+
+        Leaving my family and beginning an independent life was one
+        of the most important transitions of my life. BAU introduced
+        me to people from different districts, cultures, personalities
+        and ways of thinking.
+
+    </p>
+
+    <p>
+
+        Over time, university life strengthened my
+        <span class="highlight">
+        confidence, adaptability, communication and ability
+        to connect naturally with different people.
+        </span>
+
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <strong>2017 · A New Beginning</strong>
+
+            <span>
+                Joined Bangladesh Agricultural University
+                and began life away from family.
+            </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <strong>Academic & Campus Growth</strong>
+
+            <span>
+                Developed academic knowledge,
+                relationships, leadership and
+                organizational experience.
+            </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <strong>Seven Years of Transformation</strong>
+
+            <span>
+                University, hall life, friendship,
+                responsibility and professional
+                mindset gradually shaped who I became.
+            </span>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <strong>2024 · Degree Journey Completed</strong>
+
+            <span>
+                Completed a chapter that gave me
+                much more than an academic qualification.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEGREE
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        THE DEGREE
+    </div>
+
+    <h2>
+        Agricultural Economics & Rural Sociology — What I Studied
+    </h2>
+
+    <p>
+
+        Agricultural Economics taught me to see agriculture as an
+        <span class="highlight">
+        economic system,
+        </span>
+
+        while Rural Sociology taught me to understand the
+        <span class="highlight">
+        people and communities behind that system.
+        </span>
+
+    </p>
+
+    <p>
+
+        Together, the discipline developed a broader understanding
+        of how production, markets, rural livelihoods, finance,
+        policy, society and development interact.
+
+    </p>
+
+
+    <div class="premium-grid">
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-coins"></i>
+
+            <h3>Agricultural Economics</h3>
+
+            <p>
+                Production economics, resource allocation,
+                costs, returns and economic decision-making
+                in agriculture.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-store"></i>
+
+            <h3>Agricultural Markets</h3>
+
+            <p>
+                Supply, demand, pricing,
+                market structure, value chains
+                and agricultural marketing.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <h3>Statistics & Analysis</h3>
+
+            <p>
+                Data interpretation, quantitative
+                analysis and evidence-based
+                decision-making.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+
+            <h3>Agricultural Finance</h3>
+
+            <p>
+                Understanding finance, investment,
+                credit and economic decision-making
+                in agricultural systems.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-people-roof"></i>
+
+            <h3>Rural Sociology</h3>
+
+            <p>
+                Rural institutions, communities,
+                social relationships, livelihoods
+                and development processes.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <h3>Agribusiness</h3>
+
+            <p>
+                Connecting agriculture with business,
+                markets, entrepreneurship and
+                commercial opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT I LEARNED
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        KNOWLEDGE INTO CAPABILITY
+    </div>
+
+    <h2>
+        What Agricultural Economics Built in Me
+    </h2>
+
+    <p>
+
+        My degree did not only teach me theories.
+        It trained me to think about
+        <span class="highlight">
+        value, cost, markets, human behaviour,
+        resources, incentives and decision-making.
+        </span>
+
+    </p>
+
+
+    <div class="skill-pills">
+
+        <span class="skill-pill">
+            Analytical Thinking
+        </span>
+
+        <span class="skill-pill">
+            Market Understanding
+        </span>
+
+        <span class="skill-pill">
+            Research
+        </span>
+
+        <span class="skill-pill">
+            Data Interpretation
+        </span>
+
+        <span class="skill-pill">
+            Economic Decision-Making
+        </span>
+
+        <span class="skill-pill">
+            Rural Development
+        </span>
+
+        <span class="skill-pill">
+            Agribusiness Thinking
+        </span>
+
+        <span class="skill-pill">
+            Problem Solving
+        </span>
+
+        <span class="skill-pill">
+            Strategic Thinking
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAMPUS LIFE
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        BEYOND THE CLASSROOM
+    </div>
+
+    <h2>
+        Campus Life — Where Confidence Met Opportunity
+    </h2>
+
+    <p>
+
+        BAU's classrooms gave me academic knowledge,
+        but the wider campus gave me opportunities to practice
+        <span class="highlight">
+        communication, teamwork, public speaking,
+        coordination and leadership.
+        </span>
+
+    </p>
+
+    <p>
+
+        I participated in
+        <span class="highlight">
+        cultural programmes, debates, quizzes,
+        social initiatives, student activities
+        and organizational events.
+        </span>
+
+    </p>
+
+    <p>
+
+        Those experiences gradually taught me how to speak in
+        front of people, work with different personalities,
+        take responsibility, organize activities and respond
+        when something did not go according to plan.
 
     </p>
 
 </section>
 
 
+<!-- =========================================================
+     HALL LIFE
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>My Journey at Bangladesh Agricultural University</h2>
+    <div class="section-kicker">
+        MY FIRST HOME AWAY FROM HOME
+    </div>
+
+    <h2>
+        Shahid Nazmul Ahsan Hall — The Life Classroom
+    </h2>
 
     <p>
 
-        In <span class="highlight">2017</span>, I stepped into
-        <span class="highlight">Bangladesh Agricultural University</span>
-        and enrolled in the
+        Leaving my family for university,
         <span class="highlight">
-        Department of Agricultural Economics and Rural Sociology.
+        Shahid Nazmul Ahsan Hall
+        </span>
+
+        became my first real home away from home.
+
+    </p>
+
+    <p>
+
+        Hall life became one of the most important learning
+        environments of my university journey. Living with people
+        from different backgrounds taught me
+        <span class="highlight">
+        unity, adaptability, respect, communication,
+        cooperation and how to become part of a community.
+        </span>
+
+    </p>
+
+
+    <div class="hall-feature">
+
+        <h3>
+            What Hall Life Taught Me
+        </h3>
+
+        <p>
+
+            From speaking in front of others to coordinating
+            dining-related activities, helping organize tours,
+            supporting hall programmes, participating in competitions
+            and managing collective responsibilities, I gradually
+            developed practical
+            <span class="highlight">
+            leadership and people-management skills.
+            </span>
+
+        </p>
+
+        <p>
+
+            At the same time, university life was never only responsibility.
+            There were classes, examinations, assignments,
+            friendships and countless memorable
+            <span class="highlight">
+            addas.
+            </span>
+
+            Learning how to balance all of these taught me one of
+            my most valuable capabilities:
+            <span class="highlight">
+            time management.
+            </span>
+
+        </p>
+
+    </div>
+
+
+    <div class="skill-pills">
+
+        <span class="skill-pill">
+            Leadership
+        </span>
+
+        <span class="skill-pill">
+            Public Speaking
+        </span>
+
+        <span class="skill-pill">
+            Communication
+        </span>
+
+        <span class="skill-pill">
+            Teamwork
+        </span>
+
+        <span class="skill-pill">
+            Time Management
+        </span>
+
+        <span class="skill-pill">
+            People Management
+        </span>
+
+        <span class="skill-pill">
+            Event Coordination
+        </span>
+
+        <span class="skill-pill">
+            Tour Management
+        </span>
+
+        <span class="skill-pill">
+            Community Building
+        </span>
+
+    </div>
+
+
+    <div class="roommate-card">
+
+        <div class="name">
+            MEHEDI HASAN
+        </div>
+
+        <p>
+
+            My seven-year hall journey would be incomplete
+            without mentioning
+            <span class="highlight">
+            Mehedi Hasan — my roommate,
+            trusted companion and one of the most dependable
+            people throughout my university life.
+            </span>
+
+        </p>
+
+        <p>
+
+            From everyday hall life to difficult moments,
+            academic responsibilities, programmes and
+            personal challenges, his support and cooperation
+            remained constant. He was connected, directly or
+            indirectly, with almost every important chapter
+            of my hall journey.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STRUGGLE
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        GROWTH THROUGH CHALLENGE
+    </div>
+
+    <h2>
+        Independence, Adjustment & Personal Struggle
+    </h2>
+
+    <p>
+
+        University life was also a period of adjustment.
+        Living away from family meant learning how to
+        make decisions independently, manage responsibilities,
+        solve everyday problems and continue moving forward
+        even when situations were uncomfortable.
+
+    </p>
+
+    <p>
+
+        These experiences strengthened my
+        <span class="highlight">
+        resilience, emotional maturity, adaptability,
+        self-management and confidence.
         </span>
 
     </p>
 
     <p>
 
-        Moving away from home and living without my parents for the first
-        time became a major turning point in my life. I started my residential
-        life at <span class="highlight">Shahid Nazmul Ahsan Hall</span>
-        and gradually adapted to a completely new environment.
-
-    </p>
-
-    <p>
-
-        Coming from a different part of Bangladesh and meeting students
-        from many districts gave me the opportunity to understand different
-        cultures, personalities and ways of thinking.
-
-    </p>
-
-    <p>
-
-        My natural ability to communicate and connect with people helped me
-        build strong relationships across the campus and become actively
-        involved in university life.
+        Looking back, many of the challenges that felt difficult
+        at the time became some of the most valuable lessons
+        of my university life.
 
     </p>
 
 </section>
 
 
+<!-- =========================================================
+     LEADERSHIP
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>Campus Life, Leadership & Co-Curricular Activities</h2>
+    <div class="section-kicker">
+        LEADERSHIP DEVELOPMENT
+    </div>
+
+    <h2>
+        Leadership Was Learned Through Responsibility
+    </h2>
 
     <p>
 
-        BAU provided me with much more than classroom education. The university
-        environment gave me countless opportunities to participate in
-        co-curricular and extracurricular activities.
+        Hall and campus life taught me that leadership is not simply
+        about holding a formal position.
 
     </p>
 
     <p>
 
-        I actively participated in
+        Leadership means
         <span class="highlight">
-        cultural programs, debates, quizzes, social activities,
-        organizational events and different student platforms.
+        listening, coordinating people, earning trust,
+        taking responsibility, communicating clearly
+        and remaining dependable when something needs to be done.
         </span>
 
     </p>
 
-    <p>
 
-        These activities significantly improved my
-        <span class="highlight">
-        public speaking, communication, leadership, decision-making,
-        teamwork and problem-solving abilities.
-        </span>
+    <div class="premium-grid">
 
-    </p>
+        <div class="premium-card">
 
-    <p>
+            <i class="fa-solid fa-microphone"></i>
 
-        The experience taught me how to communicate with different types of
-        people, work as part of a team and take responsibility when situations
-        demanded leadership.
+            <h3>Public Speaking</h3>
 
-    </p>
+            <p>
+                Developing confidence to communicate
+                ideas and speak in front of groups.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-people-arrows"></i>
+
+            <h3>People Coordination</h3>
+
+            <p>
+                Learning to work with different
+                personalities toward a common goal.
+            </p>
+
+        </div>
+
+
+        <div class="premium-card">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <h3>Event Management</h3>
+
+            <p>
+                Supporting programmes, tours,
+                activities and student initiatives
+                from planning to execution.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- =========================================================
+     SKILLS
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>Agricultural Economics & Rural Sociology</h2>
+    <div class="section-kicker">
+        MY BAU SKILLSET
+    </div>
 
-    <p>
+    <h2>
+        Skills Developed Across Seven Years
+    </h2>
 
-        My academic specialization in
-        <span class="highlight">
-        Agricultural Economics and Rural Sociology
-        </span>
-        allowed me to explore agriculture from both economic and social
-        perspectives.
-
-    </p>
-
-    <p>
-
-        The discipline combines agricultural production with economics,
-        markets, resource management, rural society and development.
-
-    </p>
 
     <ul>
 
         <li>
-            <span class="highlight">Agricultural Economics:</span>
-            Understanding economic principles and their application to
-            agriculture and rural development.
+            <span class="highlight">
+                Analytical Thinking:
+            </span>
+
+            Understanding problems through
+            evidence, economics and logical reasoning.
         </li>
 
-        <li>
-            <span class="highlight">Agricultural Markets:</span>
-            Understanding market structures, supply, demand, pricing and
-            agricultural value chains.
-        </li>
 
         <li>
-            <span class="highlight">Rural Development:</span>
-            Understanding rural communities, livelihoods and development
-            challenges.
+            <span class="highlight">
+                Communication:
+            </span>
+
+            Connecting with people from
+            different backgrounds and communicating clearly.
         </li>
 
-        <li>
-            <span class="highlight">Resource Management:</span>
-            Understanding efficient utilization of agricultural resources
-            for sustainable development.
-        </li>
 
         <li>
-            <span class="highlight">Agribusiness:</span>
-            Developing an understanding of agricultural business,
-            marketing and commercial opportunities.
+            <span class="highlight">
+                Leadership:
+            </span>
+
+            Taking responsibility,
+            coordinating people and building trust.
         </li>
 
+
         <li>
-            <span class="highlight">Research & Analysis:</span>
-            Developing analytical thinking, research skills and
-            evidence-based decision-making abilities.
+            <span class="highlight">
+                Time Management:
+            </span>
+
+            Balancing study, responsibilities,
+            activities, friendships and personal life.
+        </li>
+
+
+        <li>
+            <span class="highlight">
+                Teamwork:
+            </span>
+
+            Working effectively with people
+            who think and behave differently.
+        </li>
+
+
+        <li>
+            <span class="highlight">
+                Problem Solving:
+            </span>
+
+            Responding calmly and practically
+            when unexpected situations arise.
+        </li>
+
+
+        <li>
+            <span class="highlight">
+                Strategic Thinking:
+            </span>
+
+            Understanding how economics,
+            people, markets and resources connect.
         </li>
 
     </ul>
@@ -1129,194 +2144,174 @@ li::before {
 </section>
 
 
+<!-- =========================================================
+     SEVEN YEARS
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>Skills Developed Through Agricultural Education</h2>
+    <div class="section-kicker">
+        THE EXPERIENCE
+    </div>
+
+    <h2>
+        Seven Years of Memories, Friendship & Growth
+    </h2>
 
     <p>
 
-        My education at BAU helped me develop a combination of technical,
-        analytical and interpersonal skills that continue to support my
-        professional career.
-
-    </p>
-
-    <ul>
-
-        <li>
-            <span class="highlight">Analytical Thinking:</span>
-            Ability to examine problems, identify key factors and develop
-            practical solutions.
-        </li>
-
-        <li>
-            <span class="highlight">Communication:</span>
-            Ability to explain ideas clearly and communicate with people
-            from different backgrounds.
-        </li>
-
-        <li>
-            <span class="highlight">Leadership:</span>
-            Experience taking responsibility, coordinating people and
-            working toward common objectives.
-        </li>
-
-        <li>
-            <span class="highlight">Problem Solving:</span>
-            Ability to respond to challenges with practical and logical
-            approaches.
-        </li>
-
-        <li>
-            <span class="highlight">Teamwork:</span>
-            Experience working with different teams and personalities
-            in academic and organizational environments.
-        </li>
-
-        <li>
-            <span class="highlight">Strategic Thinking:</span>
-            Understanding how agricultural, economic and social factors
-            interact with one another.
-        </li>
-
-    </ul>
-
-</section>
-
-
-
-<section class="content-box">
-
-    <h2>Seven Years of Memories & Growth</h2>
-
-    <p>
-
-        For almost seven incredible years, I experienced the academic,
-        social and personal environment of the BAU campus.
+        For almost seven years, BAU was not simply the place
+        where I studied. It became the environment where
+        my academic, personal and social identities developed
+        together.
 
     </p>
 
     <p>
 
-        The university's vast green environment, agricultural fields,
-        residential halls, classrooms, organizations and friendships
-        created countless memories that remain an important part of my life.
+        The green campus, agricultural fields,
+        classrooms, residential hall, friendships,
+        programmes and everyday experiences created memories
+        that continue to remain an important part of my life.
 
     </p>
 
     <p>
 
-        I successfully completed my degree journey in
-        <span class="highlight">2024.</span>
-
-        Looking back, I realize that BAU gave me much more than a degree.
-        It helped shape my personality, confidence, communication ability,
-        professional mindset and understanding of agriculture.
-
-    </p>
-
-</section>
-
-
-
-<section class="content-box">
-
-    <h2>Agriculture, Business & My Professional Vision</h2>
-
-    <p>
-
-        My background in agriculture has given me a unique perspective on
-        the connection between agricultural production, markets, business,
-        consumers and communication.
-
-    </p>
-
-    <p>
-
-        I believe modern agriculture is no longer limited to farming alone.
-        It is connected with
+        I completed my degree journey in
         <span class="highlight">
-        technology, business, supply chains, marketing, communication,
-        sustainability and global trade.
+        2024.
+        </span>
+
+        But BAU gave me much more than a degree:
+        it gave me
+        <span class="highlight">
+        confidence, friendships, independence,
+        communication ability, leadership experience
+        and a professional mindset.
+        </span>
+
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     PROFESSIONAL BRIDGE
+========================================================= -->
+
+<section class="content-box">
+
+    <div class="section-kicker">
+        FROM ACADEMIC ROOTS TO PROFESSIONAL THINKING
+    </div>
+
+    <h2>
+        Agriculture, Business & My Professional Vision
+    </h2>
+
+    <p>
+
+        Agricultural Economics taught me that agriculture
+        does not stop at production.
+
+    </p>
+
+    <p>
+
+        It continues through
+        <span class="highlight">
+        pricing, markets, supply chains, consumers,
+        business decisions, communication, sustainability
+        and international trade.
         </span>
 
     </p>
 
     <p>
 
-        My professional experience in communication and account management
-        allows me to combine my agricultural academic background with
-        practical business and market-oriented experience.
-
-    </p>
-
-    <p>
-
-        My goal is to continue building a career where agriculture,
-        communication, business development and strategic thinking can work
-        together to create meaningful professional impact.
+        That perspective now connects naturally with my
+        professional experience in
+        <span class="highlight">
+        communication, sales, key-account management
+        and commercial strategy.
+        </span>
 
     </p>
 
 </section>
 
 
+<!-- =========================================================
+     MALAYSIA
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>From Bangladesh to Malaysia — A New Chapter</h2>
+    <div class="section-kicker">
+        A NEW INTERNATIONAL CHAPTER
+    </div>
+
+    <h2>
+        From Bangladesh to Malaysia
+    </h2>
 
     <p>
 
-        After completing my academic journey at Bangladesh Agricultural
-        University, my life entered a new international chapter in
-        <span class="highlight">Malaysia.</span>
+        After BAU, my journey entered a new chapter in
+        <span class="highlight">
+        Malaysia.
+        </span>
 
     </p>
 
     <p>
 
-        Moving to a new country gave me the opportunity to experience a
-        different culture, professional environment and academic system.
+        Living, studying and working in a multicultural
+        environment strengthened my
+        <span class="highlight">
+        adaptability, communication, confidence
+        and international professional perspective.
+        </span>
 
     </p>
 
     <p>
 
-        I am currently continuing my higher education in Malaysia while
-        developing my professional career and expanding my knowledge beyond
-        the agricultural sector.
-
-    </p>
-
-    <p>
-
-        This international experience has strengthened my adaptability,
-        communication skills, confidence and understanding of multicultural
-        professional environments.
+        The foundation built at BAU continues to influence
+        how I approach people, markets, business and
+        professional challenges today.
 
     </p>
 
 </section>
 
 
+<!-- =========================================================
+     PERSONAL STORY
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>Agriculture Became Part of My Personal Story</h2>
+    <div class="section-kicker">
+        A PERSONAL CONNECTION
+    </div>
+
+    <h2>
+        Agriculture Became Part of My Personal Story
+    </h2>
 
     <p>
 
-        Agriculture is not simply an academic subject in my life.
-        It became deeply connected with some of the most important chapters
-        of my personal journey.
+        BAU also became connected with one of the most
+        important parts of my personal life.
 
     </p>
 
     <p>
 
-        It was at Bangladesh Agricultural University that I met my wife,
+        It was there that I met my wife,
+
         <a
             href="https://mehedialimayon-del.github.io/Nusrat-Nasrin/#home"
             target="_blank"
@@ -1330,34 +2325,36 @@ li::before {
 
     <p>
 
-        She was studying Fisheries at BAU, and our university journey
-        eventually became the beginning of our life together.
-
-    </p>
-
-    <p>
-
-        Today, both of us continue our academic and professional journeys
-        in Malaysia while carrying the memories and values we gained from
-        Bangladesh Agricultural University.
+        She studied Fisheries at BAU,
+        and our university journey eventually became
+        the beginning of our life together.
 
     </p>
 
 </section>
 
 
+<!-- =========================================================
+     BELIEF
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>My Belief as an Agriculturist</h2>
+    <div class="section-kicker">
+        MY BELIEF
+    </div>
+
+    <h2>
+        What Agriculture Means to Me
+    </h2>
 
     <div class="quote-box">
 
         <p>
 
-            "Agriculture is not only about producing food;
-            it is about people, livelihoods, economies, communities
-            and the future of society."
+            “Agriculture is not only about producing food;
+            it is about people, livelihoods, markets,
+            communities, economies and the future of society.”
 
         </p>
 
@@ -1366,48 +2363,55 @@ li::before {
 </section>
 
 
+<!-- =========================================================
+     CLOSING
+========================================================= -->
 
 <section class="content-box">
 
-    <h2>My Agricultural Journey Continues</h2>
+    <div class="section-kicker">
+        THE JOURNEY CONTINUES
+    </div>
+
+    <h2>
+        My Agricultural Journey Continues
+    </h2>
 
     <p>
 
-        My journey as an agriculturist started at Bangladesh Agricultural
-        University, but I believe it does not end with graduation.
+        My journey as an agriculturist started at
+        Bangladesh Agricultural University,
+        but it did not end with graduation.
 
     </p>
 
     <p>
 
-        Every professional experience, every new market, every new person
-        I communicate with and every new challenge gives me another
-        opportunity to understand how agriculture connects with the wider
-        world.
+        Every professional experience, market,
+        new relationship and challenge adds another
+        layer to how I understand agriculture and its
+        connection with the wider economy.
 
     </p>
 
     <p>
 
-        I want to continue learning, developing myself and using my
-        agricultural knowledge together with communication, business and
-        leadership skills.
+        My goal is to continue combining
+        <span class="highlight">
+        agriculture, communication, business,
+        research and leadership
+        </span>
 
-    </p>
-
-    <p>
-
-        My ultimate goal is to build a meaningful professional journey
-        where my education, experience and abilities can create value for
-        people, organizations and the agricultural sector.
+        to create meaningful professional impact.
 
     </p>
 
     <p>
 
         <span class="highlight">
-        The journey that began in the green fields of Bangladesh Agricultural
-        University continues toward a much bigger horizon.
+            The journey that began in the green fields
+            of Bangladesh Agricultural University
+            continues toward a much bigger horizon.
         </span>
 
     </p>
@@ -1415,45 +2419,107 @@ li::before {
 </section>
 
 
-
-<a href="index.html" class="back-btn">
+<a
+    href="index.html"
+    class="back-btn"
+>
     ← BACK TO HOME
 </a>
 
 
 </div>
 
-<!-- MENU TOGGLE SCRIPT -->
+
 <script>
-    const menuToggleBtn = document.getElementById('menuToggleBtn');
-    const navDrawer = document.getElementById('navDrawer');
-    const menuIcon = document.getElementById('menuIcon');
 
-    menuToggleBtn.addEventListener('click', () => {
-        navDrawer.classList.toggle('active');
-        
-        if (navDrawer.classList.contains('active')) {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-xmark');
-        } else {
-            menuIcon.classList.remove('fa-xmark');
-            menuIcon.classList.add('fa-bars');
+const menuToggleBtn =
+    document.getElementById(
+        'menuToggleBtn'
+    );
+
+const navDrawer =
+    document.getElementById(
+        'navDrawer'
+    );
+
+const menuIcon =
+    document.getElementById(
+        'menuIcon'
+    );
+
+
+menuToggleBtn.addEventListener(
+    'click',
+    () => {
+
+        navDrawer.classList.toggle(
+            'active'
+        );
+
+        if(
+            navDrawer
+            .classList
+            .contains('active')
+        ){
+
+            menuIcon.classList.remove(
+                'fa-bars'
+            );
+
+            menuIcon.classList.add(
+                'fa-xmark'
+            );
+
+        }else{
+
+            menuIcon.classList.remove(
+                'fa-xmark'
+            );
+
+            menuIcon.classList.add(
+                'fa-bars'
+            );
+
         }
-    });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!siteNavbarContains(e.target)) {
-            navDrawer.classList.remove('active');
-            menuIcon.classList.remove('fa-xmark');
-            menuIcon.classList.add('fa-bars');
-        }
-    });
-
-    function siteNavbarContains(target) {
-        return menuToggleBtn.contains(target) || navDrawer.contains(target);
     }
+);
+
+
+document.addEventListener(
+    'click',
+    e => {
+
+        if(
+            !menuToggleBtn.contains(
+                e.target
+            )
+            &&
+            !navDrawer.contains(
+                e.target
+            )
+        ){
+
+            navDrawer
+            .classList
+            .remove('active');
+
+            menuIcon
+            .classList
+            .remove('fa-xmark');
+
+            menuIcon
+            .classList
+            .add('fa-bars');
+
+        }
+
+    }
+);
+
 </script>
 
+
 </body>
+
 </html>
