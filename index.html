@@ -1,1172 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta
-    name="google-site-verification"
-    content="ZtVoX_hDDnlEpPzqVAKHiQFwOSCVchx1_x_G7cmrxng"
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+name="google-site-verification"
+content="ZtVoX_hDDnlEpPzqVAKHiQFwOSCVchx1_x_G7cmrxng"
 />
 
-<title>Mehedi Alim Ayon - Professional Portfolio</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>
+Mehedi Alim Ayon - Professional Portfolio
+</title>
 
 <link
-    rel="preload"
-    as="image"
-    href="assets/images/mehedi-hero-final.png"
-    fetchpriority="high"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
+
+<link
+rel="preload"
+as="image"
+href="assets/images/mehedi-hero-final.png"
+fetchpriority="high"
 >
 
 <style>
 
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
     max-width:100%;
     overflow-x:hidden;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial,sans-serif;
-    color:#fff;
-    background:#030507;
-    overflow-x:hidden;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#020305;
+    color:#ffffff;
 }
 
-/* ================= DESKTOP PAGE ================= */
 
-.page{
-    width:100vw;
-    height:100vh;
-    min-height:750px;
-    position:relative;
-    overflow:hidden;
-    display:block;
+/* =========================================================
+   PAGE
+========================================================= */
 
-    background:
-        radial-gradient(circle at 65% 45%,
-        rgba(255,116,20,.20) 0%,
-        rgba(255,116,20,.08) 25%,
-        rgba(8,11,17,.96) 50%,
-        #030507 80%),
-        linear-gradient(135deg,#020304 0%,#080b11 45%,#030405 100%);
-}
+.portfolio{
 
-.page::before{
-    content:"";
-    position:absolute;
-    top:-20%;
-    right:-5%;
-    width:70%;
-    height:140%;
-    background:
-        radial-gradient(ellipse at center,
-        rgba(255,116,20,.18) 0%,
-        rgba(255,116,20,.06) 35%,
-        transparent 70%);
-    pointer-events:none;
-    z-index:0;
-    filter:blur(20px);
-}
-
-.page::after{
-    content:"";
-    position:absolute;
-    width:650px;
-    height:140%;
-    top:-20%;
-    left:50%;
-    transform:rotate(27deg);
-
-    background:
-        linear-gradient(90deg,
-        transparent 0%,
-        rgba(255,116,20,.03) 35%,
-        rgba(255,116,20,.10) 50%,
-        rgba(255,116,20,.03) 65%,
-        transparent 100%);
-
-    border-left:1px solid rgba(255,116,20,.18);
-    border-right:1px solid rgba(255,116,20,.10);
-    pointer-events:none;
-    z-index:1;
-}
-
-/* ================= DESKTOP NAV ================= */
-
-.desktop-nav{
-    display:flex;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:74px;
-    align-items:center;
-    padding:0 30px;
-    border-bottom:1px solid rgba(255,116,20,.16);
-    background:rgba(3,5,7,.88);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    z-index:100;
-}
-
-.desktop-logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:#fff;
-    min-width:235px;
-}
-
-.desktop-logo-mark{
-    width:45px;
-    height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:2px solid #ff7414;
-    color:#ff7414;
-    font-size:23px;
-    font-weight:900;
-    transform:rotate(45deg);
-}
-
-.desktop-logo-mark span{
-    transform:rotate(-45deg);
-}
-
-.desktop-logo-text{
-    display:flex;
-    flex-direction:column;
-    line-height:1;
-}
-
-.desktop-logo-text strong{
-    font-size:17px;
-    letter-spacing:1.5px;
-}
-
-.desktop-logo-text small{
-    font-size:12px;
-    letter-spacing:2px;
-    color:#ff7414;
-    margin-top:4px;
-}
-
-.desktop-nav-links{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-    flex:1;
-}
-
-.desktop-nav-links a{
-    position:relative;
-    color:#fff;
-    text-decoration:none;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:.85px;
-    text-transform:uppercase;
-    padding:10px 8px;
-    border-radius:5px;
-    white-space:nowrap;
-}
-
-.desktop-nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-7px;
-    width:0;
-    height:2px;
-    background:#ff7414;
-    transition:.3s;
-}
-
-.desktop-nav-links a:hover::after,
-.desktop-nav-links a:first-child::after{
     width:100%;
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 14%,
+            rgba(255,115,15,.18) 0%,
+            rgba(255,95,0,.07) 28%,
+            transparent 50%
+        ),
+
+        radial-gradient(
+            circle at 4% 42%,
+            rgba(255,111,9,.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #080604 0%,
+            #050607 38%,
+            #020406 100%
+        );
+
 }
 
-.desktop-nav-cta{
+
+/* GOLD AMBIENT BACKGROUND */
+
+.portfolio::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:760px;
+    height:760px;
+
+    top:-220px;
+    right:-420px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,119,15,.12),
+            transparent 67%
+        );
+
+    filter:blur(35px);
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   MOBILE MAIN WRAPPER
+========================================================= */
+
+.mobile-shell{
+
+    width:100%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        10px
+        28px
+        55px;
+
+}
+
+
+/* =========================================================
+   TOP NAV
+========================================================= */
+
+.top-nav{
+
+    width:100%;
+
     display:flex;
-    min-width:150px;
-    height:42px;
+
+    justify-content:
+        space-between;
+
+    align-items:center;
+
+    padding:
+        10px
+        2px
+        15px;
+
+    border-bottom:
+        1px solid
+        rgba(255,133,35,.23);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+}
+
+.logo-box{
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+
     align-items:center;
     justify-content:center;
-    gap:10px;
-    border:1px solid #ff7414;
-    border-radius:6px;
-    color:#fff;
-    text-decoration:none;
-    font-size:11px;
-    font-weight:900;
-    background:rgba(255,116,20,.10);
+
+    border:
+        2px solid
+        #ff7a19;
+
+    color:#ff861f;
+
+    transform:
+        rotate(45deg);
+
+    font-weight:950;
+
+    font-size:17px;
+
+    box-shadow:
+        0 0 12px
+        rgba(255,111,15,.13);
+
 }
 
-/* ================= DESKTOP HERO ================= */
+.logo-box span{
+
+    transform:
+        rotate(-45deg);
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1;
+
+}
+
+.logo-text strong{
+
+    font-size:13px;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+.logo-text small{
+
+    margin-top:5px;
+
+    font-size:8px;
+
+    font-weight:900;
+
+    color:#ff821e;
+
+    letter-spacing:
+        2px;
+
+}
+
+.talk-btn{
+
+    min-width:96px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    border:
+        1px solid
+        #ff7c1b;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:9px;
+
+    font-weight:950;
+
+    background:
+        rgba(255,104,10,.07);
+
+    transition:.2s;
+
+}
+
+.talk-btn:active{
+
+    transform:
+        scale(.96);
+
+    background:#b74207;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
 
 .hero{
-    position:absolute !important;
-    top:76px !important;
-    left:3.5% !important;
-    bottom:162px !important;
 
-    width:470px !important;
-    height:auto !important;
+    position:relative;
 
-    display:flex !important;
-    align-items:flex-end !important;
-    justify-content:center !important;
+    width:
+        min(94vw,430px);
 
-    overflow:visible !important;
-    z-index:10 !important;
+    height:
+        clamp(
+            310px,
+            48vh,
+            440px
+        );
+
+    margin:
+        0 auto
+        4px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
 }
 
 .hero::before{
+
     content:"";
+
     position:absolute;
-    top:48%;
+
     left:50%;
-    transform:translate(-50%,-50%);
-    width:610px;
-    height:680px;
+    top:47%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width:112%;
+    height:102%;
 
     background:
-        radial-gradient(ellipse at center,
-        rgba(255,132,38,.62) 0%,
-        rgba(255,116,20,.40) 23%,
-        rgba(255,103,10,.21) 44%,
-        rgba(255,90,0,.07) 62%,
-        transparent 79%);
 
-    filter:blur(28px);
-    z-index:-3;
+        radial-gradient(
+            ellipse at center,
+            rgba(255,134,35,.42),
+            rgba(255,94,0,.20) 37%,
+            transparent 72%
+        );
+
+    filter:
+        blur(24px);
+
 }
 
 .hero::after{
+
     content:"";
+
     position:absolute;
-    top:4%;
-    left:5%;
-    width:90%;
-    height:91%;
-    border:1px solid rgba(255,116,20,.52);
-    transform:rotate(-7deg);
-    box-shadow:0 0 38px rgba(255,116,20,.16);
-    z-index:-2;
+
+    width:88%;
+    height:84%;
+
+    top:8%;
+    left:6%;
+
+    border:
+        1px solid
+        rgba(255,115,15,.60);
+
+    transform:
+        rotate(-6deg);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,104,0,.15);
+
 }
 
-.hero-image{
-    position:relative !important;
-    width:auto !important;
-    height:100% !important;
-    max-width:100% !important;
-    max-height:100% !important;
+.hero img{
 
-    object-fit:contain !important;
-    object-position:center bottom !important;
+    position:relative;
 
-    display:block !important;
-    transform:none !important;
-    z-index:5 !important;
+    z-index:3;
+
+    height:100%;
+
+    width:auto;
+
+    max-width:none;
+
+    object-fit:contain;
+
+    object-position:
+        center bottom;
 
     filter:
+
         brightness(1.04)
-        contrast(1.06)
-        saturate(1.05)
-        drop-shadow(0 22px 32px rgba(0,0,0,.72)) !important;
+
+        contrast(1.05)
+
+        saturate(1.04)
+
+        drop-shadow(
+            0 22px 32px
+            rgba(0,0,0,.80)
+        );
+
 }
 
-/* ================= MAIN CONTENT ================= */
 
-.main-content{
-    position:absolute !important;
-    left:43.5% !important;
-    top:41% !important;
-    transform:translateY(-50%) !important;
-    width:41% !important;
-    max-width:600px !important;
-    z-index:20 !important;
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    text-align:center;
+
+    position:relative;
+
 }
 
-.main-content::before{
-    content:"AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
-    display:block;
-    color:#ff7414;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:2.5px;
-    margin-bottom:12px;
+.tagline{
+
+    color:#ff821e;
+
+    font-size:
+        clamp(
+            7px,
+            1.75vw,
+            11px
+        );
+
+    font-weight:950;
+
+    letter-spacing:
+        2.7px;
+
+    margin-bottom:
+        10px;
+
 }
 
 .name{
-    margin:0 0 10px !important;
-    font-size:clamp(42px,4vw,62px) !important;
-    line-height:.94 !important;
-    font-weight:950 !important;
-}
 
-.refresh-name{
+    margin:0;
+
+    font-size:
+        clamp(
+            34px,
+            7vw,
+            58px
+        );
+
+    line-height:.95;
+
+    font-weight:950;
+
+    letter-spacing:
+        -.8px;
+
     color:#fff;
-    text-decoration:none;
+
+    text-shadow:
+        0 7px 24px
+        rgba(0,0,0,.40);
+
 }
 
-.profession{
-    color:#ff7414;
-    font-size:16px;
-    font-weight:900;
-    min-height:22px;
-    margin-bottom:14px;
+.name span{
+
+    color:#ff861f;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,111,10,.24);
+
 }
 
-.cursor{
-    background:#ff7414;
-    width:2px;
+
+/* =========================================================
+   TYPING MODE
+========================================================= */
+
+.typing-wrap{
+
+    min-height:36px;
+
+    margin-top:
+        12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+
+.typing-line{
+
+    color:#ff8c28;
+
+    font-size:
+        clamp(
+            9px,
+            2.1vw,
+            13px
+        );
+
+    font-weight:950;
+
+    letter-spacing:
+        2px;
+
+    min-height:
+        17px;
+
+}
+
+.typing-cursor{
+
     display:inline-block;
-    animation:blink 1s infinite;
+
+    width:2px;
+
+    height:13px;
+
+    margin-left:3px;
+
+    background:#ff8a24;
+
+    vertical-align:-2px;
+
+    animation:
+        blink
+        .85s
+        infinite;
+
 }
 
 @keyframes blink{
-    50%{opacity:0;}
+
+    50%{
+        opacity:0;
+    }
+
 }
 
-.profession::after{
-    content:"";
-    display:block;
-    width:68px;
-    height:3px;
-    background:#ff7414;
-    margin-top:10px;
-}
+.typing-bar{
 
-.personal-quote{
-    max-width:560px;
-    margin-bottom:16px;
-    color:#d8dce1;
-    font-size:14.5px;
-    line-height:1.55;
-    font-style:italic;
-}
+    width:82px;
 
-.desktop-cta{
-    display:inline-flex;
-    height:44px;
-    padding:0 24px;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    background:linear-gradient(135deg,#ff7414,#ff8a28);
-    border-radius:6px;
-    text-decoration:none;
-    font-size:10px;
-    font-weight:900;
-}
+    height:2px;
 
-/* ================= STATS ================= */
-
-.desktop-stats-panel{
-    position:absolute;
-    top:43%;
-    right:2.5%;
-    transform:translateY(-50%);
-    width:135px;
-    height:450px;
-    border:1px solid rgba(255,116,20,.55);
-    border-radius:18px;
-    background:rgba(8,11,16,.92);
-    z-index:30;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-evenly;
-}
-
-.desktop-stat{
-    width:100%;
-    text-align:center;
-}
-
-.desktop-stat-icon{
-    color:#ff7414;
-    font-size:19px;
-    margin-bottom:6px;
-}
-
-.desktop-stat-number{
-    color:#ff7414;
-    font-size:27px;
-    font-weight:950;
-}
-
-.desktop-stat-label{
-    margin-top:7px;
-    font-size:8.5px;
-    line-height:1.4;
-    text-transform:uppercase;
-    font-weight:800;
-}
-
-/* ================= DESKTOP DOCK ================= */
-
-.desktop-dock-wrapper{
-    position:absolute;
-    left:20px;
-    right:20px;
-    bottom:14px;
-    height:148px;
-    padding:8px 10px;
-    border:1px solid rgba(255,116,20,.28);
-    border-radius:14px;
-    background:rgba(3,6,10,.82);
-    z-index:60;
-}
-
-.desktop-dock{
-    width:100%;
-    height:100%;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows:1fr 1fr;
-    gap:8px;
-}
-
-.desktop-dock .menu-button{
-    padding:0 14px;
-    border:1px solid rgba(255,116,20,.58);
-    border-radius:8px;
+    margin-top:8px;
 
     background:
-        linear-gradient(145deg,
-        rgba(14,19,27,.96),
-        rgba(7,11,17,.96));
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:#fff;
-    text-decoration:none;
-}
-
-.desktop-dock .menu-icon{
-    color:#ff7414;
-    font-size:18px;
-    width:28px;
-    text-align:center;
-}
-
-.menu-title-text{
-    font-size:13px;
-    font-weight:950;
-}
-
-.card-desc{
-    margin-top:3px;
-    font-size:9.5px;
-    color:#d0d4d8;
-    font-weight:700;
-}
-
-.desktop-dock .menu-button::after{
-    content:"›";
-    margin-left:auto;
-    font-size:22px;
-}
-
-.desktop-dock .profile-card,
-.desktop-dock .gallery-card{
-    background:
-        linear-gradient(145deg,
-        rgba(14,19,27,.96),
-        rgba(7,11,17,.96)) !important;
-}
-
-.about-card{grid-column:1;grid-row:1;}
-.agri-card{grid-column:2;grid-row:1;}
-.comm-card{grid-column:3;grid-row:1;}
-.kam-card{grid-column:4;grid-row:1;}
-.profile-card{grid-column:1;grid-row:2;}
-.gallery-card{grid-column:2/4;grid-row:2;}
-
-/* ================= PREMIUM FRAMEWORK ================= */
-
-.desktop-dock .framework-card{
-    grid-column:4;
-    grid-row:2;
-    position:relative;
-    overflow:visible;
-
-    background:
-        radial-gradient(
-            circle at 12% 50%,
-            rgba(255,190,94,.24),
-            transparent 40%
-        ),
         linear-gradient(
-            115deg,
-            #8f3008 0%,
-            #b94509 38%,
-            #d85b0b 70%,
-            #8b2b05 100%
-        ) !important;
-
-    border-color:#ff8a25 !important;
+            90deg,
+            transparent,
+            #ff7714,
+            #ffc05a,
+            #ff7714,
+            transparent
+        );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.14),
-        inset 0 -1px 0 rgba(0,0,0,.32),
-        0 10px 28px rgba(255,92,0,.22),
-        0 0 22px rgba(255,116,20,.14);
+        0 0 9px
+        rgba(255,116,20,.45);
+
 }
 
-.desktop-dock .framework-card::before{
-    content:"FEATURED\\A WORK";
-    white-space:pre;
-
-    position:absolute;
-    top:-1px;
-    right:12px;
-
-    width:48px;
-    height:45px;
-    padding-top:7px;
-
-    text-align:center;
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffd783 0%,
-            #f4ad37 58%,
-            #d77a13 100%
-        );
-
-    color:#3c1b05;
-    border:1px solid #ffe3a4;
-
-    font-size:5.5px;
-    line-height:1.2;
-    font-weight:950;
-    letter-spacing:.5px;
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            100% 82%,
-            75% 100%,
-            50% 84%,
-            25% 100%,
-            0 82%
-        );
-
-    z-index:5;
-}
-
-.desktop-dock .framework-card .menu-icon{
-    color:#ffd078 !important;
-}
-
-.desktop-dock .framework-card .menu-title-text{
-    color:#fff !important;
-}
-
-.desktop-dock .framework-card .card-desc{
-    color:rgba(255,255,255,.86) !important;
-    padding-right:46px;
-}
-
-/* ================= SOCIAL ================= */
-
-.desktop-right-socials{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    position:absolute;
-    left:20px;
-    bottom:175px;
-    z-index:80;
-}
-
-.desktop-right-socials a{
-    width:32px;
-    height:32px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,116,20,.62);
-    border-radius:50%;
-    color:#fff;
-    text-decoration:none;
-}
-
-.mobile-portfolio{
-    display:none;
-}
-
-/* ================= LAPTOP ================= */
-
-@media screen and (min-width:769px) and (max-height:850px){
-
-    .page{
-        min-height:650px;
-    }
-
-    .hero{
-        top:76px !important;
-        bottom:157px !important;
-        left:2.8% !important;
-        width:440px !important;
-        height:auto !important;
-    }
-
-    .hero-image{
-        width:auto !important;
-        height:100% !important;
-        max-width:100% !important;
-        max-height:100% !important;
-        object-fit:contain !important;
-        object-position:center bottom !important;
-        transform:none !important;
-    }
-
-    .main-content{
-        top:39% !important;
-    }
-
-    .desktop-stats-panel{
-        top:40%;
-        height:390px;
-    }
-
-    .desktop-dock-wrapper{
-        height:145px;
-        bottom:12px;
-    }
-
-    .desktop-right-socials{
-        bottom:170px;
-    }
-}
-
-/* ================= MEDIUM LAPTOP ================= */
-
-@media screen and (min-width:769px) and (max-width:1250px){
-
-    .desktop-nav{
-        padding:0 18px;
-    }
-
-    .desktop-logo{
-        min-width:185px;
-    }
-
-    .desktop-nav-links{
-        gap:8px;
-    }
-
-    .desktop-nav-links a{
-        font-size:9px;
-        padding:10px 5px;
-    }
-
-    .desktop-nav-cta{
-        min-width:125px;
-        font-size:9px;
-    }
-
-    .hero{
-        left:1.5% !important;
-        width:440px !important;
-    }
-
-    .main-content{
-        left:41% !important;
-        width:43% !important;
-    }
-
-    .desktop-stats-panel{
-        right:1.5%;
-        width:120px;
-    }
-}
 
 /* =========================================================
-   MOBILE
+   QUOTE
 ========================================================= */
 
-@media screen and (max-width:768px){
+.quote{
 
-.page,
-.desktop-nav,
-.hero,
-.main-content,
-.desktop-stats-panel,
-.desktop-dock-wrapper,
-.desktop-right-socials{
-    display:none !important;
-}
+    max-width:700px;
 
-.mobile-portfolio{
-    display:flex !important;
-    width:100%;
-    min-height:100vh;
+    margin:
+        8px auto
+        25px;
 
-    background:
-        radial-gradient(circle at 50% 15%,
-        rgba(255,116,20,.18) 0%,
-        rgba(8,11,17,.96) 60%,
-        #030507 100%);
+    padding:
+        0 7px;
 
-    flex-direction:column;
-    align-items:center;
-    padding:10px 14px 30px 14px !important;
-}
-
-.m-nav{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding-bottom:9px;
-    border-bottom:1px solid rgba(255,116,20,.2);
-    margin-bottom:6px;
-    min-height:58px;
-}
-
-.m-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:#fff;
-}
-
-.m-logo-mark{
-    width:32px;
-    height:32px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:2px solid #ff7414;
-    color:#ff7414;
-    font-size:16px;
-    font-weight:900;
-    transform:rotate(45deg);
-}
-
-.m-logo-mark span{
-    transform:rotate(-45deg);
-}
-
-.m-logo-text{
-    display:flex;
-    flex-direction:column;
-}
-
-.m-logo-text strong{
-    font-size:13px;
-}
-
-.m-logo-text small{
-    font-size:9px;
-    color:#ff7414;
-}
-
-.m-nav-cta{
-    padding:8px 12px;
-    border:1px solid #ff7414;
-    border-radius:5px;
-    color:#fff;
-    text-decoration:none;
-    font-size:9px;
-    font-weight:900;
-}
-
-.m-hero{
-    position:relative;
-    width:min(92vw,330px) !important;
-    height:48vh !important;
-    min-height:330px !important;
-    max-height:430px !important;
-    margin:0 auto 5px !important;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-}
-
-.m-hero::before{
-    content:"";
-    position:absolute;
-    top:49%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:105%;
-    height:105%;
-
-    background:
-        radial-gradient(ellipse at center,
-        rgba(255,132,38,.58),
-        rgba(255,116,20,.36) 26%,
-        rgba(255,100,10,.17) 48%,
-        transparent 80%);
-
-    filter:blur(22px);
-}
-
-.m-hero::after{
-    content:"";
-    position:absolute;
-    top:6%;
-    left:7%;
-    width:86%;
-    height:88%;
-    border:1px solid rgba(255,116,20,.5);
-    transform:rotate(-7deg);
-}
-
-.m-hero img{
-    position:relative;
-    width:auto !important;
-    height:100% !important;
-    max-width:none !important;
-    object-fit:contain !important;
-    object-position:center bottom !important;
-    z-index:3;
-}
-
-.m-content{
     text-align:center;
-    width:100%;
-    max-width:420px;
-}
 
-.m-sub-tag{
-    color:#ff7414;
-    font-size:8px;
-    font-weight:900;
-    letter-spacing:1.6px;
-    margin-bottom:5px;
-}
+    color:#e3e3e3;
 
-.m-name{
-    font-size:25px;
-    line-height:1;
-    font-weight:950;
-    margin-bottom:6px;
-}
+    font-size:
+        clamp(
+            10.5px,
+            2.2vw,
+            15px
+        );
 
-.m-name a{
-    color:#fff;
-    text-decoration:none;
-}
+    line-height:1.5;
 
-.m-profession{
-    color:#ff7414;
-    font-size:11px;
-    font-weight:900;
-    margin-bottom:7px;
-    min-height:17px;
-}
-
-.m-profession::after{
-    content:"";
-    display:block;
-    width:42px;
-    height:2px;
-    background:#ff7414;
-    margin:4px auto 0;
-}
-
-.m-quote{
-    color:#d8dce1;
-    font-size:10.5px;
-    line-height:1.42;
     font-style:italic;
-    margin-bottom:11px;
-    padding:0 8px;
+
 }
 
-.m-stats{
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+
+    width:100%;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:7px;
-    width:100%;
-    margin-bottom:12px;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:16px;
+
+    margin-bottom:
+        26px;
+
 }
 
-.m-stat{
-    background:rgba(12,15,20,.85);
-    border:1px solid rgba(255,116,20,.3);
-    border-radius:8px;
-    min-height:64px;
-    padding:7px 3px;
-}
+.stat-card{
 
-.m-stat-num{
-    color:#ff7414;
-    font-size:17px;
-    font-weight:950;
-}
-
-.m-stat-lbl{
-    font-size:7px;
-    color:#cbd5e1;
-    font-weight:700;
-}
-
-.m-socials{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-bottom:18px;
-}
-
-.m-socials a{
-    width:36px;
-    height:36px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,116,20,.6);
-    border-radius:50%;
-    color:#fff;
-    text-decoration:none;
-}
-
-.m-cta{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    width:100%;
-    height:44px;
-    background:linear-gradient(135deg,#ff7414,#ff8a28);
-    border-radius:6px;
-    color:#fff;
-    text-decoration:none;
-    font-size:10px;
-    font-weight:900;
-    margin-bottom:20px;
-}
-
-.m-menu-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    width:100%;
-}
-
-.m-menu-btn{
-    background:
-        linear-gradient(145deg,
-        rgba(14,19,27,.96),
-        rgba(7,11,17,.96));
-
-    border:1px solid rgba(255,116,20,.4);
-    border-radius:8px;
-    padding:12px 10px;
-    text-decoration:none;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-align:left;
-}
-
-.m-menu-icon{
-    color:#ff7414;
-    font-size:18px;
-    width:24px;
-    text-align:center;
-}
-
-.m-menu-text strong{
-    display:block;
-    font-size:11px;
-    font-weight:900;
-    margin-bottom:2px;
-}
-
-.m-menu-text span{
-    display:block;
-    font-size:8px;
-    color:#94a3b8;
-}
-
-.m-menu-btn.profile-highlight,
-.m-menu-btn.gallery-highlight{
-    background:
-        linear-gradient(145deg,
-        rgba(14,19,27,.96),
-        rgba(7,11,17,.96)) !important;
-
-    border-color:rgba(255,116,20,.4) !important;
-}
-
-/* ================= PREMIUM ORIGINAL FRAMEWORKS ================= */
-
-.m-menu-btn.framework-wide{
-    grid-column:1/-1;
     position:relative;
-    overflow:visible;
-    min-height:72px;
+
+    min-height:118px;
+
+    padding:
+        15px 8px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:13px;
+
+    border:
+        1px solid
+        rgba(255,126,28,.72);
+
+    border-radius:12px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(15,18,21,.98),
+            rgba(5,8,11,.98)
+        );
+
+    box-shadow:
+
+        inset
+        0 1px 0
+        rgba(255,255,255,.03),
+
+        0 9px 25px
+        rgba(0,0,0,.28);
+
+    overflow:hidden;
+
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    top:-45px;
+    right:-30px;
+
+    border-radius:50%;
 
     background:
         radial-gradient(
-            circle at 14% 50%,
-            rgba(255,190,94,.24),
-            transparent 40%
-        ),
-        linear-gradient(
-            115deg,
-            #8f3008 0%,
-            #b94509 38%,
-            #d85b0b 70%,
-            #8b2b05 100%
-        ) !important;
-
-    border:1px solid #ff8a25 !important;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.14),
-        inset 0 -1px 0 rgba(0,0,0,.32),
-        0 10px 28px rgba(255,92,0,.22),
-        0 0 22px rgba(255,116,20,.14);
-}
-
-.m-menu-btn.framework-wide::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:8px;
-
-    background:
-        linear-gradient(
-            125deg,
-            transparent 0%,
-            rgba(255,207,137,.06) 38%,
-            rgba(255,207,137,.14) 50%,
-            rgba(255,132,25,.04) 68%,
-            transparent 100%
+            circle,
+            rgba(255,136,30,.12),
+            transparent 70%
         );
 
-    pointer-events:none;
 }
 
-.m-menu-btn.framework-wide::after{
-    content:"SIGNATURE-WORK";
-    white-space:pre;
+.stat-icon{
 
-    position:absolute;
-    top:-1px;
-    right:13px;
+    flex:0 0 48px;
 
-    width:52px;
+    width:48px;
     height:48px;
-    padding:8px 4px 0;
-
-    text-align:center;
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffd783 0%,
-            #f4ad37 58%,
-            #d77a13 100%
-        );
-
-    color:#3c1b05;
-    border:1px solid #ffe3a4;
-
-    font-size:5px;
-    line-height:1.2;
-    font-weight:950;
-    letter-spacing:.55px;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.40),
-        0 0 14px rgba(255,166,54,.22);
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            100% 82%,
-            75% 100%,
-            50% 84%,
-            25% 100%,
-            0 82%
-        );
-
-    z-index:5;
-}
-
-.m-menu-btn.framework-wide .m-menu-icon{
-    color:#ffd078 !important;
-
-    filter:
-        drop-shadow(
-            0 0 7px rgba(255,175,67,.42)
-        );
-}
-
-.m-menu-btn.framework-wide strong{
-    color:#fff !important;
-}
-
-.m-menu-btn.framework-wide span{
-    color:rgba(255,255,255,.88) !important;
-}
-
-.m-menu-btn.framework-wide .m-menu-text{
-    padding-right:58px;
-}
-
-/* ================= SIGNATURE FOOTER ================= */
-
-.m-signature-footer{
-    grid-column:1/-1;
-
-    width:100%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    gap:11px;
+    border-radius:50%;
 
-    padding:13px 4px 1px;
+    border:
+        1px solid
+        rgba(255,127,25,.48);
 
-    color:#ff7414;
+    color:#ff7a16;
 
-    font-size:7px;
-    font-weight:900;
+    font-size:21px;
 
-    letter-spacing:2.2px;
+    background:
+        rgba(8,10,12,.76);
 
-    white-space:nowrap;
+    box-shadow:
+        0 0 14px
+        rgba(255,112,10,.10);
+
 }
 
-.m-signature-footer::before,
-.m-signature-footer::after{
-    content:"";
+.stat-data{
 
-    flex:1;
+    text-align:left;
 
-    max-width:58px;
+}
+
+.stat-number{
+
+    color:#ff7b19;
+
+    font-size:
+        clamp(
+            22px,
+            5vw,
+            31px
+        );
+
+    line-height:1;
+
+    font-weight:950;
+
+}
+
+.stat-label{
+
+    margin-top:7px;
+
+    color:#e6e6e6;
+
+    font-size:
+        clamp(
+            7px,
+            1.65vw,
+            10px
+        );
+
+    white-space:nowrap;
+
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:17px;
+
+    margin:
+        0 auto
+        27px;
+
+}
+
+.social-line{
+
+    width:90px;
 
     height:1px;
 
@@ -1174,503 +818,2114 @@ body{
         linear-gradient(
             90deg,
             transparent,
-            #ff7414
+            #ff7c19
         );
 
-    box-shadow:
-        0 0 7px rgba(255,116,20,.45);
 }
 
-.m-signature-footer::after{
+.social-line.right{
+
     background:
         linear-gradient(
             90deg,
-            #ff7414,
+            #ff7c19,
             transparent
         );
-}
 
 }
 
-/* END MOBILE */
+.social-btn{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        #ff7c19;
+
+    color:#fff;
+
+    font-size:23px;
+
+    text-decoration:none;
+
+    background:
+        rgba(5,7,9,.90);
+
+    box-shadow:
+
+        0 0 14px
+        rgba(255,111,13,.16),
+
+        inset
+        0 0 10px
+        rgba(255,112,9,.04);
+
+    transition:
+        .2s;
+
+}
+
+.social-btn:active{
+
+    transform:
+        scale(.92);
+
+    color:#ffc566;
+
+    border-color:#ffc05b;
+
+    box-shadow:
+        0 0 22px
+        rgba(255,120,16,.55);
+
+}
+
+
+/* =========================================================
+   MAIN CTA
+========================================================= */
+
+.main-cta{
+
+    width:100%;
+
+    min-height:72px;
+
+    padding:
+        0 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:
+        clamp(
+            11px,
+            2.5vw,
+            16px
+        );
+
+    font-weight:950;
+
+    letter-spacing:.2px;
+
+    border:
+        1px solid
+        #ffb04a;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            105deg,
+            #e84f03 0%,
+            #ff7b12 45%,
+            #f16a08 100%
+        );
+
+    box-shadow:
+
+        inset
+        0 1px 0
+        rgba(255,255,255,.24),
+
+        0 8px 28px
+        rgba(255,91,0,.28),
+
+        0 0 18px
+        rgba(255,115,10,.18);
+
+    margin-bottom:
+        32px;
+
+    transition:
+        .2s;
+
+}
+
+.main-cta .cta-arrow{
+
+    width:36px;
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(110,40,0,.27);
+
+    font-size:16px;
+
+}
+
+.main-cta:active{
+
+    transform:
+        scale(.985);
+
+    filter:
+        brightness(1.10);
+
+}
+
+
+/* =========================================================
+   MENU GRID
+========================================================= */
+
+.menu-grid{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.menu-card{
+
+    position:relative;
+
+    min-height:118px;
+
+    padding:
+        17px 17px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    border:
+        1px solid
+        rgba(255,125,25,.66);
+
+    border-radius:11px;
+
+    background:
+
+        radial-gradient(
+            circle at 0 0,
+            rgba(255,121,15,.055),
+            transparent 42%
+        ),
+
+        linear-gradient(
+            145deg,
+            #0c1014,
+            #05080b
+        );
+
+    box-shadow:
+
+        inset
+        0 1px 0
+        rgba(255,255,255,.025),
+
+        0 8px 20px
+        rgba(0,0,0,.25);
+
+    overflow:hidden;
+
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+
+}
+
+.menu-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-30%;
+
+    width:40%;
+
+    height:300%;
+
+    transform:
+        rotate(28deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,199,109,.08),
+            transparent
+        );
+
+    transition:
+        .35s;
+
+}
+
+.menu-card:hover::before{
+
+    left:120%;
+
+}
+
+.menu-icon{
+
+    flex:0 0 48px;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ff7817;
+
+    font-size:25px;
+
+    border-radius:50%;
+
+    background:
+        rgba(10,12,15,.82);
+
+    box-shadow:
+        0 0 15px
+        rgba(255,111,10,.07);
+
+}
+
+.menu-copy{
+
+    min-width:0;
+
+    flex:1;
+
+}
+
+.menu-copy strong{
+
+    display:block;
+
+    font-size:
+        clamp(
+            11px,
+            2.45vw,
+            16px
+        );
+
+    font-weight:950;
+
+    line-height:1.08;
+
+}
+
+.menu-copy span{
+
+    display:block;
+
+    margin-top:7px;
+
+    color:#aab0b8;
+
+    font-size:
+        clamp(
+            8px,
+            1.8vw,
+            11px
+        );
+
+    line-height:1.25;
+
+}
+
+.menu-arrow{
+
+    margin-left:auto;
+
+    color:#ff801b;
+
+    font-size:19px;
+
+}
+
+
+/* ACTIVE CLICK */
+
+.menu-card.is-active{
+
+    transform:
+        scale(.975);
+
+    border-color:#ffd071;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(255,191,77,.26),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #4c1c03,
+            #9b3705
+        );
+
+    box-shadow:
+
+        inset
+        0 0 20px
+        rgba(255,183,66,.10),
+
+        0 0 0 1px
+        rgba(255,197,91,.22),
+
+        0 0 28px
+        rgba(255,112,10,.48);
+
+}
+
+.menu-card.is-active .menu-icon,
+.menu-card.is-active .menu-arrow{
+
+    color:#ffd274;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(255,190,81,.55)
+        );
+
+}
+
+
+/* =========================================================
+   ORIGINAL FRAMEWORKS PREMIUM CARD
+========================================================= */
+
+.framework-card{
+
+    grid-column:
+        1 / -1;
+
+    min-height:180px;
+
+    margin-top:2px;
+
+    padding:
+        25px 95px
+        25px 28px;
+
+    position:relative;
+
+    overflow:visible;
+
+    border:
+        1px solid
+        #ffb04c;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:
+
+        radial-gradient(
+            ellipse at 32% 110%,
+            rgba(255,190,78,.38),
+            transparent 44%
+        ),
+
+        radial-gradient(
+            circle at 83% 20%,
+            rgba(255,116,8,.23),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            115deg,
+            #702102 0%,
+            #a83a03 30%,
+            #cc5006 57%,
+            #842500 100%
+        );
+
+    box-shadow:
+
+        inset
+        0 1px 0
+        rgba(255,255,255,.22),
+
+        inset
+        0 -1px 0
+        rgba(0,0,0,.38),
+
+        0 10px 35px
+        rgba(255,86,0,.28),
+
+        0 0 30px
+        rgba(255,118,12,.17);
+
+    transition:
+        .2s;
+
+}
+
+
+/* PREMIUM LIGHT WAVE */
+
+.framework-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:72%;
+
+    border-radius:
+        0 0
+        12px 12px;
+
+    background:
+
+        radial-gradient(
+            ellipse at 30% 125%,
+            rgba(255,222,136,.47),
+            transparent 48%
+        ),
+
+        linear-gradient(
+            122deg,
+            transparent 6%,
+            rgba(255,207,113,.02) 27%,
+            rgba(255,224,149,.17) 49%,
+            rgba(255,143,27,.04) 65%,
+            transparent 86%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* FRAMEWORK ICON */
+
+.framework-icon{
+
+    position:relative;
+
+    z-index:3;
+
+    flex:0 0 62px;
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffdc83;
+
+    font-size:30px;
+
+    filter:
+        drop-shadow(
+            0 0 9px
+            rgba(255,197,89,.38)
+        );
+
+}
+
+.framework-text{
+
+    position:relative;
+
+    z-index:3;
+
+    min-width:0;
+
+}
+
+.framework-text strong{
+
+    display:block;
+
+    font-size:
+        clamp(
+            16px,
+            3.4vw,
+            24px
+        );
+
+    font-weight:950;
+
+    letter-spacing:
+        .2px;
+
+}
+
+.framework-text span{
+
+    display:block;
+
+    margin-top:9px;
+
+    color:
+        rgba(255,245,228,.92);
+
+    font-size:
+        clamp(
+            8px,
+            1.75vw,
+            11px
+        );
+
+    line-height:1.35;
+
+}
+
+
+/* SIGNATURE RIBBON */
+
+.signature-ribbon{
+
+    position:absolute;
+
+    top:-1px;
+    right:22px;
+
+    z-index:8;
+
+    width:80px;
+
+    height:93px;
+
+    padding-top:11px;
+
+    text-align:center;
+
+    color:#401b01;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #fff0b4 0%,
+            #ffd36d 25%,
+            #f3a925 68%,
+            #cd720f 100%
+        );
+
+    border:
+        1px solid
+        #ffe6a5;
+
+    box-shadow:
+
+        0 7px 16px
+        rgba(0,0,0,.45),
+
+        0 0 18px
+        rgba(255,173,50,.25);
+
+    clip-path:
+
+        polygon(
+            0 0,
+            100% 0,
+            100% 82%,
+            75% 100%,
+            50% 84%,
+            25% 100%,
+            0 82%
+        );
+
+}
+
+.signature-ribbon i{
+
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:6px;
+
+}
+
+.signature-ribbon strong{
+
+    display:block;
+
+    font-size:8px;
+
+    line-height:1.12;
+
+    letter-spacing:
+        .8px;
+
+    font-weight:950;
+
+}
+
+
+/* EXPLORE ARROW */
+
+.framework-explore{
+
+    position:absolute;
+
+    right:25px;
+
+    bottom:18px;
+
+    z-index:7;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid
+        #ffc65f;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    font-size:18px;
+
+    background:
+        rgba(92,28,0,.28);
+
+    box-shadow:
+        0 0 13px
+        rgba(255,133,20,.25);
+
+}
+
+.framework-card.is-active{
+
+    transform:
+        scale(.985);
+
+    filter:
+        brightness(1.12);
+
+    border-color:#ffe093;
+
+    box-shadow:
+
+        0 0 0 1px
+        rgba(255,219,136,.30),
+
+        0 0 40px
+        rgba(255,115,11,.58);
+
+}
+
+
+/* =========================================================
+   SIGNATURE FOOTER
+========================================================= */
+
+.signature-footer{
+
+    width:100%;
+
+    margin-top:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    color:#ff8220;
+
+    font-size:
+        clamp(
+            7px,
+            1.7vw,
+            10px
+        );
+
+    font-weight:950;
+
+    letter-spacing:
+        3.2px;
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 0 9px
+        rgba(255,118,15,.28);
+
+}
+
+.signature-footer::before,
+.signature-footer::after{
+
+    content:"";
+
+    width:110px;
+
+    max-width:22vw;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff801d
+        );
+
+    box-shadow:
+        0 0 8px
+        rgba(255,111,10,.40);
+
+}
+
+.signature-footer::after{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff801d,
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .mobile-shell{
+
+        padding:
+            8px
+            14px
+            42px;
+
+    }
+
+    .top-nav{
+
+        min-height:54px;
+
+        padding-bottom:9px;
+
+    }
+
+    .hero{
+
+        width:
+            min(
+                92vw,
+                345px
+            );
+
+        height:44vh;
+
+        min-height:300px;
+
+        max-height:400px;
+
+    }
+
+    .tagline{
+
+        font-size:7.5px;
+
+        letter-spacing:
+            1.9px;
+
+        margin-bottom:8px;
+
+    }
+
+    .name{
+
+        font-size:
+            clamp(
+                31px,
+                9vw,
+                43px
+            );
+
+    }
+
+    .typing-line{
+
+        font-size:
+            clamp(
+                8px,
+                2.5vw,
+                11px
+            );
+
+        letter-spacing:
+            1.2px;
+
+    }
+
+    .quote{
+
+        font-size:10.5px;
+
+        margin-bottom:20px;
+
+    }
+
+    .stats{
+
+        gap:8px;
+
+        margin-bottom:20px;
+
+    }
+
+    .stat-card{
+
+        min-height:92px;
+
+        padding:
+            10px 4px;
+
+        gap:6px;
+
+        flex-direction:column;
+
+    }
+
+    .stat-icon{
+
+        width:34px;
+        height:34px;
+
+        flex-basis:34px;
+
+        font-size:15px;
+
+    }
+
+    .stat-data{
+
+        text-align:center;
+
+    }
+
+    .stat-number{
+
+        font-size:21px;
+
+    }
+
+    .stat-label{
+
+        font-size:7px;
+
+        margin-top:4px;
+
+    }
+
+    .social-row{
+
+        gap:11px;
+
+        margin-bottom:22px;
+
+    }
+
+    .social-line{
+
+        width:53px;
+
+    }
+
+    .social-btn{
+
+        width:46px;
+        height:46px;
+
+        font-size:19px;
+
+    }
+
+    .main-cta{
+
+        min-height:58px;
+
+        margin-bottom:27px;
+
+        font-size:10px;
+
+    }
+
+    .menu-grid{
+
+        gap:10px;
+
+    }
+
+    .menu-card{
+
+        min-height:110px;
+
+        padding:
+            13px 11px;
+
+        gap:10px;
+
+    }
+
+    .menu-icon{
+
+        flex:0 0 38px;
+
+        width:38px;
+        height:38px;
+
+        font-size:20px;
+
+    }
+
+    .menu-copy strong{
+
+        font-size:11px;
+
+    }
+
+    .menu-copy span{
+
+        font-size:8px;
+
+        line-height:1.3;
+
+    }
+
+    .menu-arrow{
+
+        font-size:15px;
+
+    }
+
+    .framework-card{
+
+        min-height:145px;
+
+        padding:
+            20px
+            80px
+            20px
+            17px;
+
+        gap:11px;
+
+    }
+
+    .framework-icon{
+
+        width:48px;
+
+        flex-basis:48px;
+
+        font-size:25px;
+
+    }
+
+    .framework-text strong{
+
+        font-size:17px;
+
+    }
+
+    .framework-text span{
+
+        margin-top:6px;
+
+        font-size:7.6px;
+
+    }
+
+    .signature-ribbon{
+
+        right:12px;
+
+        width:66px;
+
+        height:78px;
+
+        padding-top:8px;
+
+    }
+
+    .signature-ribbon i{
+
+        font-size:10px;
+
+        margin-bottom:4px;
+
+    }
+
+    .signature-ribbon strong{
+
+        font-size:6.7px;
+
+    }
+
+    .framework-explore{
+
+        width:34px;
+        height:34px;
+
+        right:20px;
+
+        bottom:13px;
+
+        font-size:14px;
+
+    }
+
+    .signature-footer{
+
+        gap:10px;
+
+        margin-top:22px;
+
+        font-size:6.8px;
+
+        letter-spacing:
+            2.4px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media(max-width:385px){
+
+    .mobile-shell{
+
+        padding-left:10px;
+        padding-right:10px;
+
+    }
+
+    .menu-card{
+
+        padding:
+            12px
+            8px;
+
+    }
+
+    .menu-icon{
+
+        width:34px;
+        height:34px;
+
+        flex-basis:34px;
+
+        font-size:18px;
+
+    }
+
+    .menu-copy strong{
+
+        font-size:10px;
+
+    }
+
+    .menu-copy span{
+
+        font-size:7px;
+
+    }
+
+    .framework-text strong{
+
+        font-size:15px;
+
+    }
+
+}
 
 </style>
+
 </head>
+
 
 <body>
 
-<div class="page">
+<main class="portfolio">
 
-<div class="desktop-nav">
+<div class="mobile-shell">
 
-<a href="index.html" class="desktop-logo">
-<div class="desktop-logo-mark"><span>M</span></div>
-<div class="desktop-logo-text">
-<strong>MEHEDI</strong>
-<small>ALIM AYON</small>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="top-nav">
+
+<a
+href="index.html"
+class="logo"
+>
+
+<div class="logo-box">
+<span>M</span>
 </div>
+
+<div class="logo-text">
+
+<strong>
+MEHEDI
+</strong>
+
+<small>
+ALIM AYON
+</small>
+
+</div>
+
 </a>
 
-<div class="desktop-nav-links">
-<a href="index.html">HOME</a>
-<a href="agriculturist.html">AGRICULTURIST</a>
-<a href="communicationist.html">COMMUNICATIONIST</a>
-<a href="kam.html">KEY ACCOUNT MANAGER</a>
-<a href="about.html">ABOUT ME</a>
-<a href="frameworks.html">FRAMEWORKS</a>
-<a href="gallery.html">GALLERY</a>
-<a href="resume.html">CV</a>
-<a href="contact.html">CONTACT</a>
-</div>
 
-<a href="contact.html" class="desktop-nav-cta">
-LET'S TALK <i class="fa-solid fa-arrow-right"></i>
+<a
+href="contact.html"
+class="talk-btn"
+>
+
+LET'S TALK
+
+<i
+class="fa-solid fa-arrow-right"
+></i>
+
 </a>
 
-</div>
+</nav>
 
-<div class="hero">
-<img class="hero-image"
-src="assets/images/mehedi-hero-final.png"
-alt="Mehedi Alim Ayon">
-</div>
 
-<div class="main-content">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<h1 class="name">
-<a href="javascript:void(0);" onclick="location.reload();" class="refresh-name">
-MEHEDI ALIM AYON
-</a>
-</h1>
-
-<p class="profession">
-<span class="typed-text"></span>
-<span class="cursor">&nbsp;</span>
-</p>
-
-<p class="personal-quote">
-"Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
-</p>
-
-<a href="contact.html" class="desktop-cta">
-LET'S CREATE IMPACT TOGETHER
-</a>
-
-</div>
-
-<div class="desktop-stats-panel">
-
-<div class="desktop-stat">
-<div class="desktop-stat-icon"><i class="fa-solid fa-globe"></i></div>
-<div class="desktop-stat-number desktop-counter" data-target="11">0</div>
-<div class="desktop-stat-label">Countries<br>Sourced</div>
-</div>
-
-<div class="desktop-stat">
-<div class="desktop-stat-icon"><i class="fa-solid fa-cube"></i></div>
-<div class="desktop-stat-number desktop-counter" data-target="900">0</div>
-<div class="desktop-stat-label">Products<br>Managed</div>
-</div>
-
-<div class="desktop-stat">
-<div class="desktop-stat-icon"><i class="fa-solid fa-users"></i></div>
-<div class="desktop-stat-number desktop-counter" data-target="100">0</div>
-<div class="desktop-stat-label">% Client<br>Focus</div>
-</div>
-
-</div>
-
-<div class="desktop-dock-wrapper">
-<div class="desktop-dock">
-
-<a href="about.html" class="menu-button about-card">
-<div class="menu-icon"><i class="fa-regular fa-user"></i></div>
-<div>
-<div class="menu-title-text">ABOUT ME</div>
-<div class="card-desc">Discover my journey, skills, and values</div>
-</div>
-</a>
-
-<a href="agriculturist.html" class="menu-button agri-card">
-<div class="menu-icon"><i class="fa-solid fa-seedling"></i></div>
-<div>
-<div class="menu-title-text">AGRICULTURIST</div>
-<div class="card-desc">Rooted in Agricultural Economics</div>
-</div>
-</a>
-
-<a href="communicationist.html" class="menu-button comm-card">
-<div class="menu-icon"><i class="fa-solid fa-headset"></i></div>
-<div>
-<div class="menu-title-text">COMMUNICATIONIST</div>
-<div class="card-desc">Specialized in Communication Studies</div>
-</div>
-</a>
-
-<a href="kam.html" class="menu-button kam-card">
-<div class="menu-icon"><i class="fa-solid fa-briefcase"></i></div>
-<div>
-<div class="menu-title-text">KEY ACCOUNT MANAGER</div>
-<div class="card-desc">Driving value and strategic growth</div>
-</div>
-</a>
-
-<a href="resume.html" class="menu-button profile-card">
-<div class="menu-icon"><i class="fa-regular fa-file-lines"></i></div>
-<div>
-<div class="menu-title-text">PROFILE / CV</div>
-<div class="card-desc">View professional timeline & credentials</div>
-</div>
-</a>
-
-<a href="gallery.html" class="menu-button gallery-card">
-<div class="menu-icon"><i class="fa-regular fa-image"></i></div>
-<div>
-<div class="menu-title-text">GALLERY</div>
-<div class="card-desc">Explore moments & captures</div>
-</div>
-</a>
-
-<a href="frameworks.html" class="menu-button framework-card">
-<div class="menu-icon"><i class="fa-solid fa-diagram-project"></i></div>
-<div>
-<div class="menu-title-text">ORIGINAL FRAMEWORKS</div>
-<div class="card-desc">
-Original Theories · Independent Frameworks · Field-Built Insights
-</div>
-</div>
-</a>
-
-</div>
-</div>
-
-<div class="desktop-right-socials">
-
-<a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank">
-<i class="fa-brands fa-linkedin-in"></i>
-</a>
-
-<a href="https://wa.me/601172267068" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<a href="mailto:mehedialif1999@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- ================= MOBILE ================= -->
-
-<div class="mobile-portfolio">
-
-<div class="m-nav">
-
-<a href="index.html" class="m-logo">
-<div class="m-logo-mark"><span>M</span></div>
-<div class="m-logo-text">
-<strong>MEHEDI</strong>
-<small>ALIM AYON</small>
-</div>
-</a>
-
-<a href="contact.html" class="m-nav-cta">
-LET'S TALK <i class="fa-solid fa-arrow-right"></i>
-</a>
-
-</div>
-
-<div class="m-hero">
+<section class="hero">
 
 <img
 src="assets/images/mehedi-hero-final.png"
-alt="Mehedi Alim Ayon">
+alt="Mehedi Alim Ayon"
+>
 
-</div>
+</section>
 
-<div class="m-content">
 
-<div class="m-sub-tag">
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+<div class="tagline">
+
 AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST
+
 </div>
 
-<h1 class="m-name">
 
-<a href="javascript:void(0);" onclick="location.reload();">
-MEHEDI ALIM AYON
-</a>
+<h1 class="name">
+
+MEHEDI ALIM
+
+<span>
+AYON
+</span>
 
 </h1>
 
-<p class="m-profession">
-<span class="typed-text"></span>
-<span class="cursor"></span>
-</p>
 
-<p class="m-quote">
+<!-- TYPING MODE -->
+
+<div class="typing-wrap">
+
+<div class="typing-line">
+
+<span
+id="typingText"
+></span>
+
+<span
+class="typing-cursor"
+></span>
+
+</div>
+
+<div class="typing-bar"></div>
+
+</div>
+
+
+<p class="quote">
+
 "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
+
 </p>
 
-<div class="m-stats">
+</section>
 
-<div class="m-stat">
-<div class="m-stat-num counter" data-target="11">0</div>
-<div class="m-stat-lbl">Countries Sourced</div>
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<i
+class="fa-solid fa-globe"
+></i>
+
 </div>
 
-<div class="m-stat">
-<div class="m-stat-num counter" data-target="900">0</div>
-<div class="m-stat-lbl">Products Managed</div>
+<div class="stat-data">
+
+<div
+class="stat-number counter"
+data-target="11"
+>
+0
 </div>
 
-<div class="m-stat">
-<div class="m-stat-num counter" data-target="100">0</div>
-<div class="m-stat-lbl">% Client Focus</div>
+<div class="stat-label">
+Countries Sourced
 </div>
 
 </div>
 
-<div class="m-socials">
+</div>
 
-<a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank">
-<i class="fa-brands fa-linkedin-in"></i>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<i
+class="fa-solid fa-cube"
+></i>
+
+</div>
+
+<div class="stat-data">
+
+<div
+class="stat-number counter"
+data-target="900"
+>
+0
+</div>
+
+<div class="stat-label">
+Products Managed
+</div>
+
+</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+<i
+class="fa-solid fa-users"
+></i>
+
+</div>
+
+<div class="stat-data">
+
+<div
+class="stat-number counter"
+data-target="100"
+>
+0
+</div>
+
+<div class="stat-label">
+% Client Focus
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SOCIAL
+===================================================== -->
+
+<div class="social-row">
+
+<div class="social-line"></div>
+
+
+<a
+href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
+target="_blank"
+class="social-btn"
+aria-label="LinkedIn"
+>
+
+<i
+class="fa-brands fa-linkedin-in"
+></i>
+
 </a>
 
-<a href="https://wa.me/601172267068" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
+
+<a
+href="https://wa.me/601172267068"
+target="_blank"
+class="social-btn"
+aria-label="WhatsApp"
+>
+
+<i
+class="fa-brands fa-whatsapp"
+></i>
+
 </a>
 
-<a href="mailto:mehedialif1999@gmail.com">
-<i class="fa-solid fa-envelope"></i>
+
+<a
+href="mailto:mehedialif1999@gmail.com"
+class="social-btn"
+aria-label="Email"
+>
+
+<i
+class="fa-solid fa-envelope"
+></i>
+
 </a>
+
+
+<div class="social-line right"></div>
 
 </div>
 
-<a href="contact.html" class="m-cta">
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<a
+href="contact.html"
+class="main-cta"
+>
+
+<span>
 LET'S CREATE IMPACT TOGETHER
-<i class="fa-solid fa-arrow-right"></i>
-</a>
+</span>
 
-<div class="m-menu-grid">
+<div class="cta-arrow">
 
-<a href="about.html" class="m-menu-btn">
+<i
+class="fa-solid fa-arrow-right"
+></i>
 
-<div class="m-menu-icon">
-<i class="fa-regular fa-user"></i>
-</div>
-
-<div class="m-menu-text">
-<strong>ABOUT ME</strong>
-<span>My journey & skills</span>
 </div>
 
 </a>
 
-<a href="agriculturist.html" class="m-menu-btn">
 
-<div class="m-menu-icon">
-<i class="fa-solid fa-seedling"></i>
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<section class="menu-grid">
+
+
+<!-- ABOUT -->
+
+<a
+href="about.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-regular fa-user"
+></i>
+
 </div>
 
-<div class="m-menu-text">
-<strong>AGRICULTURIST</strong>
-<span>Rooted in Agricultural Economics</span>
-</div>
-
-</a>
-
-<a href="communicationist.html" class="m-menu-btn">
-
-<div class="m-menu-icon">
-<i class="fa-solid fa-headset"></i>
-</div>
-
-<div class="m-menu-text">
-<strong>COMMUNICATIONIST</strong>
-<span>Specialized in Communication Studies</span>
-</div>
-
-</a>
-
-<a href="kam.html" class="m-menu-btn">
-
-<div class="m-menu-icon">
-<i class="fa-solid fa-briefcase"></i>
-</div>
-
-<div class="m-menu-text">
-<strong>KAM</strong>
-<span>Strategic growth</span>
-</div>
-
-</a>
-
-<a href="resume.html"
-class="m-menu-btn profile-highlight">
-
-<div class="m-menu-icon">
-<i class="fa-regular fa-file-lines"></i>
-</div>
-
-<div class="m-menu-text">
-<strong>CV / PROFILE</strong>
-<span>Timeline & credentials</span>
-</div>
-
-</a>
-
-<a href="gallery.html"
-class="m-menu-btn gallery-highlight">
-
-<div class="m-menu-icon">
-<i class="fa-regular fa-image"></i>
-</div>
-
-<div class="m-menu-text">
-<strong>GALLERY</strong>
-<span>Explore moments</span>
-</div>
-
-</a>
-
-<a href="frameworks.html"
-class="m-menu-btn framework-wide">
-
-<div class="m-menu-icon">
-<i class="fa-solid fa-diagram-project"></i>
-</div>
-
-<div class="m-menu-text">
+<div class="menu-copy">
 
 <strong>
-ORIGINAL FRAMEWORKS
+ABOUT ME
 </strong>
 
 <span>
-Original Theories · Independent Frameworks · Field-Built Insights
+My journey & skills
 </span>
 
 </div>
 
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
 </a>
 
-<div class="m-signature-footer">
+
+<!-- AGRICULTURIST -->
+
+<a
+href="agriculturist.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-solid fa-seedling"
+></i>
+
+</div>
+
+<div class="menu-copy">
+
+<strong>
+AGRICULTURIST
+</strong>
+
+<span>
+Rooted in Agricultural Economics
+</span>
+
+</div>
+
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
+</a>
+
+
+<!-- COMMUNICATIONIST -->
+
+<a
+href="communicationist.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-solid fa-headset"
+></i>
+
+</div>
+
+<div class="menu-copy">
+
+<strong>
+COMMUNICATIONIST
+</strong>
+
+<span>
+Specialized in Communication Studies
+</span>
+
+</div>
+
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
+</a>
+
+
+<!-- KAM -->
+
+<a
+href="kam.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-solid fa-briefcase"
+></i>
+
+</div>
+
+<div class="menu-copy">
+
+<strong>
+KAM
+</strong>
+
+<span>
+Strategic growth
+</span>
+
+</div>
+
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
+</a>
+
+
+<!-- CV -->
+
+<a
+href="resume.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-regular fa-file-lines"
+></i>
+
+</div>
+
+<div class="menu-copy">
+
+<strong>
+CV / PROFILE
+</strong>
+
+<span>
+Timeline & credentials
+</span>
+
+</div>
+
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
+</a>
+
+
+<!-- GALLERY -->
+
+<a
+href="gallery.html"
+class="menu-card premium-link"
+>
+
+<div class="menu-icon">
+
+<i
+class="fa-regular fa-image"
+></i>
+
+</div>
+
+<div class="menu-copy">
+
+<strong>
+GALLERY
+</strong>
+
+<span>
+Explore moments
+</span>
+
+</div>
+
+<div class="menu-arrow">
+
+<i
+class="fa-solid fa-chevron-right"
+></i>
+
+</div>
+
+</a>
+
+
+<!-- =====================================================
+     ORIGINAL FRAMEWORKS
+===================================================== -->
+
+<a
+href="frameworks.html"
+class="framework-card premium-link"
+>
+
+
+<div class="framework-icon">
+
+<i
+class="fa-solid fa-diagram-project"
+></i>
+
+</div>
+
+
+<div class="framework-text">
+
+<strong>
+
+ORIGINAL FRAMEWORKS
+
+</strong>
+
+<span>
+
+Original Theories · Independent Frameworks · Field-Built Insights
+
+</span>
+
+</div>
+
+
+<div class="signature-ribbon">
+
+<i
+class="fa-solid fa-crown"
+></i>
+
+<strong>
+SIGNATURE
+</strong>
+
+<strong>
+WORK
+</strong>
+
+</div>
+
+
+<div class="framework-explore">
+
+<i
+class="fa-solid fa-arrow-right"
+></i>
+
+</div>
+
+
+</a>
+
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER SIGNATURE
+===================================================== -->
+
+<div class="signature-footer">
+
 IDEAS TODAY · IMPACT TOMORROW
-</div>
 
 </div>
 
-</div>
 
 </div>
+
+</main>
+
 
 <script>
 
-const textArray=[
-"AGRICULTURIST",
-"COMMUNICATIONIST",
-"KEY ACCOUNT MANAGER"
+/* =========================================================
+   PREMIUM TYPING
+========================================================= */
+
+const typingTexts = [
+
+    "KEY ACCOUNT MANAGER | AGRICULTURIST",
+
+    "AGRICULTURIST | COMMUNICATIONIST",
+
+    "COMMUNICATIONIST | KEY ACCOUNT MANAGER"
+
 ];
 
-let textIndex=0;
-let charIndex=0;
+const typingElement =
+document.getElementById(
+    "typingText"
+);
 
-function type(){
+let typingIndex = 0;
 
-const spans=document.querySelectorAll(".typed-text");
+let characterIndex = 0;
 
-if(charIndex<textArray[textIndex].length){
+let deleting = false;
 
-spans.forEach(span=>{
-span.textContent+=textArray[textIndex].charAt(charIndex);
-});
 
-charIndex++;
+function runTyping(){
 
-setTimeout(type,100);
+    const currentText =
+        typingTexts[
+            typingIndex
+        ];
 
-}else{
 
-setTimeout(erase,2000);
+    if(!deleting){
+
+        typingElement.textContent =
+            currentText.substring(
+                0,
+                characterIndex + 1
+            );
+
+        characterIndex++;
+
+
+        if(
+            characterIndex ===
+            currentText.length
+        ){
+
+            deleting = true;
+
+            setTimeout(
+                runTyping,
+                1700
+            );
+
+            return;
+
+        }
+
+
+        setTimeout(
+            runTyping,
+            65
+        );
+
+    }else{
+
+        typingElement.textContent =
+            currentText.substring(
+                0,
+                characterIndex - 1
+            );
+
+        characterIndex--;
+
+
+        if(characterIndex === 0){
+
+            deleting = false;
+
+            typingIndex =
+                (
+                    typingIndex + 1
+                )
+                %
+                typingTexts.length;
+
+            setTimeout(
+                runTyping,
+                400
+            );
+
+            return;
+
+        }
+
+
+        setTimeout(
+            runTyping,
+            32
+        );
+
+    }
 
 }
 
+
+/* =========================================================
+   COUNTING ANIMATION
+========================================================= */
+
+function animateCounter(
+    element
+){
+
+    const target =
+        Number(
+            element.dataset.target
+        );
+
+    const duration =
+        1350;
+
+    const startTime =
+        performance.now();
+
+
+    function update(
+        currentTime
+    ){
+
+        const progress =
+            Math.min(
+                (
+                    currentTime -
+                    startTime
+                )
+                /
+                duration,
+                1
+            );
+
+
+        const eased =
+            1 -
+            Math.pow(
+                1 - progress,
+                3
+            );
+
+
+        const current =
+            Math.floor(
+                eased *
+                target
+            );
+
+
+        element.textContent =
+            current +
+            "+";
+
+
+        if(progress < 1){
+
+            requestAnimationFrame(
+                update
+            );
+
+        }else{
+
+            element.textContent =
+                target +
+                "+";
+
+        }
+
+    }
+
+
+    requestAnimationFrame(
+        update
+    );
+
 }
 
-function erase(){
 
-const spans=document.querySelectorAll(".typed-text");
+/* =========================================================
+   BUTTON CLICK HIGHLIGHT
+========================================================= */
 
-if(charIndex>0){
+function setupPremiumLinks(){
 
-spans.forEach(span=>{
-span.textContent=textArray[textIndex].substring(0,charIndex-1);
-});
+    const links =
+        document.querySelectorAll(
+            ".premium-link"
+        );
 
-charIndex--;
 
-setTimeout(erase,50);
+    links.forEach(
+        link => {
 
-}else{
+            link.addEventListener(
+                "click",
+                function(event){
 
-textIndex=(textIndex+1)%textArray.length;
+                    const targetURL =
+                        this.getAttribute(
+                            "href"
+                        );
 
-setTimeout(type,500);
+
+                    if(!targetURL){
+                        return;
+                    }
+
+
+                    event.preventDefault();
+
+
+                    links.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "is-active"
+                            );
+
+                        }
+                    );
+
+
+                    this.classList.add(
+                        "is-active"
+                    );
+
+
+                    setTimeout(
+                        () => {
+
+                            window.location.href =
+                                targetURL;
+
+                        },
+                        190
+                    );
+
+                }
+            );
+
+        }
+    );
 
 }
 
-}
 
-function animateCounter(el){
-
-const target=
-Number(el.getAttribute("data-target"))||0;
-
-const duration=1200;
-
-const start=performance.now();
-
-function tick(now){
-
-const progress=
-Math.min((now-start)/duration,1);
-
-const eased=
-1-Math.pow(1-progress,3);
-
-const value=
-Math.floor(eased*target);
-
-el.textContent=
-value+(progress>=1?"+":"");
-
-if(progress<1){
-requestAnimationFrame(tick);
-}
-
-}
-
-requestAnimationFrame(tick);
-
-}
+/* =========================================================
+   START
+========================================================= */
 
 document.addEventListener(
-"DOMContentLoaded",
-function(){
+    "DOMContentLoaded",
+    function(){
 
-setTimeout(type,1000);
+        setTimeout(
+            runTyping,
+            600
+        );
 
-document
-.querySelectorAll(
-".counter,.desktop-counter"
-)
-.forEach(animateCounter);
 
-});
+        document
+        .querySelectorAll(
+            ".counter"
+        )
+        .forEach(
+            animateCounter
+        );
+
+
+        setupPremiumLinks();
+
+    }
+);
 
 </script>
 
 </body>
+
 </html>
