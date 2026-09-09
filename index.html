@@ -3,20 +3,14 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta
 name="google-site-verification"
 content="ZtVoX_hDDnlEpPzqVAKHiQFwOSCVchx1_x_G7cmrxng"
 />
 
-<title>
-Mehedi Alim Ayon - Professional Portfolio
-</title>
+<title>Mehedi Alim Ayon - Professional Portfolio</title>
 
 <link
 rel="stylesheet"
@@ -32,18 +26,13 @@ fetchpriority="high"
 
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
-
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
-html,
-body{
+html,body{
     width:100%;
     max-width:100%;
     overflow-x:hidden;
@@ -55,7 +44,6 @@ body{
     background:#030405;
     overflow-x:hidden;
 }
-
 
 /* =========================================================
    DESKTOP PAGE
@@ -70,19 +58,17 @@ body{
     display:block;
 
     background:
-
         radial-gradient(
             circle at 65% 44%,
-            rgba(198,72,7,.22) 0%,
-            rgba(123,40,0,.11) 24%,
-            rgba(9,10,11,.96) 51%,
+            rgba(255,132,25,.21) 0%,
+            rgba(121,37,0,.12) 26%,
+            rgba(7,8,9,.97) 52%,
             #020304 82%
         ),
-
         linear-gradient(
             135deg,
             #020202 0%,
-            #080705 45%,
+            #090705 46%,
             #020304 100%
         );
 }
@@ -98,50 +84,41 @@ body{
     background:
         radial-gradient(
             ellipse at center,
-            rgba(222,91,14,.20) 0%,
-            rgba(146,47,0,.08) 35%,
-            transparent 70%
+            rgba(255,145,39,.20) 0%,
+            rgba(166,48,0,.07) 37%,
+            transparent 72%
         );
 
+    filter:blur(22px);
     pointer-events:none;
     z-index:0;
-    filter:blur(20px);
 }
 
 .page::after{
     content:"";
     position:absolute;
-
     width:650px;
     height:140%;
-
     top:-20%;
     left:50%;
-
     transform:rotate(27deg);
 
     background:
         linear-gradient(
             90deg,
-            transparent 0%,
-            rgba(189,72,10,.025) 35%,
-            rgba(238,116,28,.085) 50%,
-            rgba(189,72,10,.025) 65%,
-            transparent 100%
+            transparent,
+            rgba(255,168,66,.025) 36%,
+            rgba(255,196,103,.10) 50%,
+            rgba(255,168,66,.025) 64%,
+            transparent
         );
 
-    border-left:
-        1px solid
-        rgba(216,93,18,.16);
-
-    border-right:
-        1px solid
-        rgba(216,93,18,.08);
+    border-left:1px solid rgba(255,154,49,.17);
+    border-right:1px solid rgba(255,154,49,.09);
 
     pointer-events:none;
     z-index:1;
 }
-
 
 /* =========================================================
    DESKTOP NAV
@@ -150,29 +127,21 @@ body{
 .desktop-nav{
     display:flex;
     position:absolute;
-
     top:0;
     left:0;
     right:0;
-
     height:74px;
-
     align-items:center;
-
     padding:0 30px;
 
     border-bottom:
-        1px solid
-        rgba(222,99,21,.18);
+        1px solid rgba(255,139,38,.18);
 
     background:
-        rgba(3,4,5,.91);
+        rgba(3,4,5,.90);
 
-    backdrop-filter:
-        blur(18px);
-
-    -webkit-backdrop-filter:
-        blur(18px);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     z-index:100;
 }
@@ -181,26 +150,20 @@ body{
     display:flex;
     align-items:center;
     gap:12px;
-
     text-decoration:none;
     color:#fff;
-
     min-width:235px;
 }
 
 .desktop-logo-mark{
     width:45px;
     height:45px;
-
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border:
-        2px solid
-        #dd741e;
-
-    color:#e57d24;
+    border:2px solid #f28c2a;
+    color:#f28c2a;
 
     font-size:23px;
     font-weight:900;
@@ -208,8 +171,7 @@ body{
     transform:rotate(45deg);
 
     box-shadow:
-        0 0 13px
-        rgba(226,111,24,.12);
+        0 0 14px rgba(255,136,29,.20);
 }
 
 .desktop-logo-mark span{
@@ -230,9 +192,7 @@ body{
 .desktop-logo-text small{
     font-size:12px;
     letter-spacing:2px;
-
-    color:#df7921;
-
+    color:#f18a26;
     margin-top:4px;
 }
 
@@ -240,49 +200,36 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-
     gap:20px;
-
     flex:1;
 }
 
 .desktop-nav-links a{
     position:relative;
-
     color:#fff;
-
     text-decoration:none;
-
     font-size:11px;
     font-weight:900;
-
     letter-spacing:.85px;
-
     text-transform:uppercase;
-
     padding:10px 8px;
-
     border-radius:5px;
-
     white-space:nowrap;
 }
 
 .desktop-nav-links a::after{
     content:"";
-
     position:absolute;
-
     left:0;
     bottom:-7px;
-
     width:0;
     height:2px;
 
     background:
         linear-gradient(
             90deg,
-            #a8480e,
-            #f0a145
+            #b84506,
+            #ffb64f
         );
 
     transition:.3s;
@@ -293,54 +240,42 @@ body{
     width:100%;
 }
 
-
-/* =========================================================
-   TOP RIGHT LET'S TALK — ALWAYS HIGHLIGHTED
-========================================================= */
+/* ALWAYS HIGHLIGHTED */
 
 .desktop-nav-cta{
     display:flex;
-
     min-width:150px;
     height:42px;
-
     align-items:center;
     justify-content:center;
-
     gap:10px;
 
-    border:
-        1px solid
-        #e9a24b;
-
+    border:1px solid #f2aa4e;
     border-radius:6px;
 
     color:#fff;
-
     text-decoration:none;
-
     font-size:11px;
     font-weight:900;
 
     background:
+        radial-gradient(
+            circle at 18% 20%,
+            rgba(255,215,135,.18),
+            transparent 45%
+        ),
         linear-gradient(
             115deg,
-            #6d2203 0%,
-            #a53e07 48%,
-            #cf6816 100%
+            #601a00 0%,
+            #9a3002 48%,
+            #d05d0e 100%
         );
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.15),
-
-        0 0 16px
-        rgba(214,102,21,.20),
-
-        0 6px 16px
-        rgba(0,0,0,.22);
+        inset 0 1px 0 rgba(255,255,255,.18),
+        0 0 17px rgba(255,115,13,.22),
+        0 6px 17px rgba(0,0,0,.24);
 }
-
 
 /* =========================================================
    DESKTOP HERO
@@ -348,7 +283,6 @@ body{
 
 .hero{
     position:absolute !important;
-
     top:76px !important;
     left:3.5% !important;
     bottom:162px !important;
@@ -357,101 +291,74 @@ body{
     height:auto !important;
 
     display:flex !important;
-
     align-items:flex-end !important;
     justify-content:center !important;
 
     overflow:visible !important;
-
     z-index:10 !important;
 }
 
 .hero::before{
     content:"";
-
     position:absolute;
-
     top:48%;
     left:50%;
-
-    transform:
-        translate(-50%,-50%);
-
+    transform:translate(-50%,-50%);
     width:610px;
     height:680px;
 
     background:
         radial-gradient(
             ellipse at center,
-
-            rgba(218,102,26,.50) 0%,
-            rgba(171,62,4,.30) 24%,
-            rgba(112,34,0,.15) 45%,
-            rgba(61,16,0,.05) 62%,
-
-            transparent 79%
+            rgba(255,156,50,.54) 0%,
+            rgba(233,92,7,.31) 26%,
+            rgba(128,34,0,.15) 48%,
+            transparent 80%
         );
 
     filter:blur(28px);
-
     z-index:-3;
 }
 
 .hero::after{
     content:"";
-
     position:absolute;
-
     top:4%;
     left:5%;
-
     width:90%;
     height:91%;
 
     border:
-        1px solid
-        rgba(210,93,20,.48);
+        1px solid rgba(245,128,24,.53);
 
-    transform:
-        rotate(-7deg);
+    transform:rotate(-7deg);
 
     box-shadow:
-        0 0 38px
-        rgba(179,66,6,.13);
+        0 0 36px rgba(231,83,4,.18);
 
     z-index:-2;
 }
 
 .hero-image{
     position:relative !important;
-
     width:auto !important;
     height:100% !important;
-
     max-width:100% !important;
     max-height:100% !important;
 
     object-fit:contain !important;
-
-    object-position:
-        center bottom !important;
+    object-position:center bottom !important;
 
     display:block !important;
-
     transform:none !important;
-
     z-index:5 !important;
 
     filter:
         brightness(1.04)
         contrast(1.06)
         saturate(1.05)
-        drop-shadow(
-            0 22px 32px
-            rgba(0,0,0,.72)
-        ) !important;
+        drop-shadow(0 22px 32px rgba(0,0,0,.72)) !important;
 }
-
 
 /* =========================================================
    MAIN CONTENT
@@ -459,49 +366,34 @@ body{
 
 .main-content{
     position:absolute !important;
-
     left:43.5% !important;
     top:41% !important;
-
-    transform:
-        translateY(-50%) !important;
-
+    transform:translateY(-50%) !important;
     width:41% !important;
-
     max-width:600px !important;
-
     z-index:20 !important;
 }
 
 .main-content::before{
-    content:
-        "AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
-
+    content:"AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST";
     display:block;
 
-    color:#dc7923;
+    color:#f08625;
 
     font-size:11px;
     font-weight:900;
-
     letter-spacing:2.5px;
 
     margin-bottom:12px;
+
+    text-shadow:
+        0 0 10px rgba(255,126,21,.18);
 }
 
 .name{
-    margin:
-        0 0 10px !important;
-
-    font-size:
-        clamp(
-            42px,
-            4vw,
-            62px
-        ) !important;
-
+    margin:0 0 10px !important;
+    font-size:clamp(42px,4vw,62px) !important;
     line-height:.94 !important;
-
     font-weight:950 !important;
 }
 
@@ -511,82 +403,59 @@ body{
 }
 
 .profession{
-    color:#e18427;
-
+    color:#f38c2b;
     font-size:16px;
     font-weight:900;
-
     min-height:22px;
-
     margin-bottom:14px;
 
     text-shadow:
-        0 0 10px
-        rgba(218,97,17,.15);
+        0 0 10px rgba(255,128,19,.19);
 }
 
 .cursor{
-    background:#e58b30;
-
+    background:#f5a041;
     width:2px;
-
     display:inline-block;
-
-    animation:
-        blink
-        1s
-        infinite;
+    animation:blink 1s infinite;
 }
 
 @keyframes blink{
-
-    50%{
-        opacity:0;
-    }
-
+    50%{opacity:0;}
 }
 
 .profession::after{
     content:"";
-
     display:block;
-
     width:68px;
     height:3px;
 
     background:
         linear-gradient(
             90deg,
-            #a94a10,
-            #efa147
+            #b83c03,
+            #ff9d35,
+            #ffd27c
         );
 
     margin-top:10px;
 
     box-shadow:
-        0 0 7px
-        rgba(214,93,15,.22);
+        0 0 9px rgba(255,128,22,.38);
 }
 
 .personal-quote{
     max-width:560px;
-
     margin-bottom:16px;
-
     color:#d8dce1;
-
     font-size:14.5px;
-
     line-height:1.55;
-
     font-style:italic;
 }
 
 .desktop-cta{
     display:inline-flex;
-
     height:44px;
-
     padding:0 24px;
 
     align-items:center;
@@ -595,35 +464,31 @@ body{
     color:#fff;
 
     background:
+        radial-gradient(
+            ellipse at 18% 120%,
+            rgba(255,220,140,.22),
+            transparent 46%
+        ),
         linear-gradient(
-            115deg,
-            #8f2d02 0%,
-            #c54a07 48%,
-            #e5761d 100%
+            108deg,
+            #9f3001 0%,
+            #d64d04 42%,
+            #f1760f 68%,
+            #b43701 100%
         );
 
-    border:
-        1px solid
-        #eca34d;
-
+    border:1px solid #f1a349;
     border-radius:6px;
 
     text-decoration:none;
-
     font-size:10px;
     font-weight:900;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.16),
-
-        0 6px 19px
-        rgba(146,47,0,.28),
-
-        0 0 15px
-        rgba(217,103,20,.14);
+        inset 0 1px 0 rgba(255,255,255,.20),
+        0 7px 20px rgba(188,56,0,.28),
+        0 0 16px rgba(255,118,13,.18);
 }
-
 
 /* =========================================================
    DESKTOP STATS
@@ -631,46 +496,40 @@ body{
 
 .desktop-stats-panel{
     position:absolute;
-
     top:43%;
     right:2.5%;
-
-    transform:
-        translateY(-50%);
+    transform:translateY(-50%);
 
     width:135px;
     height:450px;
 
     border:
-        1px solid
-        rgba(209,91,18,.52);
+        1px solid rgba(233,101,15,.58);
 
     border-radius:18px;
 
     background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(255,157,49,.07),
+            transparent 42%
+        ),
         linear-gradient(
             155deg,
-            rgba(13,14,15,.95),
-            rgba(5,7,9,.97)
+            rgba(14,16,18,.97),
+            rgba(4,6,8,.98)
         );
 
     z-index:30;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
-    justify-content:
-        space-evenly;
+    justify-content:space-evenly;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.025),
-
-        0 0 22px
-        rgba(164,59,4,.07);
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 0 18px rgba(229,87,5,.08);
 }
 
 .desktop-stat{
@@ -679,37 +538,27 @@ body{
 }
 
 .desktop-stat-icon{
-    color:#dc741f;
-
+    color:#f07d1f;
     font-size:19px;
-
     margin-bottom:6px;
 }
 
 .desktop-stat-number{
-    color:#e58024;
-
+    color:#f18423;
     font-size:27px;
-
     font-weight:950;
 
     text-shadow:
-        0 0 10px
-        rgba(212,91,13,.14);
+        0 0 10px rgba(255,114,10,.18);
 }
 
 .desktop-stat-label{
     margin-top:7px;
-
     font-size:8.5px;
-
     line-height:1.4;
-
     text-transform:uppercase;
-
     font-weight:800;
 }
-
 
 /* =========================================================
    DESKTOP DOCK
@@ -717,23 +566,20 @@ body{
 
 .desktop-dock-wrapper{
     position:absolute;
-
     left:20px;
     right:20px;
     bottom:14px;
-
     height:148px;
 
     padding:8px 10px;
 
     border:
-        1px solid
-        rgba(203,87,18,.24);
+        1px solid rgba(229,95,12,.27);
 
     border-radius:14px;
 
     background:
-        rgba(3,5,7,.84);
+        rgba(3,5,7,.83);
 
     z-index:60;
 }
@@ -744,69 +590,64 @@ body{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
-
-    grid-template-rows:
-        1fr 1fr;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:1fr 1fr;
 
     gap:8px;
 }
 
 .desktop-dock .menu-button{
+    position:relative;
+
     padding:0 14px;
 
     border:
-        1px solid
-        rgba(196,79,14,.58);
+        1px solid rgba(231,98,12,.62);
 
     border-radius:8px;
 
     background:
         radial-gradient(
-            circle at 0 0,
-            rgba(162,55,2,.06),
-            transparent 40%
+            ellipse at 100% 0%,
+            rgba(255,210,119,.12),
+            transparent 25%
         ),
-
+        linear-gradient(
+            125deg,
+            transparent 15%,
+            rgba(255,214,122,.03) 40%,
+            rgba(255,227,151,.08) 50%,
+            transparent 67%
+        ),
         linear-gradient(
             145deg,
-            rgba(12,15,18,.97),
+            rgba(13,16,19,.98),
             rgba(5,8,10,.98)
         );
 
     display:flex;
-
     align-items:center;
-
     gap:12px;
 
     color:#fff;
-
     text-decoration:none;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.02),
-
-        0 5px 16px
-        rgba(0,0,0,.22);
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 5px 17px rgba(0,0,0,.24);
 
     transition:
-        background .16s ease,
-        border-color .16s ease,
-        box-shadow .16s ease,
-        filter .16s ease;
+        .18s ease;
 }
 
 .desktop-dock .menu-icon{
-    color:#dc741d;
-
+    color:#f07a1b;
     font-size:18px;
-
     width:28px;
-
     text-align:center;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,113,8,.22));
 }
 
 .menu-title-text{
@@ -816,109 +657,48 @@ body{
 
 .card-desc{
     margin-top:3px;
-
     font-size:9.5px;
-
-    color:#c5c9ce;
-
+    color:#c8cdd2;
     font-weight:700;
 }
 
 .desktop-dock .menu-button::after{
     content:"›";
-
     margin-left:auto;
-
     font-size:22px;
-
-    color:#da731d;
+    color:#f18322;
 }
 
 .desktop-dock .menu-button.tap-highlight{
     background:
         radial-gradient(
             circle at 18% 50%,
-            rgba(224,157,67,.22),
-            transparent 46%
+            rgba(255,213,118,.25),
+            transparent 45%
         ),
-
         linear-gradient(
             135deg,
-            #351000,
-            #6e2403
+            #381000,
+            #792600
         ) !important;
 
-    border-color:
-        #e3a34d !important;
+    border-color:#ffd37c !important;
 
     box-shadow:
-        inset 0 0 17px
-        rgba(225,161,70,.08),
-
-        0 0 0 1px
-        rgba(224,164,73,.14),
-
-        0 0 21px
-        rgba(177,65,6,.34) !important;
-
-    filter:
-        brightness(1.10);
+        inset 0 0 18px rgba(255,198,82,.10),
+        0 0 0 1px rgba(255,214,124,.17),
+        0 0 24px rgba(248,111,11,.45) !important;
 }
 
-.desktop-dock .menu-button.tap-highlight .menu-icon,
-.desktop-dock .menu-button.tap-highlight::after{
-    color:#efb35a !important;
-}
-
-.desktop-dock .profile-card,
-.desktop-dock .gallery-card{
-    background:
-        radial-gradient(
-            circle at 0 0,
-            rgba(162,55,2,.06),
-            transparent 40%
-        ),
-
-        linear-gradient(
-            145deg,
-            rgba(12,15,18,.97),
-            rgba(5,8,10,.98)
-        ) !important;
-}
-
-.about-card{
-    grid-column:1;
-    grid-row:1;
-}
-
-.agri-card{
-    grid-column:2;
-    grid-row:1;
-}
-
-.comm-card{
-    grid-column:3;
-    grid-row:1;
-}
-
-.kam-card{
-    grid-column:4;
-    grid-row:1;
-}
-
-.profile-card{
-    grid-column:1;
-    grid-row:2;
-}
-
-.gallery-card{
-    grid-column:2/4;
-    grid-row:2;
-}
-
+.about-card{grid-column:1;grid-row:1;}
+.agri-card{grid-column:2;grid-row:1;}
+.comm-card{grid-column:3;grid-row:1;}
+.kam-card{grid-column:4;grid-row:1;}
+.profile-card{grid-column:1;grid-row:2;}
+.gallery-card{grid-column:2/4;grid-row:2;}
 
 /* =========================================================
-   DESKTOP PREMIUM FRAMEWORK
+   DESKTOP FRAMEWORK
 ========================================================= */
 
 .desktop-dock .framework-card{
@@ -926,134 +706,105 @@ body{
     grid-row:2;
 
     position:relative;
-
     overflow:visible;
 
     background:
-
         radial-gradient(
-            ellipse at 20% 125%,
-            rgba(236,180,88,.25),
+            ellipse at 22% 145%,
+            rgba(255,232,164,.43),
+            rgba(255,173,52,.19) 25%,
             transparent 50%
         ),
-
-        radial-gradient(
-            circle at 82% 20%,
-            rgba(176,63,2,.20),
-            transparent 40%
+        linear-gradient(
+            126deg,
+            transparent 12%,
+            rgba(255,222,136,.04) 38%,
+            rgba(255,232,160,.15) 50%,
+            transparent 68%
         ),
-
         linear-gradient(
             112deg,
-            #371000 0%,
-            #5d1b00 30%,
-            #8b2c01 61%,
-            #441000 100%
+            #3c0d00 0%,
+            #6a1c00 34%,
+            #973000 66%,
+            #3b0b00 100%
         ) !important;
 
-    border-color:
-        #d99235 !important;
+    border-color:#f0a33f !important;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.14),
-
-        inset 0 -1px 0
-        rgba(0,0,0,.34),
-
-        0 8px 23px
-        rgba(145,45,0,.23),
-
-        0 0 19px
-        rgba(182,68,3,.13);
+        inset 0 1px 0 rgba(255,255,255,.20),
+        0 8px 24px rgba(173,48,0,.30),
+        0 0 20px rgba(248,103,8,.17);
 }
 
 .desktop-dock .framework-card::before{
-    content:
-        "♛\A SIGNATURE\A WORK";
-
+    content:"♛\A SIGNATURE\A WORK";
     white-space:pre;
 
     position:absolute;
-
     top:-1px;
     right:12px;
 
     width:48px;
     height:45px;
-
     padding-top:4px;
 
     text-align:center;
 
     background:
-
         linear-gradient(
             90deg,
-            rgba(255,255,255,.14),
-            transparent 22%,
-            transparent 78%,
-            rgba(107,54,0,.10)
+            rgba(255,255,255,.18),
+            transparent 20%,
+            transparent 80%,
+            rgba(96,47,0,.10)
         ),
-
         linear-gradient(
             180deg,
-            #f7edc9 0%,
-            #e9cf88 27%,
-            #d9a94f 61%,
-            #b5751f 100%
+            #fff5cd 0%,
+            #f9e7a8 22%,
+            #efc665 55%,
+            #d69228 82%,
+            #b86a0e 100%
         );
 
-    color:#2e1804;
+    color:#2e1501;
 
-    border:
-        1px solid
-        #f3dfab;
+    border:1px solid #fff0b8;
 
     font-size:5px;
-
-    line-height:1.15;
-
+    line-height:1.12;
     font-weight:950;
-
     letter-spacing:.46px;
 
     clip-path:
         polygon(
             0 0,
             100% 0,
-            100% 80%,
-            75% 100%,
+            100% 79%,
+            76% 100%,
             50% 84%,
-            25% 100%,
-            0 80%
+            24% 100%,
+            0 79%
         );
 
     box-shadow:
-        0 4px 11px
-        rgba(0,0,0,.40),
-
-        0 0 14px
-        rgba(211,152,64,.23);
+        inset 0 1px 0 rgba(255,255,255,.55),
+        0 4px 11px rgba(0,0,0,.44),
+        0 0 15px rgba(255,180,53,.32);
 
     z-index:5;
 }
 
 .desktop-dock .framework-card .menu-icon{
-    color:#e9bd71 !important;
-}
-
-.desktop-dock .framework-card .menu-title-text{
-    color:#fff !important;
+    color:#ffe19a !important;
 }
 
 .desktop-dock .framework-card .card-desc{
-    color:
-        rgba(244,232,216,.86) !important;
-
+    color:rgba(255,245,228,.90) !important;
     padding-right:46px;
 }
-
 
 /* =========================================================
    SOCIAL
@@ -1061,13 +812,10 @@ body{
 
 .desktop-right-socials{
     display:flex;
-
     flex-direction:column;
-
     gap:8px;
 
     position:absolute;
-
     left:20px;
     bottom:175px;
 
@@ -1079,32 +827,28 @@ body{
     height:32px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
     border:
-        1px solid
-        rgba(198,81,13,.66);
+        1px solid rgba(239,109,15,.72);
 
     border-radius:50%;
 
     color:#fff;
-
     text-decoration:none;
 
     background:
         rgba(5,7,9,.93);
 
     box-shadow:
-        0 0 10px
-        rgba(153,50,2,.08);
+        inset 0 0 8px rgba(255,139,26,.05),
+        0 0 11px rgba(245,100,7,.14);
 }
 
 .mobile-portfolio{
     display:none;
 }
-
 
 /* =========================================================
    LAPTOP
@@ -1118,30 +862,19 @@ body{
 
     .hero{
         top:76px !important;
-
         bottom:157px !important;
-
         left:2.8% !important;
-
         width:440px !important;
-
         height:auto !important;
     }
 
     .hero-image{
         width:auto !important;
-
         height:100% !important;
-
         max-width:100% !important;
-
         max-height:100% !important;
-
         object-fit:contain !important;
-
-        object-position:
-            center bottom !important;
-
+        object-position:center bottom !important;
         transform:none !important;
     }
 
@@ -1163,7 +896,6 @@ body{
         bottom:170px;
     }
 }
-
 
 /* =========================================================
    MEDIUM LAPTOP
@@ -1207,9 +939,7 @@ body{
         right:1.5%;
         width:120px;
     }
-
 }
-
 
 /* =========================================================
    MOBILE
@@ -1229,35 +959,33 @@ body{
 
 .mobile-portfolio{
     display:flex !important;
-
     width:100%;
     min-height:100vh;
 
     background:
-
         radial-gradient(
-            circle at 50% 15%,
-            rgba(183,62,3,.17) 0%,
-            rgba(97,29,0,.085) 33%,
-            rgba(6,8,9,.98) 61%,
-            #020304 100%
+            circle at 50% 14%,
+            rgba(245,95,8,.18) 0%,
+            rgba(115,31,0,.09) 32%,
+            transparent 50%
         ),
-
+        radial-gradient(
+            ellipse at 0% 75%,
+            rgba(235,86,5,.07),
+            transparent 32%
+        ),
         linear-gradient(
             180deg,
             #080503 0%,
-            #050607 52%,
+            #050607 46%,
             #020304 100%
         );
 
     flex-direction:column;
-
     align-items:center;
 
-    padding:
-        10px 14px 30px 14px !important;
+    padding:10px 14px 30px 14px !important;
 }
-
 
 /* =========================================================
    MOBILE NAV
@@ -1265,34 +993,25 @@ body{
 
 .m-nav{
     width:100%;
-
     display:flex;
-
-    justify-content:
-        space-between;
-
+    justify-content:space-between;
     align-items:center;
 
     padding-bottom:9px;
 
     border-bottom:
-        1px solid
-        rgba(203,83,14,.19);
+        1px solid rgba(231,98,12,.20);
 
     margin-bottom:6px;
-
     min-height:58px;
 }
 
 .m-logo{
     display:flex;
-
     align-items:center;
-
     gap:10px;
 
     text-decoration:none;
-
     color:#fff;
 }
 
@@ -1301,31 +1020,23 @@ body{
     height:32px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
-    border:
-        2px solid
-        #d8751f;
-
-    color:#df7f29;
+    border:2px solid #f08b27;
+    color:#f08b27;
 
     font-size:16px;
-
     font-weight:900;
 
-    transform:
-        rotate(45deg);
+    transform:rotate(45deg);
 
     box-shadow:
-        0 0 11px
-        rgba(196,75,10,.11);
+        0 0 11px rgba(255,126,16,.19);
 }
 
 .m-logo-mark span{
-    transform:
-        rotate(-45deg);
+    transform:rotate(-45deg);
 }
 
 .m-logo-text{
@@ -1339,49 +1050,43 @@ body{
 
 .m-logo-text small{
     font-size:9px;
-
-    color:#d97720;
+    color:#ef8524;
 }
 
-
-/* MOBILE LET'S TALK — ALWAYS HIGHLIGHTED */
+/* ALWAYS HIGHLIGHTED */
 
 .m-nav-cta{
     padding:8px 12px;
 
     border:
-        1px solid
-        #e2a044;
+        1px solid #f1a74a;
 
     border-radius:5px;
 
     color:#fff;
-
     text-decoration:none;
 
     font-size:9px;
-
     font-weight:900;
 
     background:
+        radial-gradient(
+            circle at 18% 25%,
+            rgba(255,218,137,.18),
+            transparent 43%
+        ),
         linear-gradient(
-            115deg,
-            #6e2102 0%,
-            #9e3905 52%,
-            #c96112 100%
+            112deg,
+            #5e1a00 0%,
+            #9b3002 48%,
+            #d05b0d 100%
         );
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.15),
-
-        0 0 14px
-        rgba(195,78,10,.18),
-
-        0 5px 13px
-        rgba(0,0,0,.20);
+        inset 0 1px 0 rgba(255,255,255,.17),
+        0 0 15px rgba(246,105,8,.22),
+        0 5px 14px rgba(0,0,0,.22);
 }
-
 
 /* =========================================================
    MOBILE HERO
@@ -1390,35 +1095,25 @@ body{
 .m-hero{
     position:relative;
 
-    width:
-        min(92vw,330px) !important;
-
+    width:min(92vw,330px) !important;
     height:48vh !important;
-
     min-height:330px !important;
-
     max-height:430px !important;
 
-    margin:
-        0 auto 5px !important;
+    margin:0 auto 5px !important;
 
     display:flex;
-
     align-items:flex-end;
-
     justify-content:center;
 }
 
 .m-hero::before{
     content:"";
-
     position:absolute;
-
     top:49%;
     left:50%;
 
-    transform:
-        translate(-50%,-50%);
+    transform:translate(-50%,-50%);
 
     width:105%;
     height:105%;
@@ -1426,10 +1121,9 @@ body{
     background:
         radial-gradient(
             ellipse at center,
-
-            rgba(215,101,26,.47),
-            rgba(170,59,4,.27) 26%,
-            rgba(109,31,0,.13) 48%,
+            rgba(255,154,48,.53),
+            rgba(233,89,6,.30) 27%,
+            rgba(128,34,0,.14) 48%,
             transparent 80%
         );
 
@@ -1438,7 +1132,6 @@ body{
 
 .m-hero::after{
     content:"";
-
     position:absolute;
 
     top:6%;
@@ -1448,34 +1141,26 @@ body{
     height:88%;
 
     border:
-        1px solid
-        rgba(197,78,13,.48);
+        1px solid rgba(242,119,22,.52);
 
-    transform:
-        rotate(-7deg);
+    transform:rotate(-7deg);
 
     box-shadow:
-        0 0 24px
-        rgba(157,48,2,.10);
+        0 0 26px rgba(227,77,3,.16);
 }
 
 .m-hero img{
     position:relative;
 
     width:auto !important;
-
     height:100% !important;
-
     max-width:none !important;
 
     object-fit:contain !important;
-
-    object-position:
-        center bottom !important;
+    object-position:center bottom !important;
 
     z-index:3;
 }
-
 
 /* =========================================================
    MOBILE CONTENT
@@ -1483,31 +1168,25 @@ body{
 
 .m-content{
     text-align:center;
-
     width:100%;
-
     max-width:420px;
 }
 
 .m-sub-tag{
-    color:#dc7822;
-
+    color:#f18522;
     font-size:8px;
-
     font-weight:900;
-
     letter-spacing:1.6px;
-
     margin-bottom:5px;
+
+    text-shadow:
+        0 0 9px rgba(255,115,10,.16);
 }
 
 .m-name{
     font-size:25px;
-
     line-height:1;
-
     font-weight:950;
-
     margin-bottom:6px;
 }
 
@@ -1517,24 +1196,20 @@ body{
 }
 
 .m-profession{
-    color:#e18427;
+    color:#f38a28;
 
     font-size:11px;
-
     font-weight:900;
 
     margin-bottom:7px;
-
     min-height:17px;
 
     text-shadow:
-        0 0 9px
-        rgba(208,81,10,.13);
+        0 0 8px rgba(255,119,10,.17);
 }
 
 .m-profession::after{
     content:"";
-
     display:block;
 
     width:42px;
@@ -1543,32 +1218,25 @@ body{
     background:
         linear-gradient(
             90deg,
-            #9c3907,
-            #ed9a40
+            #ae3902,
+            #ff9b32,
+            #ffd27b
         );
 
-    margin:
-        4px auto 0;
+    margin:4px auto 0;
 
     box-shadow:
-        0 0 7px
-        rgba(189,67,6,.17);
+        0 0 8px rgba(255,124,15,.34);
 }
 
 .m-quote{
     color:#d8dce1;
-
     font-size:10.5px;
-
     line-height:1.42;
-
     font-style:italic;
-
     margin-bottom:11px;
-
     padding:0 8px;
 }
-
 
 /* =========================================================
    MOBILE STATS
@@ -1576,70 +1244,52 @@ body{
 
 .m-stats{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:7px;
-
     width:100%;
-
     margin-bottom:12px;
 }
 
 .m-stat{
     background:
-
         radial-gradient(
-            circle at 15% 10%,
-            rgba(168,55,2,.055),
-            transparent 43%
+            ellipse at 100% 0%,
+            rgba(255,210,115,.10),
+            transparent 28%
         ),
-
         linear-gradient(
             145deg,
-            rgba(13,15,17,.97),
-            rgba(5,7,9,.98)
+            rgba(14,16,18,.98),
+            rgba(4,6,8,.99)
         );
 
     border:
-        1px solid
-        rgba(187,73,10,.45);
+        1px solid rgba(230,96,12,.53);
 
     border-radius:8px;
 
     min-height:64px;
-
     padding:7px 3px;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.02),
-
-        0 5px 16px
-        rgba(0,0,0,.23);
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 5px 16px rgba(0,0,0,.25);
 }
 
 .m-stat-num{
-    color:#e07e25;
-
+    color:#f18120;
     font-size:17px;
-
     font-weight:950;
 
     text-shadow:
-        0 0 9px
-        rgba(191,66,5,.13);
+        0 0 9px rgba(255,115,9,.16);
 }
 
 .m-stat-lbl{
     font-size:7px;
-
     color:#cbd5e1;
-
     font-weight:700;
 }
-
 
 /* =========================================================
    MOBILE SOCIAL
@@ -1647,11 +1297,8 @@ body{
 
 .m-socials{
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
     margin-bottom:18px;
 }
 
@@ -1660,28 +1307,28 @@ body{
     height:36px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
     border:
-        1px solid
-        rgba(195,78,12,.68);
+        1px solid rgba(239,107,14,.74);
 
     border-radius:50%;
 
     color:#fff;
-
     text-decoration:none;
 
     background:
-        rgba(5,7,9,.93);
+        radial-gradient(
+            circle at center,
+            rgba(255,147,30,.055),
+            rgba(4,6,8,.97) 70%
+        );
 
     box-shadow:
-        0 0 12px
-        rgba(162,53,2,.10);
+        inset 0 0 8px rgba(255,134,22,.05),
+        0 0 12px rgba(244,100,7,.15);
 }
-
 
 /* =========================================================
    MOBILE CTA
@@ -1689,450 +1336,399 @@ body{
 
 .m-cta{
     display:inline-flex;
-
     align-items:center;
     justify-content:center;
-
     gap:10px;
 
     width:100%;
-
     height:44px;
 
     background:
+        radial-gradient(
+            ellipse at 17% 120%,
+            rgba(255,222,142,.22),
+            transparent 46%
+        ),
         linear-gradient(
-            110deg,
-            #8b2c02 0%,
-            #c14906 48%,
-            #e4741b 100%
+            108deg,
+            #9b2e00 0%,
+            #d34b04 40%,
+            #f1750f 68%,
+            #b63601 100%
         );
 
     border:
-        1px solid
-        #e59a40;
+        1px solid #f0a046;
 
     border-radius:6px;
 
     color:#fff;
-
     text-decoration:none;
 
     font-size:10px;
-
     font-weight:900;
 
     margin-bottom:20px;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.16),
-
-        0 6px 18px
-        rgba(145,44,0,.27),
-
-        0 0 14px
-        rgba(184,68,4,.12);
+        inset 0 1px 0 rgba(255,255,255,.20),
+        0 7px 20px rgba(177,51,0,.30),
+        0 0 17px rgba(246,104,8,.18);
 }
 
-
 /* =========================================================
-   MOBILE MENU GRID
+   MOBILE MENU
 ========================================================= */
 
 .m-menu-grid{
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:10px;
-
     width:100%;
 }
 
 .m-menu-btn{
+    position:relative;
+
     background:
-
         radial-gradient(
-            circle at 0 0,
-            rgba(160,53,2,.055),
-            transparent 42%
+            ellipse at 100% 0%,
+            rgba(255,211,119,.13),
+            transparent 25%
         ),
-
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(255,119,11,.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            126deg,
+            transparent 10%,
+            rgba(255,215,124,.025) 39%,
+            rgba(255,228,151,.085) 50%,
+            transparent 66%
+        ),
         linear-gradient(
             145deg,
-            rgba(12,15,18,.98),
-            rgba(5,8,10,.98)
+            rgba(13,16,19,.99),
+            rgba(4,7,9,.99)
         );
 
     border:
-        1px solid
-        rgba(188,75,11,.53);
+        1px solid rgba(231,98,12,.59);
 
     border-radius:8px;
 
     padding:12px 10px;
 
     text-decoration:none;
-
     color:#fff;
 
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
     text-align:left;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.02),
-
-        0 5px 16px
-        rgba(0,0,0,.22);
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 5px 17px rgba(0,0,0,.25);
 
     transition:
-        background .15s ease,
-        border-color .15s ease,
-        box-shadow .15s ease,
-        filter .15s ease;
+        .18s ease;
 }
 
 .m-menu-icon{
-    color:#dc741d;
+    color:#f07919;
 
     font-size:18px;
-
     width:24px;
 
     text-align:center;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,112,8,.22));
 }
 
 .m-menu-text strong{
     display:block;
-
     font-size:11px;
-
     font-weight:900;
-
     margin-bottom:2px;
 }
 
 .m-menu-text span{
     display:block;
-
     font-size:8px;
-
-    color:#98a1ac;
+    color:#9fa8b2;
 }
 
 .m-menu-btn.profile-highlight,
 .m-menu-btn.gallery-highlight{
     background:
-
         radial-gradient(
-            circle at 0 0,
-            rgba(160,53,2,.055),
-            transparent 42%
+            ellipse at 100% 0%,
+            rgba(255,211,119,.13),
+            transparent 25%
         ),
-
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(255,119,11,.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            126deg,
+            transparent 10%,
+            rgba(255,215,124,.025) 39%,
+            rgba(255,228,151,.085) 50%,
+            transparent 66%
+        ),
         linear-gradient(
             145deg,
-            rgba(12,15,18,.98),
-            rgba(5,8,10,.98)
+            rgba(13,16,19,.99),
+            rgba(4,7,9,.99)
         ) !important;
-
-    border-color:
-        rgba(188,75,11,.53) !important;
 }
 
-
-/* =========================================================
-   MOBILE CLICK HIGHLIGHT
-   SIZE DOES NOT CHANGE
-========================================================= */
+/* CLICK HIGHLIGHT — NO SIZE CHANGE */
 
 .m-menu-btn.tap-highlight{
     background:
         radial-gradient(
-            circle at 18% 50%,
-            rgba(226,164,75,.22),
-            transparent 46%
+            circle at 16% 50%,
+            rgba(255,216,124,.27),
+            transparent 45%
         ),
-
         linear-gradient(
             135deg,
-            #351000,
-            #6e2403
+            #3b1000,
+            #7b2600
         ) !important;
 
-    border-color:
-        #dfa14a !important;
+    border-color:#ffd47e !important;
 
     box-shadow:
-        inset 0 0 17px
-        rgba(222,157,65,.09),
-
-        0 0 0 1px
-        rgba(221,159,69,.15),
-
-        0 0 22px
-        rgba(164,56,3,.36) !important;
-
-    filter:
-        brightness(1.10);
+        inset 0 0 18px rgba(255,202,88,.11),
+        0 0 0 1px rgba(255,215,126,.19),
+        0 0 24px rgba(248,110,10,.47) !important;
 }
 
 .m-menu-btn.tap-highlight .m-menu-icon{
-    color:#efb25a !important;
+    color:#ffda86 !important;
 
     filter:
-        drop-shadow(
-            0 0 6px
-            rgba(222,157,68,.36)
-        );
+        drop-shadow(0 0 7px rgba(255,193,73,.55));
 }
 
-
 /* =========================================================
-   PREMIUM ORIGINAL FRAMEWORKS
-   SAME SIZE
+   PREMIUM FRAMEWORK CARD
 ========================================================= */
 
 .m-menu-btn.framework-wide{
-    grid-column:
-        1 / -1;
+    grid-column:1/-1;
 
     position:relative;
-
     overflow:visible;
 
     min-height:72px;
 
     background:
-
         radial-gradient(
-            ellipse at 21% 135%,
-            rgba(235,185,95,.39),
-            transparent 48%
+            ellipse at 22% 150%,
+            rgba(255,244,194,.62) 0%,
+            rgba(255,185,57,.31) 22%,
+            transparent 49%
         ),
-
         radial-gradient(
-            circle at 83% 18%,
-            rgba(172,59,2,.22),
-            transparent 39%
+            ellipse at 50% 150%,
+            rgba(255,174,39,.16),
+            transparent 44%
         ),
-
+        linear-gradient(
+            125deg,
+            transparent 8%,
+            transparent 31%,
+            rgba(255,215,118,.04) 39%,
+            rgba(255,234,165,.22) 50%,
+            rgba(255,145,24,.05) 63%,
+            transparent 78%
+        ),
+        radial-gradient(
+            circle at 84% 22%,
+            rgba(255,126,9,.27),
+            transparent 40%
+        ),
         linear-gradient(
             112deg,
-            #351000 0%,
-            #5e1b00 26%,
-            #8c2c01 58%,
-            #461100 100%
+            #3b0d00 0%,
+            #6c1b00 28%,
+            #9a3000 57%,
+            #6d1a00 79%,
+            #360900 100%
         ) !important;
 
     border:
-        1px solid
-        #d89436 !important;
+        1px solid #f4a541 !important;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.17),
-
-        inset 0 -1px 0
-        rgba(0,0,0,.38),
-
-        0 8px 23px
-        rgba(139,42,0,.26),
-
-        0 0 21px
-        rgba(168,58,2,.16);
+        inset 0 1px 0 rgba(255,255,255,.23),
+        inset 0 -1px 0 rgba(0,0,0,.40),
+        0 0 0 1px rgba(255,177,60,.08),
+        0 9px 27px rgba(173,47,0,.33),
+        0 0 26px rgba(246,103,7,.22) !important;
 }
-
-
-/* GOLD FLOW INSIDE FRAMEWORK */
 
 .m-menu-btn.framework-wide::before{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     border-radius:8px;
 
-    background:
-
-        radial-gradient(
-            ellipse at 26% 140%,
-            rgba(245,213,147,.43),
-            transparent 46%
-        ),
-
-        linear-gradient(
-            126deg,
-            transparent 5%,
-            rgba(231,187,95,.025) 34%,
-            rgba(238,205,135,.15) 50%,
-            rgba(192,93,19,.035) 68%,
-            transparent 88%
-        );
-
     pointer-events:none;
+
+    background:
+        radial-gradient(
+            ellipse at 21% 145%,
+            rgba(255,250,215,.52),
+            transparent 35%
+        ),
+        linear-gradient(
+            166deg,
+            transparent 0%,
+            transparent 56%,
+            rgba(255,213,113,.04) 63%,
+            rgba(255,233,165,.21) 68%,
+            rgba(255,144,22,.05) 74%,
+            transparent 81%
+        ),
+        linear-gradient(
+            125deg,
+            transparent 0%,
+            transparent 35%,
+            rgba(255,230,151,.05) 42%,
+            rgba(255,230,151,.19) 49%,
+            transparent 60%
+        );
 }
 
-
-/* =========================================================
-   SIGNATURE WORK RIBBON
-========================================================= */
+/* SIGNATURE WORK */
 
 .m-menu-btn.framework-wide::after{
-    content:
-        "♛\A SIGNATURE\A WORK";
-
+    content:"♛\A SIGNATURE\A WORK";
     white-space:pre;
 
     position:absolute;
-
     top:-1px;
     right:13px;
 
-    width:52px;
-    height:48px;
+    width:58px;
+    height:54px;
 
-    padding:
-        4px 3px 0;
+    padding:5px 3px 0;
 
     text-align:center;
 
     background:
-
         linear-gradient(
             90deg,
-            rgba(255,255,255,.13),
-            transparent 22%,
-            transparent 78%,
-            rgba(95,48,0,.08)
+            rgba(255,255,255,.23),
+            transparent 17%,
+            transparent 80%,
+            rgba(101,49,0,.12)
         ),
-
         linear-gradient(
             180deg,
-            #f7edc9 0%,
-            #ead18d 27%,
-            #d9aa51 62%,
-            #b67620 100%
+            #fff7d7 0%,
+            #fae7aa 20%,
+            #f0c45f 49%,
+            #df9a2b 72%,
+            #bb6810 100%
         );
 
-    color:#2e1804;
+    color:#2c1300;
 
     border:
-        1px solid
-        #f2dfad;
+        1px solid #fff1bd;
 
-    font-size:5px;
-
-    line-height:1.16;
-
+    font-size:5.3px;
+    line-height:1.18;
     font-weight:950;
-
-    letter-spacing:.48px;
+    letter-spacing:.52px;
 
     text-shadow:
-        0 1px 0
-        rgba(255,255,255,.28);
+        0 1px 0 rgba(255,255,255,.50);
 
     box-shadow:
-        0 4px 12px
-        rgba(0,0,0,.42),
-
-        0 0 15px
-        rgba(211,151,63,.28);
+        inset 0 1px 0 rgba(255,255,255,.72),
+        0 5px 13px rgba(0,0,0,.47),
+        0 0 18px rgba(248,178,52,.42);
 
     clip-path:
         polygon(
             0 0,
             100% 0,
-            100% 80%,
-            75% 100%,
+            100% 78%,
+            76% 100%,
             50% 84%,
-            25% 100%,
-            0 80%
+            24% 100%,
+            0 78%
         );
 
-    z-index:7;
+    z-index:8;
+}
+
+.m-menu-btn.framework-wide .m-menu-text{
+    padding-right:64px;
 }
 
 .m-menu-btn.framework-wide .m-menu-icon{
-    color:#e8bd72 !important;
+    color:#ffe29d !important;
 
     filter:
-        drop-shadow(
-            0 0 7px
-            rgba(215,158,70,.38)
-        );
+        drop-shadow(0 0 8px rgba(255,205,105,.59));
 }
 
 .m-menu-btn.framework-wide strong{
     color:#fff !important;
 
     text-shadow:
-        0 2px 8px
-        rgba(0,0,0,.38);
+        0 2px 9px rgba(0,0,0,.42);
 }
 
 .m-menu-btn.framework-wide span{
-    color:
-        rgba(243,232,217,.90) !important;
-}
-
-.m-menu-btn.framework-wide .m-menu-text{
-    padding-right:58px;
+    color:rgba(255,245,228,.92) !important;
 }
 
 .m-menu-btn.framework-wide.tap-highlight{
-    border-color:
-        #e9bb68 !important;
-
-    filter:
-        brightness(1.12);
+    border-color:#ffe19a !important;
 
     box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.24),
-
-        0 0 0 1px
-        rgba(225,177,88,.20),
-
-        0 0 27px
-        rgba(166,58,3,.42) !important;
+        inset 0 1px 0 rgba(255,255,255,.28),
+        0 0 0 1px rgba(255,219,132,.22),
+        0 0 29px rgba(250,111,10,.52) !important;
 }
 
-
 /* =========================================================
-   SIGNATURE FOOTER
+   FOOTER
 ========================================================= */
 
 .m-signature-footer{
-    grid-column:
-        1 / -1;
+    grid-column:1/-1;
 
     width:100%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
     gap:11px;
 
-    padding:
-        13px 4px 1px;
+    padding:13px 4px 1px;
 
-    color:#d47a26;
+    color:#ef8a29;
 
     font-size:7px;
-
     font-weight:900;
 
     letter-spacing:2.2px;
@@ -2140,8 +1736,7 @@ body{
     white-space:nowrap;
 
     text-shadow:
-        0 0 7px
-        rgba(164,57,3,.20);
+        0 0 9px rgba(248,102,7,.36);
 }
 
 .m-signature-footer::before,
@@ -2149,28 +1744,25 @@ body{
     content:"";
 
     flex:1;
-
     max-width:58px;
-
     height:1px;
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            #ba5c18
+            #e4781f
         );
 
     box-shadow:
-        0 0 7px
-        rgba(162,54,2,.22);
+        0 0 8px rgba(242,95,5,.42);
 }
 
 .m-signature-footer::after{
     background:
         linear-gradient(
             90deg,
-            #ba5c18,
+            #e4781f,
             transparent
         );
 }
@@ -2180,12 +1772,9 @@ body{
 /* END MOBILE */
 
 </style>
-
 </head>
 
-
 <body>
-
 
 <!-- =========================================================
      DESKTOP
@@ -2193,91 +1782,41 @@ body{
 
 <div class="page">
 
-
 <div class="desktop-nav">
 
-
-<a
-href="index.html"
-class="desktop-logo"
->
+<a href="index.html" class="desktop-logo">
 
 <div class="desktop-logo-mark">
 <span>M</span>
 </div>
 
 <div class="desktop-logo-text">
-
-<strong>
-MEHEDI
-</strong>
-
-<small>
-ALIM AYON
-</small>
-
+<strong>MEHEDI</strong>
+<small>ALIM AYON</small>
 </div>
 
 </a>
-
 
 <div class="desktop-nav-links">
 
-<a href="index.html">
-HOME
-</a>
-
-<a href="agriculturist.html">
-AGRICULTURIST
-</a>
-
-<a href="communicationist.html">
-COMMUNICATIONIST
-</a>
-
-<a href="kam.html">
-KEY ACCOUNT MANAGER
-</a>
-
-<a href="about.html">
-ABOUT ME
-</a>
-
-<a href="frameworks.html">
-FRAMEWORKS
-</a>
-
-<a href="gallery.html">
-GALLERY
-</a>
-
-<a href="resume.html">
-CV
-</a>
-
-<a href="contact.html">
-CONTACT
-</a>
+<a href="index.html">HOME</a>
+<a href="agriculturist.html">AGRICULTURIST</a>
+<a href="communicationist.html">COMMUNICATIONIST</a>
+<a href="kam.html">KEY ACCOUNT MANAGER</a>
+<a href="about.html">ABOUT ME</a>
+<a href="frameworks.html">FRAMEWORKS</a>
+<a href="gallery.html">GALLERY</a>
+<a href="resume.html">CV</a>
+<a href="contact.html">CONTACT</a>
 
 </div>
 
-
-<a
-href="contact.html"
-class="desktop-nav-cta"
->
-
+<a href="contact.html" class="desktop-nav-cta">
 LET'S TALK
-
-<i
-class="fa-solid fa-arrow-right"
-></i>
-
+<i class="fa-solid fa-arrow-right"></i>
 </a>
 
-
 </div>
-
 
 <!-- HERO -->
 
@@ -2291,11 +1830,9 @@ alt="Mehedi Alim Ayon"
 
 </div>
 
-
-<!-- MAIN TEXT -->
+<!-- MAIN CONTENT -->
 
 <div class="main-content">
-
 
 <h1 class="name">
 
@@ -2304,58 +1841,34 @@ href="javascript:void(0);"
 onclick="location.reload();"
 class="refresh-name"
 >
-
 MEHEDI ALIM AYON
-
 </a>
 
 </h1>
 
-
 <p class="profession">
-
 <span class="typed-text"></span>
-
-<span class="cursor">
-&nbsp;
-</span>
-
+<span class="cursor">&nbsp;</span>
 </p>
-
 
 <p class="personal-quote">
-
 "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
-
 </p>
 
-
-<a
-href="contact.html"
-class="desktop-cta"
->
-
+<a href="contact.html" class="desktop-cta">
 LET'S CREATE IMPACT TOGETHER
-
 </a>
 
-
 </div>
-
 
 <!-- DESKTOP STATS -->
 
 <div class="desktop-stats-panel">
 
-
 <div class="desktop-stat">
 
 <div class="desktop-stat-icon">
-
-<i
-class="fa-solid fa-globe"
-></i>
-
+<i class="fa-solid fa-globe"></i>
 </div>
 
 <div
@@ -2371,15 +1884,10 @@ Countries<br>Sourced
 
 </div>
 
-
 <div class="desktop-stat">
 
 <div class="desktop-stat-icon">
-
-<i
-class="fa-solid fa-cube"
-></i>
-
+<i class="fa-solid fa-cube"></i>
 </div>
 
 <div
@@ -2395,15 +1903,10 @@ Products<br>Managed
 
 </div>
 
-
 <div class="desktop-stat">
 
 <div class="desktop-stat-icon">
-
-<i
-class="fa-solid fa-users"
-></i>
-
+<i class="fa-solid fa-users"></i>
 </div>
 
 <div
@@ -2419,9 +1922,7 @@ data-target="100"
 
 </div>
 
-
 </div>
-
 
 <!-- DESKTOP DOCK -->
 
@@ -2429,34 +1930,23 @@ data-target="100"
 
 <div class="desktop-dock">
 
-
 <a
 href="about.html"
 class="menu-button about-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-regular fa-user"
-></i>
-
+<i class="fa-regular fa-user"></i>
 </div>
 
 <div>
-
-<div class="menu-title-text">
-ABOUT ME
-</div>
-
+<div class="menu-title-text">ABOUT ME</div>
 <div class="card-desc">
 Discover my journey, skills, and values
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="agriculturist.html"
@@ -2464,27 +1954,17 @@ class="menu-button agri-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-solid fa-seedling"
-></i>
-
+<i class="fa-solid fa-seedling"></i>
 </div>
 
 <div>
-
-<div class="menu-title-text">
-AGRICULTURIST
-</div>
-
+<div class="menu-title-text">AGRICULTURIST</div>
 <div class="card-desc">
 Rooted in Agricultural Economics
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="communicationist.html"
@@ -2492,15 +1972,10 @@ class="menu-button comm-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-solid fa-headset"
-></i>
-
+<i class="fa-solid fa-headset"></i>
 </div>
 
 <div>
-
 <div class="menu-title-text">
 COMMUNICATIONIST
 </div>
@@ -2508,11 +1983,9 @@ COMMUNICATIONIST
 <div class="card-desc">
 Specialized in Communication Studies
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="kam.html"
@@ -2520,15 +1993,10 @@ class="menu-button kam-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-solid fa-briefcase"
-></i>
-
+<i class="fa-solid fa-briefcase"></i>
 </div>
 
 <div>
-
 <div class="menu-title-text">
 KEY ACCOUNT MANAGER
 </div>
@@ -2536,11 +2004,9 @@ KEY ACCOUNT MANAGER
 <div class="card-desc">
 Driving value and strategic growth
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="resume.html"
@@ -2548,15 +2014,10 @@ class="menu-button profile-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-regular fa-file-lines"
-></i>
-
+<i class="fa-regular fa-file-lines"></i>
 </div>
 
 <div>
-
 <div class="menu-title-text">
 PROFILE / CV
 </div>
@@ -2564,11 +2025,9 @@ PROFILE / CV
 <div class="card-desc">
 View professional timeline & credentials
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="gallery.html"
@@ -2576,15 +2035,10 @@ class="menu-button gallery-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-regular fa-image"
-></i>
-
+<i class="fa-regular fa-image"></i>
 </div>
 
 <div>
-
 <div class="menu-title-text">
 GALLERY
 </div>
@@ -2592,11 +2046,9 @@ GALLERY
 <div class="card-desc">
 Explore moments & captures
 </div>
-
 </div>
 
 </a>
-
 
 <a
 href="frameworks.html"
@@ -2604,11 +2056,7 @@ class="menu-button framework-card premium-menu-link"
 >
 
 <div class="menu-icon">
-
-<i
-class="fa-solid fa-diagram-project"
-></i>
-
+<i class="fa-solid fa-diagram-project"></i>
 </div>
 
 <div>
@@ -2618,67 +2066,41 @@ ORIGINAL FRAMEWORKS
 </div>
 
 <div class="card-desc">
-
 Original Theories · Independent Frameworks · Field-Built Insights
-
 </div>
 
 </div>
 
 </a>
 
-
 </div>
-
 </div>
-
 
 <!-- DESKTOP SOCIAL -->
 
 <div class="desktop-right-socials">
 
-
 <a
 href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
 target="_blank"
 >
-
-<i
-class="fa-brands fa-linkedin-in"
-></i>
-
+<i class="fa-brands fa-linkedin-in"></i>
 </a>
-
 
 <a
 href="https://wa.me/601172267068"
 target="_blank"
 >
-
-<i
-class="fa-brands fa-whatsapp"
-></i>
-
+<i class="fa-brands fa-whatsapp"></i>
 </a>
 
-
-<a
-href="mailto:mehedialif1999@gmail.com"
->
-
-<i
-class="fa-solid fa-envelope"
-></i>
-
+<a href="mailto:mehedialif1999@gmail.com">
+<i class="fa-solid fa-envelope"></i>
 </a>
-
 
 </div>
 
-
 </div>
-
-
 
 <!-- =========================================================
      MOBILE
@@ -2686,50 +2108,27 @@ class="fa-solid fa-envelope"
 
 <div class="mobile-portfolio">
 
-
 <div class="m-nav">
 
-
-<a
-href="index.html"
-class="m-logo"
->
+<a href="index.html" class="m-logo">
 
 <div class="m-logo-mark">
 <span>M</span>
 </div>
 
 <div class="m-logo-text">
-
-<strong>
-MEHEDI
-</strong>
-
-<small>
-ALIM AYON
-</small>
-
+<strong>MEHEDI</strong>
+<small>ALIM AYON</small>
 </div>
 
 </a>
 
-
-<a
-href="contact.html"
-class="m-nav-cta"
->
-
+<a href="contact.html" class="m-nav-cta">
 LET'S TALK
-
-<i
-class="fa-solid fa-arrow-right"
-></i>
-
+<i class="fa-solid fa-arrow-right"></i>
 </a>
 
-
 </div>
-
 
 <!-- MOBILE HERO -->
 
@@ -2742,16 +2141,11 @@ alt="Mehedi Alim Ayon"
 
 </div>
 
-
 <div class="m-content">
 
-
 <div class="m-sub-tag">
-
 AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST
-
 </div>
-
 
 <h1 class="m-name">
 
@@ -2759,34 +2153,25 @@ AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST
 href="javascript:void(0);"
 onclick="location.reload();"
 >
-
 MEHEDI ALIM AYON
-
 </a>
 
 </h1>
 
-
 <p class="m-profession">
 
 <span class="typed-text"></span>
-
 <span class="cursor"></span>
 
 </p>
 
-
 <p class="m-quote">
-
 "Rooted in agricultural innovation, driven by meaningful connections, and dedicated to cultivating partnerships that yield lasting global impact."
-
 </p>
-
 
 <!-- MOBILE STATS -->
 
 <div class="m-stats">
-
 
 <div class="m-stat">
 
@@ -2803,7 +2188,6 @@ Countries Sourced
 
 </div>
 
-
 <div class="m-stat">
 
 <div
@@ -2818,7 +2202,6 @@ Products Managed
 </div>
 
 </div>
-
 
 <div class="m-stat">
 
@@ -2835,73 +2218,45 @@ data-target="100"
 
 </div>
 
-
 </div>
-
 
 <!-- MOBILE SOCIAL -->
 
 <div class="m-socials">
 
-
 <a
 href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331"
 target="_blank"
 >
-
-<i
-class="fa-brands fa-linkedin-in"
-></i>
-
+<i class="fa-brands fa-linkedin-in"></i>
 </a>
-
 
 <a
 href="https://wa.me/601172267068"
 target="_blank"
 >
-
-<i
-class="fa-brands fa-whatsapp"
-></i>
-
+<i class="fa-brands fa-whatsapp"></i>
 </a>
 
-
-<a
-href="mailto:mehedialif1999@gmail.com"
->
-
-<i
-class="fa-solid fa-envelope"
-></i>
-
+<a href="mailto:mehedialif1999@gmail.com">
+<i class="fa-solid fa-envelope"></i>
 </a>
-
 
 </div>
 
+<!-- CTA -->
 
-<!-- MOBILE CTA -->
-
-<a
-href="contact.html"
-class="m-cta"
->
+<a href="contact.html" class="m-cta">
 
 LET'S CREATE IMPACT TOGETHER
 
-<i
-class="fa-solid fa-arrow-right"
-></i>
+<i class="fa-solid fa-arrow-right"></i>
 
 </a>
 
-
-<!-- MOBILE MENU -->
+<!-- MENU -->
 
 <div class="m-menu-grid">
-
 
 <a
 href="about.html"
@@ -2909,27 +2264,15 @@ class="m-menu-btn premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-regular fa-user"
-></i>
-
+<i class="fa-regular fa-user"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-ABOUT ME
-</strong>
-
-<span>
-My journey & skills
-</span>
-
+<strong>ABOUT ME</strong>
+<span>My journey & skills</span>
 </div>
 
 </a>
-
 
 <a
 href="agriculturist.html"
@@ -2937,27 +2280,15 @@ class="m-menu-btn premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-solid fa-seedling"
-></i>
-
+<i class="fa-solid fa-seedling"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-AGRICULTURIST
-</strong>
-
-<span>
-Rooted in Agricultural Economics
-</span>
-
+<strong>AGRICULTURIST</strong>
+<span>Rooted in Agricultural Economics</span>
 </div>
 
 </a>
-
 
 <a
 href="communicationist.html"
@@ -2965,27 +2296,15 @@ class="m-menu-btn premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-solid fa-headset"
-></i>
-
+<i class="fa-solid fa-headset"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-COMMUNICATIONIST
-</strong>
-
-<span>
-Specialized in Communication Studies
-</span>
-
+<strong>COMMUNICATIONIST</strong>
+<span>Specialized in Communication Studies</span>
 </div>
 
 </a>
-
 
 <a
 href="kam.html"
@@ -2993,27 +2312,15 @@ class="m-menu-btn premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-solid fa-briefcase"
-></i>
-
+<i class="fa-solid fa-briefcase"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-KAM
-</strong>
-
-<span>
-Strategic growth
-</span>
-
+<strong>KAM</strong>
+<span>Strategic growth</span>
 </div>
 
 </a>
-
 
 <a
 href="resume.html"
@@ -3021,27 +2328,15 @@ class="m-menu-btn profile-highlight premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-regular fa-file-lines"
-></i>
-
+<i class="fa-regular fa-file-lines"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-CV / PROFILE
-</strong>
-
-<span>
-Timeline & credentials
-</span>
-
+<strong>CV / PROFILE</strong>
+<span>Timeline & credentials</span>
 </div>
 
 </a>
-
 
 <a
 href="gallery.html"
@@ -3049,29 +2344,15 @@ class="m-menu-btn gallery-highlight premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-regular fa-image"
-></i>
-
+<i class="fa-regular fa-image"></i>
 </div>
 
 <div class="m-menu-text">
-
-<strong>
-GALLERY
-</strong>
-
-<span>
-Explore moments
-</span>
-
+<strong>GALLERY</strong>
+<span>Explore moments</span>
 </div>
 
 </a>
-
-
-<!-- ORIGINAL FRAMEWORKS -->
 
 <a
 href="frameworks.html"
@@ -3079,11 +2360,7 @@ class="m-menu-btn framework-wide premium-menu-link"
 >
 
 <div class="m-menu-icon">
-
-<i
-class="fa-solid fa-diagram-project"
-></i>
-
+<i class="fa-solid fa-diagram-project"></i>
 </div>
 
 <div class="m-menu-text">
@@ -3093,192 +2370,116 @@ ORIGINAL FRAMEWORKS
 </strong>
 
 <span>
-
 Original Theories · Independent Frameworks · Field-Built Insights
-
 </span>
 
 </div>
 
 </a>
 
-
 <div class="m-signature-footer">
-
 IDEAS TODAY · IMPACT TOMORROW
-
-</div>
-
-
-</div>
-
-
 </div>
 
 </div>
 
-
+</div>
+</div>
 
 <!-- =========================================================
-     JAVASCRIPT
+     SCRIPT
 ========================================================= -->
 
 <script>
 
+/* EXISTING TYPING */
 
-/* =========================================================
-   TYPING MODE
-========================================================= */
-
-const textArray = [
-
-    "KEY ACCOUNT MANAGER | AGRICULTURIST",
-
-    "AGRICULTURIST | COMMUNICATIONIST",
-
-    "COMMUNICATIONIST | KEY ACCOUNT MANAGER"
-
+const textArray=[
+    "AGRICULTURIST",
+    "COMMUNICATIONIST",
+    "KEY ACCOUNT MANAGER"
 ];
 
-
-let textIndex = 0;
-
-let charIndex = 0;
-
+let textIndex=0;
+let charIndex=0;
 
 function type(){
 
+    const spans=
+        document.querySelectorAll(".typed-text");
 
-    const spans =
-        document.querySelectorAll(
-            ".typed-text"
-        );
+    if(charIndex<textArray[textIndex].length){
 
-
-    if(
-        charIndex <
-        textArray[textIndex].length
-    ){
-
-
-        spans.forEach(
-            span => {
-
-                span.textContent +=
-                    textArray[textIndex]
-                    .charAt(charIndex);
-
-            }
-        );
-
+        spans.forEach(span=>{
+            span.textContent+=
+                textArray[textIndex]
+                .charAt(charIndex);
+        });
 
         charIndex++;
 
-
-        setTimeout(
-            type,
-            75
-        );
-
+        setTimeout(type,100);
 
     }else{
 
-
-        setTimeout(
-            erase,
-            1800
-        );
-
+        setTimeout(erase,2000);
 
     }
-
 }
-
 
 function erase(){
 
+    const spans=
+        document.querySelectorAll(".typed-text");
 
-    const spans =
-        document.querySelectorAll(
-            ".typed-text"
-        );
+    if(charIndex>0){
 
+        spans.forEach(span=>{
 
-    if(charIndex > 0){
+            span.textContent=
+                textArray[textIndex]
+                .substring(
+                    0,
+                    charIndex-1
+                );
 
-
-        spans.forEach(
-            span => {
-
-                span.textContent =
-                    textArray[textIndex]
-                    .substring(
-                        0,
-                        charIndex - 1
-                    );
-
-            }
-        );
-
+        });
 
         charIndex--;
 
-
-        setTimeout(
-            erase,
-            35
-        );
-
+        setTimeout(erase,50);
 
     }else{
 
-
-        textIndex =
-            (
-                textIndex + 1
-            )
+        textIndex=
+            (textIndex+1)
             %
             textArray.length;
 
-
-        setTimeout(
-            type,
-            400
-        );
-
+        setTimeout(type,500);
 
     }
-
 }
 
-
-/* =========================================================
-   COUNTING
-========================================================= */
+/* EXISTING COUNTING */
 
 function animateCounter(el){
 
-
-    const target =
+    const target=
         Number(
             el.getAttribute(
                 "data-target"
             )
-        ) || 0;
+        )||0;
 
+    const duration=1200;
 
-    const duration =
-        1200;
-
-
-    const start =
+    const start=
         performance.now();
-
 
     function tick(now){
 
-
-        const progress =
+        const progress=
             Math.min(
                 (now-start)
                 /
@@ -3286,34 +2487,30 @@ function animateCounter(el){
                 1
             );
 
-
-        const eased =
-            1 -
+        const eased=
+            1-
             Math.pow(
                 1-progress,
                 3
             );
 
-
-        const value =
+        const value=
             Math.floor(
-                eased *
+                eased*
                 target
             );
 
-
-        el.textContent =
-            value +
+        el.textContent=
+            value+
             (
-                progress >= 1
+                progress>=1
                 ?
                 "+"
                 :
                 ""
             );
 
-
-        if(progress < 1){
+        if(progress<1){
 
             requestAnimationFrame(
                 tick
@@ -3323,120 +2520,78 @@ function animateCounter(el){
 
     }
 
-
     requestAnimationFrame(
         tick
     );
-
 }
 
-
-/* =========================================================
-   BUTTON CLICK HIGHLIGHT
-========================================================= */
+/* BUTTON CLICK HIGHLIGHT */
 
 function setupPremiumLinks(){
 
-
-    const links =
+    const links=
         document.querySelectorAll(
             ".premium-menu-link"
         );
 
+    links.forEach(link=>{
 
-    links.forEach(
-        link => {
+        link.addEventListener(
+            "click",
+            function(event){
 
+                const href=
+                    this.getAttribute("href");
 
-            link.addEventListener(
-                "click",
-                function(event){
+                if(!href){
+                    return;
+                }
 
+                event.preventDefault();
 
-                    const url =
-                        this.getAttribute(
-                            "href"
-                        );
-
-
-                    if(!url){
-                        return;
-                    }
-
-
-                    event.preventDefault();
-
-
-                    links.forEach(
-                        item => {
-
-                            item.classList.remove(
-                                "tap-highlight"
-                            );
-
-                        }
-                    );
-
-
-                    this.classList.add(
+                links.forEach(item=>{
+                    item.classList.remove(
                         "tap-highlight"
                     );
+                });
 
+                this.classList.add(
+                    "tap-highlight"
+                );
 
-                    setTimeout(
-                        () => {
+                setTimeout(()=>{
+                    window.location.href=
+                        href;
+                },180);
 
-                            window.location.href =
-                                url;
+            }
+        );
 
-                        },
-                        180
-                    );
-
-
-                }
-            );
-
-
-        }
-    );
-
+    });
 }
 
-
-/* =========================================================
-   START
-========================================================= */
+/* START */
 
 document.addEventListener(
     "DOMContentLoaded",
     function(){
 
-
-        setTimeout(
-            type,
-            700
-        );
-
+        setTimeout(type,1000);
 
         document
         .querySelectorAll(
-            ".counter, .desktop-counter"
+            ".counter,.desktop-counter"
         )
         .forEach(
             animateCounter
         );
 
-
         setupPremiumLinks();
-
 
     }
 );
 
-
 </script>
-
 
 </body>
 </html>
