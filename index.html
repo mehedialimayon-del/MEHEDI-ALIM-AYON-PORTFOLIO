@@ -485,8 +485,6 @@ body{
     font-size:22px;
 }
 
-/* CV/GALLERY NORMAL */
-
 .desktop-dock .profile-card,
 .desktop-dock .gallery-card{
     background:
@@ -502,45 +500,92 @@ body{
 .profile-card{grid-column:1;grid-row:2;}
 .gallery-card{grid-column:2/4;grid-row:2;}
 
-/* PREMIUM FRAMEWORK */
+/* ================= PREMIUM FRAMEWORK ================= */
 
 .desktop-dock .framework-card{
     grid-column:4;
     grid-row:2;
     position:relative;
-    overflow:hidden;
+    overflow:visible;
 
     background:
-        linear-gradient(120deg,
-        #ff7414 0%,
-        #ff8a28 55%,
-        #ff6900 100%) !important;
+        radial-gradient(
+            circle at 12% 50%,
+            rgba(255,190,94,.24),
+            transparent 40%
+        ),
+        linear-gradient(
+            115deg,
+            #8f3008 0%,
+            #b94509 38%,
+            #d85b0b 70%,
+            #8b2b05 100%
+        ) !important;
 
-    border-color:#ff9a45 !important;
+    border-color:#ff8a25 !important;
 
     box-shadow:
-        0 8px 28px rgba(255,116,20,.28),
-        0 0 25px rgba(255,116,20,.18);
+        inset 0 1px 0 rgba(255,255,255,.14),
+        inset 0 -1px 0 rgba(0,0,0,.32),
+        0 10px 28px rgba(255,92,0,.22),
+        0 0 22px rgba(255,116,20,.14);
 }
 
 .desktop-dock .framework-card::before{
-    content:"FEATURED WORK";
+    content:"FEATURED\\A WORK";
+    white-space:pre;
+
     position:absolute;
-    top:5px;
-    right:7px;
-    padding:3px 6px;
-    border:1px solid rgba(255,255,255,.4);
-    border-radius:20px;
-    font-size:6px;
-    font-weight:900;
-    letter-spacing:.8px;
-    color:#fff;
+    top:-1px;
+    right:12px;
+
+    width:48px;
+    height:45px;
+    padding-top:7px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffd783 0%,
+            #f4ad37 58%,
+            #d77a13 100%
+        );
+
+    color:#3c1b05;
+    border:1px solid #ffe3a4;
+
+    font-size:5.5px;
+    line-height:1.2;
+    font-weight:950;
+    letter-spacing:.5px;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 82%,
+            75% 100%,
+            50% 84%,
+            25% 100%,
+            0 82%
+        );
+
+    z-index:5;
 }
 
-.desktop-dock .framework-card .menu-icon,
-.desktop-dock .framework-card .menu-title-text,
-.desktop-dock .framework-card .card-desc{
+.desktop-dock .framework-card .menu-icon{
+    color:#ffd078 !important;
+}
+
+.desktop-dock .framework-card .menu-title-text{
     color:#fff !important;
+}
+
+.desktop-dock .framework-card .card-desc{
+    color:rgba(255,255,255,.86) !important;
+    padding-right:46px;
 }
 
 /* ================= SOCIAL ================= */
@@ -659,7 +704,7 @@ body{
 }
 
 /* =========================================================
-   MOBILE — ORIGINAL SIZE/LAYOUT PRESERVED
+   MOBILE
 ========================================================= */
 
 @media screen and (max-width:768px){
@@ -961,8 +1006,6 @@ body{
     color:#94a3b8;
 }
 
-/* CV AND GALLERY NORMAL */
-
 .m-menu-btn.profile-highlight,
 .m-menu-btn.gallery-highlight{
     background:
@@ -973,52 +1016,178 @@ body{
     border-color:rgba(255,116,20,.4) !important;
 }
 
-/* PREMIUM ORIGINAL FRAMEWORKS */
+/* ================= PREMIUM ORIGINAL FRAMEWORKS ================= */
 
 .m-menu-btn.framework-wide{
     grid-column:1/-1;
     position:relative;
-    overflow:hidden;
+    overflow:visible;
     min-height:72px;
 
     background:
-        linear-gradient(110deg,
-        #ff7414 0%,
-        #ff8a28 55%,
-        #ff6900 100%) !important;
+        radial-gradient(
+            circle at 14% 50%,
+            rgba(255,190,94,.24),
+            transparent 40%
+        ),
+        linear-gradient(
+            115deg,
+            #8f3008 0%,
+            #b94509 38%,
+            #d85b0b 70%,
+            #8b2b05 100%
+        ) !important;
 
-    border:1px solid #ff9a45 !important;
+    border:1px solid #ff8a25 !important;
 
     box-shadow:
-        0 10px 28px rgba(255,116,20,.25),
-        0 0 24px rgba(255,116,20,.15);
+        inset 0 1px 0 rgba(255,255,255,.14),
+        inset 0 -1px 0 rgba(0,0,0,.32),
+        0 10px 28px rgba(255,92,0,.22),
+        0 0 22px rgba(255,116,20,.14);
+}
+
+.m-menu-btn.framework-wide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:8px;
+
+    background:
+        linear-gradient(
+            125deg,
+            transparent 0%,
+            rgba(255,207,137,.06) 38%,
+            rgba(255,207,137,.14) 50%,
+            rgba(255,132,25,.04) 68%,
+            transparent 100%
+        );
+
+    pointer-events:none;
 }
 
 .m-menu-btn.framework-wide::after{
-    content:"FEATURED WORK";
+    content:"FEATURED\\A WORK";
+    white-space:pre;
+
     position:absolute;
-    top:7px;
-    right:8px;
-    padding:3px 7px;
-    border:1px solid rgba(255,255,255,.4);
-    border-radius:20px;
-    color:#fff;
+    top:-1px;
+    right:13px;
+
+    width:52px;
+    height:48px;
+    padding:8px 4px 0;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffd783 0%,
+            #f4ad37 58%,
+            #d77a13 100%
+        );
+
+    color:#3c1b05;
+    border:1px solid #ffe3a4;
+
     font-size:6px;
+    line-height:1.2;
     font-weight:950;
-    letter-spacing:.8px;
+    letter-spacing:.55px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.40),
+        0 0 14px rgba(255,166,54,.22);
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 82%,
+            75% 100%,
+            50% 84%,
+            25% 100%,
+            0 82%
+        );
+
+    z-index:5;
 }
 
-.m-menu-btn.framework-wide .m-menu-icon,
+.m-menu-btn.framework-wide .m-menu-icon{
+    color:#ffd078 !important;
+
+    filter:
+        drop-shadow(
+            0 0 7px rgba(255,175,67,.42)
+        );
+}
+
 .m-menu-btn.framework-wide strong{
     color:#fff !important;
 }
 
 .m-menu-btn.framework-wide span{
-    color:rgba(255,255,255,.92) !important;
+    color:rgba(255,255,255,.88) !important;
 }
 
 .m-menu-btn.framework-wide .m-menu-text{
-    padding-right:65px;
+    padding-right:58px;
+}
+
+/* ================= SIGNATURE FOOTER ================= */
+
+.m-signature-footer{
+    grid-column:1/-1;
+
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:11px;
+
+    padding:13px 4px 1px;
+
+    color:#ff7414;
+
+    font-size:7px;
+    font-weight:900;
+
+    letter-spacing:2.2px;
+
+    white-space:nowrap;
+}
+
+.m-signature-footer::before,
+.m-signature-footer::after{
+    content:"";
+
+    flex:1;
+
+    max-width:58px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff7414
+        );
+
+    box-shadow:
+        0 0 7px rgba(255,116,20,.45);
+}
+
+.m-signature-footer::after{
+    background:
+        linear-gradient(
+            90deg,
+            #ff7414,
+            transparent
+        );
 }
 
 }
@@ -1176,20 +1345,24 @@ Original Theories · Independent Frameworks · Field-Built Insights
 </div>
 
 <div class="desktop-right-socials">
+
 <a href="https://www.linkedin.com/in/mehedi-alim-ayon-2a8435331" target="_blank">
 <i class="fa-brands fa-linkedin-in"></i>
 </a>
+
 <a href="https://wa.me/601172267068" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
+
 <a href="mailto:mehedialif1999@gmail.com">
 <i class="fa-solid fa-envelope"></i>
 </a>
-</div>
 
 </div>
 
-<!-- MOBILE -->
+</div>
+
+<!-- ================= MOBILE ================= -->
 
 <div class="mobile-portfolio">
 
@@ -1210,7 +1383,11 @@ LET'S TALK <i class="fa-solid fa-arrow-right"></i>
 </div>
 
 <div class="m-hero">
-<img src="assets/images/mehedi-hero-final.png" alt="Mehedi Alim Ayon">
+
+<img
+src="assets/images/mehedi-hero-final.png"
+alt="Mehedi Alim Ayon">
+
 </div>
 
 <div class="m-content">
@@ -1220,9 +1397,11 @@ AGRICULTURAL INNOVATION & PARTNERSHIP SPECIALIST
 </div>
 
 <h1 class="m-name">
+
 <a href="javascript:void(0);" onclick="location.reload();">
 MEHEDI ALIM AYON
 </a>
+
 </h1>
 
 <p class="m-profession">
@@ -1277,65 +1456,114 @@ LET'S CREATE IMPACT TOGETHER
 <div class="m-menu-grid">
 
 <a href="about.html" class="m-menu-btn">
-<div class="m-menu-icon"><i class="fa-regular fa-user"></i></div>
+
+<div class="m-menu-icon">
+<i class="fa-regular fa-user"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>ABOUT ME</strong>
 <span>My journey & skills</span>
 </div>
+
 </a>
 
 <a href="agriculturist.html" class="m-menu-btn">
-<div class="m-menu-icon"><i class="fa-solid fa-seedling"></i></div>
+
+<div class="m-menu-icon">
+<i class="fa-solid fa-seedling"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>AGRICULTURIST</strong>
 <span>Rooted in Agricultural Economics</span>
 </div>
+
 </a>
 
 <a href="communicationist.html" class="m-menu-btn">
-<div class="m-menu-icon"><i class="fa-solid fa-headset"></i></div>
+
+<div class="m-menu-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>COMMUNICATIONIST</strong>
 <span>Specialized in Communication Studies</span>
 </div>
+
 </a>
 
 <a href="kam.html" class="m-menu-btn">
-<div class="m-menu-icon"><i class="fa-solid fa-briefcase"></i></div>
+
+<div class="m-menu-icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>KAM</strong>
 <span>Strategic growth</span>
 </div>
+
 </a>
 
-<a href="resume.html" class="m-menu-btn profile-highlight">
-<div class="m-menu-icon"><i class="fa-regular fa-file-lines"></i></div>
+<a href="resume.html"
+class="m-menu-btn profile-highlight">
+
+<div class="m-menu-icon">
+<i class="fa-regular fa-file-lines"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>CV / PROFILE</strong>
 <span>Timeline & credentials</span>
 </div>
+
 </a>
 
-<a href="gallery.html" class="m-menu-btn gallery-highlight">
-<div class="m-menu-icon"><i class="fa-regular fa-image"></i></div>
+<a href="gallery.html"
+class="m-menu-btn gallery-highlight">
+
+<div class="m-menu-icon">
+<i class="fa-regular fa-image"></i>
+</div>
+
 <div class="m-menu-text">
 <strong>GALLERY</strong>
 <span>Explore moments</span>
 </div>
+
 </a>
 
-<a href="frameworks.html" class="m-menu-btn framework-wide">
-<div class="m-menu-icon"><i class="fa-solid fa-diagram-project"></i></div>
+<a href="frameworks.html"
+class="m-menu-btn framework-wide">
+
+<div class="m-menu-icon">
+<i class="fa-solid fa-diagram-project"></i>
+</div>
+
 <div class="m-menu-text">
-<strong>ORIGINAL FRAMEWORKS</strong>
+
+<strong>
+ORIGINAL FRAMEWORKS
+</strong>
+
 <span>
 Original Theories · Independent Frameworks · Field-Built Insights
 </span>
-</div>
-</a>
 
 </div>
+
+</a>
+
+<div class="m-signature-footer">
+IDEAS TODAY · IMPACT TOMORROW
 </div>
+
+</div>
+
+</div>
+
 </div>
 
 <script>
@@ -1360,10 +1588,13 @@ span.textContent+=textArray[textIndex].charAt(charIndex);
 });
 
 charIndex++;
+
 setTimeout(type,100);
 
 }else{
+
 setTimeout(erase,2000);
+
 }
 
 }
@@ -1379,11 +1610,13 @@ span.textContent=textArray[textIndex].substring(0,charIndex-1);
 });
 
 charIndex--;
+
 setTimeout(erase,50);
 
 }else{
 
 textIndex=(textIndex+1)%textArray.length;
+
 setTimeout(type,500);
 
 }
@@ -1392,17 +1625,26 @@ setTimeout(type,500);
 
 function animateCounter(el){
 
-const target=Number(el.getAttribute("data-target"))||0;
+const target=
+Number(el.getAttribute("data-target"))||0;
+
 const duration=1200;
+
 const start=performance.now();
 
 function tick(now){
 
-const progress=Math.min((now-start)/duration,1);
-const eased=1-Math.pow(1-progress,3);
-const value=Math.floor(eased*target);
+const progress=
+Math.min((now-start)/duration,1);
 
-el.textContent=value+(progress>=1?"+":"");
+const eased=
+1-Math.pow(1-progress,3);
+
+const value=
+Math.floor(eased*target);
+
+el.textContent=
+value+(progress>=1?"+":"");
 
 if(progress<1){
 requestAnimationFrame(tick);
@@ -1411,14 +1653,19 @@ requestAnimationFrame(tick);
 }
 
 requestAnimationFrame(tick);
+
 }
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
 setTimeout(type,1000);
 
 document
-.querySelectorAll(".counter,.desktop-counter")
+.querySelectorAll(
+".counter,.desktop-counter"
+)
 .forEach(animateCounter);
 
 });
